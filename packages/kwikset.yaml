@@ -29,13 +29,13 @@ automation:
         message: "{{ trigger.to_state.attributes.friendly_name }} has been UNLOCKED"
 
 #-------------------------------------------
-- alias: "Night Auto-Lock"
-  trigger:
-    platform: time
-    at: '21:00:00'
-  action:
-    - service: lock.lock
-      entity_id: group.all_locks
-    - service: notify.primary_contact
-      data:
-        message: "All doors have been LOCKED" 
+  - alias: "Night Auto-Lock"
+    trigger:
+      platform: time
+      at: '21:00:00'
+    action:
+      - service: lock.lock
+        entity_id: group.all_locks
+      - service: notify.primary_contact
+        data:
+          message: "All doors have been LOCKED" 
