@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Wife Office
+# Office
 #-------------------------------------------
-name: 'Wife Work'
-latitude: !secret megan_work_lat
-longitude: !secret megan_work_lon
+name: 'Work'
+latitude: 30.408712
+longitude: -97.661640
 icon: mdi:briefcase
