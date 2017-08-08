@@ -1,31 +1,31 @@
 #-------------------------------------------
 #  Default Notifier (all things use this)
 #-------------------------------------------
-name: primary_contact
-platform: group
-services:
-  service: slack
+- name: primary_contact
+  platform: group
+  services:
+    service: slack
 
 #-------------------------------------------
 #  iOS Push
 #-------------------------------------------
-name: ios_users
-platform: group
-services:
-  - service: ios_chris_iphone
-  - service: ios_megan_iphone
+- name: ios_users
+  platform: group
+  services:
+    - service: ios_chris_iphone
+    - service: ios_megan_iphone
 
 #-------------------------------------------
 # Slack
 #-------------------------------------------
-name: slack
-platform: slack
-api_key: !secret slack_api_key 
-default_channel: '#general'
+- name: slack
+  platform: slack
+  api_key: !secret slack_api_key 
+  default_channel: '#general'
 
 #-------------------------------------------
 #  Twilio SMS
 #-------------------------------------------
-name: twilio_sms
-platform: twilio_sms
-from_number: !secret twilio_from 
+- name: twilio_sms
+  platform: twilio_sms
+  from_number: !secret twilio_from 
