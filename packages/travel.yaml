@@ -13,7 +13,6 @@ group:
 
 #-------------------------------------------
 sensor: 
-
   - platform: google_travel_time
     name: Chris Location To Home
     api_key: !secret traveltime_api_key
