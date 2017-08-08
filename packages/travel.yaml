@@ -1,0 +1,54 @@
+#-------------------------------------------
+# Travel Times
+#-------------------------------------------
+group:
+  travel:
+    name: Travel Times
+    entities:
+      - sensor.parents_from_home
+      - sensor.curras_from_home
+      - sensor.kids_from_home
+      - sensor.airport_from_home
+      - sensor.therapist_from_home
+
+#-------------------------------------------
+- platform: google_travel_time
+  name: Chris Location To Home
+  api_key: !secret traveltime_api_key
+  origin: device_tracker.chris_iphone
+  destination: Home
+
+#-------------------------------------------
+- platform: google_travel_time
+  name: Megan Location To Home
+  api_key: !secret traveltime_api_key
+  origin: device_tracker.megan_iphone
+  destination: Home
+
+#-------------------------------------------
+- platform: google_travel_time
+  name: Parents from Home
+  api_key: !secret traveltime_api_key
+  origin: Home 
+  destination: Parents
+
+#-------------------------------------------
+- platform: google_travel_time
+  name: Curras from Home
+  api_key: !secret traveltime_api_key
+  origin: Home
+  destination: Curras
+
+#-------------------------------------------
+- platform: google_travel_time
+  name: Airport from Home
+  api_key: !secret traveltime_api_key
+  origin: Home
+  destination: Austin-Bergstrom Airport
+
+#-------------------------------------------
+- platform: google_travel_time
+  name: Therapist from Home
+  api_key: !secret traveltime_api_key
+  origin: Home
+  destination: Therapist

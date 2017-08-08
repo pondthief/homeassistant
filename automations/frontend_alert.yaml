@@ -1,0 +1,31 @@
+# can we move the front-end colors here?
+
+automation:
+  - alias: 'Activate Red Alert'
+    trigger:
+      - platform: state
+        entity_id: alert.ups_batter_low
+        to: 'on'
+      - platform: state
+        entity_id: alert.chris_garage_door
+        to: 'on'
+    action:
+      service: frontend.set_theme
+      data:
+        name: red
+
+#-------------------------------------------
+  - alias: 'Activate No Alert'
+    trigger:
+      - platform: state
+        entity_id: alert.ups_batter_low
+        to: 'idle'
+      - platform: state
+        entity_id: alert.chris_garage_door
+        to: 'idle'
+    action:
+      service: frontend.set_theme
+      data:
+        name: default
+
+#  need binary sensor for active alert

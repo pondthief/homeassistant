@@ -1,0 +1,15 @@
+sensor:
+  - platform: pi_hole
+    host: 45.55.128.168
+
+group:
+  pihole:
+    name: piHole
+    entities:
+      - sensor.pihole_ads_blocked_today
+      - sensor.pihole_ads_percentage_blocked_today
+      - sensor.pihole_dns_queries_today
+      - sensor.pihole_domains_blocked
+      - sensor.pihole_dns_unique_domains
+      - sensor.pihole_dns_queries_cached
+      - sensor.pihole_dns_queries_forwarded

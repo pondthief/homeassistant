@@ -1,0 +1,8 @@
+#-------------------------------------------
+# Newark Airport
+#-------------------------------------------
+name: Newark Airport
+latitude: 40.695047
+longitude: -74.176715
+icon: mdi:airplane
+hidden: true

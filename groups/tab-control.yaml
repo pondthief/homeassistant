@@ -1,0 +1,90 @@
+#-------------------------------------------
+#  Control Tab
+#-------------------------------------------
+control:
+  name: Control
+  view: yes
+  icon: mdi:toggle-switch
+  entities:
+    - group.study
+    - group.guest_room
+    - group.child_room
+    - group.guest_bath
+    - group.main
+    - group.kitchen
+    - group.master_bed
+    - group.outside
+    - group.master_bath
+    - group.all_locks
+    - group.nest_control
+
+#-------------------------------------------
+study:
+  name: Study
+  entities:
+    - switch.study_overhead_switch
+    - light.study_cans_level
+
+#-------------------------------------------
+guest_room:
+  name: Guest Room
+  entities:
+    - switch.guest_room_overhead_switch
+
+#-------------------------------------------
+child_room:
+  name: Child's Room
+  entities:
+    - switch.child_room_overhead_switch
+
+#-------------------------------------------
+guest_bath:
+  name: Guest Bathroom
+  entities:
+    - switch.guest_bathroom_shower_switch
+    - switch.guest_bathroom_sink_switch
+    - switch.guest_bathroom_fan_switch
+
+#-------------------------------------------
+main:
+  name: Main Area
+  entities:
+    - switch.tv_room_overhead_switch
+    - switch.living_room_overhead_switch
+    - light.living_room_cans_level  
+    - switch.entry_light_switch
+    - switch.hallway_switch
+
+#-------------------------------------------
+master_bath:
+  name: Master Bathroom
+  entities:
+    - switch.master_bathroom_sink_switch
+    - switch.master_bathroom_fan_switch
+    - switch.master_bathroom_shower_switch
+
+#-------------------------------------------
+master_bed:
+  name: Master Bedroom
+  entities:
+    - switch.chris_bedside_switch
+    - switch.megan_bedside_switch
+    - switch.master_bedroom_fan_switch
+    - light.master_bedroom_cans_level
+
+#-------------------------------------------
+outside:
+  name: Outside
+  entities:
+    - switch.backyard_switch
+    - switch.frontyard_switch
+
+#-------------------------------------------
+kitchen:
+  name: Kitchen
+  entities:
+    - light.kitchen_sink_overhead_level
+    - switch.kitchen_cabinet_switch
+    - light.kitchen_cans_level
+    - light.kitchen_island_light_level
+    - switch.kitchen_table_switch

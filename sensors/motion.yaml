@@ -1,0 +1,15 @@
+#-------------------------------------------
+# Multisensor 6
+#-------------------------------------------
+- platform: template
+  sensors:
+    multisensor_6_motion:
+      friendly_name: 'Motion'
+      value_template: >-
+        {% if is_state("sensor.aeotec_zw100_multisensor_6_burglar", "8") %}
+        Yes
+        {% elif is_state("sensor.aeotec_zw100_multisensor_6_burglar", "3") %}
+        Tampered 
+        {% else %}
+        No
+        {% endif %}

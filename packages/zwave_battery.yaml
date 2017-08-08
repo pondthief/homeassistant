@@ -1,0 +1,22 @@
+#-------------------------------------------
+# Zwave Low Battery
+#-------------------------------------------
+binary_sensor:
+  - platform: template
+    sensors:
+      zwave_battery_low:
+        value_template: >
+          {% for zwave in states.zwave if zwave.attributes.battery_level %}
+            {%- if zwave.attributes.battery_level | int < 70 -%}
+              {{true}}
+            {%- endif -%}
+          {%- endfor -%}
+
+#-------------------------------------------
+alert:
+  zwave_battery:
+    name: Zwave Battery is low
+    entity_id: binary_sensor.zwave_battery_low
+    repeat: 30
+    notifiers:
+      - primary_contact

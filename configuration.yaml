@@ -1,0 +1,135 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_lat
+  longitude: !secret home_lon
+  elevation: 252
+  unit_system: imperial
+  time_zone: America/Chicago
+
+  #-------------------------------------------
+  # Include customizations
+  #-------------------------------------------
+  customize: !include_dir_merge_named customizations
+
+  #-------------------------------------------
+  # Include packages
+  #-------------------------------------------
+  packages: !include_dir_named packages
+  
+#-------------------------------------------
+# Recorder Settings
+#-------------------------------------------
+recorder:
+  db_url: !secret mysql_log_conn
+
+#-------------------------------------------
+# Logger Settings
+#-------------------------------------------
+logger: !include logger.yaml
+
+#-------------------------------------------
+# Frontend Settings
+#-------------------------------------------
+frontend:
+  themes:
+    red:
+      primary-color: red
+    orange:
+      primary-color: orange
+
+#-------------------------------------------
+# iOS App Settings
+#-------------------------------------------
+ios: 
+
+#-------------------------------------------
+# Enable configuration UI
+#-------------------------------------------
+config:
+
+#-------------------------------------------
+# HTTP Server Config
+#-------------------------------------------
+http:
+  api_password: !secret http_password
+  base_url: !secret server_fqdn
+  ip_ban_enabled: true
+  login_attempts_threshold: 3
+
+#-------------------------------------------
+# Checks for available updates
+#-------------------------------------------
+updater:
+  include_used_components: true
+
+#-------------------------------------------
+# Twilio Settings
+#-------------------------------------------
+twilio:
+  account_sid: !secret twilio_sid 
+  auth_token: !secret twilio_token
+
+#-------------------------------------------
+# Enable Auto-discover (what we can)
+#-------------------------------------------
+discovery:
+
+#-------------------------------------------
+# MQTT Settings
+#-------------------------------------------
+mqtt:
+  broker: !secret cloudmqtt_url
+  port: !secret cloudmqtt_port
+  username: !secret cloudmqtt_user
+  password: !secret cloudmqtt_pass
+
+#-------------------------------------------
+# Disable History support
+#-------------------------------------------
+# history:
+
+#-------------------------------------------
+# Logbook Settings
+#-------------------------------------------
+logbook: !include logbook.yaml
+
+#-------------------------------------------
+# Track the sun
+#-------------------------------------------
+sun:
+
+#-------------------------------------------
+# Text to speech settings
+#-------------------------------------------
+tts:
+  platform: google
+
+#-------------------------------------------
+# Include sensors
+#-------------------------------------------
+sensor: !include_dir_merge_list sensors
+
+#-------------------------------------------
+# Include notifications
+#-------------------------------------------
+notify: !include notify.yaml
+
+#-------------------------------------------
+# Include zones
+#-------------------------------------------
+zone: !include_dir_list zones
+
+#-------------------------------------------
+# Include groups
+#-------------------------------------------
+group: !include_dir_merge_named groups
+
+#-------------------------------------------
+# Include automations
+#-------------------------------------------
+automation: !include automation.yaml
+
+#-------------------------------------------
+# Zwave Settings
+#-------------------------------------------
+zwave: !include zwave.yaml

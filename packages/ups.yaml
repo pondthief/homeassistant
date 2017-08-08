@@ -1,0 +1,45 @@
+#-------------------------------------------
+# APCUPSd Package Things
+#-------------------------------------------
+apcupsd:
+
+#-------------------------------------------
+group:
+  name: UPS
+  entities:
+    - sensor.ups_battery
+    - sensor.ups_input_voltage
+    - sensor.ups_load
+    - sensor.ups_status
+    - sensor.ups_time_left
+    - sensor.ups_time_on_battery
+
+#-------------------------------------------
+binary_sensor:
+  - platform: apcupsd
+
+#-------------------------------------------
+sensor:
+  - platform: apcupsd
+    resources:
+      - bcharge
+      - linev
+      - loadpct
+      - nominv
+      - nompower
+      - numxfers
+      - outputv
+      - status
+      - timeleft
+      - tonbatt
+
+#-------------------------------------------
+alert:
+  ups_running:
+    name: UPS Running
+    done_message: UPS Charging
+    entity_id: binary_sensor.ups_online_status
+    state: 'off'
+    repeat: 30
+    notifiers:
+      - primary_contacts

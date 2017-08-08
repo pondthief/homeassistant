@@ -1,0 +1,32 @@
+#-------------------------------------------
+# Weather Package
+#-------------------------------------------
+sensor:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    monitored_conditions:
+      - summary
+      - icon
+      - nearest_storm_distance
+      - precip_probability
+      - humidity
+      - temperature
+
+#-------------------------------------------
+  - platform: wunderground
+    api_key: !secret wunderground_api_key
+    monitored_conditions:
+      - alerts
+
+#-------------------------------------------
+group:
+  name: Weather
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_nearest_storm_distance
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_temperature
+
+
+#todo add weather alert!

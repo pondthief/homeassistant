@@ -1,0 +1,11 @@
+#-------------------------------------------
+#  Home Tab
+#-------------------------------------------
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.weather
+    - group.family_location
+    - group.travel
+    - group.nest_sensors

@@ -1,0 +1,10 @@
+#-------------------------------------------
+#  Network Tab
+#-------------------------------------------
+network_status:
+  name: Network Status
+  view: yes
+  icon: mdi:network
+  entities:
+    - group.ups
+    - group.pihole
