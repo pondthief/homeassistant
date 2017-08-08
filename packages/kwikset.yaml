@@ -3,7 +3,7 @@
 #-------------------------------------------
 automation:
   - alias: "Door Unlocked"
-    - platform: template
+#    - platform: template
 #      value_template: >
 #        {% for lock in states.lock if lock.attributes.locked %}
 #          {%- if lock.attributes.locked | int < 70 -%}
