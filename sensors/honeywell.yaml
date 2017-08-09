@@ -1,0 +1,6 @@
+- name: "Study Window"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  qos: 0
+  device_class: opening
+  value_template: '{% if value_json.id is equalto 547651 %} {{value_json.state}} {% else %} {{states.sensor.study_window.state}} {% endif %}'
