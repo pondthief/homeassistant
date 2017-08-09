@@ -16,6 +16,7 @@ binary_sensor:
 alert:
   zwave_battery:
     name: Zwave Battery is low
+    done_message: All Zwave batteries are OK
     entity_id: binary_sensor.zwave_battery_low
     repeat: 30
     notifiers:
