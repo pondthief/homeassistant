@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Binary Sensors
+#-------------------------------------------
 - name: "Study Window"
   platform: mqtt
   state_topic: "homeassistant/sensor/honeywell"
