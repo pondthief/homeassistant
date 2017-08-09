@@ -36,6 +36,10 @@ frontend:
       primary-color: red
     orange:
       primary-color: orange
+    yellow:
+      primary-color: "#cccc00"
+    green:
+      primary-color: "#009900"
 
 #-------------------------------------------
 # iOS App Settings
