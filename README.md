@@ -37,4 +37,12 @@ blacklist rtl2832
 blacklist rtl2830
 ```
 
-### 
+### Rancher
+- If you happen to run this in Rancher, use the docker-compose.yml and the rancher-compose.yml files
+- It uses the following images:
+```
+roflmao/rtl2mqtt
+mariadb
+cyrilix/rabbitmq-mqtt
+home-assistant/home-assistant
+```
