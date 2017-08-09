@@ -6,16 +6,12 @@ sensors:
   view: yes
   icon: mdi:radar
   entities:
-    - group.main_room_sensors
+    - group.study_sensors
     - group.nest_sensors
     - group.weather
 
 #-------------------------------------------
-main_room_sensors:
-  name: Main Room
+study_sensors:
+  name: Study
   entities:
-    - sensor.aeotec_zw100_multisensor_6_luminance
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity
-    - sensor.aeotec_zw100_multisensor_6_temperature
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet
-    - sensor.multisensor_6_motion
+    - sensor.study_window
