@@ -20,4 +20,21 @@ My Home Assistant Config.  More comming in the README later.
 - Setup /etc/udev/rules.d/99-usb-serial.rules
 ```
 ACTION=="add", ATTRS{idVendor}=="0658", ATTRS{idProduct}=="0200", SYMLINK+="zwave"
+ACTION=="add", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="2838", SYMLINK+="sdr"
 ```
+- Disable (something) so that the SDR works correctly
+```
+sudo rmmod -f dvb_usb_rtl28xxu rtl2832
+```
+- Create a file permanetment disable 
+```
+sudo vi /etc/modprobe.d/no-rtl.conf
+```
+with the following:
+```
+blacklist dvb_usb_rtl28xxu
+blacklist rtl2832
+blacklist rtl2830
+```
+
+### 
