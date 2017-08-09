@@ -1,4 +1,5 @@
-- alias: 'Sunrise'
+- id: sunrise
+  alias: 'Sunrise'
   trigger:
     platform: sun
     event: sunrise
@@ -20,8 +21,8 @@
     - service: notify.primary_contact
       data:
         message: "Outside lights OFF, Temperature set to DAY level"
-
-- alias: 'Sunset'
+- id: sunset
+  alias: 'Sunset'
   trigger:
     platform: sun
     event: sunset
