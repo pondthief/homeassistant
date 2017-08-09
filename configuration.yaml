@@ -114,6 +114,11 @@ tts:
 sensor: !include_dir_merge_list sensors
 
 #-------------------------------------------
+# Include sensors
+#-------------------------------------------
+binary_sensor: !include_dir_merge_list bsensors
+
+#-------------------------------------------
 # Include notifications
 #-------------------------------------------
 notify: !include notify.yaml

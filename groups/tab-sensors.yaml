@@ -14,4 +14,4 @@ sensors:
 study_sensors:
   name: Study
   entities:
-    - sensor.study_window
+    - binary_sensor.study_window
