@@ -5,7 +5,6 @@ group:
   travel:
     name: Travel Times
     entities:
-      - sensor.parents_from_home
       - sensor.curras_from_home
       - sensor.kids_from_home
       - sensor.airport_from_home
@@ -25,13 +24,6 @@ sensor:
     api_key: !secret traveltime_api_key
     origin: device_tracker.megan_iphone
     destination: Home
-
-#-------------------------------------------
-  - platform: google_travel_time
-    name: Parents from Home
-    api_key: !secret traveltime_api_key
-    origin: Home 
-    destination: Parents
 
 #-------------------------------------------
   - platform: google_travel_time
