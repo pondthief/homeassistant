@@ -5,10 +5,10 @@ group:
   travel:
     name: Travel Times
     entities:
-      - sensor.curras_from_home
-      - sensor.kids_from_home
+      - sensor.south_from_home_via_i35
+      - sensor.south_from_home_via_mopac
+      - sensor.north_from_home
       - sensor.airport_from_home
-      - sensor.therapist_from_home
 
 #-------------------------------------------
 sensor: 
@@ -27,7 +27,7 @@ sensor:
 
 #-------------------------------------------
   - platform: google_travel_time
-    name: Curras from Home
+    name: South from Home via I35
     api_key: !secret traveltime_api_key
     origin: Home
     destination: Curras
@@ -41,7 +41,14 @@ sensor:
 
 #-------------------------------------------
   - platform: google_travel_time
-    name: Therapist from Home
+    name: South from Home via Mopac
     api_key: !secret traveltime_api_key
     origin: Home
     destination: Therapist
+
+#-------------------------------------------
+  - platform: google_travel_time
+    name: North from Home
+    api_key: !secret traveltime_api_key
+    origin: Home
+    destination: Ikea
