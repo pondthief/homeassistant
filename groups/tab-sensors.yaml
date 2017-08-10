@@ -8,7 +8,6 @@ sensors:
   entities:
     - group.study_sensors
     - group.nest_sensors
-    - group.weather
 
 #-------------------------------------------
 study_sensors:
