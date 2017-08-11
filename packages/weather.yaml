@@ -29,7 +29,6 @@ group:
       - sensor.dark_sky_humidity
       - sensor.dark_sky_temperature
 
-
 #-------------------------------------------
 binary_sensor:
   - platform: template
