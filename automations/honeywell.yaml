@@ -1,0 +1,9 @@
+alert:
+  window_open:
+    name: Window Opened
+    done_message: Window Closed
+    entity_id: binary_sensor.ups_online_status
+    state: 'off'
+    repeat: 30
+    notifiers:
+      - primary_contacts
