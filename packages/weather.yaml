@@ -30,4 +30,24 @@ group:
       - sensor.dark_sky_temperature
 
 
-#todo add weather alert!
+#-------------------------------------------
+binary_sensor:
+  - platform: template
+    sensors:
+      severe_weather:
+        value_template: >
+          {%- if is_state("sensor.pws_alerts", "0") -%}
+          False
+          {%- else -%}
+          True
+          {%- endif -%}
+
+#-------------------------------------------
+alert:
+  severe_weather:
+    name: There is a severe weather alert
+    done_message: No active severe weather alerts
+    entity_id: binary_sensor.severe_weather
+    repeat: 15
+    notifiers:
+      - primary_contact
