@@ -69,3 +69,64 @@
   qos: 0
   device_class: opening
   value_template: '{% if value_json.id is equalto 4559 %} {{value_json.state}} {% else %} {{states.binary_sensor.front_window_two.state}} {% endif %}'
+
+#-------------------------------------------
+- name: "Back Window One"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  payload_on: "open"
+  payload_off: "closed"
+  qos: 0
+  device_class: opening
+  value_template: '{% if value_json.id is equalto 272026 %} {{value_json.state}} {% else %} {{states.binary_sensor.back_window_one.state}} {% endif %}'
+
+#-------------------------------------------
+- name: "Back Window Two"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  payload_on: "open"
+  payload_off: "closed"
+  qos: 0
+  device_class: opening
+  value_template: '{% if value_json.id is equalto 224113 %} {{value_json.state}} {% else %} {{states.binary_sensor.back_window_two.state}} {% endif %}'
+
+#-------------------------------------------
+- name: "Back Window Three"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  payload_on: "open"
+  payload_off: "closed"
+  qos: 0
+  device_class: opening
+  value_template: '{% if value_json.id is equalto 830937 %} {{value_json.state}} {% else %} {{states.binary_sensor.back_window_three.state}} {% endif %}'
+
+#-------------------------------------------
+- name: "Back Right Window"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  payload_on: "open"
+  payload_off: "closed"
+  qos: 0
+  device_class: opening
+  value_template: '{% if value_json.id is equalto 924316 %} {{value_json.state}} {% else %} {{states.binary_sensor.back_right_window.state}} {% endif %}'
+
+#-------------------------------------------
+- name: "Kitchen Sink Window"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  payload_on: "open"
+  payload_off: "closed"
+  qos: 0
+  device_class: opening
+  value_template: '{% if value_json.id is equalto 65736 %} {{value_json.state}} {% else %} {{states.binary_sensor.kitchen_sink_window.state}} {% endif %}'
+
+#-------------------------------------------
+- name: "Master Bedroom Window"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  payload_on: "open"
+  payload_off: "closed"
+  qos: 0
+  device_class: opening
+  value_template: '{% if value_json.id is equalto 761758 %} {{value_json.state}} {% else %} {{states.binary_sensor.master_bedroom_window.state}} {% endif %}'
+

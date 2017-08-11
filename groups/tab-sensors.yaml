@@ -11,10 +11,10 @@ sensors:
     - group.master_bath_sensors
     - group.child_room_sensors
     - group.main_sensors
-#    - group.master_bed_sensors
-#    - group.outside_sensors
-#    - group.kitchen_sensors
+    - group.master_bed_sensors
+    - group.kitchen_sensors
     - group.nest_sensors
+#    - group.outside_sensors
 
 #-------------------------------------------
 study_sensors:
@@ -48,8 +48,21 @@ main_sensors:
     - binary_sensor.front_window_one
     - binary_sensor.front_window_two
 
-# master_bed_sensors:
+#-------------------------------------------
+master_bed_sensors:
+  name: Master Bedroom
+  entities:
+    - binary_sensor.master_bedroom_window
 
+#-------------------------------------------
+kitchen_sensors:
+  name: Kitchen
+  entities:
+    - binary_sensor.back_window_one
+    - binary_sensor.back_window_two
+    - binary_sensor.back_window_three
+    - binary_sensor.back_right_window
+    - binary_sensor.kitchen_sink_window
+
+#-------------------------------------------
 # outside_sensors:
-
-# kitchen_sensors:
