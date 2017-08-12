@@ -15,7 +15,7 @@ homeassistant:
   # Include packages
   #-------------------------------------------
   packages: !include_dir_named packages
-  
+
 #-------------------------------------------
 # Recorder Settings
 #-------------------------------------------
@@ -44,7 +44,7 @@ frontend:
 #-------------------------------------------
 # iOS App Settings
 #-------------------------------------------
-ios: 
+ios:
 
 #-------------------------------------------
 # Enable configuration UI
@@ -70,7 +70,7 @@ updater:
 # Twilio Settings
 #-------------------------------------------
 twilio:
-  account_sid: !secret twilio_sid 
+  account_sid: !secret twilio_sid
   auth_token: !secret twilio_token
 
 #-------------------------------------------
@@ -107,6 +107,11 @@ sun:
 #-------------------------------------------
 tts:
   platform: google
+
+#-------------------------------------------
+# Include sensors
+#-------------------------------------------
+input_select: !include input_select.yaml
 
 #-------------------------------------------
 # Include sensors
