@@ -7,3 +7,10 @@ settings:
   icon: mdi:settings
   entities:
     - group.all_automations
+    - group.home_mode
+
+#-------------------------------------------
+house_mode:
+  name: House Mode
+  entities:
+    - input_select.house_mode
