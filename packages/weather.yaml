@@ -9,6 +9,11 @@ sensor:
       - icon
       - nearest_storm_distance
       - precip_probability
+      - precip_intensity
+      - wind_speed
+      - wind_bearing
+      - apparent_temperature
+      - pressure
       - humidity
       - temperature
 
