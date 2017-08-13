@@ -23,6 +23,12 @@ recorder:
   db_url: !secret mysql_log_conn
 
 #-------------------------------------------
+# Datadog Settings
+#-------------------------------------------
+datadog:
+  db_url: !secret datadog_host
+
+#-------------------------------------------
 # Logger Settings
 #-------------------------------------------
 logger: !include logger.yaml
