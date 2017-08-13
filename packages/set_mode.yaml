@@ -1,0 +1,52 @@
+automation:
+  - alias: 'Morning Mode'
+    trigger:
+      platform: sun
+      event: sunrise
+      offset: '+00:00:00'
+    action:
+      - service: script.morning_mode
+
+#-------------------------------------------
+  - alias: 'Day Mode'
+    trigger:
+      platform: time
+      at: '08:00:00'
+    action:
+      - service: script.day_mode
+
+#-------------------------------------------
+  - alias: 'Evening Mode'
+    trigger:
+      platform: sun
+      event: sunset
+      offset: '+00:00:00'
+  action:
+    action:
+      - service: script.evening_mode
+
+#-------------------------------------------
+  - alias: 'Night Mode'
+    trigger:
+      platform: time
+      at: '21:00:00'
+    action:
+      - service: script.night_mode
+
+#-------------------------------------------
+  - alias: 'Away Mode'
+    trigger:
+      platform: state
+      entity_id: group.family
+      to: 'not_home'
+      for:
+        minutes: 10
+    condition:
+      - condition: state
+        entity_id: group.family
+        state: 'not_home'
+      - condition: state
+        entity_id: input_select.house_mode
+        state: 'guest'
+    action:
+      - service: script.night_mode

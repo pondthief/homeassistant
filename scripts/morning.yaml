@@ -5,3 +5,6 @@ morning_mode:
       data:
         entity_id: input_select.house_mode
         option: Morning
+    - service: notify.primary_contact
+      data:
+        message: "Home to set MORNING mode."
