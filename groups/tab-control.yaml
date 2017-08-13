@@ -59,9 +59,9 @@ main:
 master_bath:
   name: Master Bathroom
   entities:
-    - switch.master_bathroom_sink_switch
-    - switch.master_bathroom_fan_switch
-    - switch.master_bathroom_shower_switch
+    - switch.master_bath_mirror_switch
+    - switch.master_bath_fan_switch
+    - switch.master_bath_shower_switch
 
 #-------------------------------------------
 master_bed:
