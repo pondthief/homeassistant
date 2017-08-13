@@ -21,7 +21,6 @@ automation:
       platform: sun
       event: sunset
       offset: '+00:00:00'
-  action:
     action:
       - service: script.evening_mode
 
