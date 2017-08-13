@@ -69,8 +69,8 @@ master_bed:
   entities:
     - switch.chris_bedside_switch
     - switch.megan_bedside_switch
-    - switch.master_bedroom_fan_switch
-    - light.master_bedroom_cans_level
+    - switch.master_fan_switch
+    - light.master_cans_level
 
 #-------------------------------------------
 outside:
