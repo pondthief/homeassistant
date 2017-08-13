@@ -88,3 +88,10 @@ kitchen:
     - light.kitchen_cans_level
     - light.island_level
     - switch.kitchen_table_switch
+
+#-------------------------------------------
+garage:
+  name: Garage Door Status
+  entities:
+    - sensor.chris_overhead_garage_status
+    - sensor.chris_car_present
