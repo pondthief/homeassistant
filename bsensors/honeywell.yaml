@@ -131,7 +131,7 @@
   value_template: '{% if value_json.id is equalto 761758 %} {{value_json.state}} {% else %} {{states.binary_sensor.master_bedroom_window.state}} {% endif %}'
 
 #-------------------------------------------
-- name: Front Door"
+- name: "Front Door"
   platform: mqtt
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
@@ -141,7 +141,7 @@
   value_template: '{% if value_json.id is equalto 648705 %} {{value_json.state}} {% else %} {{states.binary_sensor.front_door.state}} {% endif %}'
 
 #-------------------------------------------
-- name: Back Door"
+- name: "Back Door"
   platform: mqtt
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
@@ -151,7 +151,7 @@
   value_template: '{% if value_json.id is equalto 491009 %} {{value_json.state}} {% else %} {{states.binary_sensor.back_door.state}} {% endif %}'
 
 #-------------------------------------------
-- name: Garage Door"
+- name: "Garage Door"
   platform: mqtt
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
