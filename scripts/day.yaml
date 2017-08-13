@@ -5,6 +5,10 @@ day_mode:
       data:
         entity_id: input_select.house_mode
         option: Day
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.hallway
+        temperature: '72'
     - service: notify.primary_contact
       data:
         message: "Home to set DAY mode."

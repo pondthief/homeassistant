@@ -5,6 +5,15 @@ morning_mode:
       data:
         entity_id: input_select.house_mode
         option: Morning
+    - service: light.turn_off
+      data:
+        entity_id: 
+          - light.kitchen_sink_level
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.outside_deck_switch
+          - switch.frontyard_switch
     - service: notify.primary_contact
       data:
         message: "Home to set MORNING mode."
