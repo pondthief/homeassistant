@@ -6,5 +6,5 @@ guest_mode:
         entity_id: input_select.house_mode
         option: Guest
     - service: notify.primary_contact
-        data:
-          message: "Home to set GUEST mode."
+      data:
+        message: "Home to set GUEST mode."
