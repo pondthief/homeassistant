@@ -88,9 +88,9 @@ mqtt:
   password: !secret cloudmqtt_pass
 
 #-------------------------------------------
-# Disable History support
+# History support
 #-------------------------------------------
-# history:
+history:
 
 #-------------------------------------------
 # Logbook Settings
