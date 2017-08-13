@@ -94,5 +94,5 @@ kitchen:
 garage:
   name: Garage Door Status
   entities:
-    - sensor.chris_overhead_garage_status
+    - cover.chris_overhead_garage_door
     - sensor.chris_car_present
