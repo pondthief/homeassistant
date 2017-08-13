@@ -52,7 +52,7 @@ main:
     - switch.craft_overhead_switch
     - switch.living_room_overhead_switch
     - light.living_room_cans_level  
-    - switch.entry_light_switch
+    - switch.entry_overhead_switch
     - switch.hallway_switch
 
 #-------------------------------------------
