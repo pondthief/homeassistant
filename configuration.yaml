@@ -26,7 +26,7 @@ recorder:
 # Datadog Settings
 #-------------------------------------------
 datadog:
-  db_url: !secret datadog_host
+  host: !secret datadog_host
 
 #-------------------------------------------
 # Logger Settings
