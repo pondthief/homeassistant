@@ -151,4 +151,4 @@ zwave: !include zwave.yaml
 #-------------------------------------------
 # Scripts
 #-------------------------------------------
-zwave: !include_dir_merge_named scripts
+script: !include_dir_merge_named scripts
