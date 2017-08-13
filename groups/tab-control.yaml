@@ -17,6 +17,7 @@ control:
     - group.master_bath
     - group.all_locks
     - group.nest_control
+    - group.garage
 
 #-------------------------------------------
 study:
