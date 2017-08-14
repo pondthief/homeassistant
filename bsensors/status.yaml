@@ -14,10 +14,6 @@
         {%- else -%}
         on
         {%- endif %}
-      entity_id:
-        - binary_sensor.garage_door
-        - binary_sensor.front_door
-        - binary_sensor.back_door
 
 #-------------------------------------------
 - platform: template
@@ -33,10 +29,6 @@
         {%- else -%}
         on
         {%- endif %}
-      entity_id:
-        - lock.garage_door_locked
-        - lock.front_door_locked
-        - lock.back_door_locked
 
 #-------------------------------------------
 - platform: template
@@ -62,20 +54,6 @@
         {%- else -%}
         on
         {%- endif %}
-      entity_id:
-        - binary_sensor.back_right_window
-        - binary_sensor.back_window_one
-        - binary_sensor.back_window_three
-        - binary_sensor.front_window_two
-        - binary_sensor.front_window_one
-        - binary_sensor.front_right_window
-        - binary_sensor.child_window
-        - binary_sensor.back_window_two
-        - binary_sensor.guest_window
-        - binary_sensor.kitchen_sink_window
-        - binary_sensor.master_bathroom_window
-        - binary_sensor.master_bedroom_window
-        - binary_sensor.study_window
 
 #-------------------------------------------
 - platform: template
