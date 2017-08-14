@@ -17,6 +17,7 @@ control:
     - group.master_bath
     - group.all_locks
     - group.nest_control
+    - group.garage
 
 #-------------------------------------------
 study:
@@ -29,13 +30,13 @@ study:
 guest_room:
   name: Guest Room
   entities:
-    - switch.guest_room_overhead_switch
+    - switch.guest_overhead_switch
 
 #-------------------------------------------
 child_room:
-  name: Child's Room
+  name: Child Room
   entities:
-    - switch.child_room_overhead_switch
+    - switch.child_overhead_switch
 
 #-------------------------------------------
 guest_bath:
@@ -49,19 +50,19 @@ guest_bath:
 main:
   name: Main Area
   entities:
-    - switch.tv_room_overhead_switch
+    - switch.craft_overhead_switch
     - switch.living_room_overhead_switch
     - light.living_room_cans_level  
-    - switch.entry_light_switch
+    - switch.entry_overhead_switch
     - switch.hallway_switch
 
 #-------------------------------------------
 master_bath:
   name: Master Bathroom
   entities:
-    - switch.master_bathroom_sink_switch
-    - switch.master_bathroom_fan_switch
-    - switch.master_bathroom_shower_switch
+    - switch.master_bath_mirror_switch
+    - switch.master_bath_fan_switch
+    - switch.master_bath_shower_switch
 
 #-------------------------------------------
 master_bed:
@@ -69,22 +70,29 @@ master_bed:
   entities:
     - switch.chris_bedside_switch
     - switch.megan_bedside_switch
-    - switch.master_bedroom_fan_switch
-    - light.master_bedroom_cans_level
+    - switch.master_fan_switch
+    - light.master_cans_level
 
 #-------------------------------------------
 outside:
   name: Outside
   entities:
-    - switch.backyard_switch
+    - switch.outside_deck_switch
     - switch.frontyard_switch
 
 #-------------------------------------------
 kitchen:
   name: Kitchen
   entities:
-    - light.kitchen_sink_overhead_level
+    - light.kitchen_sink_level
     - switch.kitchen_cabinet_switch
     - light.kitchen_cans_level
-    - light.kitchen_island_light_level
+    - light.island_level
     - switch.kitchen_table_switch
+
+#-------------------------------------------
+garage:
+  name: Garage Door Status
+  entities:
+    - cover.chris_overhead_garage_door
+    - sensor.chris_car_present

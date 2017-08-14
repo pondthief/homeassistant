@@ -14,6 +14,7 @@ sensors:
     - group.master_bed_sensors
     - group.kitchen_sensors
     - group.nest_sensors
+    - group.door_sensors
 #    - group.outside_sensors
 
 #-------------------------------------------
@@ -65,4 +66,9 @@ kitchen_sensors:
     - binary_sensor.kitchen_sink_window
 
 #-------------------------------------------
-# outside_sensors:
+door_sensors:
+  name: Doors
+  entities:
+    - binary_sensor.front_door
+    - binary_sensor.back_door
+    - binary_sensor.garage_door

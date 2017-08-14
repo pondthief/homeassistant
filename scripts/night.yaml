@@ -1,0 +1,22 @@
+night_mode:
+  alias: Night Mode
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.house_mode
+        option: Night
+    - service: light.turn_on
+      data:
+        entity_id: 
+          - light.kitchen_sink_level
+        brightness: 40
+    - service: light.turn_off
+      data:
+        entity_id: 
+          - light.light.island_level
+    - service: lock.lock
+      data:
+        entity_id: group.all_locks
+    - service: notify.primary_contact
+      data:
+        message: "Home to set NIGHT mode."

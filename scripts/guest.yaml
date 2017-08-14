@@ -1,0 +1,10 @@
+guest_mode:
+  alias: Guest Mode
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.house_mode
+        option: Guest
+    - service: notify.primary_contact
+      data:
+        message: "Home to set GUEST mode."

@@ -4,3 +4,5 @@ house_mode:
     - Day
     - Evening
     - Night
+    - Guest
+    - Away

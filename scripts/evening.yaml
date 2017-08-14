@@ -1,0 +1,26 @@
+evening_mode:
+  alias: Evening Mode
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.house_mode
+        option: Evening
+    - service: light.turn_on
+      data:
+        entity_id: 
+          - light.light.island_level
+        brightness: 100
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.outside_deck_switch
+          - switch.frontyard_switch
+          - switch.chris_bedside_switch
+          - switch.megan_bedside_switch
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.hallway
+        temperature: '68'
+    - service: notify.primary_contact
+      data:
+        message: "Home to set EVENING mode."

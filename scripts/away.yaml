@@ -1,0 +1,10 @@
+away_mode:
+  alias: Away Mode
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.house_mode
+        option: Away
+    - service: notify.primary_contact
+      data:
+        message: "Home to set AWAY mode."
