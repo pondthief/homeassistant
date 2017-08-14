@@ -15,6 +15,8 @@ evening_mode:
         entity_id:
           - switch.outside_deck_switch
           - switch.frontyard_switch
+          - switch.chris_bedside_switch
+          - switch.megan_bedside_switch
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
