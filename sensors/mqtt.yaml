@@ -1,4 +1,9 @@
 - platform: mqtt
-  name: Office Atmosphere
+  name: Office Temp
   state_topic: "v1/devices/temp"
-  value_template: '{% if value_json.id is equalto 111 %} {{value_json.state}} {% else %} {{states.sensor.office_atmosphere.state}} {% endif %}'
+  value_template: '{% if value_json.id is equalto 111 %} {{value_json.temperature}} {% else %} {{states.sensor.office_temp.state}} {% endif %}'
+
+- platform: mqtt
+  name: Office Humidity
+  state_topic: "v1/devices/temp"
+  value_template: '{% if value_json.id is equalto 111 %} {{value_json.humidity}} {% else %} {{states.sensor.office_humidity.state}} {% endif %}'
