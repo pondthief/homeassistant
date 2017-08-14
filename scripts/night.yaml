@@ -13,7 +13,22 @@ night_mode:
     - service: light.turn_off
       data:
         entity_id: 
-          - light.light.island_level
+          - light.island_level
+          - light.kitchen_cans_level
+          - light.living_room_cans_level
+          - light.master_cans_level
+          - light.study_cans_level
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.kitchen_table_switch
+          - switch.kitchen_cabinet_switch
+          - switch.guest_overhead_switch
+          - switch.entry_overhead_switch
+          - switch.craft_overhead_switch
+          - switch.living_room_overhead_switch
+          - switch.study_overhead_switch
+          - switch.hallway_switch
     - service: lock.lock
       data:
         entity_id: group.all_locks

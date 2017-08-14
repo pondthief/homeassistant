@@ -17,6 +17,13 @@ evening_mode:
           - switch.frontyard_switch
           - switch.chris_bedside_switch
           - switch.megan_bedside_switch
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.guest_overhead_switch
+          - switch.entry_overhead_switch
+          - switch.study_overhead_switch
+          - switch.hallway_switch
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway

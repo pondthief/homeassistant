@@ -9,6 +9,7 @@ cover:
         device_key: !secret garage_door_key
         name:  Chris Overhead Garage Door
 
+#-------------------------------------------
 sensor:
   - platform: template
     sensors:
@@ -30,6 +31,7 @@ sensor:
             n/a
             {% endif %}'
 
+#-------------------------------------------
   - platform: template
     sensors:
       chris_car_present:
