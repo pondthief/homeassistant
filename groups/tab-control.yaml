@@ -42,9 +42,9 @@ child_room:
 guest_bath:
   name: Guest Bathroom
   entities:
-    - switch.guest_bathroom_shower_switch
-    - switch.guest_bathroom_sink_switch
-    - switch.guest_bathroom_fan_switch
+    - switch.guest_bath_fan_switch
+    - switch.guest_bath_mirror_switch
+    - switch.guest_bath_shower_switch
 
 #-------------------------------------------
 main:
