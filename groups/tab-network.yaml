@@ -7,4 +7,3 @@ network_status:
   icon: mdi:network
   entities:
     - group.ups
-    - group.pihole
