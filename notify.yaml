@@ -4,7 +4,13 @@
 - name: primary_contact
   platform: group
   services:
-    service: slack
+#    - service: slack
+#    - service: ios_users
+    - service: twilio_sms
+        data:
+          target:
+            - !secret chris_mobile_num
+            - !secret megan_mobile_num
 
 #-------------------------------------------
 #  iOS Push
