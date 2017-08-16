@@ -5,7 +5,6 @@ logs:
   homeassistant.components.climate.nest: warn
   homeassistant.components.device_tracker: warn
   homeassistant.components.discovery: warn
-  homeassistant.components.datadog: debug
   homeassistant.components.http: warn
   homeassistant.components.media_player: warn
   homeassistant.components.recorder: error
