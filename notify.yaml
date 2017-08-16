@@ -7,10 +7,10 @@
 #    - service: slack
 #    - service: ios_users
     - service: twilio_sms
-        data:
-          target:
-            - !secret chris_mobile_num
-            - !secret megan_mobile_num
+      data:
+        target:
+          - !secret chris_mobile_num
+          - !secret megan_mobile_num
 
 #-------------------------------------------
 #  iOS Push
