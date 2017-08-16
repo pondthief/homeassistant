@@ -31,3 +31,4 @@
 #-------------------------------------------
 - name: syslog
   platform: syslog
+  priority: 3
