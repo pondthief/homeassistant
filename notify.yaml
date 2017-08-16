@@ -4,14 +4,10 @@
 - name: primary_contact
   platform: group
   services:
-#    - service: slack
+    - service: slack
 #    - service: ios_users
     - service: syslog
-    - service: twilio_sms
-      data:
-        target:
-          - !secret chris_mobile_num
-          - !secret megan_mobile_num
+
 
 #-------------------------------------------
 #  iOS Push
@@ -28,7 +24,7 @@
 - name: slack
   platform: slack
   api_key: !secret slack_api_key 
-  default_channel: '#general'
+  default_channel: '#home'
 
 #-------------------------------------------
 #  Twilio SMS
