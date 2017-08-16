@@ -6,6 +6,7 @@
   services:
 #    - service: slack
 #    - service: ios_users
+    - service: lametric
     - service: twilio_sms
       data:
         target:
@@ -35,3 +36,11 @@
 - name: twilio_sms
   platform: twilio_sms
   from_number: !secret twilio_from 
+
+#-------------------------------------------
+#  LaMmetric
+#-------------------------------------------
+- name: lametric
+  platform: lametric
+  display_time: 20
+  icon: i7300
