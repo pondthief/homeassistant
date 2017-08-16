@@ -17,6 +17,7 @@ evening_mode:
           - switch.frontyard_switch
           - switch.chris_bedside_switch
           - switch.megan_bedside_switch
+          - switch.master_fan_switch
     - service: switch.turn_off
       data:
         entity_id:
