@@ -6,7 +6,7 @@
   services:
 #    - service: slack
 #    - service: ios_users
-    - service: lametric
+    - service: syslog
     - service: twilio_sms
       data:
         target:
@@ -38,9 +38,7 @@
   from_number: !secret twilio_from 
 
 #-------------------------------------------
-#  LaMmetric
+#  Syslog
 #-------------------------------------------
-- name: lametric
-  platform: lametric
-  display_time: 20
-  icon: i7300
+- name: syslog
+  platform: syslog
