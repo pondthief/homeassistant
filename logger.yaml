@@ -9,7 +9,7 @@ logs:
   homeassistant.components.media_player: warn
   homeassistant.components.recorder: error
   homeassistant.components.sensor.darksky: warn
-  homeassistant.components.zwave: warning
+  homeassistant.components.zwave: error
   homeassistant.helpers.script: warn
   homeassistant.exceptions: info
   py.warnings: error
