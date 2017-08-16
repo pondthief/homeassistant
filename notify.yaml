@@ -5,7 +5,6 @@
   platform: group
   services:
     - service: slack
-    - service: syslog
     #- service: ios_users
 
 
@@ -25,10 +24,3 @@
   platform: slack
   api_key: !secret slack_api_key 
   default_channel: '#home'
-
-#-------------------------------------------
-#  Syslog
-#-------------------------------------------
-- name: syslog
-  platform: syslog
-  priority: 3
