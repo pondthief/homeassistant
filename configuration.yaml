@@ -74,13 +74,6 @@ updater:
   include_used_components: true
 
 #-------------------------------------------
-# Twilio Settings
-#-------------------------------------------
-twilio:
-  account_sid: !secret twilio_sid
-  auth_token: !secret twilio_token
-
-#-------------------------------------------
 # Enable Auto-discover (what we can)
 #-------------------------------------------
 # discovery:
