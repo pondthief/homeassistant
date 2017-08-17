@@ -10,7 +10,7 @@
 #    - primary_contact
 
 open_door:
-  name: A door has been open for more than 5minutes
+  name: A door has been open for more than 5 minutes
   done_message: All doors closed
   entity_id: binary_sensor.all_doors
   state: 'on'
