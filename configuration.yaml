@@ -158,3 +158,8 @@ zwave: !include zwave.yaml
 # Scripts
 #-------------------------------------------
 script: !include_dir_merge_named scripts
+
+#-------------------------------------------
+# Include alerts
+#-------------------------------------------
+alert: !include alerts.yaml

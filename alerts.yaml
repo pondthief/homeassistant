@@ -1,0 +1,21 @@
+#unlocked_door:
+#  name: A door is unlocked
+#  done_message: All doors locked
+#  entity_id: binary_sensor.all_locks
+#  state: 'on'
+#  repeat: 30
+#  can_acknowledge: True
+#  skip_first: True
+#  notifiers:
+#    - primary_contact
+
+open_door:
+  name: A door has been open for more than 5minutes
+  done_message: All doors closed
+  entity_id: binary_sensor.all_doors
+  state: 'on'
+  repeat: 5
+  can_acknowledge: True
+  skip_first: True
+  notifiers:
+    - primary_contact
