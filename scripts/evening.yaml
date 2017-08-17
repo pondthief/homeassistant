@@ -30,6 +30,13 @@ evening_mode:
           - switch.entry_overhead_switch
           - switch.study_overhead_switch
           - switch.hallway_switch
+          - switch.kitchen_table_switch
+    - service: light.turn_off
+      data:
+        entity_id: 
+          - light.kitchen_cans_level
+          - light.living_room_cans_level
+          - light.master_cans_level
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
