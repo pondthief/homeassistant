@@ -1,5 +1,6 @@
+# Make sure we have heartbeats every 3 hours
 - platform: mqtt
   name: "Study Window Heartbeat"
   state_topic: "homeassistant/sensor/honeywell"
-  expire_after: 3600
-  value_template: '{% if value_json.id is equalto 547651 %} {{value_json.time}} {% else %} {{states.sensor.study_window_heartbeat.state}} {% endif %}'
+  expire_after: 10800
+  value_template: '{% if value_json.id is equalto 547651 %} {{value_json.heartbeat}} {% else %} {{states.sensor.study_window_heartbeat.state}} {% endif %}'
