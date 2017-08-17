@@ -1,6 +1,5 @@
-# {"time"' : '"2017-08-17' '13:18:58",' '"model"' : '"Honeywell' Door/Window 'Sensor",' '"id"' : 547651, '"channel"' : 8, '"event"' : 4, '"state"' : '"closed",' '"heartbeat"' : '"yes"}
 - platform: mqtt
   name: "Study Window Heartbeat"
   state_topic: "homeassistant/sensor/honeywell"
   expire_after: 3600
-  value_template: '{% if value_json.id is equalto 547651 %} {{value_json.time}} {% else %} {{states.sensor.study_window_heartbeat.state}} {% endif %}'
+  value_template: '{% if value_json.id is equalto 547651x %} {{value_json.time}} {% else %} {{states.sensor.study_window_heartbeat.state}} {% endif %}'
