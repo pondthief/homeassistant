@@ -8,8 +8,13 @@ evening_mode:
     - service: light.turn_on
       data:
         entity_id: 
-          - light.light.island_level
+          - light.island_level
         brightness: 100
+    - service: light.turn_on
+      data:
+        entity_id: 
+          - light.study_cans_level
+        brightness: 50
     - service: switch.turn_on
       data:
         entity_id:
