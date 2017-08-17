@@ -41,6 +41,9 @@ evening_mode:
       data:
         entity_id: climate.hallway
         temperature: '68'
+    - service: lock.lock
+      data:
+        entity_id: group.all_locks
     - service: notify.primary_contact
       data:
         message: "Home to set EVENING mode."
