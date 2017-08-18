@@ -7,5 +7,6 @@ default_view:
   entities:
     - group.weather
     - group.family_location
+    - group.garage
     - group.travel
     - group.nest_sensors

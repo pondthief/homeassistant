@@ -37,23 +37,3 @@
     service: notify.primary_contact
     data_template:
       message: "{{ trigger.to_state.attributes.friendly_name }} has been OPENED"
-
-- id: doorclosed
-  alias: "Door Closed"
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.back_door
-      to: 'off'
-      from: 'on'
-    - platform: state
-      entity_id: binary_sensor.front_door
-      to: 'off'
-      from: 'on'
-    - platform: state
-      entity_id: binary_sensor.garage_door
-      to: 'off'
-      from: 'on'
-  action:
-    service: notify.primary_contact
-    data_template:
-      message: "{{ trigger.to_state.attributes.friendly_name }} has been CLOSED"
