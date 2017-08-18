@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Cluster Sensor Prototype
+#-------------------------------------------
 - platform: mqtt
   name: Office Temp
   state_topic: "v1/devices/temp"
