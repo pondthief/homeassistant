@@ -5,14 +5,14 @@
 My Home Assistant Config.  More comming in the README later.
 
 ### Hardware
-- 25x GE Z-Wave Wireless Switches [Amazon](https://www.amazon.com/gp/product/B0035YRCR2/)
-- 6x GE Z-wave Wireless Dimmers [Amazon](https://www.amazon.com/gp/product/B006LQFHN2/)
-- 3x Kwikset 910 Z-Wave Signature Series [Amazon](https://www.amazon.com/Kwikset-910-Signature-Traditional-Electronic/dp/B013PQ1EUK/)
-- 2x GoControl/Linear GD00Z-4 Z-Wave Garage Door Opener [Amazon](https://www.amazon.com/GoControl-Linear-GD00Z-4-Z-Wave-Controller/dp/B00M75TEIU/)
-- Aeotec Z-Stick Gen5, Z-Wave Plus USB to create gateway [Amazon](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)
-- NooElec NESDR Nano 2+ Tiny Black RTL-SDR USB [Amazon](https://www.amazon.com/gp/product/B01B4L48QU/)
-- 12x Honeywell 5800MINI Wireless Door/Window Contact [Amazon](https://www.amazon.com/gp/product/B01LYOAECP/)
-- Intel BOXNUC7I5BNH NUC [Amazon](https://www.amazon.com/gp/product/B01N2UMKZ5/)
+- 25x GE Z-Wave Wireless Switches [(Amazon)](https://www.amazon.com/gp/product/B0035YRCR2/)
+- 6x GE Z-wave Wireless Dimmers [(Amazon)](https://www.amazon.com/gp/product/B006LQFHN2/)
+- 3x Kwikset 910 Z-Wave Signature Series [(Amazon)](https://www.amazon.com/Kwikset-910-Signature-Traditional-Electronic/dp/B013PQ1EUK/)
+- 2x GoControl/Linear GD00Z-4 Z-Wave Garage Door Opener [(Amazon)](https://www.amazon.com/GoControl-Linear-GD00Z-4-Z-Wave-Controller/dp/B00M75TEIU/)
+- Aeotec Z-Stick Gen5, Z-Wave Plus USB to create gateway [(Amazon)](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)
+- NooElec NESDR Nano 2+ Tiny Black RTL-SDR USB [(Amazon)](https://www.amazon.com/gp/product/B01B4L48QU/)
+- 12x Honeywell 5800MINI Wireless Door/Window Contact [(Amazon)](https://www.amazon.com/gp/product/B01LYOAECP/)
+- Intel BOXNUC7I5BNH NUC [(Amazon)](https://www.amazon.com/gp/product/B01N2UMKZ5/)
 - Nest Thermostat (3rd Gen)
 
 
