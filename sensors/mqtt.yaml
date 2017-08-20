@@ -14,7 +14,7 @@
 - platform: mqtt
   name: Laundry Room Lux
   state_topic: "v1/devices/temp"
-  value_template: '{% if value_json.id is equalto "7f8aa329" %} {{value_json.humidity}} {% else %} {{states.sensor.laundry_room_lux.state}} {% endif %}'
+  value_template: '{% if value_json.id is equalto "7f8aa329" %} {{value_json.lux}} {% else %} {{states.sensor.laundry_room_lux.state}} {% endif %}'
 
 #-------------------------------------------
 #  Craft Room
