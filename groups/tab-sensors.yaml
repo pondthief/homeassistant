@@ -72,3 +72,18 @@ door_sensors:
     - binary_sensor.front_door
     - binary_sensor.back_door
     - binary_sensor.garage_door
+
+#-------------------------------------------
+laundry_room_sensors:
+  name: Laundry Room
+  entities:
+    - sensor.laundry_room_temp
+    - sensor.laundry_room_humidity
+    - sensor.laundry_room_lux
+
+#-------------------------------------------
+craft_room_sensors:
+  name: Craft Room
+  entities:
+    - sensor.craft_room_temp
+    - sensor.craft_room_humidity
