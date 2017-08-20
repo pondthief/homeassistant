@@ -4,17 +4,17 @@
 - platform: mqtt
   name: Laundry Room Temp
   state_topic: "v1/devices/temp"
-  value_template: '{% if value_json.id is equalto '7f8aa329' %} {{value_json.temperature}} {% else %} {{states.sensor.laundry_room_temp.state}} {% endif %}'
+  value_template: '{% if value_json.id is equalto "7f8aa329" %} {{value_json.temperature}} {% else %} {{states.sensor.laundry_room_temp.state}} {% endif %}'
 
 - platform: mqtt
   name: Laundry Room Humidity
   state_topic: "v1/devices/temp"
-  value_template: '{% if value_json.id is equalto '7f8aa329' %} {{value_json.humidity}} {% else %} {{states.sensor.laundry_room_humidity.state}} {% endif %}'
+  value_template: '{% if value_json.id is equalto "7f8aa329" %} {{value_json.humidity}} {% else %} {{states.sensor.laundry_room_humidity.state}} {% endif %}'
 
 - platform: mqtt
   name: Laundry Room Lux
   state_topic: "v1/devices/temp"
-  value_template: '{% if value_json.id is equalto '7f8aa329' %} {{value_json.humidity}} {% else %} {{states.sensor.laundry_room_lux.state}} {% endif %}'
+  value_template: '{% if value_json.id is equalto "7f8aa329" %} {{value_json.humidity}} {% else %} {{states.sensor.laundry_room_lux.state}} {% endif %}'
 
 #-------------------------------------------
 #  Craft Room
@@ -22,9 +22,9 @@
 - platform: mqtt
   name: Craft Room Temp
   state_topic: "v1/devices/temp"
-  value_template: '{% if value_json.id is equalto '7faedf7' %} {{value_json.temperature}} {% else %} {{states.sensor.craft_room_temp.state}} {% endif %}'
+  value_template: '{% if value_json.id is equalto "7faedf7" %} {{value_json.temperature}} {% else %} {{states.sensor.craft_room_temp.state}} {% endif %}'
 
 - platform: mqtt
   name: Craft Room Humidity
   state_topic: "v1/devices/temp"
-  value_template: '{% if value_json.id is equalto '7faedf7' %} {{value_json.humidity}} {% else %} {{states.sensor.craft_room_humidity.state}} {% endif %}'
+  value_template: '{% if value_json.id is equalto "7faedf7" %} {{value_json.humidity}} {% else %} {{states.sensor.craft_room_humidity.state}} {% endif %}'
