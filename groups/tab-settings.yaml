@@ -20,7 +20,7 @@ house_mode:
 rf_heartbeats:
   name: RF Device Heartbeats
   entities:
-    - sensor.back_door_heartbeat
+    - sensor.back_door_heartbeat | now()
     - sensor.back_window_one_heartbeat
     - sensor.back_window_three_heartbeat
     - sensor.back_window_two_heartbeat
