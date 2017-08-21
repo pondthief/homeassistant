@@ -1,5 +1,5 @@
 amcrest:
-  - host: 192.168.128.231
+  - host: 192.168.128.236
     name: Garage Right
     username: !secret amcrest_user
     password: !secret amcrest_pass
