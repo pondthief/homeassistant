@@ -1,6 +1,7 @@
 amcrest:
   - host: 192.168.128.236
     name: Garage Right
+    stream_source: rtsp
     username: !secret amcrest_user
     password: !secret amcrest_pass
     sensors:
