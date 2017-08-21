@@ -5,6 +5,9 @@ amcrest:
     password: !secret amcrest_pass
     sensors:
       - motion_detector
-      - sdcard
+
 camera:
+  - platform: amcrest
+
+sensor:
   - platform: amcrest
