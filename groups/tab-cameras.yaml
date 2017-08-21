@@ -1,0 +1,15 @@
+#-------------------------------------------
+#  Cameras Tab
+#-------------------------------------------
+settings:
+  name: Cameras
+  view: yes
+  icon: mdi:video
+  entities:
+    - group.front_cameras
+
+#-------------------------------------------
+front_cameras:
+  name: Front
+  entities:
+    - camera.garage_right
