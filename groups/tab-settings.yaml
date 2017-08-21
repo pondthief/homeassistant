@@ -18,7 +18,7 @@ house_mode:
 
 #-------------------------------------------
 rf_heartbeats:
-  name: RF Device Heartbeats
+  name: RF Device Last Seen
   entities:
     - sensor.back_door_heartbeat
     - sensor.back_window_one_heartbeat
