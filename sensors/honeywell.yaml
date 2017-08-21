@@ -103,7 +103,7 @@
   platform: mqtt
   state_topic: "homeassistant/sensor/honeywell"
   expire_after: 10800
-  value_template: '{% if value_json.id is equalto 491009 %} {{value_json.time}} {% else %} {{states.sensor.back_door_heartbeat.state}} {% endif %}'
+  value_template: '{% if value_json.id is equalto 491009 %} {{value_json.time}} {% else %} {{as_timestamp(states.sensor.back_door_heartbeat.state) | timestamp_custom("%Y%m%d-%H%M%S")}} {% endif %}'
 
 #-------------------------------------------
 - name: "Garage Door Heartbeat"
