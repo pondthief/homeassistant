@@ -13,7 +13,7 @@ night_mode:
     - service: light.turn_off
       data:
         entity_id: 
-          - light.island_level
+          - light.dining_table_level
           - light.kitchen_cans_level
           - light.living_room_cans_level
           - light.master_cans_level
@@ -21,6 +21,7 @@ night_mode:
     - service: switch.turn_off
       data:
         entity_id:
+          - switch.island_switch
           - switch.kitchen_table_switch
           - switch.kitchen_cabinet_switch
           - switch.guest_overhead_switch

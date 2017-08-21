@@ -8,11 +8,6 @@ evening_mode:
     - service: light.turn_on
       data:
         entity_id: 
-          - light.island_level
-        brightness: 100
-    - service: light.turn_on
-      data:
-        entity_id: 
           - light.study_cans_level
         brightness: 50
     - service: switch.turn_on
@@ -23,20 +18,21 @@ evening_mode:
           - switch.chris_bedside_switch
           - switch.megan_bedside_switch
           - switch.master_fan_switch
+          - switch.island_switch
     - service: switch.turn_off
       data:
         entity_id:
           - switch.guest_overhead_switch
           - switch.entry_overhead_switch
           - switch.study_overhead_switch
-          - switch.hallway_switch
-          - switch.kitchen_table_switch
     - service: light.turn_off
       data:
         entity_id: 
+          - light.dining_table_level
           - light.kitchen_cans_level
           - light.living_room_cans_level
           - light.master_cans_level
+          - light.hallway_level
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
