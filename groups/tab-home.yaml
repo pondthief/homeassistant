@@ -10,3 +10,14 @@ default_view:
     - group.garage
     - group.travel
     - group.nest_sensors
+    - group.almanac
+  
+almanac:
+  name: Almanac
+  entities:
+  - sun.sun
+  - sensor.nextsunrise
+  - sensor.nextsunset
+  - sensor.moon
+  - sensor.dayofyear
+  - sensor.weekofyear

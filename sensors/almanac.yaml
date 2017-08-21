@@ -1,0 +1,17 @@
+- platform: template
+  sensors:
+    nextsunrise:
+      friendly_name: 'Next Sunrise'
+      value_template: "{{ as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom('%D %-I:%M %P') }}"
+
+    nextsunset:
+      friendly_name: 'Next Sunset'
+      value_template: "{{ as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom('%D %-I:%M %P') }}"
+  
+    dayofyear:
+      friendly_name: 'Day Number'
+      value_template: "{{ now().strftime('%j') }}"
+
+    weekofyear:
+      friendly_name: 'Week Number'
+      value_template: "{{ now().strftime('%U') }}"
