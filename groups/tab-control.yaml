@@ -36,7 +36,7 @@ guest_room:
 child_room:
   name: Child Room
   entities:
-    - switch.child_overhead_switch
+    - light.child_overhead_level
 
 #-------------------------------------------
 guest_bath:
@@ -54,7 +54,7 @@ main:
     - switch.living_room_overhead_switch
     - light.living_room_cans_level  
     - switch.entry_overhead_switch
-    - switch.hallway_switch
+    - light.hallway_level
 
 #-------------------------------------------
 master_bath:
@@ -87,8 +87,8 @@ kitchen:
     - light.kitchen_sink_level
     - switch.kitchen_cabinet_switch
     - light.kitchen_cans_level
-    - light.island_level
-    - switch.kitchen_table_switch
+    - switch.island_switch
+    - light.dining_table_level
 
 #-------------------------------------------
 garage:
