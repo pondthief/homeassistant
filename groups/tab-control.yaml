@@ -96,3 +96,8 @@ garage:
   entities:
     - cover.chris_overhead_garage_door
     - sensor.chris_car_present
+
+laundry_room:
+  name: Laundry Room
+  entities:
+    - switch.laundry_overhead_switch
