@@ -1,0 +1,10 @@
+amcrest:
+  - host: 192.168.128.231
+    name: Garage Right
+    username: !secret amcrest_user
+    password: !secret amcrest_pass
+    sensors:
+      - motion_detector
+      - sdcard
+camera:
+  - platform: amcrest
