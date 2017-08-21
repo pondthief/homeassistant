@@ -1,7 +1,7 @@
 #-------------------------------------------
 #  Cameras Tab
 #-------------------------------------------
-settings:
+cameras:
   name: Cameras
   view: yes
   icon: mdi:video
