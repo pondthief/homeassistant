@@ -15,3 +15,5 @@ devices:
     - binary_sensor.garage_right_camera
     - binary_sensor.chris_open_garage
     - binary_sensor.rachio_panel
+    - binary_sensor.craft_room_probe
+    - binary_sensor.laundry_room_probe
