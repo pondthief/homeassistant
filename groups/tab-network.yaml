@@ -7,3 +7,11 @@ network_status:
   icon: mdi:network
   entities:
     - group.ups
+    - group.devices
+
+devices:
+  name: Devices
+  entities:
+    - binary_sensor.garage_right_camera
+    - binary_sensor.chris_open_garage
+    - binary_sensor.rachio_panel

@@ -1,0 +1,13 @@
+- platform: ping
+  host: 192.168.128.236
+  name: Garage Right Camera
+
+- platform: ping
+  host: 192.168.128.227
+  name: Chris Open Garage
+
+- platform: ping
+  host: 192.168.128.222
+  name: Rachio Panel
+
+
