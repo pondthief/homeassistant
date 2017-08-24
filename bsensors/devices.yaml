@@ -17,5 +17,3 @@
 - platform: ping
   host: 192.168.128.234
   name: Laundry Room Probe
-
-
