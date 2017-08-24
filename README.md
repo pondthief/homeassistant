@@ -37,6 +37,44 @@ blacklist rtl2832
 blacklist rtl2830
 ```
 
+- The Zwave devices MUST be "linked" in this order otherwise configs will be borked
+
+| Name                  | Type      | Notes |
+| --------------------- | --------- | ----- |
+| Study Overhead        | switch    |       |
+| Entry                 | switch    |       |
+| Front Unknown         | switch    |       | 
+| Front Yard            | switch    |       | 
+| Craft Overhead        | switch    |       | 
+| Kitchen Island        | switch    |       | 
+| Under Cabinets        | switch    |       | 
+| Back Yard             | switch    |       | 
+| Living Unknown        | switch    |       | 
+| Living Overhead       | switch    |       | 
+| Guest Overhead        | switch    |       | 
+| Guest Bath            | switch    |       | 
+| Guest Bath Mirror     | switch    |       | 
+| Guest Bath Shower     | switch    |       | 
+| Master Bed Fan        | switch    |       | 
+| Master Fan Light      | switch    |       | 
+| Megan Bedside         | switch    |       | 
+| Chris Bedside         | switch    |       | 
+| Master Bath Mirror    | switch    |       | 
+| Master Bath Shower    | switch    |       | 
+| Master Bath Fan       | switch    |       | 
+| Study Cans            | light     |       |
+| Kitchen Table         | light     |       |
+| Kitchen Cans          | light     |       |
+| Main Overhead         | light     |       |
+| Main Cans             | light     |       |
+| Hallway Cans          | light     |       |
+| Clara's Overhead      | light     |       |
+| Master Cans           | light     |       |
+| Kitchen Sink          | light     |       |
+
+
+
+
 ### Rancher
 - If you happen to run this in Rancher, use the docker-compose.yml and the rancher-compose.yml files
 - It uses the following images:
