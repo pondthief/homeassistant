@@ -5,16 +5,18 @@
 My Home Assistant Config.  More comming in the README later.
 
 ### Hardware
-- 25x GE Z-Wave Wireless Switches [(Amazon)](https://www.amazon.com/gp/product/B0035YRCR2/)
-- 6x GE Z-wave Wireless Dimmers [(Amazon)](https://www.amazon.com/gp/product/B006LQFHN2/)
-- 3x Kwikset 910 Z-Wave Signature Series [(Amazon)](https://www.amazon.com/Kwikset-910-Signature-Traditional-Electronic/dp/B013PQ1EUK/)
-- 2x GoControl/Linear GD00Z-4 Z-Wave Garage Door Opener [(Amazon)](https://www.amazon.com/GoControl-Linear-GD00Z-4-Z-Wave-Controller/dp/B00M75TEIU/)
-- Aeotec Z-Stick Gen5, Z-Wave Plus USB to create gateway [(Amazon)](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/)
-- NooElec NESDR Nano 2+ Tiny Black RTL-SDR USB [(Amazon)](https://www.amazon.com/gp/product/B01B4L48QU/)
-- 12x Honeywell 5800MINI Wireless Door/Window Contact [(Amazon)](https://www.amazon.com/gp/product/B01LYOAECP/)
-- Intel BOXNUC7I5BNH NUC [(Amazon)](https://www.amazon.com/gp/product/B01N2UMKZ5/)
-- Nest Thermostat (3rd Gen)
-
+| Qty   | Name                                                  | Link |
+| 21    | GE Z-Wave Wireless Switches                           | [(Amazon)](https://www.amazon.com/gp/product/B0035YRCR2/) |
+| 9     | GE Z-wave Wireless Dimmers                            | [(Amazon)](https://www.amazon.com/gp/product/B006LQFHN2/) |
+| 3     | Kwikset 910 Z-Wave Signature Series                   | [(Amazon)](https://www.amazon.com/Kwikset-910-Signature-Traditional-Electronic/dp/B013PQ1EUK/) |
+| 2     | Open Garage                                           | [OpenGarage](https://opengarage.io) |
+| 1     | Aeotec Z-Stick Gen5, Z-Wave Plus USB                  | [(Amazon)](https://www.amazon.com/Aeotec-Z-Stick-Z-Wave-create-gateway/dp/B00X0AWA6E/) |
+| 1     | NooElec NESDR Nano 2+ Tiny Black RTL-SDR USB          | [(Amazon)](https://www.amazon.com/gp/product/B01B4L48QU/) |
+| 12    | Honeywell 5800MINI Wireless Door/Window Contact       | [(Amazon)](https://www.amazon.com/gp/product/B01LYOAECP/) |
+| 1     | Intel BOXNUC7I5BNH NUC                                | [(Amazon)](https://www.amazon.com/gp/product/B01N2UMKZ5/) |
+| 3     | Honeywell Ademco 5818MNL Recessed Door Transmitter    | [(Amazon)](https://www.amazon.com/gp/product/B001649CBC/) |
+| 1     | Nest Thermostat (3rd Generataion)                     | [(Nest)](https://nest.com) |
+| 2     | Amcrest ProHD Outdoor IP Security Camera IP3M-956E    | [(Amazon)](https://www.amazon.com/gp/product/B01E7QMFIM/) |
 
 ### Misc Notes
 - Setup /etc/udev/rules.d/99-usb-serial.rules
@@ -75,14 +77,8 @@ blacklist rtl2830
 | Front Door Lock       | lock      |       |
 | Back Door Lock        | lock      |       |
 
-
-
 ### Rancher
-- If you happen to run this in Rancher, use the docker-compose.yml and the rancher-compose.yml files
-- It uses the following images:
+- If you happen to run this in Rancher, you can add the following catalog which has everything.
 ```
-roflmao/rtl2mqtt
-mariadb
-cyrilix/rabbitmq-mqtt
-home-assistant/home-assistant
+https://github.com/chriskacerguis/rancher-catalog
 ```
