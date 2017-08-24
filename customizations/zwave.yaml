@@ -92,3 +92,12 @@ switch.ge_14291_inwall_smart_switch_switch_20:
 switch.ge_14291_inwall_smart_switch_switch_21:
   friendly_name: Master Bath Fan
   icon: mdi:fan
+
+lock.kwikset_touchpad_electronic_deadbolt_locked:
+  friendly_name: Garage Door
+
+lock.kwikset_touchpad_electronic_deadbolt_locked_2:
+  friendly_name: Front Door
+
+lock.kwikset_touchpad_electronic_deadbolt_locked_3:
+  friendly_name: Back Door
