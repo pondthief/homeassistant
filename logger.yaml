@@ -1,16 +1,16 @@
-default: error
-logs:
-  homeassistant.core: error
-  homeassistant.components.automation: warn
-  homeassistant.components.climate.nest: warn
-  homeassistant.components.device_tracker: warn
-  homeassistant.components.discovery: warn
-  homeassistant.components.http: warn
-  homeassistant.components.media_player: warn
-  homeassistant.components.recorder: error
-  homeassistant.components.sensor.darksky: warn
-  homeassistant.components.zwave: error
-  homeassistant.helpers.script: warn
-  homeassistant.exceptions: info
-  py.warnings: error
-  root: warn
+default: debug
+#logs:
+#  homeassistant.core: error
+#  homeassistant.components.automation: warn
+#  homeassistant.components.climate.nest: warn
+#  homeassistant.components.device_tracker: warn
+#  homeassistant.components.discovery: warn
+#  homeassistant.components.http: warn
+#  homeassistant.components.media_player: warn
+#  homeassistant.components.recorder: error
+#  homeassistant.components.sensor.darksky: warn
+#  homeassistant.components.zwave: error
+#  homeassistant.helpers.script: warn
+#  homeassistant.exceptions: info
+#  py.warnings: error
+#  root: warn
