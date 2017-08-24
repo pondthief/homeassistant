@@ -22,6 +22,9 @@ light.ge_12724_3way_dimmer_switch_level_7:
 light.ge_12724_3way_dimmer_switch_level_8:
   friendly_name: Master Cans
 
+light.ge_12724_3way_dimmer_switch_level_9:
+  friendly_name: Kitchen Sink
+
 switch.ge_14291_inwall_smart_switch_switch:
   friendly_name: Study Overhead
 

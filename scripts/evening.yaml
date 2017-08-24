@@ -8,31 +8,32 @@ evening_mode:
     - service: light.turn_on
       data:
         entity_id: 
-          - light.study_cans_level
+          - light.ge_12724_3way_dimmer_switch_level   # Study Cans
         brightness: 50
     - service: switch.turn_on
       data:
         entity_id:
-          - switch.outside_deck_switch
-          - switch.frontyard_switch
-          - switch.chris_bedside_switch
-          - switch.megan_bedside_switch
-          - switch.master_fan_switch
-          - switch.island_switch
+          - switch.ge_14291_inwall_smart_switch_switch_8  # Back Yard
+          - switch.ge_14291_inwall_smart_switch_switch_4  # Front Yard
+          - switch.ge_14291_inwall_smart_switch_switch_18 # Chris Bedside
+          - switch.ge_14291_inwall_smart_switch_switch_17 # Megan Bedside
+          - switch.ge_14291_inwall_smart_switch_switch_15 # Master Fan
+          - switch.ge_14291_inwall_smart_switch_switch_6  # Kitchen Island
     - service: switch.turn_off
       data:
         entity_id:
-          - switch.guest_overhead_switch
-          - switch.entry_overhead_switch
-          - switch.study_overhead_switch
+          - switch.ge_14291_inwall_smart_switch_switch_11   # Guest Overhead
+          - switch.ge_14291_inwall_smart_switch_switch_2    # Entry Overhead
+          - switch.ge_14291_inwall_smart_switch_switch      # Study Overhead
+          - switch.ge_14291_inwall_smart_switch_switch_5    # Craft Overhead
     - service: light.turn_off
       data:
         entity_id: 
-          - light.dining_table_level
-          - light.kitchen_cans_level
-          - light.living_room_cans_level
-          - light.master_cans_level
-          - light.hallway_level
+          - light.ge_12724_3way_dimmer_switch_level_2     # Kitchen Table
+          - light.ge_12724_3way_dimmer_switch_level_3     # Kitchen Cans
+          - light.ge_12724_3way_dimmer_switch_level_5     # Main Cans
+          - light.ge_12724_3way_dimmer_switch_level_8     # Master Cans
+          - light.ge_12724_3way_dimmer_switch_level_6     # Hallway Cans
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway

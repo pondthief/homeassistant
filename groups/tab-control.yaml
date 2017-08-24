@@ -11,6 +11,7 @@ control:
     - group.child_room
     - group.guest_bath
     - group.main
+    - group.craft_room
     - group.kitchen
     - group.master_bed
     - group.outside
@@ -23,72 +24,81 @@ control:
 study:
   name: Study
   entities:
-    - switch.study_overhead_switch
-    - light.study_cans_level
+    - switch.ge_14291_inwall_smart_switch_switch      # Study Overhead
+    - light.ge_12724_3way_dimmer_switch_level         # Study Cans
 
 #-------------------------------------------
 guest_room:
   name: Guest Room
   entities:
-    - switch.guest_overhead_switch
+    - switch.ge_14291_inwall_smart_switch_switch_11   # Guest Overhead
 
 #-------------------------------------------
 child_room:
-  name: Child Room
+  name: Clara's Room
   entities:
-    - light.child_overhead_level
+    - light.ge_12724_3way_dimmer_switch_level_7       # Clara Overhead
 
 #-------------------------------------------
 guest_bath:
   name: Guest Bathroom
   entities:
-    - switch.guest_bath_fan_switch
-    - switch.guest_bath_mirror_switch
-    - switch.guest_bath_shower_switch
+    - switch.ge_14291_inwall_smart_switch_switch_12   # Guest Bath Fan
+    - switch.ge_14291_inwall_smart_switch_switch_13   # Guest Bath Mirror
+    - switch.ge_14291_inwall_smart_switch_switch_14   # Guest Bath Shower
 
 #-------------------------------------------
 main:
   name: Main Area
   entities:
-    - switch.craft_overhead_switch
-    - switch.living_room_overhead_switch
-    - light.living_room_cans_level  
-    - switch.entry_overhead_switch
-    - light.hallway_level
+    - switch.ge_14291_inwall_smart_switch_switch_9    # Living Unknown
+    - switch.ge_14291_inwall_smart_switch_switch_2    # Entry Overhead
+    - light.ge_12724_3way_dimmer_switch_level_4       # Main Overhead
+    - light.ge_12724_3way_dimmer_switch_level_5       # Main Cans
+    - light.ge_12724_3way_dimmer_switch_level_6       # Hallway Cans
+    
+
+#-------------------------------------------
+craft_room:
+  name: Craft Room
+  entities:
+    - switch.ge_14291_inwall_smart_switch_switch_5    # Craft Overhead
+    - switch.ge_14291_inwall_smart_switch_switch_3    # Front Unknown
 
 #-------------------------------------------
 master_bath:
   name: Master Bathroom
   entities:
-    - switch.master_bath_mirror_switch
-    - switch.master_bath_fan_switch
-    - switch.master_bath_shower_switch
+    - switch.ge_14291_inwall_smart_switch_switch_19   # Master Bath Mirror
+    - switch.ge_14291_inwall_smart_switch_switch_20   # Master Bath Shower
+    - switch.ge_14291_inwall_smart_switch_switch_21   # Master Bath Fan
 
 #-------------------------------------------
 master_bed:
   name: Master Bedroom
   entities:
-    - switch.chris_bedside_switch
-    - switch.megan_bedside_switch
-    - switch.master_fan_switch
-    - light.master_cans_level
+    - switch.ge_14291_inwall_smart_switch_switch_17 # Megan Bedside
+    - switch.ge_14291_inwall_smart_switch_switch_18 # Chris Bedside
+    - switch.ge_14291_inwall_smart_switch_switch_15 # Master Fan
+    - switch.ge_14291_inwall_smart_switch_switch_16 # Master Fan Light
+    - light.ge_12724_3way_dimmer_switch_level_8     # Master Cans
 
 #-------------------------------------------
 outside:
   name: Outside
   entities:
-    - switch.outside_deck_switch
-    - switch.frontyard_switch
+    - switch.ge_14291_inwall_smart_switch_switch_8  # Back Yard
+    - switch.ge_14291_inwall_smart_switch_switch_4  # Front Yard
 
 #-------------------------------------------
 kitchen:
   name: Kitchen
   entities:
-    - light.kitchen_sink_level
-    - switch.kitchen_cabinet_switch
-    - light.kitchen_cans_level
-    - switch.island_switch
-    - light.dining_table_level
+    - light.ge_12724_3way_dimmer_switch_level_2     # Kitchen Table
+    - light.ge_12724_3way_dimmer_switch_level_3     # Kitchen Cans
+    - switch.ge_14291_inwall_smart_switch_switch_7  # Kitchen Cabinet
+    - switch.ge_14291_inwall_smart_switch_switch_6  # Kitchen Island
+    - switch.ge_14291_inwall_smart_switch_switch_9  # Kitchen Sink
 
 #-------------------------------------------
 garage:
@@ -97,7 +107,8 @@ garage:
     - cover.chris_overhead_garage_door
     - sensor.chris_car_present
 
+#-------------------------------------------
 laundry_room:
   name: Laundry Room
   entities:
-    - switch.laundry_overhead_switch
+    - switch.ge_14291_inwall_smart_switch_switch_10 # Laundry Overhead

@@ -8,12 +8,12 @@ morning_mode:
     - service: light.turn_off
       data:
         entity_id: 
-          - light.kitchen_sink_level
+          - light.ge_12724_3way_dimmer_switch_level_9     # Kitchen Sink
     - service: switch.turn_off
       data:
         entity_id:
-          - switch.outside_deck_switch
-          - switch.frontyard_switch
+          - switch.ge_14291_inwall_smart_switch_switch_8  # Back Yard
+          - switch.ge_14291_inwall_smart_switch_switch_4  # Front Yard
     - service: notify.primary_contact
       data:
         message: "Home to set MORNING mode."
