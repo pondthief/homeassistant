@@ -1,91 +1,91 @@
-light.level:
+light.ge_12724_3way_dimmer_switch_level:
   friendly_name: Study Cans
 
-light.level_2:
+light.ge_12724_3way_dimmer_switch_level_2:
   friendly_name: Kitchen Table
 
-light.level_3:
+light.ge_12724_3way_dimmer_switch_level_3:
   friendly_name: Kitchen Cans
 
-light.level_4:
+light.ge_12724_3way_dimmer_switch_level_4:
   friendly_name: Main Overhead
 
-light.level_5:
+light.ge_12724_3way_dimmer_switch_level_5:
   friendly_name: Main Cans
 
-light.level_6:
+light.ge_12724_3way_dimmer_switch_level_6:
   friendly_name: Hallway Cans
 
-light.level_7:
+light.ge_12724_3way_dimmer_switch_level_7:
   friendly_name: Clara Overhead
 
-light.level_8:
+light.ge_12724_3way_dimmer_switch_level_8:
   friendly_name: Master Cans
 
-switch.switch:
+switch.ge_14291_inwall_smart_switch_switch:
   friendly_name: Study Overhead
 
-switch.switch_2:
+switch.ge_14291_inwall_smart_switch_switch_2:
   friendly_name: Entry Overhead
 
-switch.switch_3:
+switch.ge_14291_inwall_smart_switch_switch_3:
   friendly_name: Front Unknown
 
-switch.switch_4:
+switch.ge_14291_inwall_smart_switch_switch_4:
   friendly_name: Front Yard
 
-switch.switch_5:
+switch.ge_14291_inwall_smart_switch_switch_5:
   friendly_name: Craft Overhead
 
-switch.switch_6:
+switch.ge_14291_inwall_smart_switch_switch_6:
   friendly_name: Kitchen Island
 
-switch.switch_7:
+switch.ge_14291_inwall_smart_switch_switch_7:
   friendly_name: Kitchen Cabinet
 
-switch.switch_8:
+switch.ge_14291_inwall_smart_switch_switch_8:
   friendly_name: Back Yard
 
-switch.switch_9:
+switch.ge_14291_inwall_smart_switch_switch_9:
   friendly_name: Living Unknown
 
-switch.switch_10:
+switch.ge_14291_inwall_smart_switch_switch_10:
   friendly_name: Laundry Overhead
 
-switch.switch_11:
+switch.ge_14291_inwall_smart_switch_switch_11:
   friendly_name: Guest Overhead
 
-switch.switch_12:
+switch.ge_14291_inwall_smart_switch_switch_12:
   friendly_name: Guest Bath Fan
   icon: mdi:fan
 
-switch.switch_13:
+switch.ge_14291_inwall_smart_switch_switch_13:
   friendly_name: Guest Bath Mirror
 
-switch.switch_14:
+switch.ge_14291_inwall_smart_switch_switch_14:
   friendly_name: Guest Bath Shower
 
-switch.switch_15:
+switch.ge_14291_inwall_smart_switch_switch_15:
   friendly_name: Master Fan
   icon: mdi:fan
 
-switch.switch_16:
+switch.ge_14291_inwall_smart_switch_switch_16:
   friendly_name: Master Fan Light
 
-switch.switch_17:
+switch.ge_14291_inwall_smart_switch_switch_17:
   friendly_name: Megan Bedside
   icon: mdi:lamp
 
-switch.switch_18:
+switch.ge_14291_inwall_smart_switch_switch_18:
   friendly_name: Chris Bedside
   icon: mdi:lamp
 
-switch.switch_19:
+switch.ge_14291_inwall_smart_switch_switch_19:
   friendly_name: Master Bath Mirror
 
-switch.switch_20:
+switch.ge_14291_inwall_smart_switch_switch_20:
   friendly_name: Master Bath Shower
 
-switch.switch_21:
+switch.ge_14291_inwall_smart_switch_switch_21:
   friendly_name: Master Bath Fan
   icon: mdi:fan
