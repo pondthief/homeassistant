@@ -71,7 +71,9 @@ blacklist rtl2830
 | Clara's Overhead      | light     |       |
 | Master Cans           | light     |       |
 | Kitchen Sink          | light     |       |
-
+| Garage Door Lock      | lock      |       |
+| Front Door Lock       | lock      |       |
+| Back Door Lock        | lock      |       |
 
 
 
