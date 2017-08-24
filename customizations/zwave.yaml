@@ -1,0 +1,91 @@
+light.level:
+  friendly_name: Study Cans
+
+light.level_2:
+  friendly_name: Kitchen Table
+
+light.level_3:
+  friendly_name: Kitchen Cans
+
+light.level_4:
+  friendly_name: Main Overhead
+
+light.level_5:
+  friendly_name: Main Cans
+
+light.level_6:
+  friendly_name: Hallway Cans
+
+light.level_7:
+  friendly_name: Clara Overhead
+
+light.level_8:
+  friendly_name: Master Cans
+
+switch.switch:
+  friendly_name: Study Overhead
+
+switch.switch_2:
+  friendly_name: Entry Overhead
+
+switch.switch_3:
+  friendly_name: Front Unknown
+
+switch.switch_4:
+  friendly_name: Front Yard
+
+switch.switch_5:
+  friendly_name: Craft Overhead
+
+switch.switch_6:
+  friendly_name: Kitchen Island
+
+switch.switch_7:
+  friendly_name: Kitchen Cabinet
+
+switch.switch_8:
+  friendly_name: Back Yard
+
+switch.switch_9:
+  friendly_name: Living Unknown
+
+switch.switch_10:
+  friendly_name: Laundry Overhead
+
+switch.switch_11:
+  friendly_name: Guest Overhead
+
+switch.switch_12:
+  friendly_name: Guest Bath Fan
+  icon: mdi:fan
+
+switch.switch_13:
+  friendly_name: Guest Bath Mirror
+
+switch.switch_14:
+  friendly_name: Guest Bath Shower
+
+switch.switch_15:
+  friendly_name: Master Fan
+  icon: mdi:fan
+
+switch.switch_16:
+  friendly_name: Master Fan Light
+
+switch.switch_17:
+  friendly_name: Megan Bedside
+  icon: mdi:lamp
+
+switch.switch_18:
+  friendly_name: Chris Bedside
+  icon: mdi:lamp
+
+switch.switch_19:
+  friendly_name: Master Bath Mirror
+
+switch.switch_20:
+  friendly_name: Master Bath Shower
+
+switch.switch_21:
+  friendly_name: Master Bath Fan
+  icon: mdi:fan
