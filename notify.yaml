@@ -11,7 +11,7 @@
 #-------------------------------------------
 #  iOS Push
 #-------------------------------------------
-- name: ios_users
+- name: ios
   platform: group
   services:
     - service: ios_chris_iphone
