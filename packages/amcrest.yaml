@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Amcrest Cameras
+#-------------------------------------------
 amcrest:
   - host: 192.168.128.236
     name: Garage Right
@@ -7,8 +10,10 @@ amcrest:
     sensors:
       - motion_detector
 
+#-------------------------------------------
 camera:
   - platform: amcrest
 
+#-------------------------------------------
 sensor:
   - platform: amcrest
