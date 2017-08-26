@@ -11,3 +11,4 @@ exclude:
     - sensor.cpu_use
     - sensor.average_load_1m
     - sensor.pin_code
+    - sensor.pws_alerts
