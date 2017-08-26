@@ -6,6 +6,7 @@ My Home Assistant Config.  More comming in the README later.
 
 ### Hardware
 | Qty   | Name                                                  | Link |
+| ----- | ----------------------------------------------------- | ----- |
 | 21    | GE Z-Wave Wireless Switches                           | [(Amazon)](https://www.amazon.com/gp/product/B0035YRCR2/) |
 | 9     | GE Z-wave Wireless Dimmers                            | [(Amazon)](https://www.amazon.com/gp/product/B006LQFHN2/) |
 | 3     | Kwikset 910 Z-Wave Signature Series                   | [(Amazon)](https://www.amazon.com/Kwikset-910-Signature-Traditional-Electronic/dp/B013PQ1EUK/) |
