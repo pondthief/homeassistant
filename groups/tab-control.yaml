@@ -19,6 +19,7 @@ control:
     - group.all_locks
     - group.nest_control
     - group.garage
+    - group.laundry_room
 
 #-------------------------------------------
 study:
