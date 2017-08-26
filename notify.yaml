@@ -36,3 +36,4 @@
   password: !secret smtp_server
   sender: !secret smtp_from
   recipient: !secret smtp_to
+  encryption: tls
