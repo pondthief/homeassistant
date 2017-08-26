@@ -1,2 +1,2 @@
-graphite:
-  host: !secret graphite_host
+#graphite:
+#  host: !secret graphite_host
