@@ -21,6 +21,12 @@ homeassistant:
 #-------------------------------------------
 recorder:
   db_url: !secret mysql_log_conn
+  purge_days: 30
+  exclude:
+    domains:
+      - zwave
+    entities:
+      - sensor.pws_alerts
 
 #-------------------------------------------
 # Logger Settings
