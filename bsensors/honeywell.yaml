@@ -1,5 +1,5 @@
 #-------------------------------------------
-#  Binary Sensors
+#  Honetwell Door / Window Sensors
 #-------------------------------------------
 - name: "Study Window"
   platform: mqtt

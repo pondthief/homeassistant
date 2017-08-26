@@ -37,3 +37,65 @@
     service: notify.primary_contact
     data_template:
       message: "{{ trigger.to_state.attributes.friendly_name }} has been OPENED"
+
+- id: setmorningmode
+  alias: 'Morning Mode'
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: '+00:00:00'
+  action:
+    - service: script.morning_mode
+
+- id: setdaymode
+  alias: 'Day Mode'
+  trigger:
+    platform: time
+    at: '08:00:00'
+  action:
+    - service: script.day_mode
+
+- id: seteveningmode
+  alias: 'Evening Mode'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '+00:00:00'
+  action:
+    - service: script.evening_mode
+
+- id: setnightmode
+  alias: 'Night Mode'
+  trigger:
+    platform: time
+    at: '21:00:00'
+  action:
+    - service: script.night_mode
+
+- id: setawaymode
+  alias: 'Away Mode'
+  trigger:
+    platform: state
+    entity_id: group.family
+    to: 'not_home'
+    for:
+      minutes: 10
+  condition:
+    - condition: state
+      entity_id: group.family
+      state: 'not_home'
+    - condition: state
+      entity_id: input_select.house_mode
+      state: 'guest'
+  action:
+    - service: script.night_mode
+
+- id: updatenotice
+  alias: 'Update Available Notifications'
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.primary_contact
+    data:
+      message: 'Update for Home Assistant is available.'

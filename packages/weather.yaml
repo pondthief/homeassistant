@@ -45,15 +45,3 @@ binary_sensor:
           {%- else -%}
           True
           {%- endif -%}
-
-#-------------------------------------------
-#alert:
-#  severe_weather:
-#    name: There is a severe weather alert
-#    done_message: No active severe weather alerts
-#    entity_id: binary_sensor.severe_weather
-#    repeat: 15
-#    notifiers:
-#      - primary_contact
-
-# change ui color
