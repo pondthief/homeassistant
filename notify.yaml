@@ -5,7 +5,6 @@
   platform: group
   services:
     - service: slack
-    #- service: ios_users
 
 
 #-------------------------------------------
@@ -24,16 +23,3 @@
   platform: slack
   api_key: !secret slack_api_key 
   default_channel: '#home'
-
-#-------------------------------------------
-# SMTP
-#-------------------------------------------
-- name: email
-  platform: smtp
-  server: !secret smtp_server
-  port: !secret smtp_port
-  username: !secret smtp_server
-  password: !secret smtp_server
-  sender: !secret smtp_from
-  recipient: !secret smtp_to
-  encryption: tls
