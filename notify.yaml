@@ -34,5 +34,5 @@
   port: !secret smtp_port
   username: !secret smtp_server
   password: !secret smtp_server
-  sender: !secret smtp_server
+  sender: !secret smtp_from
   recipient: !secret smtp_to
