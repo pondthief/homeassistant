@@ -28,7 +28,7 @@
       friendly_name: 'Infinity in Garage'
       value_template: '{% if states.cover.megan_overhead_garage_door %}
           {% if states.cover.megan_overhead_garage_door.state == "open" %}
-            Unknown
+            Door Open / Unknown
           {% elif ((states.cover.megan_overhead_garage_door.attributes["distance_sensor"] > 100) and (states.cover.megan_overhead_garage_door.attributes["distance_sensor"] < 120)) %}
             Yes
           {% else %}
