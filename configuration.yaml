@@ -78,6 +78,30 @@ updater:
 # discovery:
 
 #-------------------------------------------
+# Enable cameras
+#-------------------------------------------
+camera:
+  - platform: amcrest
+
+#-------------------------------------------
+# Enable covers
+#-------------------------------------------
+cover: !include covers.yaml
+
+#-------------------------------------------
+# Nest Settings
+#-------------------------------------------
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+#-------------------------------------------
+# APCUPSd Settings
+#-------------------------------------------
+apcupsd:
+  host: !secret apcupsd_host
+
+#-------------------------------------------
 # MQTT Settings
 #-------------------------------------------
 mqtt:
@@ -162,3 +186,8 @@ script: !include scripts.yaml
 # Include alerts
 #-------------------------------------------
 alert: !include alerts.yaml
+
+#-------------------------------------------
+# Include aleamcrestrts
+#-------------------------------------------
+amcrest: amcrest.yaml

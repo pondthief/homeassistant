@@ -1,0 +1,7 @@
+travel_times:
+  name: Travel Times
+  entities:
+    - sensor.south_from_home_via_i35
+    - sensor.south_from_home_via_mopac
+    - sensor.north_from_home
+    - sensor.airport_from_home

@@ -17,7 +17,9 @@ sensors:
     - group.door_sensors
     - group.laundry_room_sensors
     - group.craft_room_sensors
+    - group.apcupsd
 #    - group.outside_sensors
+
 
 #-------------------------------------------
 study_sensors:

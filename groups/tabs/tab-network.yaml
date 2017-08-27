@@ -6,7 +6,6 @@ network_status:
   view: yes
   icon: mdi:network
   entities:
-    - group.ups
     - group.devices
 
 devices:
