@@ -3,16 +3,16 @@
 #-------------------------------------------
 - platform: template
   sensors:
-    chris_overhead_garage_door:
-      friendly_name: 'Chris Overhead Garage Status'
-      value_template: '{% if states.cover.chris_overhead_garage_door %}
-          {% if states.cover.chris_overhead_garage_door.attributes["door_state"] == "open" %}
+    megan_overhead_garage_door:
+      friendly_name: 'Megan Overhead Garage Status'
+      value_template: '{% if states.cover.megan_overhead_garage_door %}
+          {% if states.cover.megan_overhead_garage_door.attributes["door_state"] == "open" %}
             Open
-          {% elif states.cover.chris_overhead_garage_door.attributes["door_state"] == "closed" %}
+          {% elif states.cover.megan_overhead_garage_door.attributes["door_state"] == "closed" %}
             Closed
-          {% elif states.cover.chris_overhead_garage_door.attributes["door_state"] == "opening" %}
+          {% elif states.cover.megan_overhead_garage_door.attributes["door_state"] == "opening" %}
             Opening
-          {% elif states.cover.chris_overhead_garage_door.attributes["door_state"] == "closing" %}
+          {% elif states.cover.megan_overhead_garage_door.attributes["door_state"] == "closing" %}
             Closing
           {% else %}
             Unknown
@@ -24,12 +24,12 @@
 #-------------------------------------------
 - platform: template
   sensors:
-    chris_car_present:
-      friendly_name: 'Nissan in Garage'
-      value_template: '{% if states.cover.chris_overhead_garage_door %}
-          {% if states.cover.chris_overhead_garage_door.state == "open" %}
+    megan_car_present:
+      friendly_name: 'Infinity in Garage'
+      value_template: '{% if states.cover.megan_overhead_garage_door %}
+          {% if states.cover.megan_overhead_garage_door.state == "open" %}
             Unknown
-          {% elif ((states.cover.chris_overhead_garage_door.attributes["distance_sensor"] > 40) and (states.cover.chris_overhead_garage_door.attributes["distance_sensor"] < 100)) %}
+          {% elif ((states.cover.megan_overhead_garage_door.attributes["distance_sensor"] > 100) and (states.cover.megan_overhead_garage_door.attributes["distance_sensor"] < 120)) %}
             Yes
           {% else %}
             No

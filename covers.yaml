@@ -3,4 +3,4 @@
     garage:
       host: 192.168.128.227
       device_key: !secret garage_door_key
-      name:  Chris Overhead Garage Door
+      name:  Megan Overhead Garage Door

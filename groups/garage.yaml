@@ -1,5 +1,5 @@
 garage:
   name: Garage Door Status
   entities:
-    - cover.chris_overhead_garage_door
-    - sensor.chris_car_present
+    - cover.megan_overhead_garage_door
+    - sensor.megan_car_present
