@@ -8,6 +8,6 @@
     - type: network_in
       arg: eno1
     - type: network_out
-       arg: eno1
+      arg: eno1
     - type: since_last_boot
     - type: processor_use
