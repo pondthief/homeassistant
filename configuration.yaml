@@ -11,11 +11,6 @@ homeassistant:
   #-------------------------------------------
   customize: !include_dir_merge_named customizations
 
-  #-------------------------------------------
-  # Include packages
-  #-------------------------------------------
-  packages: !include_dir_named packages
-
 #-------------------------------------------
 # Recorder Settings
 #-------------------------------------------
@@ -190,4 +185,4 @@ alert: !include alerts.yaml
 #-------------------------------------------
 # Include aleamcrestrts
 #-------------------------------------------
-amcrest: amcrest.yaml
+amcrest: !include amcrest.yaml
