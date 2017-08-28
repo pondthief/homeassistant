@@ -7,9 +7,3 @@ cameras:
   icon: mdi:video
   entities:
     - group.front_cameras
-
-#-------------------------------------------
-front_cameras:
-  name: Front
-  entities:
-    - camera.garage_right

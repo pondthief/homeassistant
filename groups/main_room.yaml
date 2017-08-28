@@ -1,0 +1,12 @@
+main_room:
+  name: Main Area
+  entities:
+    - switch.ge_14291_inwall_smart_switch_switch_9    # Living Unknown
+    - switch.ge_14291_inwall_smart_switch_switch_2    # Entry Overhead
+    - light.ge_12724_3way_dimmer_switch_level_4       # Main Overhead
+    - light.ge_12724_3way_dimmer_switch_level_5       # Main Cans
+    - light.ge_12724_3way_dimmer_switch_level_6       # Hallway Cans
+    - binary_sensor.front_right_window
+    - binary_sensor.front_window_one
+    - binary_sensor.front_window_two
+    - binary_sensor.front_door

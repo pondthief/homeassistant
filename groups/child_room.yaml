@@ -1,0 +1,5 @@
+child_room:
+  name: Clara's Room
+  entities:
+    - light.ge_12724_3way_dimmer_switch_level_7       # Clara Overhead
+    - binary_sensor.child_window

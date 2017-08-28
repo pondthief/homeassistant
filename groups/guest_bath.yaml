@@ -1,0 +1,6 @@
+guest_bath:
+  name: Guest Bathroom
+  entities:
+    - switch.ge_14291_inwall_smart_switch_switch_12   # Guest Bath Fan
+    - switch.ge_14291_inwall_smart_switch_switch_13   # Guest Bath Mirror
+    - switch.ge_14291_inwall_smart_switch_switch_14   # Guest Bath Shower

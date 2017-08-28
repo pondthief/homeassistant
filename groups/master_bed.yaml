@@ -1,0 +1,9 @@
+master_bed:
+  name: Master Bedroom
+  entities:
+    - switch.ge_14291_inwall_smart_switch_switch_17 # Megan Bedside
+    - switch.ge_14291_inwall_smart_switch_switch_18 # Chris Bedside
+    - switch.ge_14291_inwall_smart_switch_switch_15 # Master Fan
+    - switch.ge_14291_inwall_smart_switch_switch_16 # Master Fan Light
+    - light.ge_12724_3way_dimmer_switch_level_8     # Master Cans
+    - binary_sensor.master_bedroom_window

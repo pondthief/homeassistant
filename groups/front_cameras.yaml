@@ -1,0 +1,4 @@
+front_cameras:
+  name: Front
+  entities:
+    - camera.garage_right

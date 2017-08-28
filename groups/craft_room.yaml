@@ -1,0 +1,7 @@
+craft_room:
+  name: Craft Room
+  entities:
+    - switch.ge_14291_inwall_smart_switch_switch_5    # Craft Overhead
+    - switch.ge_14291_inwall_smart_switch_switch_3    # Front Unknown
+    - sensor.craft_room_temp
+    - sensor.craft_room_humidity
