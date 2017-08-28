@@ -133,9 +133,14 @@ tts:
   platform: google
 
 #-------------------------------------------
-# Include sensors
+# Include input dropdowns
 #-------------------------------------------
 input_select: !include input_select.yaml
+
+#-------------------------------------------
+# Include input boolenas
+#-------------------------------------------
+input_boolean: !include input_boolean.yaml
 
 #-------------------------------------------
 # Include sensors
