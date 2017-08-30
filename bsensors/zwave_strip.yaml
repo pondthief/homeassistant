@@ -6,7 +6,7 @@
         open 
       {%- else -%} 
         closed 
-      {%- endif -%}
+      {%- endif %}
       friendly_name: 'Study Door'
       device_class: opening
 
