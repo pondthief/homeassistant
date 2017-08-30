@@ -1,0 +1,8 @@
+- platform: template
+  sensors:
+    study_door:
+      value_template: '{{ sensor.sensative_strips_access_control == 22}}'
+      friendly_name: 'Study Door'
+      device_class: opening
+
+# Note: 23 = door closed, 22 = door open
