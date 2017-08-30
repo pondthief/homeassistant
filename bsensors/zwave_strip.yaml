@@ -1,7 +1,12 @@
 - platform: template
   sensors:
     study_door:
-      value_template: '{% if states.sensor.sensative_strips_access_control.state == '22' %} open {% else %} closed {% endif %}'
+      value_template: >
+      {% if states.sensor.sensative_strips_access_control.state == '22' %} 
+        open 
+      {% else %} 
+        closed 
+      {% endif %}
       friendly_name: 'Study Door'
       device_class: opening
 
