@@ -1,5 +1,5 @@
 #-------------------------------------------
 #  Workday Sensor
 #-------------------------------------------
-  - platform: workday
-    country: US
+- platform: workday
+  country: US
