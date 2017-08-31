@@ -16,10 +16,6 @@ day_mode:
       data:
         entity_id: input_select.house_mode
         option: Day
-    - service: climate.set_temperature
-      data:
-        entity_id: climate.hallway
-        temperature: '72'
     - service: light.turn_off
     - service: switch.turn_off
     - service: notify.primary_contact
@@ -89,6 +85,10 @@ morning_mode:
         entity_id:
           - switch.ge_14291_inwall_smart_switch_switch_8  # Back Yard
           - switch.ge_14291_inwall_smart_switch_switch_4  # Front Yard
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.hallway
+        temperature: '72'
     - service: notify.primary_contact
       data:
         message: "Home to set MORNING mode."

@@ -52,6 +52,10 @@
   trigger:
     platform: time
     at: '08:00:00'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.workday_sensor
+      state: 'on'
   action:
     - service: script.day_mode
 
