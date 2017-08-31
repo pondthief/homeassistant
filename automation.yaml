@@ -69,6 +69,10 @@
   trigger:
     platform: time
     at: '21:00:00'
+  condition:
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: 'off'
   action:
     - service: script.night_mode
 
@@ -85,8 +89,8 @@
       entity_id: group.family
       state: 'not_home'
     - condition: state
-      entity_id: input_select.house_mode
-      state: 'guest'
+      entity_id: input_boolean.guest_mode
+      state: 'off'
   action:
     - service: script.night_mode
 
