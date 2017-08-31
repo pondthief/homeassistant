@@ -59,6 +59,18 @@
   action:
     - service: script.day_mode
 
+- id: setweekendmode
+  alias: 'Weekend Mode'
+  trigger:
+    platform: time
+    at: '08:00:00'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.workday_sensor
+      state: 'off'
+  action:
+    - service: script.weekend_mode
+
 - id: seteveningmode
   alias: 'Evening Mode'
   trigger:
