@@ -83,3 +83,16 @@ blacklist rtl2830
 ```
 https://github.com/chriskacerguis/rancher-catalog
 ```
+
+### Credstash
+
+To use credstash, ssh into the container and run (first time only):
+
+```
+credstash -t homeassistant setup
+```
+
+Then to add things
+```
+credstash -t homeassistant put [key name] [key value]
+```

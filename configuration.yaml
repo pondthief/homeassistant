@@ -43,6 +43,13 @@ recorder:
 logger: !include logger.yaml
 
 #-------------------------------------------
+# Ring Doorbell Settings
+#-------------------------------------------
+ring:
+  username: !secret ring_username
+  password: !secret ring_password
+
+#-------------------------------------------
 # Frontend Settings
 #-------------------------------------------
 frontend:
