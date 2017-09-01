@@ -96,3 +96,9 @@ Then to add things
 ```
 credstash -t homeassistant put [key name] [key value]
 ```
+
+Make sure to set these ENV vars
+
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+AWS_DEFAULT_REGION=us-west-2
