@@ -1,0 +1,9 @@
+#-------------------------------------------
+#  Sensors Tab
+#-------------------------------------------
+sensors_tab:
+  name: Sensors
+  view: yes
+  icon: mdi:radar
+  entities:
+    - group.guest_room_sensors
