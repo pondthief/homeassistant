@@ -1,5 +1,13 @@
 guest_room:
   name: Guest Room
   entities:
-    - switch.ge_14291_inwall_smart_switch_switch_11   # Guest Overhead
+    - group.guest_room_sensors
+    - group.guest_room_control
+
+guest_room_sensors:
+  entities:
     - binary_sensor.guest_window
+
+guest_room_control:
+  entities:
+    - switch.ge_14291_inwall_smart_switch_switch_11   # Guest Overhead
