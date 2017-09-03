@@ -1,0 +1,7 @@
+links:
+  name: Links
+  entities:
+    - weblink.meraki_management
+    - weblink.papertrail
+    - weblink.pingdom
+    - weblink.rachio

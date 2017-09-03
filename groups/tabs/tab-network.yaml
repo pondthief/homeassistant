@@ -9,3 +9,4 @@ network_status:
     - group.devices
     - group.system
     - group.apcupsd
+    - group.links
