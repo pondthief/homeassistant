@@ -212,3 +212,8 @@ alert: !include alerts.yaml
 # Include aleamcrestrts
 #-------------------------------------------
 amcrest: !include amcrest.yaml
+
+#-------------------------------------------
+# Include weblinks
+#-------------------------------------------
+weblink: !include weblink.yaml

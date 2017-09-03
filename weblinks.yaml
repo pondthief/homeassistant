@@ -1,0 +1,12 @@
+entities:
+  - name: Meraki Management
+    url: https://account.meraki.com/secure/login/dashboard_login
+    icon: mdi:router-wireless
+  - name: Papertrail
+    url: https://papertrailapp.com
+  - name: Rachio
+    url: https://app.rach.io
+    icon: mdi:water-pump
+  - name: Pingdom
+    url: https://server.pingdom.com/cowdog_automation_llc/clients/10078281
+    icon: mdi:security-network
