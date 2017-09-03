@@ -16,7 +16,7 @@ control:
     - group.master_bed
     - group.outside
     - group.master_bath
-    - group.all_locks
+    - group.doors
     - group.nest_control
     - group.garage
     - group.laundry_room

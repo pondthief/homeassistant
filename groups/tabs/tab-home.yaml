@@ -12,6 +12,7 @@ default_view:
     - group.nest_sensors
     - group.almanac
     - group.house_mode
+    - group.doors_home_page
   
 almanac:
   name: Almanac
