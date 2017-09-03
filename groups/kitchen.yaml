@@ -6,6 +6,10 @@ kitchen:
     - switch.ge_14291_inwall_smart_switch_switch_7  # Kitchen Cabinet
     - switch.ge_14291_inwall_smart_switch_switch_6  # Kitchen Island
     - switch.ge_14291_inwall_smart_switch_switch_9  # Kitchen Sink
+
+kitchen_sensors:
+  name: Kitchen
+  entities:
     - binary_sensor.back_window_one
     - binary_sensor.back_window_two
     - binary_sensor.back_window_three

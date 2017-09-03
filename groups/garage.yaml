@@ -3,3 +3,9 @@ garage:
   entities:
     - cover.megan_overhead_garage_door
     - sensor.megan_car_present
+
+garage_sensors:
+  name: Garage Door Status
+  entities:
+    - cover.megan_overhead_garage_door
+    - sensor.megan_car_present

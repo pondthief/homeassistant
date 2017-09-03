@@ -7,3 +7,12 @@ sensors_tab:
   icon: mdi:radar
   entities:
     - group.guest_room_sensors
+    - group.child_room_sensors
+    - group.craft_room_sensors
+    - group.doors_sensors
+    - group.guest_room_sensors
+    - group.kitchen_sensors
+    - group.laundry_room_sensors
+    - group.master_bath_sensors
+    - group.master_bed_sensors
+    - group.outside_sensors

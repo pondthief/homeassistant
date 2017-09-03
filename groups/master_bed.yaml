@@ -6,4 +6,8 @@ master_bed:
     - switch.ge_14291_inwall_smart_switch_switch_15 # Master Fan
     - switch.ge_14291_inwall_smart_switch_switch_16 # Master Fan Light
     - light.ge_12724_3way_dimmer_switch_level_8     # Master Cans
+
+master_bed_sensors:
+  name: Master Bedroom
+  entities:
     - binary_sensor.master_bedroom_window

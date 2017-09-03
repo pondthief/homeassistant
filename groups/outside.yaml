@@ -3,3 +3,10 @@ outside:
   entities:
     - switch.ge_14291_inwall_smart_switch_switch_8  # Back Yard
     - switch.ge_14291_inwall_smart_switch_switch_4  # Front Yard
+
+outside_sensors:
+  name: Outside
+  entities:
+    - sensor.garage_left_motion_detected
+    - sensor.garage_right_motion_detected
+    - binary_sensor.ring_front_door_motion

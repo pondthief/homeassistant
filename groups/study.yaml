@@ -3,4 +3,8 @@ study:
   entities:
     - switch.ge_14291_inwall_smart_switch_switch      # Study Overhead
     - light.ge_12724_3way_dimmer_switch_level         # Study Cans
+
+study_sensors:
+  name: Study
+  entities:
     - binary_sensor.study_window

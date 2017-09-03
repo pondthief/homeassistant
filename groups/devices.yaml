@@ -6,3 +6,4 @@ devices:
     - binary_sensor.rachio_panel
     - binary_sensor.craft_room_probe
     - binary_sensor.laundry_room_probe
+    # need other camera

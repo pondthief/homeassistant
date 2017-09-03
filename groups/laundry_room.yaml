@@ -2,6 +2,10 @@ laundry_room:
   name: Laundry Room
   entities:
     - switch.ge_14291_inwall_smart_switch_switch_10 # Laundry Overhead
+
+laundry_room_sensors:
+  name: Laundry Room
+  entities:
     - binary_sensor.garage_door
     - sensor.laundry_room_temp
     - sensor.laundry_room_humidity
