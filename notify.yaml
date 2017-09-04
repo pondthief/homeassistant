@@ -29,7 +29,6 @@
 - name: smtp
   platform: smtp
   sender: !secret smtp_sender
-  encryption: tls
   sender_name: Home Assistant
   server: !secret smtp_server
   username: !secret smtp_username
