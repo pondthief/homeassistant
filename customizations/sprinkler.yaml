@@ -1,7 +1,7 @@
 switch.sprinkler_back_center_left:
   icon: mdi:water-pump
   
-witch.sprinkler_back_center_left_2:
+switch.sprinkler_back_center_left_2:
   icon: mdi:water-pump
 
 switch.sprinkler_back_left_side:
