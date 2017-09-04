@@ -108,7 +108,7 @@
       entity_id: input_boolean.guest_mode
       state: 'off'
   action:
-    - service: script.night_mode
+    - service: script.away_mode
 
 - id: updatenotice
   alias: 'Update Available Notifications'
