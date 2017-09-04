@@ -114,4 +114,5 @@
   action:
     service: notify.primary_contact
     data:
-      message: 'Update for Home Assistant is available.'
+      message: 'Update for Home Assistant is available'
+      title: 'Important notice from Home'
