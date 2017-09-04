@@ -2,5 +2,5 @@
   covers:
     garage:
       host: 192.168.128.227
-      device_key: !secret garage_door_key
+      device_key: !secret opengarage_key
       name:  Megan Overhead Garage Door
