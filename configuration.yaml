@@ -69,6 +69,13 @@ frontend:
 ios:
 
 #-------------------------------------------
+# Twilio Settings
+#-------------------------------------------
+twilio:
+  account_sid: !secret twilio_sid
+  auth_token: !secret twilio_token
+
+#-------------------------------------------
 # Enable configuration UI
 #-------------------------------------------
 config:
