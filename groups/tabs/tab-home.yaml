@@ -8,30 +8,9 @@ default_view:
     - group.weather
     - group.family_location
     - group.garage
-    - group.travel_times
-    - group.nest_sensors
-    - group.almanac
+    - group.nest_control
     - group.house_mode
     - group.doors_home_page
-  
-almanac:
-  name: Almanac
-  entities:
-  - sun.sun
-  - sensor.nextsunrise
-  - sensor.nextsunset
-  - sensor.moon
-  - sensor.dayofyear
-  - sensor.weekofyear
-
-weather:
-  name: Weather
-  entities:
-    - sensor.dark_sky_summary
-    - sensor.dark_sky_nearest_storm_distance
-    - sensor.dark_sky_precip_probability
-    - sensor.dark_sky_humidity
-    - sensor.dark_sky_temperature
 
 house_mode:
   name: House Mode
