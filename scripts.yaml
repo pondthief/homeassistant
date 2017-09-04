@@ -13,6 +13,7 @@ away_mode:
     - service: notify.primary_contact
       data:
         message: "Home to set AWAY mode."
+        title: 'Mode Change: AWAY'
 
 morning_mode:
   alias: Morning Mode
@@ -37,6 +38,7 @@ morning_mode:
     - service: notify.primary_contact
       data:
         message: "Home to set MORNING mode."
+        title: 'Mode Change: MORNING'
         
 day_mode:
   alias: Day Mode
@@ -50,6 +52,7 @@ day_mode:
     - service: notify.primary_contact
       data:
         message: "Home to set DAY mode."
+        title: 'Mode Change: DAY'
 
 weekend_mode:
   alias: Weekend Mode
@@ -63,6 +66,7 @@ weekend_mode:
     - service: notify.primary_contact
       data:
         message: "Home to set WEEKEND mode."
+        title: 'Mode Change: WEEKEND'
 
 evening_mode:
   alias: Evening Mode
@@ -110,6 +114,7 @@ evening_mode:
     - service: notify.primary_contact
       data:
         message: "Home to set EVENING mode."
+        title: 'Mode Change: EVENING'
 
 night_mode:
   alias: Night Mode
@@ -142,9 +147,11 @@ night_mode:
           - switch.ge_14291_inwall_smart_switch_switch_2    # Entry Overhead
           - switch.ge_14291_inwall_smart_switch_switch      # Study Overhead
           - switch.ge_14291_inwall_smart_switch_switch_5    # Craft Overhead
+          - switch.ge_14291_inwall_smart_switch_switch_10   # Laundry Overhead
     - service: lock.lock
       data:
         entity_id: group.all_locks
     - service: notify.primary_contact
       data:
         message: "Home to set NIGHT mode."
+        title: 'Mode Change: NIGHT'
