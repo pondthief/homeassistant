@@ -229,9 +229,10 @@ switch:
 #-------------------------------------------
 # LaMetric Time Setup
 #-------------------------------------------
-lametric:
-  client_id: !secret lametric_client_id
-  client_secret: !secret lametric_client_secret
+# Disabled for the time being, bug in HASS
+#lametric:
+#  client_id: !secret lametric_client_id
+#  client_secret: !secret lametric_client_secret
 
 #-------------------------------------------
 # Weblinks

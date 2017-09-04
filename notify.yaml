@@ -59,7 +59,7 @@
 #-------------------------------------------
 # LaMetric
 #-------------------------------------------
-- name: lametric
-  platform: lametric
-  display_time: 20
-  icon: i4787
+#- name: lametric
+#  platform: lametric
+#  display_time: 20
+#  icon: i4787
