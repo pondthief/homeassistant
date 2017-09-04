@@ -1,5 +1,0 @@
-nest_control:
-  name: Nest Control
-  entities:
-    - configurator.nest
-    - climate.hallway 

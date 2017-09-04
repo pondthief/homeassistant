@@ -1,3 +1,9 @@
+nest_control:
+  name: Nest Control
+  entities:
+    - configurator.nest
+    - climate.hallway 
+
 nest_sensors:
   name: Nest Sensors
   entities:
