@@ -227,6 +227,13 @@ switch:
     access_token: !secret rachio_api_key
 
 #-------------------------------------------
+# LaMetric Time Setup
+#-------------------------------------------
+lametric:
+  client_id: !secret lametric_client_id
+  client_secret: !secret lametric_client_secret
+
+#-------------------------------------------
 # Weblinks
 #-------------------------------------------
 weblink:
