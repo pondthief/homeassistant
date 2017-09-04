@@ -22,17 +22,15 @@
     data_template:
       message: "{{ trigger.to_state.attributes.friendly_name }} has been OPENED"
 
-- id: doorbell
-  alias: 'Doorbell'
+- id: doorbellring
+  alias: 'Doorbell Ring'
   trigger:
     platform: state
     entity_id: binary_sensor.ring_front_door_ding
     from: 'off'
     to: 'on'
   action:
-    service: notify.emergency_contact
-    data_template:
-      message: "Someone is at the Front Door!"
+    - service: script.doorbell_ring
 
 - id: setmorningmode
   alias: 'Morning Mode'
@@ -112,7 +110,4 @@
     platform: state
     entity_id: updater.updater
   action:
-    service: notify.primary_contact
-    data:
-      message: 'Update for Home Assistant is available'
-      title: 'Important notice from Home'
+    - service: script.update_notice
