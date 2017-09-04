@@ -173,4 +173,4 @@ doorbell_ring:
   sequence:
     - service: notify.emergency_contact
       data_template:
-        message: "Someone is at the Front Door!"
+        message: "\U0001F514 Someone is at the Front Door!"

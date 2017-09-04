@@ -15,12 +15,12 @@
       from: 'off'
   condition:
     - condition: state
-      entity_id: input_select.house_mode
-      state: 'Away'
+      entity_id: group.family
+      state: not_home
   action:
     service: notify.emergency_contact
     data_template:
-      message: "{{ trigger.to_state.attributes.friendly_name }} has been OPENED"
+      message: "\U0001F6A8 {{ trigger.to_state.attributes.friendly_name }} has been OPENED"
 
 - id: doorbellring
   alias: 'Doorbell Ring'
