@@ -122,7 +122,6 @@ apcupsd:
 #-------------------------------------------
 mqtt:
   broker: !secret cloudmqtt_url
-  port: !secret cloudmqtt_port
   username: !secret cloudmqtt_user
   password: !secret cloudmqtt_pass
 
