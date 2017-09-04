@@ -4,7 +4,26 @@
 - name: primary_contact
   platform: group
   services:
-    - service: slack
+    - service: smtp
+
+#-------------------------------------------
+#  Emergency Notices
+#-------------------------------------------
+- name: emergency_contact
+  platform: group
+  services:
+    - service: sms
+      data:
+        target:
+          - !secret chris_mobile_num
+#          - !secret megan_mobile_num
+
+#-------------------------------------------
+#  Default Notifier (all things use this)
+#-------------------------------------------
+- name: sms
+  platform: twilio_sms
+  from_number: !secret twilio_from
 
 #-------------------------------------------
 #  iOS Push
@@ -35,3 +54,4 @@
   password: !secret smtp_password
   recipient:
       - !secret chris_email
+#      - !secret megan_email
