@@ -1,0 +1,6 @@
+doorbell_ring:
+  alias: Doorbell Ring
+  sequence:
+    - service: notify.emergency_contact
+      data_template:
+        message: "\U0001F514 Someone is at the Front Door!"

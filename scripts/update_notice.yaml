@@ -1,0 +1,11 @@
+update_notice:
+  alias: Update Notice
+  sequence:
+    - service: persistent_notification.create
+      data:
+        message: 'Update for Home Assistant is available'
+        title: 'Important notice from Home'
+    - service: notify.primary_contact
+      data:
+        message: 'Update for Home Assistant is available'
+        title: 'Important notice from Home'
