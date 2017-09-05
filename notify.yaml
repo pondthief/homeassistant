@@ -57,13 +57,6 @@
 #      - !secret megan_email
 
 #-------------------------------------------
-# Facebook Messenger
-#-------------------------------------------
-- name: workplace
-  platform: facebook
-  page_access_token: !secret facebook_access_token
-
-#-------------------------------------------
 # LaMetric
 #-------------------------------------------
 #- name: lametric
