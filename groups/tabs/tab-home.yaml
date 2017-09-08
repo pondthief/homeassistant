@@ -5,14 +5,8 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-    - group.weather
     - group.family_location
     - group.garage
     - group.nest_control
-    - group.house_mode
-    - group.doors_home_page
-
-house_mode:
-  name: House Mode
-  entities:
-    - input_select.house_mode
+    - group.doors
+    - group.doors_sensors

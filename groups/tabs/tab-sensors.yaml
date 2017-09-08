@@ -18,3 +18,4 @@ sensors_tab:
     - group.outside_sensors
     - group.study_sensors
     - group.nest_sensors
+    - group.weather

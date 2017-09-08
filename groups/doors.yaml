@@ -1,9 +1,9 @@
 doors:
-  name: Doors
+  name: Door Locks
   entities:
-    - lock.kwikset_touchpad_electronic_deadbolt_locked # garage door
     - lock.kwikset_touchpad_electronic_deadbolt_locked_2 # front door
     - lock.kwikset_touchpad_electronic_deadbolt_locked_3 # back door
+    - lock.kwikset_touchpad_electronic_deadbolt_locked # garage door
 
 doors_sensors:
   name: Doors
@@ -11,13 +11,3 @@ doors_sensors:
     - binary_sensor.front_door
     - binary_sensor.back_door
     - binary_sensor.garage_door
-
-doors_home_page:
-  name: Doors
-  entities:
-    - binary_sensor.front_door
-    - lock.kwikset_touchpad_electronic_deadbolt_locked_2 # front door
-    - binary_sensor.back_door
-    - lock.kwikset_touchpad_electronic_deadbolt_locked_3 # back door
-    - binary_sensor.garage_door
-    - lock.kwikset_touchpad_electronic_deadbolt_locked # garage door
