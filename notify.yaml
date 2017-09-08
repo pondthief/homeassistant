@@ -16,7 +16,7 @@
       data:
         target:
           - !secret chris_mobile_num
-#          - !secret megan_mobile_num
+          - !secret megan_mobile_num
 
 #-------------------------------------------
 #  Default Notifier (all things use this)
