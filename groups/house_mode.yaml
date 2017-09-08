@@ -1,0 +1,4 @@
+house_mode:
+  name: House Mode
+  entities:
+    - input_select.house_mode

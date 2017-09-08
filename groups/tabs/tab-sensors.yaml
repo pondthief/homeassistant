@@ -15,7 +15,5 @@ sensors_tab:
     - group.laundry_room_sensors
     - group.master_bath_sensors
     - group.master_bed_sensors
-    - group.outside_sensors
     - group.study_sensors
     - group.nest_sensors
-    - group.weather

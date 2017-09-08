@@ -20,4 +20,3 @@ control:
     - group.nest_control
     - group.garage
     - group.laundry_room
-    - group.sprinkler

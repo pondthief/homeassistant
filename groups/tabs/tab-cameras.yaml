@@ -1,9 +1,0 @@
-#-------------------------------------------
-#  Cameras Tab
-#-------------------------------------------
-cameras:
-  name: Cameras
-  view: yes
-  icon: mdi:video
-  entities:
-    - group.front_cameras

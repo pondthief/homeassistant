@@ -1,0 +1,13 @@
+#-------------------------------------------
+#  Outside Tab
+#-------------------------------------------
+settings:
+  name: Outside
+  view: yes
+  icon: mdi:leaf
+  entities:
+    - group.sprinkler
+    - group.outside_sensors
+    - group.weather
+    - group.outside
+    - group.front_cameras
