@@ -2,7 +2,6 @@ weather:
   name: Weather
   entities:
     - sensor.dark_sky_summary
-    - sensor.dark_sky_nearest_storm_distance
     - sensor.dark_sky_precip_probability
     - sensor.dark_sky_humidity
     - sensor.dark_sky_temperature
@@ -10,3 +9,4 @@ weather:
     - sensor.nextsunrise
     - sensor.nextsunset
     - sensor.moon
+    - sensor.season
