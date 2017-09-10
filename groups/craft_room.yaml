@@ -9,6 +9,7 @@ craft_room_sensors:
   entities:
     - sensor.craft_room_temp
     - sensor.craft_room_humidity
+    - sensor.craft_room_lux
     - binary_sensor.front_right_window
     - binary_sensor.front_window_one
     - binary_sensor.front_window_two

@@ -9,4 +9,3 @@ laundry_room_sensors:
     - binary_sensor.garage_door
     - sensor.laundry_room_temp
     - sensor.laundry_room_humidity
-    - sensor.laundry_room_lux
