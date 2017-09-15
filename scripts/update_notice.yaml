@@ -5,7 +5,7 @@ update_notice:
       data:
         message: 'Update for Home Assistant is available'
         title: 'Important notice from Home'
-    - service: notify.primary_contact
+    - service: notify.ios
       data:
         message: 'Update for Home Assistant is available'
         title: 'Important notice from Home'
