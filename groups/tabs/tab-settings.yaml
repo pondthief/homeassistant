@@ -1,11 +1,15 @@
 #-------------------------------------------
-#  Settings Tab
+#  System Tab
 #-------------------------------------------
-settings:
-  name: Settings
+system_tab:
+  name: System
   view: yes
   icon: mdi:settings
   entities:
     - group.all_automations
     - group.house_mode
     - group.rf_heartbeats
+    - group.devices
+    - group.system
+    - group.apcupsd
+    - group.links

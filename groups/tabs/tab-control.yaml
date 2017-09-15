@@ -1,7 +1,7 @@
 #-------------------------------------------
 #  Control Tab
 #-------------------------------------------
-control:
+control_tab:
   name: Control
   view: yes
   icon: mdi:toggle-switch
