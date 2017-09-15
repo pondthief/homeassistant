@@ -1,12 +1,12 @@
 #-------------------------------------------
 #  Outside Tab
 #-------------------------------------------
-outside:
+outside_tab:
   name: Outside
   view: yes
   icon: mdi:leaf
   entities:
-    - group.sprinkler
+#    - group.sprinkler
     - group.outside_sensors
     - group.weather
     - group.outside
