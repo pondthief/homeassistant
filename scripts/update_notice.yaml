@@ -4,8 +4,8 @@ update_notice:
     - service: persistent_notification.create
       data:
         message: 'Update for Home Assistant is available'
-        title: 'Important notice from Home'
-    - service: notify.ios
+        title: 'Software Update'
+    - service: notify.primary_contact
       data:
         message: 'Update for Home Assistant is available'
-        title: 'Important notice from Home'
+        title: 'Software Update'

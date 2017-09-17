@@ -5,8 +5,6 @@ weekend_mode:
       data:
         entity_id: input_select.house_mode
         option: Weekend
-    - service: light.turn_off
-    - service: switch.turn_off
     - service: notify.primary_contact
       data:
         message: "Home to set WEEKEND mode."

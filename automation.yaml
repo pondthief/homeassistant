@@ -94,9 +94,6 @@
       minutes: 10
   condition:
     - condition: state
-      entity_id: group.family
-      state: 'not_home'
-    - condition: state
       entity_id: input_boolean.guest_mode
       state: 'off'
   action:
