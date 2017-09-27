@@ -5,11 +5,6 @@ night_mode:
       data:
         entity_id: input_select.house_mode
         option: Night
-    - service: light.turn_on
-      data:
-        entity_id: 
-          - light.ge_12724_3way_dimmer_switch_level_9     # Kitchen Sink
-        brightness: 40
     - service: lock.lock
       data:
         entity_id: group.all_locks

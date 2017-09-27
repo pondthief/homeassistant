@@ -12,6 +12,11 @@ evening_mode:
           - switch.ge_14291_inwall_smart_switch_switch_4  # Front Yard
           - switch.ge_14291_inwall_smart_switch_switch_18 # Chris Bedside
           - switch.ge_14291_inwall_smart_switch_switch_17 # Megan Bedside
+    - service: light.turn_on
+      data:
+        entity_id: 
+          - light.ge_12724_3way_dimmer_switch_level_9     # Kitchen Sink
+        brightness: 40
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
