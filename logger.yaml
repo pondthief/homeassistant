@@ -11,6 +11,7 @@ logs:
   homeassistant.components.sensor.darksky: warn
   homeassistant.components.zwave: error
   homeassistant.helpers.script: warn
+  homeassistant.components.cover.opengarage: critical
   homeassistant.exceptions: info
   py.warnings: error
   root: warn
