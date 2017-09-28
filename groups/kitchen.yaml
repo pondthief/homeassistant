@@ -1,11 +1,11 @@
 kitchen:
   name: Kitchen
   entities:
-    - light.ge_12724_3way_dimmer_switch_level_2     # Kitchen Table
-    - light.ge_12724_3way_dimmer_switch_level_3     # Kitchen Cans
-    - switch.ge_14291_inwall_smart_switch_switch_7  # Kitchen Cabinet
-    - switch.ge_14291_inwall_smart_switch_switch_6  # Kitchen Island
-    - switch.ge_14291_inwall_smart_switch_switch_9  # Kitchen Sink
+    - light.kitchen_table_level
+    - light.kitchen_cans_level
+    - switch.kitchen_cabinet_switch
+    - switch.kitchen_island_switch
+    - light.kitchen_sink_level
 
 kitchen_sensors:
   name: Kitchen

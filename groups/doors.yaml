@@ -1,9 +1,9 @@
 doors:
   name: Door Locks
   entities:
-    - lock.kwikset_touchpad_electronic_deadbolt_locked_2 # front door
-    - lock.kwikset_touchpad_electronic_deadbolt_locked_3 # back door
-    - lock.kwikset_touchpad_electronic_deadbolt_locked # garage door
+    - lock.door_front_locked
+    - lock.door_back_locked
+    - lock.door_garage_locked
 
 doors_sensors:
   name: Doors

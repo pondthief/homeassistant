@@ -8,12 +8,11 @@ morning_mode:
     - service: light.turn_off
       data:
         entity_id: 
-          - light.ge_12724_3way_dimmer_switch_level_9     # Kitchen Sink
+          - light.kitchen_sink_level
     - service: switch.turn_off
       data:
         entity_id:
-          - switch.ge_14291_inwall_smart_switch_switch_8  # Back Yard
-          - switch.ge_14291_inwall_smart_switch_switch_4  # Front Yard
+          - switch.outside_front_switch
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway

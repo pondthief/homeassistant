@@ -34,108 +34,108 @@ switch.sprinkler_front_window_drip:
 switch.sprinkler_zone_10:
   icon: mdi:water-pump
 
-light.ge_12724_3way_dimmer_switch_level:
+light.study_cans_level:
   friendly_name: Study Cans
 
-light.ge_12724_3way_dimmer_switch_level_2:
+light.kitchen_table_level:
   friendly_name: Kitchen Table
 
-light.ge_12724_3way_dimmer_switch_level_3:
+light.kitchen_cans_level:
   friendly_name: Kitchen Cans
 
-light.ge_12724_3way_dimmer_switch_level_4:
-  friendly_name: Main Overhead
+light.living_overhead_level:
+  friendly_name: Living Overhead
 
-light.ge_12724_3way_dimmer_switch_level_5:
-  friendly_name: Main Cans
+light.living_cans_level:
+  friendly_name: Living Cans
 
-light.ge_12724_3way_dimmer_switch_level_6:
+light.hallway_cans_level:
   friendly_name: Hallway Cans
 
-light.ge_12724_3way_dimmer_switch_level_7:
+light.clara_overhead_level
   friendly_name: Clara Overhead
 
-light.ge_12724_3way_dimmer_switch_level_8:
+light.master_cans_level:
   friendly_name: Master Cans
 
-light.ge_12724_3way_dimmer_switch_level_9:
+light.kitchen_sink_level:
   friendly_name: Kitchen Sink
 
-switch.ge_14291_inwall_smart_switch_switch:
+switch.study_overhead_switch:
   friendly_name: Study Overhead
 
-switch.ge_14291_inwall_smart_switch_switch_2:
-  friendly_name: Entry Overhead
+switch.front_entry_switch:
+  friendly_name: Front Entry Overhead
 
-switch.ge_14291_inwall_smart_switch_switch_3:
+switch.front_unknown_switch:
   friendly_name: Front Unknown
 
-switch.ge_14291_inwall_smart_switch_switch_4:
+switch.outside_front_switch:
   friendly_name: Front Yard
 
-switch.ge_14291_inwall_smart_switch_switch_5:
+switch.craft_overhead_switch:
   friendly_name: Craft Overhead
 
-switch.ge_14291_inwall_smart_switch_switch_6:
+switch.kitchen_island_switch:
   friendly_name: Kitchen Island
 
-switch.ge_14291_inwall_smart_switch_switch_7:
+switch.kitchen_cabinet_switch:
   friendly_name: Kitchen Cabinet
 
-switch.ge_14291_inwall_smart_switch_switch_8:
+switch.outside_back_switch:
   friendly_name: Back Yard
 
-switch.ge_14291_inwall_smart_switch_switch_9:
-  friendly_name: Living Unknown
+#switch.ge_14291_inwall_smart_switch_switch_9:
+#  friendly_name: Living Unknown
 
-switch.ge_14291_inwall_smart_switch_switch_10:
+switch.laundry_overhead_switch:
   friendly_name: Laundry Overhead
 
-switch.ge_14291_inwall_smart_switch_switch_11:
+switch.guest_overhead_switch:
   friendly_name: Guest Overhead
 
-switch.ge_14291_inwall_smart_switch_switch_12:
+switch.guest_bath_fan_switch:
   friendly_name: Guest Bath Fan
   icon: mdi:fan
 
-switch.ge_14291_inwall_smart_switch_switch_13:
+switch.guest_bath_mirror_switch:
   friendly_name: Guest Bath Mirror
 
-switch.ge_14291_inwall_smart_switch_switch_14:
+switch.guest_bath_shower_switch:
   friendly_name: Guest Bath Shower
 
-switch.ge_14291_inwall_smart_switch_switch_15:
+switch.master_fan_switch:
   friendly_name: Master Fan
   icon: mdi:fan
 
-switch.ge_14291_inwall_smart_switch_switch_16:
+switch.master_unknown_switch:
   friendly_name: Master Fan Light
 
-switch.ge_14291_inwall_smart_switch_switch_17:
+switch.master_megan_switch:
   friendly_name: Megan Bedside
   icon: mdi:lamp
 
-switch.ge_14291_inwall_smart_switch_switch_18:
+switch.master_chris_switch:
   friendly_name: Chris Bedside
   icon: mdi:lamp
 
-switch.ge_14291_inwall_smart_switch_switch_19:
+switch.master_bath_mirror_switch:
   friendly_name: Master Bath Mirror
 
-switch.ge_14291_inwall_smart_switch_switch_20:
+switch.master_bath_shower_switch:
   friendly_name: Master Bath Shower
 
-switch.ge_14291_inwall_smart_switch_switch_21:
+switch.master_bath_fan_switch:
   friendly_name: Master Bath Fan
   icon: mdi:fan
 
-lock.kwikset_touchpad_electronic_deadbolt_locked:
+lock.door_garage_locked:
   friendly_name: Garage Door
 
-lock.kwikset_touchpad_electronic_deadbolt_locked_2:
+lock.door_front_locked:
   friendly_name: Front Door
 
-lock.kwikset_touchpad_electronic_deadbolt_locked_3:
+lock.door_back_locked:
   friendly_name: Back Door
 
 group.all_automations:

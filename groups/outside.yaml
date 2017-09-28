@@ -1,8 +1,8 @@
 outside:
   name: Outside
   entities:
-    - switch.ge_14291_inwall_smart_switch_switch_8  # Back Yard
-    - switch.ge_14291_inwall_smart_switch_switch_4  # Front Yard
+    - switch.outside_back_switch
+    - switch.outside_front_switch
 
 outside_sensors:
   name: Outside

@@ -1,9 +1,9 @@
 master_bath:
   name: Master Bathroom
   entities:
-    - switch.ge_14291_inwall_smart_switch_switch_19   # Master Bath Mirror
-    - switch.ge_14291_inwall_smart_switch_switch_20   # Master Bath Shower
-    - switch.ge_14291_inwall_smart_switch_switch_21   # Master Bath Fan
+    - switch.master_bath_mirror_switch
+    - switch.master_bath_shower_switch
+    - switch.master_bath_fan_switch
 
 master_bath_sensors:
   name: Master Bathroom

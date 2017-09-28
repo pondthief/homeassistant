@@ -1,8 +1,8 @@
 study:
   name: Study
   entities:
-    - switch.ge_14291_inwall_smart_switch_switch      # Study Overhead
-    - light.ge_12724_3way_dimmer_switch_level         # Study Cans
+    - switch.study_overhead_switch
+    - light.study_cans_level
 
 study_sensors:
   name: Study
