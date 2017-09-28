@@ -52,7 +52,7 @@ light.living_cans_level:
 light.hallway_cans_level:
   friendly_name: Hallway Cans
 
-light.clara_overhead_level
+light.clara_overhead_level:
   friendly_name: Clara Overhead
 
 light.master_cans_level:
