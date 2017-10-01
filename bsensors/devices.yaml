@@ -3,7 +3,15 @@
   name: Garage Right Camera
 
 - platform: ping
+  host: 192.168.128.240
+  name: Garage Left Camera
+
+- platform: ping
   host: 192.168.128.227
+  name: Megan Open Garage
+
+- platform: ping
+  host: 192.168.128.248
   name: Chris Open Garage
 
 - platform: ping
@@ -17,3 +25,4 @@
 - platform: ping
   host: 192.168.128.234
   name: Laundry Room Probe
+
