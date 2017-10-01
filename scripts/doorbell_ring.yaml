@@ -5,6 +5,5 @@ doorbell_ring:
       data:
         attachment:
           url: https://home.cowdog.io/api/camera_proxy/camera.garage_left?token=baf44682c183f1ab5ddfb7fa3becb6e2837c99083381236d5eb075bd51c27e49
-      data_template:
         title: 'Doorbell'
         message: "\U0001F514 Someone is at the Front Door!"
