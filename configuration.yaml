@@ -16,7 +16,8 @@ homeassistant:
 #-------------------------------------------
 recorder:
   db_url: !secret mysql_log_conn
-  purge_days: 7
+  purge_keep_days: 7
+  purge_interval: 2
   exclude:
     domains:
       - zwave
