@@ -5,6 +5,10 @@ night_mode:
       data:
         entity_id: input_select.house_mode
         option: Night
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.hallway
+        temperature: '68'
     - service: lock.lock
       data:
         entity_id: group.all_locks
