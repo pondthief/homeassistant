@@ -7,7 +7,7 @@
     - service: ios
 
 #-------------------------------------------
-#  Emergency Notices
+#  Emergency Notices via SMS
 #-------------------------------------------
 - name: emergency_contact
   platform: group
@@ -19,7 +19,7 @@
           - !secret megan_mobile_num
 
 #-------------------------------------------
-#  Default Notifier (all things use this)
+#  Twilio SMS Notices
 #-------------------------------------------
 - name: sms
   platform: twilio_sms
