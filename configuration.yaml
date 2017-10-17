@@ -72,7 +72,7 @@ ios:
 #-------------------------------------------
 # Twilio Settings
 #-------------------------------------------
- twilio:
+twilio:
   account_sid: !secret twilio_sid
   auth_token: !secret twilio_token
 
@@ -99,7 +99,7 @@ updater:
 #-------------------------------------------
 # Enable Auto-discover (what we can)
 #-------------------------------------------
-# discovery:
+discovery:
 
 #-------------------------------------------
 # Enable cameras
@@ -226,14 +226,6 @@ amcrest: !include amcrest.yaml
 switch:
   - platform: rachio
     access_token: !secret rachio_api_key
-
-#-------------------------------------------
-# LaMetric Time Setup
-#-------------------------------------------
-# Disabled for the time being, bug in HASS
-#lametric:
-#  client_id: !secret lametric_client_id
-#  client_secret: !secret lametric_client_secret
 
 #-------------------------------------------
 # Weblinks
