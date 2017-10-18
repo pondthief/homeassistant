@@ -10,7 +10,7 @@ control_tab:
     - group.guest_room
     - group.child_room
     - group.guest_bath
-    - group.main_room
+    - group.living_room
     - group.craft_room
     - group.kitchen
     - group.master_bed
