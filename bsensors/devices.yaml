@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Network Devices to keep an eye on
+#-------------------------------------------
 - platform: ping
   host: 192.168.128.236
   name: Garage Right Camera

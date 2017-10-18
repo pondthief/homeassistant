@@ -1,0 +1,8 @@
+id: seteveningmode
+alias: 'Evening Mode'
+trigger:
+  platform: sun
+  event: sunset
+  offset: '+00:00:00'
+action:
+  - service: script.evening_mode

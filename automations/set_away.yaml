@@ -1,0 +1,14 @@
+id: setawaymode
+alias: 'Away Mode'
+trigger:
+  platform: state
+  entity_id: group.family
+  to: 'not_home'
+  for:
+    minutes: 10
+condition:
+  - condition: state
+    entity_id: input_boolean.guest_mode
+    state: 'off'
+action:
+  - service: script.away_mode

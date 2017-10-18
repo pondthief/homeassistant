@@ -1,0 +1,8 @@
+id: setmorningmode
+alias: 'Morning Mode'
+trigger:
+  platform: sun
+  event: sunrise
+  offset: '+00:00:00'
+action:
+  - service: script.morning_mode

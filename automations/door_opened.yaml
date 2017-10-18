@@ -1,0 +1,21 @@
+id: dooropened
+alias: "Door Opened When AWAY"
+trigger:
+  - platform: state
+    entity_id: binary_sensor.back_door
+    to: 'on'
+    from: 'off'
+  - platform: state
+    entity_id: binary_sensor.front_door
+    to: 'on'
+    from: 'off'
+  - platform: state
+    entity_id: binary_sensor.garage_door
+    to: 'on'
+    from: 'off'
+condition:
+  - condition: state
+    entity_id: group.family
+    state: not_home
+action:
+  - service: script.door_opened_when_away

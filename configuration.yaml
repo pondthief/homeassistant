@@ -193,7 +193,7 @@ group: !include_dir_merge_named groups
 #-------------------------------------------
 # Include automations
 #-------------------------------------------
-automation: !include automation.yaml
+automation: !include_dir_merge_named automation
 
 #-------------------------------------------
 # Zwave Settings
@@ -238,5 +238,3 @@ weblink:
     - name: Pingdom
       url: https://server.pingdom.com/cowdog_automation_llc/clients/10078281
       icon: mdi:security-network
-    - name: Maingun
-      url: https://app.mailgun.com/app/dashboard
