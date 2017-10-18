@@ -1,0 +1,9 @@
+id: lostpower
+alias: 'Lost Power'
+trigger:
+  platform: state
+  entity_id: sensor.ups_status
+  from: 'ONLINE'
+  to: 'ONBATT'
+action:
+  - service: script.lost_power
