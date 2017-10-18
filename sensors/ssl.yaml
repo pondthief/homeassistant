@@ -2,4 +2,4 @@
 #  SSL Cert Sensor
 #-------------------------------------------
 - platform: cert_expiry
-  host: home.cowdog.io
+  host: !secret server_fqdn
