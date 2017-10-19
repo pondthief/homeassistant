@@ -1,5 +1,4 @@
-- id: doorbellring
-  alias: 'Doorbell Ring'
+- alias: 'Doorbell Ring'
   trigger:
     platform: state
     entity_id: binary_sensor.ring_front_door_ding

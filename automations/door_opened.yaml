@@ -1,5 +1,4 @@
-- id: dooropened
-  alias: "Door Opened When AWAY"
+- alias: "Door Opened When AWAY"
   trigger:
     - platform: state
       entity_id: binary_sensor.back_door
