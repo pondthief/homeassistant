@@ -1,7 +1,6 @@
-id: updatenotice
-alias: 'Update Available Notifications'
-trigger:
-  platform: state
-  entity_id: updater.updater
-action:
-  - service: script.update_notice
+- alias: 'Update Available Notifications'
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    - service: script.update_notice
