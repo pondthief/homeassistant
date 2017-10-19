@@ -235,6 +235,6 @@ weblink:
     - name: Rachio
       url: https://app.rach.io
       icon: mdi:water-pump
-    - name: Pingdom
-      url: https://server.pingdom.com/cowdog_automation_llc/clients/10078281
+    - name: Montastic
+      url: https://www.montastic.com
       icon: mdi:security-network
