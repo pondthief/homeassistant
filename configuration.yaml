@@ -193,7 +193,7 @@ group: !include_dir_merge_named groups
 #-------------------------------------------
 # Include automations
 #-------------------------------------------
-automation: !include_dir_merge_named automations
+automation: !include_dir_merge_list automations
 
 #-------------------------------------------
 # Zwave Settings
