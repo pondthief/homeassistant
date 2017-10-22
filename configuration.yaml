@@ -223,6 +223,13 @@ switch:
     access_token: !secret rachio_api_key
 
 #-------------------------------------------
+# Rachio Setup
+#-------------------------------------------
+eight_sleep:
+  username: !secret eight_sleep_user
+  password: !secret eight_sleep_pass
+
+#-------------------------------------------
 # Weblinks
 #-------------------------------------------
 weblink:
