@@ -42,8 +42,8 @@ megan_opengarage_offline:
   notifiers:
     - primary_contact
 
-megan_opengarage_offline:
-  name: Megan Opengarage OFFLINE
+chris_opengarage_offline:
+  name: Chris Opengarage OFFLINE
   done_message: Megan Opengarage ONLINE
   entity_id: binary_sensor.chris_open_garage
   state: 'off'
