@@ -1,0 +1,4 @@
+Entry:
+  name: Entry
+  entities:
+    - switch.front_entry_switch

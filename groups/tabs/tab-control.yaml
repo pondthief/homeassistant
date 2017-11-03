@@ -20,4 +20,4 @@ control_tab:
     - group.nest_control
     - group.garage
     - group.laundry_room
-    - group.front_room
+    - group.entry

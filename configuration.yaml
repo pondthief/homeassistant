@@ -216,13 +216,6 @@ alert: !include alerts.yaml
 amcrest: !include amcrest.yaml
 
 #-------------------------------------------
-# Rachio Setup
-#-------------------------------------------
-switch:
-  - platform: rachio
-    access_token: !secret rachio_api_key
-
-#-------------------------------------------
 # Eight Sleep Setup
 #-------------------------------------------
 eight_sleep:

@@ -1,40 +1,4 @@
-switch.sprinkler_back_center_left:
-  icon: mdi:water-pump
-  
-switch.sprinkler_back_center_left_2:
-  icon: mdi:water-pump
-
-switch.sprinkler_back_left_side:
-  icon: mdi:water-pump
-
-switch.sprinkler_back_left_by_gate:
-  icon: mdi:water-pump
-
-switch.sprinkler_back_right:
-  icon: mdi:water-pump
-
-switch.sprinkler_back_right_corner:
-  icon: mdi:water-pump
-
-switch.sprinkler_back_tree_bubbler:
-  icon: mdi:water-pump
-
-switch.sprinkler_front_center:
-  icon: mdi:water-pump
-
-switch.sprinkler_front_middle:
-  icon: mdi:water-pump
-
-switch.sprinkler_front_right:
-  icon: mdi:water-pump
-
-switch.sprinkler_front_window_drip:
-  icon: mdi:water-pump
-
-switch.sprinkler_zone_10:
-  icon: mdi:water-pump
-
-light.study_cans_level:
+ight.study_cans_level:
   friendly_name: Study Cans
 
 light.kitchen_table_level:
@@ -55,7 +19,7 @@ light.hallway_cans_level:
 light.clara_overhead_level:
   friendly_name: Clara Overhead
 
-light.master_cans_level:
+light.master_bed_cans_level:
   friendly_name: Master Cans
 
 light.kitchen_sink_level:
@@ -64,11 +28,11 @@ light.kitchen_sink_level:
 switch.study_overhead_switch:
   friendly_name: Study Overhead
 
-switch.front_entry_switch:
-  friendly_name: Front Entry Overhead
+switch.entry_overhead_switch:
+  friendly_name: Entry Overhead
 
-switch.front_unknown_switch:
-  friendly_name: Front Unknown
+switch.craft_lamp_switch:
+  friendly_name: Craft Lamp
 
 switch.outside_front_switch:
   friendly_name: Front Yard
@@ -79,11 +43,11 @@ switch.craft_overhead_switch:
 switch.kitchen_island_switch:
   friendly_name: Kitchen Island
 
-switch.kitchen_cabinet_switch:
-  friendly_name: Kitchen Cabinet
+switch.kitchen_cabinets_switch:
+  friendly_name: Kitchen Cabinets
 
-switch.outside_back_switch:
-  friendly_name: Back Yard
+switch.deck_flood_switch:
+  friendly_name: Deck Flood
 
 #switch.ge_14291_inwall_smart_switch_switch_9:
 #  friendly_name: Living Unknown
@@ -98,29 +62,29 @@ switch.guest_bath_fan_switch:
   friendly_name: Guest Bath Fan
   icon: mdi:fan
 
-switch.guest_bath_mirror_switch:
+switch.guest_bath_sink_switch:
   friendly_name: Guest Bath Mirror
 
 switch.guest_bath_shower_switch:
   friendly_name: Guest Bath Shower
 
-switch.master_fan_switch:
+switch.master_bed_fan_switch:
   friendly_name: Master Fan
   icon: mdi:fan
 
-switch.master_unknown_switch:
+switch.master_bed_fan_light_switch:
   friendly_name: Master Fan Light
 
-switch.master_megan_switch:
+switch.megan_bedside_switch:
   friendly_name: Megan Bedside
   icon: mdi:lamp
 
-switch.master_chris_switch:
+switch.chris_bedside_switch:
   friendly_name: Chris Bedside
   icon: mdi:lamp
 
-switch.master_bath_mirror_switch:
-  friendly_name: Master Bath Mirror
+switch.master_bath_sink_switch:
+  friendly_name: Master Bath Sink
 
 switch.master_bath_shower_switch:
   friendly_name: Master Bath Shower
