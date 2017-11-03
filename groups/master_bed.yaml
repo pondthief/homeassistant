@@ -1,11 +1,11 @@
 master_bed:
   name: Master Bedroom
   entities:
-    - switch.master_megan_switch
-    - switch.master_chris_switch
-    - switch.master_fan_switch
-    - switch.master_unknown_switch
-    - light.master_cans_level
+    - switch.megan_bedside_switch
+    - switch.chris_bedside_switch
+    - switch.master_bed_fan_switch
+    - switch.master_bed_fan_light_switch
+    - light.master_bed_cans_level
 
 master_bed_sensors:
   name: Master Bedroom

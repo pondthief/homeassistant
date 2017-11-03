@@ -1,7 +1,7 @@
 master_bath:
   name: Master Bathroom
   entities:
-    - switch.master_bath_mirror_switch
+    - switch.master_bath_sink_switch
     - switch.master_bath_shower_switch
     - switch.master_bath_fan_switch
 
