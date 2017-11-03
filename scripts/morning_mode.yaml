@@ -12,7 +12,7 @@ morning_mode:
     - service: switch.turn_off
       data:
         entity_id:
-          - switch.outside_front_switch
+          - switch.front_yard_switch
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
