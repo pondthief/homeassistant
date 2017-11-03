@@ -34,11 +34,11 @@ switch.entry_overhead_switch:
 switch.craft_lamp_switch:
   friendly_name: Craft Lamp
 
-switch.outside_front_switch:
+switch.front_yard_switch:
   friendly_name: Front Yard
 
-switch.craft_overhead_switch:
-  friendly_name: Craft Overhead
+switch.craft_cans_switch:
+  friendly_name: Craft Cans
 
 switch.kitchen_island_switch:
   friendly_name: Kitchen Island
