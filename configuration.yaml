@@ -229,6 +229,16 @@ eight_sleep:
   password: !secret eight_sleep_pass
 
 #-------------------------------------------
+# Car Tracking
+#-------------------------------------------
+device_tracker:
+  - platform: automatic
+    client_id: !secret automatic_client_id
+    secret: !secret automatic_secret
+    devices:
+      - Rogue
+
+#-------------------------------------------
 # Weblinks
 #-------------------------------------------
 weblink:
