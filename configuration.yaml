@@ -89,6 +89,8 @@ http:
   base_url: !secret server_fqdn
   ip_ban_enabled: true
   login_attempts_threshold: 3
+  ssl_certificate: /certs/fullchain.pem 
+  ssl_key: /certs/privkey.pem
 
 #-------------------------------------------
 # Checks for available updates
@@ -124,9 +126,7 @@ apcupsd:
 # MQTT Settings
 #-------------------------------------------
 mqtt:
-  broker: !secret cloudmqtt_url
-  username: !secret cloudmqtt_user
-  password: !secret cloudmqtt_pass
+  broker: 127.0.0.1
 
 #-------------------------------------------
 # History support
