@@ -89,8 +89,8 @@ http:
   base_url: !secret server_fqdn
   ip_ban_enabled: true
   login_attempts_threshold: 3
-  ssl_certificate: /certs/fullchain.pem 
-  ssl_key: /certs/privkey.pem
+  ssl_certificate: !secret ssl_cert_path
+  ssl_key: !secret ssl_key_path
 
 #-------------------------------------------
 # Checks for available updates
@@ -104,7 +104,7 @@ updater:
 camera:
   - platform: amcrest
   - platform: ring
-  
+
 #-------------------------------------------
 # Enable covers
 #-------------------------------------------
