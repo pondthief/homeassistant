@@ -1,0 +1,17 @@
+- platform: template
+  sensors:
+    front_door_battery_low:
+      value_template: '{{ states.zwave.front_door.attributes.battery_level < 25 }}'
+      friendly_name: 'Front Door Lock battery is low'
+
+- platform: template
+  sensors:
+    back_door_battery_low:
+      value_template: '{{ states.zwave.back_door.attributes.battery_level < 25 }}'
+      friendly_name: 'Back Door Lock battery is low'
+
+- platform: template
+  sensors:
+    garage_door_battery_low:
+      value_template: '{{ states.zwave.garage_door.attributes.battery_level < 25 }}'
+      friendly_name: 'Garage Door Lock battery is low'
