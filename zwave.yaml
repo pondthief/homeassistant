@@ -1,7 +1,7 @@
 usb_path: /dev/zwave
 network_key: !secret zwave_network_key
 new_entity_ids: true
-polling_interval: 30000
+polling_interval: 10000
 device_config_domain:
   light:
     polling_intensity: 1
