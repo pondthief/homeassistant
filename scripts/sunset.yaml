@@ -1,10 +1,6 @@
-evening_mode:
-  alias: Evening Mode
+sunset:
+  alias: Sunset
   sequence:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.house_mode
-        option: Evening
     - service: switch.turn_on
       data:
         entity_id:
@@ -25,5 +21,5 @@ evening_mode:
         entity_id: group.all_locks
     - service: notify.primary_contact
       data:
-        message: "Home to set EVENING mode."
-        title: 'Mode Change: EVENING'
+        message: "The house is ready for everyone to good to sleep"
+        title: 'Good Night'

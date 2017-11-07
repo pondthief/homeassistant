@@ -1,10 +1,6 @@
-morning_mode:
-  alias: Morning Mode
+sunrise:
+  alias: Sunrise
   sequence:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.house_mode
-        option: Morning
     - service: light.turn_off
       data:
         entity_id: 
@@ -19,5 +15,5 @@ morning_mode:
         temperature: '72'
     - service: notify.primary_contact
       data:
-        message: "Home to set MORNING mode."
-        title: 'Mode Change: MORNING'
+        message: "The sun is up, and the house is ready for the day"
+        title: 'Good Morning'

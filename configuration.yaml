@@ -36,7 +36,6 @@ recorder:
       - sensor.ups_time_on_battery
       - binary_sensor.workday_sensor
       - binary_sensor.ups_online_status
-      - binary_sensor.rachio_panel
 
 #-------------------------------------------
 # Logger Settings
@@ -157,16 +156,6 @@ tts:
   platform: google
 
 #-------------------------------------------
-# Include input dropdowns
-#-------------------------------------------
-input_select: !include input_select.yaml
-
-#-------------------------------------------
-# Include input boolenas
-#-------------------------------------------
-input_boolean: !include input_boolean.yaml
-
-#-------------------------------------------
 # Include sensors
 #-------------------------------------------
 sensor: !include_dir_merge_list sensors
@@ -241,9 +230,6 @@ weblink:
       icon: mdi:router-wireless
     - name: Papertrail
       url: https://papertrailapp.com
-    - name: Rachio
-      url: https://app.rach.io
-      icon: mdi:water-pump
     - name: Montastic
       url: https://www.montastic.com
       icon: mdi:security-network

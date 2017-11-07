@@ -1,8 +1,0 @@
-house_mode:
-  options:
-    - Morning
-    - Day
-    - Evening
-    - Night
-    - Weekend
-    - Away

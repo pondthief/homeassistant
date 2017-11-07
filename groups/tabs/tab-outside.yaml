@@ -4,10 +4,6 @@
 outside_tab:
   name: Outside
   view: yes
-  icon: mdi:leaf
+  icon: mdi:camera
   entities:
-#    - group.sprinkler
-    - group.outside_sensors
-    - group.weather
-    - group.outside
     - group.front_cameras

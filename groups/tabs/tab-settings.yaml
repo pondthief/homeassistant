@@ -6,8 +6,6 @@ system_tab:
   view: yes
   icon: mdi:settings
   entities:
-    - group.all_automations
-    - group.house_mode
     - group.rf_heartbeats
     - group.devices
     - group.system
