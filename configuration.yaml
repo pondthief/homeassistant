@@ -211,6 +211,7 @@ amcrest: !include amcrest.yaml
 eight_sleep:
   username: !secret eight_sleep_user
   password: !secret eight_sleep_pass
+  partner: true
 
 #-------------------------------------------
 # Car Tracking
