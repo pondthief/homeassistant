@@ -1,0 +1,7 @@
+asleep:
+  alias: Asleep
+  sequence:
+    - service: notify.primary_contact
+      data:
+        message: "I think you are asleep"
+        title: 'Good night'
