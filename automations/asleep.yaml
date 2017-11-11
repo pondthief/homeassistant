@@ -2,12 +2,12 @@
   trigger:
     - platform: state
       entity_id: sensor.eight_left_sleep_stage
-      from: 'awake'
+      to: 'asleep'
       for:
         minutes: 10
     - platform: state
       entity_id: sensor.eight_right_sleep_stage
-      from: 'awake'
+      to: 'asleep'
       for:
         minutes: 10
   action:
