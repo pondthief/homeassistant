@@ -60,4 +60,3 @@
     - service: notify.primary_contact
       data_template:
         message: "\U0001F6A8 {{ trigger.to_state.attributes.friendly_name }} has been OPENED"
-#    - service: script.window_opened
