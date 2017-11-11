@@ -1,126 +1,80 @@
-switch.sprinkler_back_center_left:
-  icon: mdi:water-pump
-  
-switch.sprinkler_back_center_left_2:
-  icon: mdi:water-pump
-
-switch.sprinkler_back_left_side:
-  icon: mdi:water-pump
-
-switch.sprinkler_back_left_by_gate:
-  icon: mdi:water-pump
-
-switch.sprinkler_back_right:
-  icon: mdi:water-pump
-
-switch.sprinkler_back_right_corner:
-  icon: mdi:water-pump
-
-switch.sprinkler_back_tree_bubbler:
-  icon: mdi:water-pump
-
-switch.sprinkler_front_center:
-  icon: mdi:water-pump
-
-switch.sprinkler_front_middle:
-  icon: mdi:water-pump
-
-switch.sprinkler_front_right:
-  icon: mdi:water-pump
-
-switch.sprinkler_front_window_drip:
-  icon: mdi:water-pump
-
-switch.sprinkler_zone_10:
-  icon: mdi:water-pump
-
+#-------------------------------------------
+# Study Objects
+#-------------------------------------------
 light.study_cans_level:
   friendly_name: Study Cans
 
+switch.study_overhead_switch:
+  friendly_name: Study Overhead
+
+#-------------------------------------------
+# Kitchen Objects
+#-------------------------------------------
 light.kitchen_table_level:
   friendly_name: Kitchen Table
 
 light.kitchen_cans_level:
   friendly_name: Kitchen Cans
 
-light.living_overhead_level:
-  friendly_name: Living Overhead
-
-light.living_cans_level:
-  friendly_name: Living Cans
-
-light.hallway_cans_level:
-  friendly_name: Hallway Cans
-
-light.clara_overhead_level:
-  friendly_name: Clara Overhead
-
-light.master_cans_level:
-  friendly_name: Master Cans
-
 light.kitchen_sink_level:
   friendly_name: Kitchen Sink
 
-switch.study_overhead_switch:
-  friendly_name: Study Overhead
-
-switch.front_entry_switch:
-  friendly_name: Front Entry Overhead
-
-switch.front_unknown_switch:
-  friendly_name: Front Unknown
-
-switch.outside_front_switch:
-  friendly_name: Front Yard
-
-switch.craft_overhead_switch:
-  friendly_name: Craft Overhead
+switch.kitchen_cabinets_switch:
+  friendly_name: Kitchen Cabinets
 
 switch.kitchen_island_switch:
   friendly_name: Kitchen Island
 
-switch.kitchen_cabinet_switch:
-  friendly_name: Kitchen Cabinet
+#-------------------------------------------
+# Living Room Objects
+#-------------------------------------------
+light.living_room_overhead_level:
+  friendly_name: Living Overhead
 
-switch.outside_back_switch:
-  friendly_name: Back Yard
+light.living_room_cans_level:
+  friendly_name: Living Room Cans
 
-#switch.ge_14291_inwall_smart_switch_switch_9:
-#  friendly_name: Living Unknown
+switch.living_room_lamp_switch:
+  friendly_name: Living Room Switch
 
-switch.laundry_overhead_switch:
-  friendly_name: Laundry Overhead
+#-------------------------------------------
+# Hallway Objects
+#-------------------------------------------
+light.hallway_cans_level:
+  friendly_name: Hallway Cans
 
-switch.guest_overhead_switch:
-  friendly_name: Guest Overhead
+#-------------------------------------------
+# Clara Room Objects
+#-------------------------------------------
+light.clara_overhead_level:
+  friendly_name: Clara Overhead
 
-switch.guest_bath_fan_switch:
-  friendly_name: Guest Bath Fan
-  icon: mdi:fan
+#-------------------------------------------
+# Master Bedroom Room Objects
+#-------------------------------------------
+light.master_bed_cans_level:
+  friendly_name: Master Cans
 
-switch.guest_bath_mirror_switch:
-  friendly_name: Guest Bath Mirror
-
-switch.guest_bath_shower_switch:
-  friendly_name: Guest Bath Shower
-
-switch.master_fan_switch:
+switch.master_bed_fan_switch:
   friendly_name: Master Fan
   icon: mdi:fan
 
-switch.master_unknown_switch:
+switch.master_bed_fan_light_switch:
   friendly_name: Master Fan Light
 
-switch.master_megan_switch:
+switch.megan_bedside_switch:
   friendly_name: Megan Bedside
   icon: mdi:lamp
 
-switch.master_chris_switch:
+switch.chris_bedside_switch:
   friendly_name: Chris Bedside
   icon: mdi:lamp
 
-switch.master_bath_mirror_switch:
-  friendly_name: Master Bath Mirror
+#-------------------------------------------
+# Master Bath Objects
+#-------------------------------------------
+switch.master_bath_sink_switch:
+  friendly_name: Master Bath Sink
 
 switch.master_bath_shower_switch:
   friendly_name: Master Bath Shower
@@ -129,6 +83,58 @@ switch.master_bath_fan_switch:
   friendly_name: Master Bath Fan
   icon: mdi:fan
 
+#-------------------------------------------
+# Guest Bath Objects
+#-------------------------------------------
+switch.guest_bath_fan_switch:
+  friendly_name: Guest Bath Fan
+  icon: mdi:fan
+
+switch.guest_bath_sink_switch:
+  friendly_name: Guest Bath Mirror
+
+switch.guest_bath_shower_switch:
+  friendly_name: Guest Bath Shower
+
+#-------------------------------------------
+# Entry Objects
+#-------------------------------------------
+switch.entry_overhead_switch:
+  friendly_name: Entry Overhead
+
+#-------------------------------------------
+# Craft Room Objects
+#-------------------------------------------
+switch.craft_lamp_switch:
+  friendly_name: Craft Lamp
+
+switch.craft_cans_switch:
+  friendly_name: Craft Cans
+
+#-------------------------------------------
+# Outside Objects
+#-------------------------------------------
+switch.front_yard_switch:
+  friendly_name: Front Yard
+
+switch.deck_flood_switch:
+  friendly_name: Deck Flood
+
+#-------------------------------------------
+# Laundry Objects
+#-------------------------------------------
+switch.laundry_overhead_switch:
+  friendly_name: Laundry Overhead
+
+#-------------------------------------------
+# Guest Room Objects
+#-------------------------------------------
+switch.guest_overhead_switch:
+  friendly_name: Guest Overhead
+
+#-------------------------------------------
+# Locks
+#-------------------------------------------
 lock.door_garage_locked:
   friendly_name: Garage Door
 
@@ -138,6 +144,9 @@ lock.door_front_locked:
 lock.door_back_locked:
   friendly_name: Back Door
 
+#-------------------------------------------
+# Misc Objects
+#-------------------------------------------
 group.all_automations:
   friendly_name: Automations
   hidden: false

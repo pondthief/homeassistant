@@ -44,7 +44,7 @@ megan_opengarage_offline:
 
 chris_opengarage_offline:
   name: Chris Opengarage OFFLINE
-  done_message: Megan Opengarage ONLINE
+  done_message: Chris Opengarage ONLINE
   entity_id: binary_sensor.chris_open_garage
   state: 'off'
   repeat: 30

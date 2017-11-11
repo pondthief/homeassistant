@@ -4,4 +4,4 @@
     event: sunrise
     offset: '+00:00:00'
   action:
-    - service: script.morning_mode
+    - service: script.sunrise

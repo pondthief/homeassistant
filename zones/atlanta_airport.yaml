@@ -1,8 +1,0 @@
-#-------------------------------------------
-# Atlanta Airport
-#-------------------------------------------
-name: Atlanta Airport
-latitude: 33.640870
-longitude: -84.427749
-icon: mdi:airplane
-hidden: true

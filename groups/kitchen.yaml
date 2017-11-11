@@ -3,7 +3,7 @@ kitchen:
   entities:
     - light.kitchen_table_level
     - light.kitchen_cans_level
-    - switch.kitchen_cabinet_switch
+    - switch.kitchen_cabinets_switch
     - switch.kitchen_island_switch
     - light.kitchen_sink_level
 

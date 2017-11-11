@@ -2,5 +2,5 @@ guest_bath:
   name: Guest Bathroom
   entities:
     - switch.guest_bath_fan_switch
-    - switch.guest_bath_mirror_switch
+    - switch.guest_bath_sink_switch
     - switch.guest_bath_shower_switch

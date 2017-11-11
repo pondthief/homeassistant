@@ -1,8 +1,8 @@
 outside:
   name: Outside
   entities:
-    - switch.outside_back_switch
-    - switch.outside_front_switch
+    - switch.deck_flood_switch
+    - switch.front_yard_switch
 
 outside_sensors:
   name: Outside

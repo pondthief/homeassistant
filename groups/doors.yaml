@@ -1,9 +1,9 @@
 doors:
   name: Door Locks
   entities:
-    - lock.door_front_locked
-    - lock.door_back_locked
-    - lock.door_garage_locked
+    - lock.front_door_locked
+    - lock.back_door_locked
+    - lock.garage_door_locked
 
 doors_sensors:
   name: Doors

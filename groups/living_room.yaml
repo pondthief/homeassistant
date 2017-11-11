@@ -1,7 +1,7 @@
 living_room:
   name: Living Room
   entities:
-    # - Unknown switch
-    - light.living_overhead_level
-    - light.living_cans_level
+    - switch.living_room_lamp_switch
+    - light.living_room_overhead_level
+    - light.living_room_cans_level
     - light.hallway_cans_level

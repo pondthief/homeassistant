@@ -1,5 +1,0 @@
-front_room:
-  name: Front Room
-  entities:
-    - switch.front_entry_switch
-    - switch.front_unknown_switch
