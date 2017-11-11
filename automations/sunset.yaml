@@ -1,4 +1,4 @@
-- alias: 'Evening Mode'
+- alias: 'Sunset'
   trigger:
     platform: sun
     event: sunset
