@@ -1,7 +1,7 @@
 laundry_room:
   name: Laundry Room
   entities:
-    - switch.laundry_overhead_switch
+    - switch.laundry_room_overhead_switch
 
 laundry_room_sensors:
   name: Laundry Room
