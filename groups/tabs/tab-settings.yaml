@@ -6,7 +6,6 @@ system_tab:
   view: yes
   icon: mdi:settings
   entities:
-    - group.rf_heartbeats
     - group.devices
     - group.system
     - group.apcupsd
