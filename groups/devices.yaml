@@ -7,4 +7,3 @@ devices:
     - binary_sensor.megan_open_garage
     - binary_sensor.rachio_panel
     - binary_sensor.craft_room_probe
-    - binary_sensor.laundry_room_probe
