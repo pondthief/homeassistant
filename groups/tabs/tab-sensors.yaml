@@ -17,7 +17,6 @@ sensors_tab:
     - group.master_bed_sensors
     - group.study_sensors
     - group.nest_sensors
-    - group.outside
     - group.outside_sensors
     - group.weather
     - group.travel_times
