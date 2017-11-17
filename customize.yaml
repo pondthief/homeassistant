@@ -123,7 +123,7 @@ switch.deck_flood_switch:
 #-------------------------------------------
 # Laundry Objects
 #-------------------------------------------
-switch.laundry_overhead_switch:
+switch.laundry_room_overhead_switch:
   friendly_name: Laundry Overhead
 
 #-------------------------------------------
@@ -147,11 +147,6 @@ lock.door_back_locked:
 #-------------------------------------------
 # Misc Objects
 #-------------------------------------------
-group.all_automations:
-  friendly_name: Automations
-  hidden: false
-  control: show
-
 group.all_locks:
   friendly_name: Door Locks
   hidden: false

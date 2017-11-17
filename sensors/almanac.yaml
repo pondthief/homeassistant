@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Almanac Sensors
+#-------------------------------------------
 - platform: template
   sensors:
     nextsunrise:

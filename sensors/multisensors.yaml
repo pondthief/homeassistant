@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Aeotec Multisensors
+#-------------------------------------------
 - platform: template
   sensors:
     laundry_multisensor_motion:

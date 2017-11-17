@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Zwave Component
+#-------------------------------------------
 usb_path: /dev/zwave
 network_key: !secret zwave_network_key
 new_entity_ids: true
