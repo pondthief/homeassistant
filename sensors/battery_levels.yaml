@@ -9,3 +9,17 @@
         {%- endif -%}
       unit_of_measurement: '%'
       entity_id: zwave.laundry_multisensor
+      icon_template: >-
+        {% set battery_level = states('sensor.mailbox_battery')|int('unknown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {% if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
