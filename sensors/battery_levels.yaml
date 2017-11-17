@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Laundry Room Multisensor
+#-------------------------------------------
 - platform: template
   sensors:
     laundry_multisensor_battery:
@@ -6,6 +9,30 @@
       entity_id: zwave.laundry_multisensor
       icon_template: >-
         {% set battery_level = states('sensor.laundry_multisensor_battery')|int('unknown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {% if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+
+#-------------------------------------------
+#  Front Door Lock
+#-------------------------------------------
+- platform: template
+  sensors:
+    front_door_battery:
+      value_template: '{{ states.zwave.front_door.attributes.battery_level }}'
+      unit_of_measurement: '%'
+      entity_id: zwave.front_door
+      icon_template: >-
+        {% set battery_level = states('sensor.front_door_battery')|int('unknown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}
         {% if battery_level == 'unknown' %}
           mdi:battery-unknown
