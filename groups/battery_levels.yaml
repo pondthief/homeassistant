@@ -2,8 +2,8 @@ battery_levels:
   name: Battery Levels
   entities:
     - zwave.laundry_multisensor.attributes.battery_level
-    - zwave.back_door.battery_level
-    - zwave.front_door.battery_level
-    - zwave.garage_door.battery_level
+    - zwave.back_door.attributes.battery_level
+    - zwave.front_door.attributes.battery_level
+    - zwave.garage_door.attributes.battery_level
     - sensor.chris_iphone_battery_level
     - sensor.chriss_ipad_battery_level
