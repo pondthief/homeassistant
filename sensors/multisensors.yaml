@@ -1,0 +1,12 @@
+- platform: template
+  sensors:
+    laundry_multisensor_motion:
+      friendly_name: 'Laundry MultiSensor Motion'
+      value_template: >-
+      {% if is_state("sensor.laundry_multisensor_burglar", "8") %}
+      motion
+      {% elif is_state("sensor.laundry_multisensor_burglar", "3") %}
+      tamper
+      {% else %}
+      still
+      {% endif %}
