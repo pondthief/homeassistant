@@ -1,0 +1,11 @@
+- platform: template
+  sensors:
+    laundry_multisensor_battery:
+      value_template: >-
+        {%- if states.zwave.laundry_multisensor -%}
+          {{ states.zwave.laundry_multisensor.attributes.battery_level }}
+        {%- else -%}
+          n/a
+        {%- endif -%}
+      unit_of_measurement: '%'
+      entity_id: zwave.laundry_multisensor
