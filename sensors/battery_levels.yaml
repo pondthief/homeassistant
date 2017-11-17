@@ -45,3 +45,51 @@
             mdi:battery-alert
           {% endif %}
         {% endif %}
+
+#-------------------------------------------
+#  Back Door Lock
+#-------------------------------------------
+- platform: template
+  sensors:
+    back_door_battery:
+      value_template: '{{ states.zwave.back_door.attributes.battery_level }}'
+      unit_of_measurement: '%'
+      entity_id: zwave.back_door
+      icon_template: >-
+        {% set battery_level = states('sensor.back_door_battery')|int('unknown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {% if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+
+#-------------------------------------------
+#  Garage Door Lock
+#-------------------------------------------
+- platform: template
+  sensors:
+    garage_door_battery:
+      value_template: '{{ states.zwave.garage_door.attributes.battery_level }}'
+      unit_of_measurement: '%'
+      entity_id: zwave.garage_door
+      icon_template: >-
+        {% set battery_level = states('sensor.garage_door_battery')|int('unknown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {% if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
