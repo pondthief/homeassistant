@@ -19,7 +19,7 @@
   trigger:
     - platform: state
       entity_id: cover.chris_overhead_garage_door
-      to: 'opened'
+      to: 'open'
       from: 'closed'
   action:
     - service: notify.primary_contact
@@ -33,7 +33,7 @@
   trigger:
     - platform: state
       entity_id: cover.megan_overhead_garage_door
-      to: 'opened'
+      to: 'open'
       from: 'closed'
   action:
     - service: notify.primary_contact
