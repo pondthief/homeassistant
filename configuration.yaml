@@ -134,12 +134,6 @@ mqtt:
 # History support
 #-------------------------------------------
 history:
-  exclude:
-    domains:
-      - zwave
-      - weblink
-      - script
-      - sun
   
 #-------------------------------------------
 # Logbook Settings
