@@ -1,18 +1,41 @@
+#-------------------------------------------
+# Alert When Front Door Opened
+#-------------------------------------------
 - alias: "Door Opened"
   trigger:
     - platform: state
-      entity_id: binary_sensor.back_door
-      to: 'on'
-      from: 'off'
-    - platform: state
       entity_id: binary_sensor.front_door
-      to: 'on'
-      from: 'off'
-    - platform: state
-      entity_id: binary_sensor.garage_door
       to: 'on'
       from: 'off'
   action:
     - service: notify.primary_contact
       data_template:
         message: "\U0001F6AA {{ trigger.to_state.attributes.friendly_name }} has been OPENED"
+
+#-------------------------------------------
+# Alert When Chris Garage Door Opened
+#-------------------------------------------
+- alias: "Chris Garage Door Opened"
+  trigger:
+    - platform: state
+      entity_id: cover.chris_overhead_garage_door
+      to: 'open'
+      from: 'closed'
+  action:
+    - service: notify.primary_contact
+      data_template:
+        message: "\U0001F697 {{ trigger.to_state.attributes.friendly_name }} has been OPENED"
+
+#-------------------------------------------
+# Alert When Megan Garage Door Opened
+#-------------------------------------------
+- alias: "Megan Garage Door Opened"
+  trigger:
+    - platform: state
+      entity_id: cover.megan_overhead_garage_door
+      to: 'open'
+      from: 'closed'
+  action:
+    - service: notify.primary_contact
+      data_template:
+        message: "\U0001F697 {{ trigger.to_state.attributes.friendly_name }} has been OPENED"

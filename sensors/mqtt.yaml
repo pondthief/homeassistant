@@ -18,18 +18,3 @@
   state_topic: "v1/devices/temp"
   unit_of_measurement: "lux"
   value_template: '{% if value_json.id is equalto "7f8aa329" %} {{value_json.lux}} {% else %} {{states.sensor.laundry_room_lux.state}} {% endif %}'
-
-#-------------------------------------------
-#  Laundry Room
-#-------------------------------------------
-- platform: mqtt
-  name: Laundry Room Temp
-  state_topic: "v1/devices/temp"
-  unit_of_measurement: "°F"
-  value_template: '{% if value_json.id is equalto "7faedf7" %} {{value_json.temperature}} {% else %} {{states.sensor.craft_room_temp.state}} {% endif %}'
-
-- platform: mqtt
-  name: Laundry Room Humidity
-  state_topic: "v1/devices/temp"
-  unit_of_measurement: "%"
-  value_template: '{% if value_json.id is equalto "7faedf7" %} {{value_json.humidity}} {% else %} {{states.sensor.craft_room_humidity.state}} {% endif %}'

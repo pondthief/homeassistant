@@ -1,3 +1,6 @@
+#-------------------------------------------
+# When No One Is Home
+#-------------------------------------------
 - alias: 'Away Mode'
   trigger:
     platform: state

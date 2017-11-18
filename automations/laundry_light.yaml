@@ -1,0 +1,25 @@
+#-------------------------------------------
+# Turn on Laundry Light on Motion
+#-------------------------------------------
+- alias: 'Laundry Room Motion Light On'
+  trigger:
+    platform: state
+    entity_id: sensor.laundry_multisensor_burglar
+    from: '0'
+    to: '8'
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.laundry_room_overhead_switch
+
+#-------------------------------------------
+# Turn off Laundry Light when no motion
+#-------------------------------------------
+- alias: 'Laundry Room Motion Light On'
+  trigger:
+    platform: state
+    entity_id: sensor.laundry_multisensor_burglar
+    from: '8'
+    to: '0'
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.laundry_room_overhead_switch

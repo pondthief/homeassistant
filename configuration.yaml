@@ -110,6 +110,12 @@ camera:
 cover: !include covers.yaml
 
 #-------------------------------------------
+# Enable light component
+#-------------------------------------------
+light:
+  - platform: lifx
+
+#-------------------------------------------
 # Nest Settings
 #-------------------------------------------
 nest:
@@ -220,6 +226,7 @@ device_tracker:
   - platform: automatic
     client_id: !secret automatic_client_id
     secret: !secret automatic_secret
+    current_location: true
 
 #-------------------------------------------
 # Weblinks

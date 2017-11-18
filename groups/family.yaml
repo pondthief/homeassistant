@@ -15,3 +15,4 @@ family_location:
     - sensor.chris_location_to_home
     - device_tracker.megan_iphone
     - sensor.megan_location_to_home
+    - device_tracker.2015_nissan_rogue

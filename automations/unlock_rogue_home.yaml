@@ -1,0 +1,10 @@
+- alias: 'Unlock when Rogue Arrive Home'
+  trigger:
+    platform: state
+    entity_id: device_tracker.2015_nissan_rogue
+    to: 'home'
+    from: 'not_home'
+  action:
+    - service: lock.unlock
+      data:
+        entity_id: lock.front_door_locked

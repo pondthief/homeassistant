@@ -1,12 +1,12 @@
 #-------------------------------------------
-#  Honetwell Door / Window Sensors
+#  Honeywell Door / Window Sensors
 #-------------------------------------------
 - name: "Study Window"
   platform: mqtt
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 547651 %} {{value_json.state}} {% else %} {{states.binary_sensor.study_window.state}} {% endif %}'
 
@@ -16,7 +16,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 792500 %} {{value_json.state}} {% else %} {{states.binary_sensor.master_bathroom_window.state}} {% endif %}'
 
@@ -26,7 +26,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 871236 %} {{value_json.state}} {% else %} {{states.binary_sensor.guest_window.state}} {% endif %}'
 
@@ -36,7 +36,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 265871 %} {{value_json.state}} {% else %} {{states.binary_sensor.child_window.state}} {% endif %}'
 
@@ -46,7 +46,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 785920 %} {{value_json.state}} {% else %} {{states.binary_sensor.front_right_window.state}} {% endif %}'
 
@@ -56,7 +56,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 529823 %} {{value_json.state}} {% else %} {{states.binary_sensor.front_window_one.state}} {% endif %}'
 
@@ -66,7 +66,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 4559 %} {{value_json.state}} {% else %} {{states.binary_sensor.front_window_two.state}} {% endif %}'
 
@@ -76,7 +76,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 272026 %} {{value_json.state}} {% else %} {{states.binary_sensor.back_window_one.state}} {% endif %}'
 
@@ -86,7 +86,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 224113 %} {{value_json.state}} {% else %} {{states.binary_sensor.back_window_two.state}} {% endif %}'
 
@@ -96,7 +96,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 830937 %} {{value_json.state}} {% else %} {{states.binary_sensor.back_window_three.state}} {% endif %}'
 
@@ -106,7 +106,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 924316 %} {{value_json.state}} {% else %} {{states.binary_sensor.back_right_window.state}} {% endif %}'
 
@@ -116,7 +116,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 65736 %} {{value_json.state}} {% else %} {{states.binary_sensor.kitchen_sink_window.state}} {% endif %}'
 
@@ -126,7 +126,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 761758 %} {{value_json.state}} {% else %} {{states.binary_sensor.master_bedroom_window.state}} {% endif %}'
 
@@ -136,7 +136,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 648705 %} {{value_json.state}} {% else %} {{states.binary_sensor.front_door.state}} {% endif %}'
 
@@ -146,7 +146,7 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 491009 %} {{value_json.state}} {% else %} {{states.binary_sensor.back_door.state}} {% endif %}'
 
@@ -156,6 +156,6 @@
   state_topic: "homeassistant/sensor/honeywell"
   payload_on: "open"
   payload_off: "closed"
-  qos: 0
+  qos: 1
   device_class: opening
   value_template: '{% if value_json.id is equalto 275843 %} {{value_json.state}} {% else %} {{states.binary_sensor.garage_door.state}} {% endif %}'

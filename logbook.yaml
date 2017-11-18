@@ -1,11 +1,13 @@
+#-------------------------------------------
+#  Logbook Component
+#-------------------------------------------
 exclude:
   domains:
     - zwave
     - weblink
   entities:
-    - sensor.swap_use
+    - sensor.swap_used
     - sensor.ram_free
-    - sensor.disk_use_
-    - sensor.cpu_use
+    - sensor.disk_used_
+    - sensor.cpu_used
     - sensor.average_load_1m
-    - sensor.pws_alerts

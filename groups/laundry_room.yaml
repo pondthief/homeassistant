@@ -1,11 +1,13 @@
 laundry_room:
   name: Laundry Room
   entities:
-    - switch.laundry_overhead_switch
+    - switch.laundry_room_overhead_switch
 
 laundry_room_sensors:
   name: Laundry Room
   entities:
     - binary_sensor.garage_door
-    - sensor.laundry_room_temp
-    - sensor.laundry_room_humidity
+    - sensor.laundry_multisensor_motion
+    - sensor.laundry_multisensor_luminance
+    - sensor.laundry_multisensor_relative_humidity
+    - sensor.laundry_multisensor_temperature
