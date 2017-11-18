@@ -1,0 +1,13 @@
+#-------------------------------------------
+# Actions to take at bedtime
+#-------------------------------------------
+bedtime:
+  alias: Bedtime
+  sequence:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.hallway
+        temperature: '68'
+    - service: lock.lock
+      data:
+        entity_id: group.all_locks
