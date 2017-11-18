@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Turn on Laundry Light on Motion
+#-------------------------------------------
 - alias: 'Laundry Room Motion Light On'
   trigger:
     platform: state
@@ -8,6 +11,9 @@
     service: homeassistant.turn_on
     entity_id: switch.laundry_room_overhead_switch
 
+#-------------------------------------------
+# Turn off Laundry Light when no motion
+#-------------------------------------------
 - alias: 'Laundry Room Motion Light On'
   trigger:
     platform: state
