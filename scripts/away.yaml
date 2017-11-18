@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Actions to take when Away detected
+#-------------------------------------------
 away:
   alias: Away
   sequence:

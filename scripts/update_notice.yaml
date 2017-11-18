@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Update me that there is an HA update
+#-------------------------------------------
 update_notice:
   alias: Update Notice
   sequence:
