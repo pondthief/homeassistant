@@ -9,6 +9,7 @@ sunrise:
       data:
         entity_id:
           - switch.front_yard_switch
+          - switch.deck_flood_switch
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
