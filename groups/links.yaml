@@ -5,3 +5,4 @@ links:
     - weblink.papertrail
     - weblink.rachio
     - weblink.montastic
+    - weblink.nagios

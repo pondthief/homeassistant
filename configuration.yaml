@@ -216,7 +216,7 @@ device_tracker:
   - platform: automatic
     client_id: !secret automatic_client_id
     secret: !secret automatic_secret
-    current_location: true
+#    current_location: true
 
 #-------------------------------------------
 # Weblinks
@@ -231,3 +231,6 @@ weblink:
     - name: Montastic
       url: https://www.montastic.com
       icon: mdi:security-network
+    - name: Nagios
+      url: http://192.168.128.253:8081
+      icon: mdi:ethernet
