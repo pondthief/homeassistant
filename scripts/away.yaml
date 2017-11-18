@@ -7,9 +7,3 @@ away:
     - service: lock.lock
       data:
         entity_id: group.all_locks
-    - service: light.turn_off
-    - service: switch.turn_off
-    - service: notify.primary_contact
-      data:
-        message: "There doesn't appear to be anyone at home"
-        title: 'Anyone Home?'
