@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Unlock house when Chris gets home
+#-------------------------------------------
 - alias: 'Unlock when Rogue Arrive Home'
   trigger:
     platform: state

@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Things to do at Sunrise
+#-------------------------------------------
 - alias: 'Sunrise'
   trigger:
     platform: sun
