@@ -7,7 +7,6 @@ family:
     - device_tracker.chris_iphone
     - device_tracker.megan_iphone
 
-#-------------------------------------------
 family_location:
   name: Family Location
   entities:

@@ -1,4 +1,7 @@
-Entry:
+#-------------------------------------------
+#  Front Entry
+#-------------------------------------------
+entry:
   name: Entry
   entities:
     - switch.front_entry_switch
