@@ -14,7 +14,7 @@
 #-------------------------------------------
 # Turn off Laundry Light when no motion
 #-------------------------------------------
-- alias: 'Laundry Room Motion Light On'
+- alias: 'Laundry Room Motion Light Off'
   trigger:
     platform: state
     entity_id: sensor.laundry_multisensor_burglar
