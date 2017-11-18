@@ -6,7 +6,6 @@ system_tab:
   view: yes
   icon: mdi:settings
   entities:
-    - group.devices
     - group.system
     - group.apcupsd
     - group.links
