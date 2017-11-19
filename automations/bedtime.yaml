@@ -4,6 +4,6 @@
 - alias: 'Bedtime'
   trigger:
     platform: time
-    at: '21:30:00'
+    at: '22:30:00'
   action:
     - service: script.bedtime
