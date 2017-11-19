@@ -14,7 +14,3 @@ sunrise:
       data:
         entity_id: climate.hallway
         temperature: '72'
-    - service: notify.primary_contact
-      data:
-        message: "The sun is up, and the house is ready for the day"
-        title: 'Good Morning'
