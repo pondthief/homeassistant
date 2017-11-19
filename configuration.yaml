@@ -211,13 +211,9 @@ eight_sleep:
   partner: true
 
 #-------------------------------------------
-# Car Tracking
+# Device Tracking
 #-------------------------------------------
-device_tracker:
-  - platform: automatic
-    client_id: !secret automatic_client_id
-    secret: !secret automatic_secret
-#    current_location: true
+device_tracker: !include amcrest.yaml
 
 #-------------------------------------------
 # Weblinks
