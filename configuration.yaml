@@ -213,7 +213,7 @@ eight_sleep:
 #-------------------------------------------
 # Device Tracking
 #-------------------------------------------
-device_tracker: !include amcrest.yaml
+device_tracker: !include device_tracker.yaml
 
 #-------------------------------------------
 # Weblinks
