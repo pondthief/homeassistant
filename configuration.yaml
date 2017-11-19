@@ -231,3 +231,6 @@ weblink:
     - name: Nagios
       url: http://192.168.128.253:8081
       icon: mdi:ethernet
+    - name: Rancher
+      url: http://192.168.128.253:8080
+      icon: mdi:cow
