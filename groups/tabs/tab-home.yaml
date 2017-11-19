@@ -9,4 +9,4 @@ default_view:
     - group.garage
     - group.nest_control
     - group.doors
-    - group.doors_sensors
+    - group.links

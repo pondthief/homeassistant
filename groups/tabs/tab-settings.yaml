@@ -8,5 +8,4 @@ system_tab:
   entities:
     - group.system
     - group.apcupsd
-    - group.links
     - group.battery_levels
