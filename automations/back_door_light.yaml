@@ -1,0 +1,15 @@
+#-------------------------------------------
+# Turn on deck back door if night / open
+#-------------------------------------------
+- alias: "Turn on Deck Light if Door Open"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.back_door
+      to: 'on'
+      from: 'off'
+  condition:
+    condition: sun
+    after: sunset
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.deck_flood_switch
