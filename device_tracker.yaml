@@ -13,3 +13,4 @@
   hosts: 192.168.128.0/24
   interval_seconds: 60
   consider_home: 180
+  track_new_devices: false
