@@ -22,7 +22,3 @@ sunset:
     - service: lock.lock
       data:
         entity_id: group.all_locks
-    - service: notify.primary_contact
-      data:
-        message: "The house is ready for everyone to good to sleep"
-        title: 'Good Night'
