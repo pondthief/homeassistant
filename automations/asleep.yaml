@@ -9,5 +9,17 @@
     - platform: state
       entity_id: sensor.eight_right_sleep_stage
       to: 'deep'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: binary_sensor.front_door
+        state: 'off'
+      - condition: state
+        entity_id: binary_sensor.garage_door
+        state: 'off'
+      - condition: state
+        entity_id: binary_sensor.back_door
+        state: 'off'
   action:
     - service: script.asleep
