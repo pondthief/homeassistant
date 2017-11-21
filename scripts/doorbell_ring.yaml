@@ -5,11 +5,10 @@ doorbell_ring:
   alias: Doorbell Ring
   sequence:
     - service: notify.primary_contact
-      data:
+      data_template:
         title: "Doorbell"
         message: "\U0001F514 Someone is at the Front Door!"
         data:
-          attachment:
-            url: http://192.168.128.240/cgi-bin/snapshot.cgi?1
-            content-type: jpg
-            hide-thumbnail: false
+          push:
+            category: camera
+          entity_id: camera.garage_left
