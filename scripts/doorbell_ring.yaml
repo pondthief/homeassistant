@@ -5,7 +5,7 @@ doorbell_ring:
   alias: Doorbell Ring
   sequence:
     - service: notify.primary_contact
-      data_template:
+      data:
         title: "Doorbell"
         message: "\U0001F514 Someone is at the Front Door!"
         data:
