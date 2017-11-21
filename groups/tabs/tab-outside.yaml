@@ -6,4 +6,4 @@ outside_tab:
   view: yes
   icon: mdi:camera
   entities:
-    - group.front_cameras
+    - group.cameras
