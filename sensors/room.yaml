@@ -1,5 +1,5 @@
 - platform: mqtt_room
-  device_id: 0CF3EE16461E
+  device_id: 2f234454cf6d4a0fadf2f4911ba9ffa6-0-1
   name: 'Chris Beacon'
   state_topic: 'room_presence'
   timeout: 5
