@@ -4,3 +4,13 @@
   state_topic: 'room_presence'
   timeout: 5
   away_timeout: 60
+
+- platform: mqtt_room
+  device_id: bc44f10e7b554f9984ec1949292f72f1-0-1
+  name: 'Tupac Beacon'
+  state_topic: 'room_presence'
+  timeout: 5
+  away_timeout: 60
+
+
+  
