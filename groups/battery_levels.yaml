@@ -10,3 +10,5 @@ battery_levels:
     - sensor.garage_door_battery
     - sensor.chris_iphone_battery_level
     - sensor.chriss_ipad_battery_level
+    - sensor.iphone_battery_level
+    - sensor.megans_ipad_battery_level
