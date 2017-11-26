@@ -5,7 +5,12 @@
   sensors:
     laundry_multisensor_battery:
       friendly_name: 'Laundry Room Multisensor'
-      value_template: '{{ states.zwave.laundry_multisensor.attributes.battery_level }}'
+      # value_template: '{{ states.zwave.laundry_multisensor.attributes.battery_level }}'
+      value_template: '{% if states.zwave.laundry_multisensor.attributes.battery_level %}
+        {{ states.zwave.laundry_multisensor.attributes.battery_level }}
+      {% else %}
+        unknown
+      {% endif %}'      
       unit_of_measurement: '%'
       entity_id: zwave.laundry_multisensor
       icon_template: >-
