@@ -10,3 +10,4 @@ default_view:
     - group.nest_control
     - group.doors
     - group.links
+    - group.beacons
