@@ -2,7 +2,7 @@
 #  Beacons
 #-------------------------------------------
 beacons:
-  name: Battery Levels
+  name: Beacons
   entities:
     - sensor.chris_beacon
     - sensor.megan_beacon
