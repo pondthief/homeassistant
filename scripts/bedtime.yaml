@@ -11,3 +11,9 @@ bedtime:
     - service: lock.lock
       data:
         entity_id: group.all_locks
+    - service: switch.turn_on
+      data:
+        entity_id: switch.outside_security_switch
+
+
+        
