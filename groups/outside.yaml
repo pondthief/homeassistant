@@ -6,6 +6,7 @@ outside:
   entities:
     - switch.deck_flood_switch
     - switch.front_yard_switch
+    - switch.craft_lamp_switch
 
 outside_sensors:
   name: Outside

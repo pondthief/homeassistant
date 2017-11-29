@@ -5,7 +5,6 @@ craft_room:
   name: Craft Room
   entities:
     - switch.craft_cans_switch
-    - switch.craft_lamp_switch
 
 craft_room_sensors:
   name: Craft Room
