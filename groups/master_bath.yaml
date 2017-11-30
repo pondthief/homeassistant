@@ -12,3 +12,7 @@ master_bath_sensors:
   name: Master Bathroom
   entities:
     - binary_sensor.master_bathroom_window
+    - sensor.master_bath_multisensor_motion
+    - sensor.master_bath_multisensor_luminance
+    - sensor.master_bath_multisensor_relative_humidity
+    - sensor.master_bath_multisensor_temperature
