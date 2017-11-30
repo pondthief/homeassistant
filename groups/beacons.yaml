@@ -1,9 +1,8 @@
 #-------------------------------------------
-#  Outside Tab
+#  Beacons
 #-------------------------------------------
-outside_tab:
-  name: Outside
-  view: yes
-  icon: mdi:camera
+beacons:
+  name: Beacons
   entities:
-    - group.cameras
+    - sensor.chris_beacon
+    - sensor.megan_beacon

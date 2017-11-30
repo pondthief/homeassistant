@@ -1,0 +1,9 @@
+#-------------------------------------------
+#  IP Cameras
+#-------------------------------------------
+cameras:
+  name: Front
+  entities:
+    - camera.driveway
+    - camera.front_porch
+    - camera.garage_inside

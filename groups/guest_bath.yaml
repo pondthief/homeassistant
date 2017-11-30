@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Guest Bathroom
+#-------------------------------------------
 guest_bath:
   name: Guest Bathroom
   entities:

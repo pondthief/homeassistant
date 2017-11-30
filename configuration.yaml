@@ -14,28 +14,7 @@ homeassistant:
 #-------------------------------------------
 # Recorder Settings
 #-------------------------------------------
-recorder:
-  db_url: !secret mysql_log_conn
-  purge_keep_days: 7
-  purge_interval: 2
-  exclude:
-    domains:
-      - zwave
-      - sun
-    entities:
-      - sensor.pws_alerts
-      - sensor.south_from_home_via_i35
-      - sensor.south_from_home_via_mopac
-      - sensor.north_from_home
-      - sensor.airport_from_home
-      - sensor.ups_battery
-      - sensor.ups_input_voltage
-      - sensor.ups_load
-      - sensor.ups_status
-      - sensor.ups_time_left
-      - sensor.ups_time_on_battery
-      - binary_sensor.workday_sensor
-      - binary_sensor.ups_online_status
+recorder: !include recorder.yaml
 
 #-------------------------------------------
 # Logger Settings
@@ -53,6 +32,7 @@ ring:
 # Frontend Settings
 #-------------------------------------------
 frontend:
+  javascript_version: latest
   themes:
     red:
       primary-color: red
@@ -118,19 +98,19 @@ light:
 #-------------------------------------------
 # Media Players
 #-------------------------------------------
-media_player:
-  - platform: directv
-    host: 192.168.128.207
-    port: 8080
-    name: Main DirecTV Box
-    device: 0
-  - platform: directv
-    host: 192.168.128.207
-    port: 8080
-    name: Master Bedroom DirecTV
-    device: 14B7F87C30BF
-  - platform: roku
-    host: 192.168.128.200
+#media_player:
+#  - platform: directv
+#    host: 192.168.128.207
+#    port: 8080
+#    name: Main DirecTV Box
+#    device: 0
+#  - platform: directv
+#    host: 192.168.128.207
+#    port: 8080
+#    name: Master Bedroom DirecTV
+#    device: 14B7F87C30BF
+#  - platform: roku
+#    host: 192.168.128.200
 
 #-------------------------------------------
 # Nest Settings
@@ -155,12 +135,6 @@ mqtt:
 # History support
 #-------------------------------------------
 history:
-  exclude:
-    domains:
-      - zwave
-      - weblink
-      - script
-      - sun
   
 #-------------------------------------------
 # Logbook Settings
@@ -237,13 +211,9 @@ eight_sleep:
   partner: true
 
 #-------------------------------------------
-# Car Tracking
+# Device Tracking
 #-------------------------------------------
-device_tracker:
-  - platform: automatic
-    client_id: !secret automatic_client_id
-    secret: !secret automatic_secret
-    current_location: true
+device_tracker: !include device_tracker.yaml
 
 #-------------------------------------------
 # Weblinks
@@ -258,3 +228,9 @@ weblink:
     - name: Montastic
       url: https://www.montastic.com
       icon: mdi:security-network
+    - name: Nagios
+      url: http://192.168.128.253:8081/nagios/cgi-bin/status.cgi?host=all
+      icon: mdi:ethernet
+    - name: Rancher
+      url: http://192.168.128.253:8080
+      icon: mdi:cow

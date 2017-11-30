@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Actions to take when Doorbell Rings
+#-------------------------------------------
 doorbell_ring:
   alias: Doorbell Ring
   sequence:

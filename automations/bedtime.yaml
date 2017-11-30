@@ -1,0 +1,9 @@
+#-------------------------------------------
+# Just before bed
+#-------------------------------------------
+- alias: 'Bedtime'
+  trigger:
+    platform: time
+    at: '22:30:00'
+  action:
+    - service: script.bedtime

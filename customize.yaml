@@ -105,9 +105,6 @@ switch.entry_overhead_switch:
 #-------------------------------------------
 # Craft Room Objects
 #-------------------------------------------
-switch.craft_lamp_switch:
-  friendly_name: Craft Lamp
-
 switch.craft_cans_switch:
   friendly_name: Craft Cans
 
@@ -119,6 +116,9 @@ switch.front_yard_switch:
 
 switch.deck_flood_switch:
   friendly_name: Deck Flood
+
+switch.craft_lamp_switch:
+  friendly_name: Security Lights
 
 #-------------------------------------------
 # Laundry Objects

@@ -1,0 +1,21 @@
+#-------------------------------------------
+#  Recorder Component
+#-------------------------------------------
+db_url: !secret mysql_log_conn
+purge_keep_days: 30
+purge_interval: 2
+include:
+  domains:
+    - switch
+    - light
+    - lock
+    - automation
+    - climate
+    - cover
+  entities:
+    - binary_sensor.back_door
+    - binary_sensor.front_door
+    - binary_sensor.garage_door
+    - binary_sensor.ring_front_door_ding
+    - device_tracker.chris_iphone
+    - device_tracker.megan_iphone

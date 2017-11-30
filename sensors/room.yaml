@@ -1,0 +1,16 @@
+- platform: mqtt_room
+  device_id: 2f234454cf6d4a0fadf2f4911ba9ffa6-0-1
+  name: 'Chris Beacon'
+  state_topic: 'room_presence'
+  timeout: 5
+  away_timeout: 60
+
+- platform: mqtt_room
+  device_id: bc44f10e7b554f9984ec1949292f72f1-0-1
+  name: 'Megan Beacon'
+  state_topic: 'room_presence'
+  timeout: 5
+  away_timeout: 60
+
+
+  

@@ -1,7 +1,9 @@
+#-------------------------------------------
+# Actions to take when asleep
+#-------------------------------------------
 asleep:
   alias: Asleep
   sequence:
-    - service: notify.primary_contact
+    - service: lock.lock
       data:
-        message: "I think you are asleep"
-        title: 'Good night'
+        entity_id: group.all_locks
