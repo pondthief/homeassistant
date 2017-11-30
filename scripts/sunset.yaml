@@ -10,6 +10,7 @@ sunset:
           - switch.front_yard_switch
           - switch.chris_bedside_switch
           - switch.megan_bedside_switch
+          - switch.kitchen_island_switch
     - service: light.turn_on
       data:
         entity_id: 

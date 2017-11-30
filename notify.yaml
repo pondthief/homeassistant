@@ -4,7 +4,7 @@
 - name: primary_contact
   platform: group
   services:
-    - service: ios
+    - service: slack
 
 #-------------------------------------------
 #  Emergency Notices via SMS
@@ -17,6 +17,14 @@
         target:
           - !secret chris_mobile_num
           - !secret megan_mobile_num
+
+#-------------------------------------------
+#  Slack Notices
+#-------------------------------------------
+- name: slack
+  platform: slack
+  api_key: !secret slack_api
+  default_channel: '#home'
 
 #-------------------------------------------
 #  Twilio SMS Notices
