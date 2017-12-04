@@ -5,7 +5,6 @@
   sensors:
     laundry_multisensor_battery:
       friendly_name: 'Laundry Room Multisensor'
-      # value_template: '{{ states.zwave.laundry_multisensor.attributes.battery_level }}'
       value_template: '{% if states.zwave.laundry_multisensor.attributes.battery_level %}
         {{ states.zwave.laundry_multisensor.attributes.battery_level }}
       {% else %}
@@ -29,13 +28,70 @@
         {% endif %}
 
 #-------------------------------------------
+#  Master Bath Multisensor
+#-------------------------------------------
+- platform: template
+  sensors:
+    master_bath_multisensor_battery:
+      friendly_name: 'Master Bath Multisensor'
+      value_template: '{% if states.zwave.master_bath_multisensor.attributes.battery_level %}
+        {{ states.zwave.master_bath_multisensor.attributes.battery_level }}
+      {% else %}
+        unknown
+      {% endif %}'      
+      unit_of_measurement: '%'
+      entity_id: zwave.master_bath_multisensor
+      icon_template: >-
+        {% set battery_level = states('sensor.master_bath_multisensor')|int('unknown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {% if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+
+#-------------------------------------------
+#  Study Multisensor
+#-------------------------------------------
+- platform: template
+  sensors:
+    study_multisensor_battery:
+      friendly_name: 'Study Multisensor'
+      value_template: '{% if states.zwave.study_multisensor.attributes.battery_level %}
+        {{ states.zwave.study_multisensor.attributes.battery_level }}
+      {% else %}
+        unknown
+      {% endif %}'      
+      unit_of_measurement: '%'
+      entity_id: zwave.study_multisensor
+      icon_template: >-
+        {% set battery_level = states('sensor.study_multisensor')|int('unknown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {% if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+
+#-------------------------------------------
 #  Front Door Lock
 #-------------------------------------------
 - platform: template
   sensors:
     front_door_battery:
       friendly_name: 'Front Door Lock Battery'
-      # value_template: '{{ states.zwave.front_door.attributes.battery_level }}'
       value_template: '{% if states.zwave.front_door.attributes.battery_level %}
         {{ states.zwave.front_door.attributes.battery_level }}
       {% else %}
