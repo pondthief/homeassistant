@@ -24,3 +24,11 @@
   password: !secret amcrest_pass
   sensors:
     - motion_detector
+
+- host: 192.168.128.170
+  name: Frontyard
+  stream_source: rtsp
+  username: !secret amcrest_user
+  password: !secret amcrest_pass
+  sensors:
+    - motion_detector

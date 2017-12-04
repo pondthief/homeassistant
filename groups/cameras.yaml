@@ -7,3 +7,4 @@ cameras:
     - camera.driveway
     - camera.front_porch
     - camera.garage_inside
+    - camera.frontyard
