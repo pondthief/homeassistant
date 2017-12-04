@@ -232,3 +232,6 @@ weblink:
     - name: Rancher
       url: http://192.168.128.253:8080
       icon: mdi:cow
+    - name: JAMF
+      url: https://cowdogio.jamfcloud.com/devices
+      icon: mdi:cellphone-link
