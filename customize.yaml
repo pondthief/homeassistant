@@ -7,6 +7,24 @@ light.study_cans_level:
 switch.study_overhead_switch:
   friendly_name: Study Overhead
 
+sensor.study_multisensor_luminance:
+  friendly_name: Study Lux
+
+sensor.study_multisensor_motion:
+  friendly_name: Study Motion
+  icon: mdi:run-fast
+
+sensor.study_multisensor_relative_humidity:
+  friendly_name: Study Humidity
+  icon: mdi:water-percent
+
+sensor.study_multisensor_temperature:
+  friendly_name: Study Temp
+
+sensor.study_multisensor_ultraviolet:
+  friendly_name: Study UV
+  icon: mdi:sunglasses
+
 #-------------------------------------------
 # Kitchen Objects
 #-------------------------------------------
@@ -88,15 +106,18 @@ sensor.master_bath_multisensor_luminance:
 
 sensor.master_bath_multisensor_motion:
   friendly_name: Master Bath Motion
+  icon: mdi:run-fast
 
 sensor.master_bath_multisensor_relative_humidity:
   friendly_name: Master Bath Humidity
+  icon: mdi:water-percent
 
 sensor.master_bath_multisensor_temperature:
   friendly_name: Master Bath Temp
 
 sensor.master_bath_multisensor_ultraviolet:
   friendly_name: Master Bath UV
+  icon: mdi:sunglasses
 
 #-------------------------------------------
 # Guest Bath Objects
@@ -146,15 +167,18 @@ sensor.laundry_multisensor_luminance:
 
 sensor.laundry_multisensor_motion:
   friendly_name: Laundry Motion
+  icon: mdi:run-fast
 
 sensor.laundry_multisensor_relative_humidity:
   friendly_name: Laundry Humidity
+  icon: mdi:water-percent
 
 sensor.laundry_multisensor_temperature:
   friendly_name: Laundry Temp
 
 sensor.laundry_multisensor_ultraviolet:
   friendly_name: Laundry UV
+  icon: mdi:sunglasses
 
 #-------------------------------------------
 # Guest Room Objects
