@@ -11,6 +11,7 @@ outside:
 outside_sensors:
   name: Outside
   entities:
-    - sensor.garage_left_motion_detected
-    - sensor.garage_right_motion_detected
+    - sensor.driveway_motion_detected
+    - sensor.front_porch_motion_detected
     - binary_sensor.ring_front_door_motion
+    - sensor.garage_inside_motion_detected
