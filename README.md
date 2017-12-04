@@ -4,13 +4,13 @@
 
 My Home Assistant Config.  I run everyting in Docker (Ubuntu host) with the [Rancher](https://rancher.com) container management platform; with the following containers.
 
-| What              | Docker Hub                                                | Notes                                                                         |
-| ----------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Home Assistant    | https://hub.docker.com/r/homeassistant/home-assistant/    | The brains of everything                                                      |
-| Nagios            | https://hub.docker.com/r/jasonrivers/nagios/              | Handles monitoring and alerting                                               |
-| MariaDB           | https://hub.docker.com/_/mariadb/                         | DB for Rancher                                                                |
-| MQTT              | https://hub.docker.com/r/ncarlier/mqtt/                   | MQTT server                                                                   |
-| Honeywell2MQTT    | https://hub.docker.com/r/chriskacerguis/honeywell2mqtt/   | Takes the SDR packets from the 5800 MINIs and sends them to the MQTT server   |
+| What              | Docker Hub                                                                                    | Notes |
+| ----------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| Home Assistant    | [homeassistant/home-assistant/](https://hub.docker.com/r/homeassistant/home-assistant/)       | The brains of everything |
+| Nagios            | [jasonrivers/nagios/](https://hub.docker.com/r/jasonrivers/nagios/)                           | Handles monitoring and alerting |
+| MariaDB           | [mariadb/](https://hub.docker.com/_/mariadb/)                                                 | DB for Rancher |
+| MQTT              | [ncarlier/mqtt/](https://hub.docker.com/r/ncarlier/mqtt/)                                     | MQTT server |
+| Honeywell2MQTT    | [chriskacerguis/honeywell2mqtt/](https://hub.docker.com/r/chriskacerguis/honeywell2mqtt/)     | Takes the SDR packets from the 5800 MINIs and sends them to the MQTT server |
 
 ### Hardware
 | Qty   | Name                                                  | Link |
