@@ -83,6 +83,21 @@ switch.master_bath_fan_switch:
   friendly_name: Master Bath Fan
   icon: mdi:fan
 
+sensor.master_bath_multisensor_luminance:
+  friendly_name: Master Bath Lux
+
+sensor.master_bath_multisensor_motion:
+  friendly_name: Master Bath Motion
+
+sensor.master_bath_multisensor_relative_humidity:
+  friendly_name: Master Bath Humidity
+
+sensor.master_bath_multisensor_temperature:
+  friendly_name: Master Bath Temp
+
+sensor.master_bath_multisensor_ultraviolet:
+  friendly_name: Master Bath UV
+
 #-------------------------------------------
 # Guest Bath Objects
 #-------------------------------------------
@@ -125,6 +140,21 @@ switch.craft_lamp_switch:
 #-------------------------------------------
 switch.laundry_room_overhead_switch:
   friendly_name: Laundry Overhead
+
+sensor.laundry_multisensor_luminance:
+  friendly_name: Laundry Lux
+
+sensor.laundry_multisensor_motion:
+  friendly_name: Laundry Motion
+
+sensor.laundry_multisensor_relative_humidity:
+  friendly_name: Laundry Humidity
+
+sensor.laundry_multisensor_temperature:
+  friendly_name: Laundry Temp
+
+sensor.laundry_multisensor_ultraviolet:
+  friendly_name: Laundry UV
 
 #-------------------------------------------
 # Guest Room Objects
