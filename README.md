@@ -2,11 +2,19 @@
  
 [![Build Status](https://travis-ci.org/chriskacerguis/Home-AssistantConfig.svg?branch=master)](https://travis-ci.org/chriskacerguis/Home-AssistantConfig)
 
-My Home Assistant Config.  More comming in the README later.
+My Home Assistant Config.  I run everyting in Docker (Ubuntu host) with the [Rancher](https://rancher.com) container management platform; with the following containers.
+
+| What              | Docker Hub                                                | Notes                                                                         |
+| ----------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Home Assistant    | https://hub.docker.com/r/homeassistant/home-assistant/    | The brains of everything                                                      |
+| Nagios            | https://hub.docker.com/r/jasonrivers/nagios/              | Handles monitoring and alerting                                               |
+| MariaDB           | https://hub.docker.com/_/mariadb/                         | DB for Rancher                                                                |
+| MQTT              | https://hub.docker.com/r/ncarlier/mqtt/                   | MQTT server                                                                   |
+| Honeywell2MQTT    | https://hub.docker.com/r/chriskacerguis/honeywell2mqtt/   | Takes the SDR packets from the 5800 MINIs and sends them to the MQTT server   |
 
 ### Hardware
 | Qty   | Name                                                  | Link |
-| ----- | ----------------------------------------------------- | ----- |
+| ----- | ----------------------------------------------------- | ---- |
 | 21    | GE Z-Wave Wireless Switches                           | [(Amazon)](https://www.amazon.com/gp/product/B0035YRCR2/) |
 | 9     | GE Z-wave Wireless Dimmers                            | [(Amazon)](https://www.amazon.com/gp/product/B006LQFHN2/) |
 | 3     | Kwikset 910 Z-Wave Signature Series                   | [(Amazon)](https://www.amazon.com/Kwikset-910-Signature-Traditional-Electronic/dp/B013PQ1EUK/) |
@@ -17,7 +25,14 @@ My Home Assistant Config.  More comming in the README later.
 | 1     | Intel BOXNUC7I5BNH NUC                                | [(Amazon)](https://www.amazon.com/gp/product/B01N2UMKZ5/) |
 | 3     | Honeywell Ademco 5818MNL Recessed Door Transmitter    | [(Amazon)](https://www.amazon.com/gp/product/B001649CBC/) |
 | 1     | Nest Thermostat (3rd Generataion)                     | [(Nest)](https://nest.com) |
-| 2     | Amcrest ProHD Outdoor IP Security Camera IP3M-956E    | [(Amazon)](https://www.amazon.com/gp/product/B01E7QMFIM/) |
+| 3     | Amcrest ProHD Outdoor IP Security Camera IP3M-956E    | [(Amazon)](https://www.amazon.com/gp/product/B01E7QMFIM/) |
+| 3     | Aeotec Multisensor 6                                  | [(Amazon)](https://www.amazon.com/Aeotec-Multisensor-temperature-humidity-vibration/dp/B0151Z8ZQY/) |
+| 1     | Eight Sleep - The Sleep Tracker                       | [(Eight Sleep)](https://eightsleep.com/products/eight-sleep-tracker) |
+| 1     | Automatic Pro                                         | [(Automatic)](https://www.automatic.com/pro/) |
+
+### Indoor Location Tracking
+
+My home automation also uses an internal bluetooth tracking system.  It uses several Raspberry Pi 3's, running the excellent [Room Assistant](https://github.com/mKeRix/room-assistant) in conjunction with the mqtt_room component of Home Assistant (those listen for the iBeacons and tell HA where the person is).  Then on my families keychains (or dog collar for the dog) are [Radbeacons](https://store.radiusnetworks.com/collections/all/products/radbeacon-dot).  Just install the default RASPBIAN Lite, and then [run this script](https://gist.github.com/chriskacerguis/b8f6baf35780670c573fa7197a8b6256)
 
 ### Misc Notes
 - Setup /etc/udev/rules.d/99-usb-serial.rules
@@ -38,30 +53,4 @@ with the following:
 blacklist dvb_usb_rtl28xxu
 blacklist rtl2832
 blacklist rtl2830
-```
-
-### Rancher
-- If you happen to run this in Rancher, you can add the following catalog which has everything.
-```
-https://github.com/chriskacerguis/rancher-catalog
-```
-
-### Credstash
-
-To use credstash, ssh into the container and run (first time only):
-
-```
-credstash -t homeassistant setup
-```
-
-Then to add things
-```
-credstash -t homeassistant put [key name] [key value]
-```
-
-Make sure to set these ENV vars
-```
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
-AWS_DEFAULT_REGION=us-west-2
 ```
