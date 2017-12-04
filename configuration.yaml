@@ -223,13 +223,11 @@ weblink:
     - name: Meraki Management
       url: https://account.meraki.com/secure/login/dashboard_login
       icon: mdi:router-wireless
-    - name: Papertrail
-      url: https://papertrailapp.com
     - name: Montastic
       url: https://www.montastic.com
       icon: mdi:security-network
     - name: Nagios
-      url: http://192.168.128.253:8081/nagios/cgi-bin/status.cgi?host=all
+      url: http://192.168.128.253:8081/nagios/
       icon: mdi:ethernet
     - name: Rancher
       url: http://192.168.128.253:8080
