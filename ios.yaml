@@ -1,9 +1,9 @@
 push:
   categories:
     - name: Unlock
-      identifier: 'unlock'
+      identifier: 'camera'
       actions:
-        - identifier: 'camera'
+        - identifier: 'UNLOCK_FRONT'
           title: 'Unlock Door'
           activationMode: 'background'
           authenticationRequired: yes

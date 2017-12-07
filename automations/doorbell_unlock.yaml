@@ -3,7 +3,7 @@
     platform: event
     event_type: ios.notification_action_fired
     event_data:
-      actionName: UNLOCK
+      actionName: UNLOCK_FRONT
   action:
     - service: lock.unlock
       data:
