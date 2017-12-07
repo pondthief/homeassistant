@@ -8,4 +8,13 @@
     from: 'off'
     to: 'on'
   action:
-    - service: script.doorbell_ring
+    - service: notify.primary_contact
+      data_template:
+        title: "Doorbell"
+        message: "\U0001F514 Someone is at the Front Door!"
+        data:
+          push:
+            - category: camera
+              entity_id: camera.front_porch
+            - category: unlock
+              entity_id: lock.front_door_locked

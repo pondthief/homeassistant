@@ -1,0 +1,10 @@
+- alias: Unlock Front Door
+  trigger:
+    platform: event
+    event_type: ios.notification_action_fired
+    event_data:
+      actionName: UNLOCK
+  action:
+    - service: lock.unlock
+      data:
+        entity_id: lock.front_door_locked
