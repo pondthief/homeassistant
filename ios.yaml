@@ -1,0 +1,11 @@
+push:
+  categories:
+    - name: Unlock
+      identifier: 'unlock'
+      actions:
+        - identifier: 'UNLOCK'
+          title: 'Unlock Door'
+          activationMode: 'background'
+          authenticationRequired: yes
+          destructive: yes
+          behavior: 'default'
