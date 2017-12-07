@@ -4,8 +4,7 @@ push:
       identifier: 'camera'
       actions:
         - identifier: 'UNLOCK_FRONT'
-          title: 'Unlock Door'
+          title: 'Unlock Front'
           activationMode: 'background'
           authenticationRequired: yes
           destructive: yes
-          behavior: 'default'
