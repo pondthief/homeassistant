@@ -3,7 +3,7 @@ push:
     - name: Unlock
       identifier: 'unlock'
       actions:
-        - identifier: 'UNLOCK'
+        - identifier: 'camera'
           title: 'Unlock Door'
           activationMode: 'background'
           authenticationRequired: yes

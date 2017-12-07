@@ -14,7 +14,5 @@
         message: "\U0001F514 Someone is at the Front Door!"
         data:
           push:
-            - category: camera
-              entity_id: camera.front_porch
-            - category: unlock
-              entity_id: lock.front_door_locked
+            category: camera
+          entity_id: camera.front_porch
