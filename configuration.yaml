@@ -227,11 +227,8 @@ weblink:
       url: https://www.montastic.com
       icon: mdi:security-network
     - name: Nagios
-      url: http://192.168.128.253:8081/nagios/
+      url: http://192.168.128.163/nagios/
       icon: mdi:ethernet
     - name: Rancher
       url: http://192.168.128.253:8080
       icon: mdi:cow
-    - name: JAMF
-      url: https://cowdogio.jamfcloud.com/devices
-      icon: mdi:cellphone-link
