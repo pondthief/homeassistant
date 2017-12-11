@@ -156,6 +156,19 @@ switch.deck_flood_switch:
 switch.craft_lamp_switch:
   friendly_name: Security Lights
 
+sensor.driveway_motion_detected:
+  friendly_name: Driveway Motion
+
+sensor.frontyard_motion_detected:
+  friendly_name: Front Yard Motion
+
+sensor.front_porch_motion_detected:
+  friendly_name: Front Porch Motion
+
+sensor.garage_inside_motion_detected:
+  friendly_name: Inside Garage Motion
+
+
 #-------------------------------------------
 # Laundry Objects
 #-------------------------------------------
