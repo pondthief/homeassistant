@@ -1,0 +1,25 @@
+#-------------------------------------------
+# If House Gets too cold, warm to 67
+#-------------------------------------------
+- alias: 'Too cold'
+  trigger:
+    platform: numeric_state
+    entity_id: climate.hallway
+    value_template: '{{states.climate.hallway.attributes.current_temperature}}'
+    below: 68
+    for:
+      hours: 1
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: sensor.season
+        state: 'Winter'
+      - condition: state
+        entity_id: sensor.season
+        state: 'Autumn'  
+  action:
+    - service: climate.set_temperature
+      entity_id: climate.hallway
+      temperature: 68
+      operation_mode: heat
