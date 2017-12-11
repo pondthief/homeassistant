@@ -21,5 +21,6 @@
   action:
     - service: climate.set_temperature
       entity_id: climate.hallway
-      temperature: 68
-      operation_mode: heat
+      data:
+        temperature: 68
+        operation_mode: heat
