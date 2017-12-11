@@ -2,10 +2,6 @@
 	sensors:
 	  average_humidity:
 		value_template: >-
-		  {{ ( 	(	float(states.sensor.hallway_thermostat_humidity.state) + 
-			     		float(states.sensor.study_multisensor_relative_humidity.state) +
-					 		float(sensor.laundry_multisensor_relative_humidity) +
-							float(sensor.master_bath_multisensor_relative_humidity)
-						) / 4 )|round(1) }}
+		  {{ ((float(states.sensor.hallway_thermostat_humidity.state) + float(states.sensor.study_multisensor_relative_humidity.state) +float(sensor.laundry_multisensor_relative_humidity) + float(sensor.master_bath_multisensor_relative_humidity)) / 4 )|round(1) }}
 		friendly_name: "Average Indoor Humidity"
 		unit_of_measurement: '%'
