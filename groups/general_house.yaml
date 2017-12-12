@@ -3,6 +3,7 @@
 #-------------------------------------------
 general_house:
   name: General House
+  control: hidden
   entities:
     - sensor.average_humidity
     - sensor.average_temperature
