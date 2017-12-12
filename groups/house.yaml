@@ -1,0 +1,8 @@
+#-------------------------------------------
+#  Whole House Sensors
+#-------------------------------------------
+general_house:
+  name: General House
+  entities:
+    - sensor.average_humidity
+    - sensor.average_temperature
