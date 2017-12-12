@@ -1,0 +1,25 @@
+#-------------------------------------------
+#  Average Humidity
+#-------------------------------------------
+- platform: min_max
+  name: Average Humidity
+  type: mean
+  round_digits: 1
+  entity_ids:
+    - sensor.hallway_thermostat_humidity
+    - sensor.laundry_multisensor_relative_humidity
+    - sensor.master_bath_multisensor_relative_humidity
+    - sensor.study_multisensor_relative_humidity
+
+#-------------------------------------------
+#  Average Temp
+#-------------------------------------------
+- platform: min_max
+  name: Average Temperature
+  type: mean
+  round_digits: 1
+  entity_ids:
+    - sensor.hallway_thermostat_temperature
+    - sensor.laundry_multisensor_temperature
+    - sensor.master_bath_multisensor_temperature
+    - sensor.study_multisensor_temperature
