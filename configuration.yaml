@@ -160,7 +160,7 @@ sensor: !include_dir_merge_list sensors
 #-------------------------------------------
 # Include sensors
 #-------------------------------------------
-binary_sensor: !include_dir_merge_list bsensors
+binary_sensor: !include_dir_merge_list binary_sensors
 
 #-------------------------------------------
 # Include notifications
