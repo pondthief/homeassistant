@@ -6,3 +6,5 @@ general_house:
   entities:
     - sensor.average_humidity
     - sensor.average_temperature
+    - script.warm_to_68
+    - script.cool_to_68
