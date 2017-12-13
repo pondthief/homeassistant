@@ -7,8 +7,6 @@
     entity_id: climate.hallway
     value_template: '{{states.climate.hallway.attributes.current_temperature}}'
     below: 67
-    for:
-      hours: 1
   condition:
     condition: or
     conditions:
