@@ -43,6 +43,24 @@ switch.kitchen_cabinets_switch:
 switch.kitchen_island_switch:
   friendly_name: Kitchen Island
 
+sensor.kitchen_multisensor_luminance:
+  friendly_name: Kitchen Lux
+
+sensor.kitchen_multisensor_motion:
+  friendly_name: Kitchen Motion
+  icon: mdi:run-fast
+
+sensor.kitchen_multisensor_relative_humidity:
+  friendly_name: Kitchen Humidity
+  icon: mdi:water-percent
+
+sensor.kitchen_multisensor_temperature:
+  friendly_name: Kitchen Temp
+
+sensor.kitchen_multisensor_ultraviolet:
+  friendly_name: Kitchen UV
+  icon: mdi:sunglasses
+
 #-------------------------------------------
 # Living Room Objects
 #-------------------------------------------

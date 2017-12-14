@@ -19,3 +19,7 @@ kitchen_sensors:
     - binary_sensor.back_right_window
     - binary_sensor.kitchen_sink_window
     - binary_sensor.back_door
+    - sensor.kitchen_multisensor_motion
+    - sensor.kitchen_multisensor_luminance
+    - sensor.kitchen_multisensor_relative_humidity
+    - sensor.kitchen_multisensor_temperature

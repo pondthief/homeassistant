@@ -1,5 +1,5 @@
 #-------------------------------------------
-#  Aeotec Multisensors
+#  Laundry Room Motion Sensor
 #-------------------------------------------
 - platform: template
   sensors:
@@ -14,6 +14,9 @@
           still
         {% endif %}
 
+#-------------------------------------------
+#  Master Bath Motion Sensor
+#-------------------------------------------
 - platform: template
   sensors:
     master_bath_multisensor_motion:
@@ -27,6 +30,9 @@
           still
         {% endif %}
 
+#-------------------------------------------
+#  Study Motion Sensor
+#-------------------------------------------
 - platform: template
   sensors:
     study_multisensor_motion:
@@ -35,6 +41,22 @@
         {% if is_state('sensor.study_multisensor_burglar', '8') %}
           motion
         {% elif is_state('sensor.study_multisensor_burglar', '3') %}
+          tamper
+        {% else %}
+          still
+        {% endif %}
+
+#-------------------------------------------
+#  Kitchen Motion Sensor
+#-------------------------------------------
+- platform: template
+  sensors:
+    kitchen_multisensor_motion:
+      friendly_name: 'Kitchen MultiSensor Motion'
+      value_template: >-
+        {% if is_state('sensor.kitchen_multisensor_burglar', '8') %}
+          motion
+        {% elif is_state('sensor.kitchen_multisensor_burglar', '3') %}
           tamper
         {% else %}
           still
