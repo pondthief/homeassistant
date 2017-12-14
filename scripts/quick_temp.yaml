@@ -11,7 +11,7 @@ warm_to_68:
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
-        temperature: '68'
+        temperature: 68
 
 #-------------------------------------------
 # Setup thermostat to 68 (cool)
@@ -26,4 +26,4 @@ cool_to_68:
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
-        temperature: '68'
+        temperature: 68
