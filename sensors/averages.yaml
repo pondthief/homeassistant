@@ -10,6 +10,7 @@
     - sensor.laundry_multisensor_relative_humidity
     - sensor.master_bath_multisensor_relative_humidity
     - sensor.study_multisensor_relative_humidity
+    - sensor.kitchen_multisensor_relative_humidity
 
 #-------------------------------------------
 #  Average Temp
@@ -23,3 +24,4 @@
     - sensor.laundry_multisensor_temperature
     - sensor.master_bath_multisensor_temperature
     - sensor.study_multisensor_temperature
+    - sensor.kitchen_multisensor_temperature
