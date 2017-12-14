@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Setup thermostat to 68 (warm)
+#-------------------------------------------
 warm_to_68:
   alias: Warm House to 68
   sequence:
@@ -10,6 +13,9 @@ warm_to_68:
         entity_id: climate.hallway
         temperature: '68'
 
+#-------------------------------------------
+# Setup thermostat to 68 (cool)
+#-------------------------------------------
 cool_to_68:
   alias: Cool House to 68
   sequence:

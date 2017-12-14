@@ -17,8 +17,4 @@
         entity_id: sensor.season
         state: 'Autumn'  
   action:
-    - service: climate.set_temperature
-      data:
-        entity_id: climate.hallway
-        temperature: 68
-        operation_mode: Heat
+    - service: script.warm_to_68
