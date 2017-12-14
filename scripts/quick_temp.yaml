@@ -1,7 +1,7 @@
 warm_to_68:
   alias: Warm House to 68
   sequence:
-    - service: climate.set_temperature
+    - service: climate.set_operation_mode
       data:
         entity_id: climate.hallway
         operation_mode: Heat
@@ -13,7 +13,7 @@ warm_to_68:
 cool_to_68:
   alias: Cool House to 68
   sequence:
-    - service: climate.set_temperature
+    - service: climate.set_operation_mode
       data:
         entity_id: climate.hallway
         operation_mode: Cool
