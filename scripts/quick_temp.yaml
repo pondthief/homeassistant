@@ -4,8 +4,11 @@ warm_to_68:
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
-        temperature: 68
         operation_mode: Heat
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.hallway
+        temperature: 68
 
 cool_to_68:
   alias: Cool House to 68
@@ -13,5 +16,8 @@ cool_to_68:
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
-        temperature: 68
         operation_mode: Cool
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.hallway
+        temperature: 68
