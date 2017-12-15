@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Simple ping
+#-------------------------------------------
 - alias: 'Telegram bot that reply pong to ping'
   hide_entity: true
   trigger:
