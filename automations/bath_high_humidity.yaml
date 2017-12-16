@@ -1,23 +1,25 @@
+# Disabled per Megan
+
 #-------------------------------------------
 # Master Bath High Humidity
 #-------------------------------------------
-- alias: 'Master Bath High Humidity'
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.master_bath_multisensor_relative_humidity
-    above: 55
-  action:
-    service: homeassistant.turn_on
-    entity_id: switch.master_bath_fan_switch
+#- alias: 'Master Bath High Humidity'
+#  trigger:
+#    platform: numeric_state
+#    entity_id: sensor.master_bath_multisensor_relative_humidity
+#    above: 55
+#  action:
+#    service: homeassistant.turn_on
+#    entity_id: switch.master_bath_fan_switch
 
 #-------------------------------------------
 # Master Bath Normal Humidity
 #-------------------------------------------
-- alias: 'Master Bath Normal Humidity'
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.master_bath_multisensor_relative_humidity
-    below: 54
-  action:
-    service: homeassistant.turn_off
-    entity_id: switch.master_bath_fan_switch
+#- alias: 'Master Bath Normal Humidity'
+#  trigger:
+#    platform: numeric_state
+#    entity_id: sensor.master_bath_multisensor_relative_humidity
+#    below: 54
+#  action:
+#    service: homeassistant.turn_off
+#    entity_id: switch.master_bath_fan_switch
