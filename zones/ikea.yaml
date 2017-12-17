@@ -5,4 +5,4 @@ name: 'Ikea'
 latitude: 30.557186
 longitude: -97.690206
 icon: mdi:store
-track_ios: true
+passive: true
