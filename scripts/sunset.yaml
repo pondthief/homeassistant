@@ -16,10 +16,6 @@ sunset:
         entity_id: 
           - light.kitchen_sink_level
         brightness: 40
-    - service: climate.set_temperature
-      data:
-        entity_id: climate.hallway
-        temperature: '70'
     - service: lock.lock
       data:
         entity_id: group.all_locks
