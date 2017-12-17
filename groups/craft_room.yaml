@@ -10,6 +10,4 @@ craft_room_sensors:
   name: Craft Room
   entities:
     - binary_sensor.front_right_window
-    - binary_sensor.front_window_one
-    - binary_sensor.front_window_two
     - binary_sensor.front_door

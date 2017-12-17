@@ -1,0 +1,18 @@
+#-------------------------------------------
+#  TV Room
+#-------------------------------------------
+#tv_room:
+#  name: TV Room
+#  entities:
+#    - switch.study_overhead_switch
+#    - light.study_cans_level
+
+tv_room_sensors:
+  name: TV Room
+  entities:
+    - binary_sensor.front_window_one
+    - binary_sensor.front_window_two
+    - sensor.tv_room_multisensor_luminance
+    - sensor.tv_room_multisensor_relative_humidity
+    - sensor.tv_room_multisensor_temperature
+    - sensor.tv_room_multisensor_ultraviolet

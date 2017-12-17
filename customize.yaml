@@ -26,6 +26,27 @@ sensor.study_multisensor_ultraviolet:
   icon: mdi:sunglasses
 
 #-------------------------------------------
+# TV Room Objects
+#-------------------------------------------
+sensor.tv_room_multisensor_luminance:
+  friendly_name: TV Room Lux
+
+sensor.tv_room__multisensor_motion:
+  friendly_name: TV Room Motion
+  icon: mdi:run-fast
+
+sensor.tv_room__multisensor_relative_humidity:
+  friendly_name: TV Room Humidity
+  icon: mdi:water-percent
+
+sensor.tv_room__multisensor_temperature:
+  friendly_name: TV Room Temp
+
+sensor.tv_room__multisensor_ultraviolet:
+  friendly_name: TV Room UV
+  icon: mdi:sunglasses
+
+#-------------------------------------------
 # Kitchen Objects
 #-------------------------------------------
 light.kitchen_table_level:

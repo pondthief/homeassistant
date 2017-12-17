@@ -22,3 +22,4 @@ sensors_tab:
     - group.travel_times
     - group.general_house
     - group.beacons
+    - group.tv_room_sensors
