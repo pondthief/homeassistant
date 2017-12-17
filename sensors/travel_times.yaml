@@ -41,3 +41,17 @@
   api_key: !secret traveltime_api_key
   origin: Home
   destination: Ikea
+
+#-------------------------------------------
+- platform: google_travel_time
+  name: Home to Chris Work
+  api_key: !secret traveltime_api_key
+  origin: Home
+  destination: Work Chris
+
+#-------------------------------------------
+- platform: google_travel_time
+  name: Home to Megan Work
+  api_key: !secret traveltime_api_key
+  origin: Home
+  destination: Work Megan
