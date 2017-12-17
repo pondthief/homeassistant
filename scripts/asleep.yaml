@@ -1,9 +1,0 @@
-#-------------------------------------------
-# Actions to take when asleep
-#-------------------------------------------
-asleep:
-  alias: Asleep
-  sequence:
-    - service: lock.lock
-      data:
-        entity_id: group.all_locks

@@ -22,4 +22,6 @@
         entity_id: binary_sensor.back_door
         state: 'off'
   action:
-    - service: script.asleep
+    - service: lock.lock
+      data:
+        entity_id: group.all_locks
