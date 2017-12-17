@@ -9,6 +9,5 @@
     to: 'ONBATT'
   action:
     - service: notify.primary_contact
-      data:
-        message: '\U0001F50B Main power lost, running on UPS power'
-        title: 'Lost Power'
+      data_template:
+        message: "\U0001F50B Main power lost, running on UPS power"
