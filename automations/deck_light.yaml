@@ -19,10 +19,10 @@
 #-------------------------------------------
 - alias: "Deck Light Off After 15 min"
   trigger:
-    - platform: state
-      entity_id: switch.deck_flood_switch
-      to: 'off'
-      from: 'on'
+    platform: state
+    entity_id: switch.deck_flood_switch
+    to: 'on'
+    from: 'off'
     for:
       minutes: 15
   action:
