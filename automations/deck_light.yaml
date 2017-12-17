@@ -20,7 +20,7 @@
 - alias: "Deck Light Off After 15 min"
   trigger:
     - platform: state
-      entity_id: binary_sensor.back_door
+      entity_id: switch.deck_flood_switch
       to: 'off'
       from: 'on'
     for:
