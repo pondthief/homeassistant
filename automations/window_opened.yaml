@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Window Opened, send alert, turn off HVAC
+#-------------------------------------------
 - alias: "Window Opened"
   trigger:
     - platform: state
