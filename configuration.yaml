@@ -245,3 +245,12 @@ weblink:
     - name: Rancher
       url: http://192.168.128.253:8080
       icon: mdi:cow
+
+#-------------------------------------------
+# iFrames
+#-------------------------------------------
+panel_iframe:
+  router:
+    title: 'Nagios'
+    url: !secret nagios_url
+    icon: mdi:ethernet
