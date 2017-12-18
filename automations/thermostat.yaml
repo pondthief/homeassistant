@@ -59,8 +59,8 @@
     at: '07:00:00'
   condition:
     condition: state
-      entity_id: sensor.season
-      state: 'Summer'
+    entity_id: sensor.season
+    state: 'Summer'
   action:
     - service: climate.set_operation_mode
       data:
