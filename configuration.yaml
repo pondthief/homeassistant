@@ -9,6 +9,14 @@ homeassistant:
   customize_glob:
     "*.*":
       custom_ui_state_card: state-card-custom-ui  
+    study_sensor_badges:
+      state_card_mode: badges
+      badges_list:
+        - binary_sensor.study_window
+        - sensor.study_multisensor_luminance
+        - sensor.study_multisensor_relative_humidity
+        - sensor.study_multisensor_temperature
+        - sensor.study_multisensor_ultraviolet
 
   #-------------------------------------------
   # Include customizations
