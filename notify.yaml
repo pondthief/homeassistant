@@ -4,7 +4,7 @@
 - name: primary_contact
   platform: group
   services:
-    - service: telegram
+    - service: ios
 
 #-------------------------------------------
 #  Emergency Notices via SMS
@@ -17,25 +17,6 @@
         target:
           - !secret chris_mobile_num
           - !secret megan_mobile_num
-
-#-------------------------------------------
-#  Telegram Notices
-#-------------------------------------------
-- name: telegram
-  platform: telegram
-  chat_id: !secret chris_telegram_id
-
-#-------------------------------------------
-#  Twitter Notices
-#-------------------------------------------
-- name: twitter
-  platform: twitter
-  consumer_key: !secret twitter_consumer_key
-  consumer_secret: !secret twitter_consumer_secret
-  access_token: !secret twitter_access_token
-  access_token_secret: !secret twitter_access_token_secret
-  username: "@chriskacerguis"
-
 
 #-------------------------------------------
 #  Twilio SMS Notices
@@ -51,4 +32,4 @@
   platform: group
   services:
     - service: ios_chris_iphone
-    - service: ios_megan_iphone
+#    - service: ios_megan_iphone
