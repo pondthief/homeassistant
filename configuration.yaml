@@ -6,6 +6,10 @@ homeassistant:
   unit_system: imperial
   time_zone: America/Chicago
 
+  customize_glob:
+    "*.*":
+      custom_ui_state_card: state-card-custom-ui  
+
   #-------------------------------------------
   # Include customizations
   #-------------------------------------------
