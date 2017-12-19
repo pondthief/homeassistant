@@ -6,10 +6,20 @@ study:
   entities:
     - switch.study_overhead_switch
     - light.study_cans_level
+    - group.study_sensor_badges
 
 study_sensors:
   name: Study
   entities:
+    - binary_sensor.study_window
+    - sensor.study_multisensor_luminance
+    - sensor.study_multisensor_relative_humidity
+    - sensor.study_multisensor_temperature
+    - sensor.study_multisensor_ultraviolet
+
+study_sensor_badges:
+  state_card_mode: badges
+  badges_list:
     - binary_sensor.study_window
     - sensor.study_multisensor_luminance
     - sensor.study_multisensor_relative_humidity
