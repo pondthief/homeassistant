@@ -6,7 +6,6 @@ study:
   entities:
     - switch.study_overhead_switch
     - light.study_cans_level
-    - group.study_sensor_badges
 
 study_sensors:
   name: Study
