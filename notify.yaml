@@ -26,10 +26,18 @@
   from_number: !secret twilio_from
 
 #-------------------------------------------
-#  iOS Push
+#  iOS Push (just Chris)
 #-------------------------------------------
 - name: ios
   platform: group
   services:
     - service: ios_chris_iphone
-#    - service: ios_megan_iphone
+
+#-------------------------------------------
+#  iOS Push (both)
+#-------------------------------------------
+- name: ios_both
+  platform: group
+  services:
+    - service: ios_chris_iphone
+    - service: ios_megan_iphone

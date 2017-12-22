@@ -8,7 +8,7 @@
     from: 'off'
     to: 'on'
   action:
-    - service: notify.primary_contact
+    - service: notify.ios_both
       data_template:
         title: "Doorbell"
         message: "\U0001F514 Someone is at the Front Door!"
