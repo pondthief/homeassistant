@@ -48,7 +48,7 @@
     - service: climate.set_temperature
       data:
         entity_id: climate.hallway
-        temperature: 68
+        temperature: 66
 
 #-------------------------------------------
 # Summer to 72 durring day (COOL)
