@@ -9,5 +9,5 @@
 # Meraki Tracking
 #-------------------------------------------
 - platform: meraki
-  secret: !secret meraki_validator
-  validator: !secret meraki_secret
+  secret: !secret meraki_secret
+  validator: !secret meraki_validator
