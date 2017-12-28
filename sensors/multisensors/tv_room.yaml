@@ -1,0 +1,15 @@
+#-------------------------------------------
+#  TV Room Motion Sensor
+#-------------------------------------------
+- platform: template
+  sensors:
+    tv_room_multisensor_motion:
+      friendly_name: 'TV Room MultiSensor Motion'
+      value_template: >-
+        {% if is_state('sensor.tv_room_multisensor_burglar', '8') %}
+          motion
+        {% elif is_state('sensor.tv_room_multisensor_burglar', '3') %}
+          tamper
+        {% else %}
+          still
+        {% endif %}

@@ -1,0 +1,15 @@
+#-------------------------------------------
+#  Master Bath Motion Sensor
+#-------------------------------------------
+- platform: template
+  sensors:
+    master_bath_multisensor_motion:
+      friendly_name: 'Master Bath MultiSensor Motion'
+      value_template: >-
+        {% if is_state('sensor.master_bath_multisensor_burglar', '8') %}
+          motion
+        {% elif is_state('sensor.master_bath_multisensor_burglar', '3') %}
+          tamper
+        {% else %}
+          still
+        {% endif %}
