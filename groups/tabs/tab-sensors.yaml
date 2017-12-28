@@ -11,6 +11,7 @@ sensors_tab:
     - group.craft_room_sensors
     - group.doors_sensors
     - group.guest_room_sensors
+    - group.guest_bath_sensors
     - group.kitchen_sensors
     - group.laundry_room_sensors
     - group.master_bath_sensors
