@@ -234,6 +234,21 @@ sensor.laundry_multisensor_ultraviolet:
 switch.guest_overhead_switch:
   friendly_name: Guest Overhead
 
+sensor.guest_multisensor_luminance:
+  friendly_name: Guest Lux
+
+sensor.guest_multisensor_motion:
+  friendly_name: Guest Motion
+
+sensor.guest_multisensor_relative_humidity:
+  friendly_name: Guest Humidity
+
+sensor.guest_multisensor_temperature:
+  friendly_name: Guest Temp
+
+sensor.guest_multisensor_ultraviolet:
+  friendly_name: Guest UV
+
 #-------------------------------------------
 # Locks
 #-------------------------------------------

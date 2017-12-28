@@ -10,3 +10,8 @@ guest_room_sensors:
   name: Guest Room
   entities:
     - binary_sensor.guest_window
+    - sensor.guest_multisensor_luminance
+    - sensor.guest_multisensor_motion
+    - sensor.guest_multisensor_relative_humidity
+    - sensor.guest_multisensor_temperature
+    - sensor.guest_multisensor_ultraviolet
