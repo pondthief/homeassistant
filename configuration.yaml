@@ -11,6 +11,11 @@ homeassistant:
   #-------------------------------------------
   customize: !include customize.yaml
 
+  #-------------------------------------------
+  # Include GLOB customizations
+  #-------------------------------------------
+  customize_glob: !include customize_glob.yaml
+
 #-------------------------------------------
 # Recorder Settings
 #-------------------------------------------

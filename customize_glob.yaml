@@ -1,0 +1,20 @@
+#-------------------------------------------
+# Multisensor Icons
+#-------------------------------------------
+sensor.*_multisensor_motion:
+  icon: mdi:walk
+
+sensor.*_multisensor_ultraviolet:
+  icon: mdi:sunglasses
+
+sensor.*_multisensor_relative_humidity:
+  icon: mdi:water-percent
+
+sensor.*_multisensor_luminance:
+  icon: mdi:brightness-6
+
+#-------------------------------------------
+# Fan Icons
+#-------------------------------------------
+switch.*_fan_switch:
+  icon: mdi:fan
