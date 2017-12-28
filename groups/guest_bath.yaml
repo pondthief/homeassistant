@@ -9,7 +9,7 @@ guest_bath:
     - switch.guest_bath_shower_switch
   
 guest_bath_sensors:
-  name: Master Bathroom
+  name: Guest Bathroom
   entities:
     - sensor.guest_bath_multisensor_motion
     - sensor.guest_bath_multisensor_luminance
