@@ -156,19 +156,19 @@ switch.guest_bath_sink_switch:
 switch.guest_bath_shower_switch:
   friendly_name: Guest Bath Shower
 
-sensor.master_bath_multisensor_luminance:
+sensor.guest_bath_multisensor_luminance:
   friendly_name: Guest Bath Lux
 
-sensor.master_bath_multisensor_motion:
+sensor.guest_bath_multisensor_motion:
   friendly_name: Guest Bath Motion
 
-sensor.master_bath_multisensor_relative_humidity:
+sensor.guest_bath_multisensor_relative_humidity:
   friendly_name: Guest Bath Humidity
 
-sensor.master_bath_multisensor_temperature:
+sensor.guest_bath_multisensor_temperature:
   friendly_name: Guest Bath Temp
 
-sensor.master_bath_multisensor_ultraviolet:
+sensor.guest_bath_multisensor_ultraviolet:
   friendly_name: Guest Bath UV
 
 #-------------------------------------------
