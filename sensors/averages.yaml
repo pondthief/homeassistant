@@ -9,11 +9,14 @@
     - sensor.hallway_thermostat_humidity
     - sensor.study_multisensor_relative_humidity
     - sensor.kitchen_multisensor_relative_humidity
+    - sensor.guest_multisensor_relative_humidity
+    - sensor.tv_room_multisensor_relative_humidity
 # Do not include bathrooms or laundry rooms,
 # as they tend to have high himidity due to 
 # bathing / laundry...duh (leaving as reminder)
 #    - sensor.laundry_multisensor_relative_humidity
 #    - sensor.master_bath_multisensor_relative_humidity
+#    - sensor.guest_bath_multisensor_relative_humidity
 
 #-------------------------------------------
 #  Average Temp
@@ -26,8 +29,11 @@
     - sensor.hallway_thermostat_temperature
     - sensor.study_multisensor_temperature
     - sensor.kitchen_multisensor_temperature
+    - sensor.guest_multisensor_temperature
+    - sensor.tv_room_multisensor_temperature
 # Do not include bathrooms or laundry rooms,
 # as they tend to have higher temp due to 
 # bathing / laundry...duh (leaving as reminder)
 #    - sensor.master_bath_multisensor_temperature
 #    - sensor.laundry_multisensor_temperature
+#    - sensor.guest_bath_multisensor_temperature
