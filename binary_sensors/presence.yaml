@@ -1,0 +1,20 @@
+- name: Chris at Home
+  platform: bayesian
+  prior: 0.1
+  probability_threshold: 1.2
+  observations:
+    - entity_id: device_tracker.2015_nissan_rogue
+      prob_given_true: 0.6
+      prob_given_false: 0.2
+      platform: 'state'
+      to_state: 'home'
+    - entity_id: sensor.chris_beacon
+      prob_given_true: 0.1
+      prob_given_false: 0.6
+      platform: 'state'
+      to_state: 'not_home'
+    - entity_id: device_tracker.chris_iphone
+      prob_given_true: 0.6
+      prob_given_false: 0.1
+      platform: 'state'
+      to_state: 'home'
