@@ -1,6 +1,6 @@
 - name: Chris at Home
   platform: bayesian
-  prior: 0.25
+  prior: 0.75
   probability_threshold: 0.95
   observations:
     - entity_id: device_tracker.2015_nissan_rogue
