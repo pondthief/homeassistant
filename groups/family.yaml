@@ -13,3 +13,4 @@ family_location:
     - device_tracker.chris_iphone
     - device_tracker.megan_iphone
     - device_tracker.2015_nissan_rogue
+    - sensor.chris_beacon

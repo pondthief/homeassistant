@@ -267,3 +267,6 @@ lock.door_back_locked:
 group.all_locks:
   friendly_name: Door Locks
   hidden: false
+
+sensor.chris_beacon:
+  entity_picture: https://s3.amazonaws.com/images.cowdog.io/hass/chris.JPG
