@@ -271,3 +271,6 @@ group.all_locks:
 group.all_automations:
   friendly_name: Automations
   hidden: false
+
+binary_sensor.chris_at_home:
+  device_class: presence
