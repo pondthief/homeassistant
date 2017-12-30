@@ -268,5 +268,11 @@ group.all_locks:
   friendly_name: Door Locks
   hidden: false
 
+#-------------------------------------------
+# Presence Icons
+#-------------------------------------------
 sensor.chris_beacon:
   entity_picture: https://s3.amazonaws.com/images.cowdog.io/hass/chris.JPG
+
+sensor.megan_beacon:
+  entity_picture: https://s3.amazonaws.com/images.cowdog.io/hass/megan.JPG
