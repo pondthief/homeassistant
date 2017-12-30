@@ -1,5 +1,5 @@
 #-------------------------------------------
-#  Garage Door Covers
+#  Garage Door Cover Megan
 #-------------------------------------------
 - platform: opengarage
   covers:
@@ -8,6 +8,9 @@
       device_key: !secret opengarage_key
       name:  Megan Overhead Garage Door
 
+#-------------------------------------------
+#  Garage Door Cover Chris
+#-------------------------------------------
 - platform: opengarage
   covers:
     garage:
