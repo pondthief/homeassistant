@@ -4,14 +4,12 @@
 family:
   name: Family
   entities:
-    - device_tracker.chris_iphone
-    - device_tracker.megan_iphone
+    - sensor.chris_beacon
+    - sensor.megan_beacon
 
 family_location:
   name: Family Location
   entities:
     - device_tracker.chris_iphone
-    - sensor.chris_location_to_home
     - device_tracker.megan_iphone
-    - sensor.megan_location_to_home
     - device_tracker.2015_nissan_rogue

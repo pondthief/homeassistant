@@ -267,10 +267,3 @@ lock.door_back_locked:
 group.all_locks:
   friendly_name: Door Locks
   hidden: false
-
-group.all_automations:
-  friendly_name: Automations
-  hidden: false
-
-binary_sensor.chris_at_home:
-  device_class: presence
