@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Odds that Chris is Home
+#-------------------------------------------
 - name: Chris at Home
   platform: bayesian
   prior: 0.75
