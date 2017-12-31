@@ -209,7 +209,6 @@
   sensors:
     garage_door_battery:
       friendly_name: 'Garage Door Lock Battery'
-      # value_template: '{{ states.zwave.garage_door.attributes.battery_level }}'
       value_template: '{% if states.zwave.garage_door.attributes.battery_level %}
         {{ states.zwave.garage_door.attributes.battery_level }}
       {% else %}
