@@ -217,6 +217,7 @@
       unit_of_measurement: '%'
       entity_id: zwave.garage_door
       icon_template: >-
+        {% if states.zwave.garage_door %}
         {% set battery_level = states('sensor.garage_door_battery')|int('unknown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}
         {% if battery_level == 'unknown' %}
@@ -229,4 +230,5 @@
           {% else %}
             mdi:battery-alert
           {% endif %}
+        {% endif %}
         {% endif %}
