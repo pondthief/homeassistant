@@ -209,11 +209,11 @@
   sensors:
     garage_door_battery:
       friendly_name: 'Garage Door Lock Battery'
-      value_template: '{% if states.zwave.garage_door.attributes.battery_level %}
+      value_template: '{% if states.zwave.garage_door.attributes.battery_level %} {% if states.zwave.garage_door.attributes.battery_level %}
         {{ states.zwave.garage_door.attributes.battery_level }}
       {% else %}
         unknown
-      {% endif %}'
+      {% endif %} {% endif %}'
       unit_of_measurement: '%'
       entity_id: zwave.garage_door
       icon_template: >-
