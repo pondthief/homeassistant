@@ -208,7 +208,7 @@ alert: !include alerts.yaml
 #-------------------------------------------
 # Include aleamcrestrts
 #-------------------------------------------
-# amcrest: !include amcrest.yaml # temp disabled
+# amcrest: !include amcrest.yaml
 
 #-------------------------------------------
 # Eight Sleep Setup
@@ -228,9 +228,6 @@ device_tracker: !include device_tracker.yaml
 #-------------------------------------------
 weblink:
   entities:
-    - name: Meraki Management
-      url: https://account.meraki.com/secure/login/dashboard_login
-      icon: mdi:router-wireless
     - name: Rancher
       url: http://192.168.128.253:8080
       icon: mdi:cow
