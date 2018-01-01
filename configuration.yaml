@@ -208,7 +208,7 @@ alert: !include alerts.yaml
 #-------------------------------------------
 # Include aleamcrestrts
 #-------------------------------------------
-amcrest: !include amcrest.yaml
+# amcrest: !include amcrest.yaml # temp disabled
 
 #-------------------------------------------
 # Eight Sleep Setup
