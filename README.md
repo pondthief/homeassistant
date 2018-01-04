@@ -56,3 +56,46 @@ blacklist dvb_usb_rtl28xxu
 blacklist rtl2832
 blacklist rtl2830
 ```
+
+### zwave ID mapping
+1 - USB Stick
+2 - Back Door (lock)
+3 - Deck Flood (switch)
+4 - Kitchen Sink (light)
+5 - Kitchen Cabinets (switch)
+6 - Kitchen Cans (light)
+7 - Kitchen Island (switch)
+8 - Kitchen Table (light)
+9 - Craft Cans (switch)
+10 - Front Entry (switch)
+11 - Outside Security (switch)
+12 - Front Yard (switch)
+13 - Front Door (lock)
+14 - Living Room Lamp (switch)
+15 - Living Room Overhead (light)
+16 - Living Room Cans (light)
+17 - Study Overhead (switch)
+18 - Study Cans (light)
+19 - Hallways Cans (light)
+20 - Laundry Room Overhead (switch)
+21 - Garage Door (lock)
+22 - Guest Overhead (switch)
+23 - Clara Overhead (light)
+24 - Guest Bath Fan (switch)
+25 - Guest Bath Shower (switch)
+26 - Guest Bath Sink (switch)
+27 - Master Bed Cans (light)
+28 - Master Bed Fan (switch)
+29 - Master Bed Fan Light (switch)
+30 - Master Bath Fan (?)
+31 - 
+32 - 
+33 - Chris Bedside (switch)
+34 - Megan Bedside (switch)
+35 - 
+36 - 
+37 - 
+38 - 
+39 - 
+40 - 
+41 - 

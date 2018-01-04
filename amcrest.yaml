@@ -1,7 +1,7 @@
 #-------------------------------------------
 #  Amcrest Cameras
 #-------------------------------------------
-- host: 192.168.128.236
+- host: 192.168.7.59
   name: Driveway
   stream_source: rtsp
   username: !secret amcrest_user
@@ -17,7 +17,7 @@
   sensors:
     - motion_detector
 
-- host: 192.168.128.225
+- host: 192.168.7.61
   name: Garage Inside
   stream_source: rtsp
   username: !secret amcrest_user
@@ -25,7 +25,7 @@
   sensors:
     - motion_detector
 
-- host: 192.168.128.170
+- host: 192.168.7.58
   name: Frontyard
   stream_source: rtsp
   username: !secret amcrest_user
