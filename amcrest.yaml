@@ -9,7 +9,7 @@
   sensors:
     - motion_detector
 
-- host: 192.168.128.240
+- host: 192.168.7.60
   name: Front Porch
   stream_source: rtsp
   username: !secret amcrest_user
