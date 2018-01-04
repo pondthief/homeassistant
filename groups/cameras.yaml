@@ -4,7 +4,7 @@
 cameras:
   name: Front
   entities:
-#    - camera.driveway
+    - camera.driveway
 #    - camera.front_porch
-#    - camera.garage_inside
-#    - camera.frontyard
+    - camera.garage_inside
+    - camera.frontyard
