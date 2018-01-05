@@ -87,15 +87,15 @@ blacklist rtl2830
 27 - Master Bed Cans (light)
 28 - Master Bed Fan (switch)
 29 - Master Bed Fan Light (switch)
-30 - Master Bath Fan (?)
-31 - 
-32 - 
+30 - Master Bath Fan (switch)
+31 - Master Bath Shower (switch)
+32 - Master Bath Sink (switch)
 33 - Chris Bedside (switch)
 34 - Megan Bedside (switch)
-35 - 
-36 - 
-37 - 
-38 - 
-39 - 
-40 - 
-41 - 
+35 - Laundry MultiSensor
+36 - Master Bath MultiSensor
+37 - Study MultiSensor
+38 - Kitchen MultiSensor
+39 - TV Room MultiSensor
+40 - Guest Bath MultiSensor
+41 - Guest MultiSensor
