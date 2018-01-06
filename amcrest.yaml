@@ -9,13 +9,13 @@
   sensors:
     - motion_detector
 
-#- host: 192.168.7.60
-#  name: Front Porch
-#  stream_source: rtsp
-#  username: !secret amcrest_user
-#  password: !secret amcrest_pass
-#  sensors:
-#    - motion_detector
+- host: 192.168.7.60
+  name: Front Porch
+  stream_source: rtsp
+  username: !secret amcrest_user
+  password: !secret amcrest_pass
+  sensors:
+    - motion_detector
 
 - host: 192.168.7.61
   name: Garage Inside
