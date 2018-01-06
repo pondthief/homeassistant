@@ -4,7 +4,7 @@
 - platform: opengarage
   covers:
     garage:
-      host: 192.168.128.227
+      host: 192.168.7.21
       device_key: !secret opengarage_key
       name:  Megan Overhead Garage Door
 
@@ -14,6 +14,6 @@
 - platform: opengarage
   covers:
     garage:
-      host: 192.168.128.248
+      host: 192.168.7.23
       device_key: !secret opengarage_key
       name:  Chris Overhead Garage Door
