@@ -222,6 +222,9 @@ weblink:
     - name: Nagios
       url: !secret nagios_url
       icon: mdi:ethernet
+    - name: Datadog
+      url: https://app.datadoghq.com
+      icon: mdi:panda
 
 #-------------------------------------------
 # iFrames
