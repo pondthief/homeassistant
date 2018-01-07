@@ -13,3 +13,32 @@
         {% else %}
           still
         {% endif %}
+
+#-------------------------------------------
+#  Study Multisensor
+#-------------------------------------------
+- platform: template
+  sensors:
+    study_multisensor_battery:
+      friendly_name: 'Study Multisensor'
+      value_template: '{% if states.zwave.study_multisensor.attributes.battery_level %}
+        {{ states.zwave.study_multisensor.attributes.battery_level }}
+      {% else %}
+        unknown
+      {% endif %}'      
+      unit_of_measurement: '%'
+      entity_id: zwave.study_multisensor
+      icon_template: >-
+        {% set battery_level = states('sensor.study_multisensor_battery')|int('unknown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {% if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
