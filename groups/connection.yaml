@@ -1,0 +1,9 @@
+#-------------------------------------------
+#  Internet Connection Related Items
+#-------------------------------------------
+connection:
+  name: Interwebs
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload

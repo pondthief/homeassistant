@@ -9,4 +9,4 @@ system_tab:
     - group.system
     - group.apcupsd
     - group.battery_levels
-#    - group.all_automations
+    - group.connection
