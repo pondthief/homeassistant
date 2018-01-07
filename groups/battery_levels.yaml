@@ -7,6 +7,8 @@ battery_levels:
     - sensor.laundry_multisensor_battery
     - sensor.master_bath_multisensor_battery
     - sensor.study_multisensor_battery
+    - sensor.tv_room_multisensor_battery
+    - sensor.kitchen_multisensor_battery
     - sensor.guest_multisensor_battery
     - sensor.guest_bath_multisensor_battery
     - sensor.front_door_battery
