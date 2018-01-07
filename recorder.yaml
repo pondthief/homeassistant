@@ -12,10 +12,9 @@ include:
     - automation
     - climate
     - cover
+    - sensor
   entities:
     - binary_sensor.back_door
     - binary_sensor.front_door
     - binary_sensor.garage_door
     - binary_sensor.ring_front_door_ding
-    - device_tracker.chris_iphone
-    - device_tracker.megan_iphone
