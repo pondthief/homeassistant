@@ -99,23 +99,6 @@ light:
   - platform: lifx
 
 #-------------------------------------------
-# Media Players
-#-------------------------------------------
-#media_player:
-#  - platform: directv
-#    host: 192.168.128.207
-#    port: 8080
-#    name: Main DirecTV Box
-#    device: 0
-#  - platform: directv
-#    host: 192.168.128.207
-#    port: 8080
-#    name: Master Bedroom DirecTV
-#    device: 14B7F87C30BF
-#  - platform: roku
-#    host: 192.168.128.200
-
-#-------------------------------------------
 # Nest Settings
 #-------------------------------------------
 nest:
@@ -234,7 +217,6 @@ weblink:
     - name: Nagios
       url: !secret nagios_url
       icon: mdi:ethernet
-
 
 #-------------------------------------------
 # iFrames
