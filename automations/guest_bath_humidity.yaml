@@ -5,7 +5,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.guest_bath_multisensor_relative_humidity
-    above: 57
+    above: 60
   action:
     service: homeassistant.turn_on
     entity_id: switch.guest_bath_fan_switch
@@ -17,7 +17,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.guest_bath_multisensor_relative_humidity
-    below: 55
+    below: 59
   action:
     service: homeassistant.turn_off
     entity_id: switch.guest_bath_fan_switch
