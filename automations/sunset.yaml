@@ -5,6 +5,5 @@
   trigger:
     platform: sun
     event: sunset
-    offset: '+01:00:00'
   action:
     - service: script.sunset
