@@ -11,11 +11,13 @@ logs:
   homeassistant.components.discovery: warn
   homeassistant.components.http: warn
   homeassistant.components.binary_sensor.ring: critical
-  homeassistant.components.camera.amcrest: critical
+  homeassistant.components.camera: critical
   homeassistant.components.sensor.ring: critical
   homeassistant.components.media_player: warn
   homeassistant.components.recorder: error
+  homeassistant.components.ring: error
   homeassistant.components.sensor.darksky: warn
+   homeassistant.components.template: error
   homeassistant.components.zwave: error
   homeassistant.helpers.script: warn
   homeassistant.components.cover.opengarage: critical
