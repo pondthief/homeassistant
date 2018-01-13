@@ -17,7 +17,7 @@ logs:
   homeassistant.components.recorder: error
   homeassistant.components.ring: error
   homeassistant.components.sensor.darksky: warn
-   homeassistant.components.template: error
+  homeassistant.components.template: error
   homeassistant.components.zwave: error
   homeassistant.helpers.script: warn
   homeassistant.components.cover.opengarage: critical
