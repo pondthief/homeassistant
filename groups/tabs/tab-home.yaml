@@ -10,4 +10,4 @@ default_view:
     - group.thermostat
     - group.doors
     - group.links
-    - group.general_house
+    - group.quick_glance

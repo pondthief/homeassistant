@@ -20,6 +20,7 @@ sensors_tab:
     - group.outside_sensors
     - group.weather
     - group.travel_times
-    - group.general_house
+    - group.quick_glance
+    - group.thermostat_sensors
     - group.beacons
     - group.tv_room_sensors

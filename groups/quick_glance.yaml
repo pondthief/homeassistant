@@ -1,9 +1,10 @@
 #-------------------------------------------
-#  Whole House Sensors
+#  Quick things to look at
 #-------------------------------------------
-general_house:
+quick_glance:
   name: General House
   control: hidden
   entities:
+    - weather.thermostat
     - sensor.average_humidity
     - sensor.average_temperature
