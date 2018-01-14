@@ -1,0 +1,7 @@
+#-------------------------------------------
+#  Group for Thermostat
+#-------------------------------------------
+thermostat:
+  name: Thermostat
+  entities:
+    - configurator.ecobee
