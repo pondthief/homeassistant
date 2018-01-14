@@ -41,3 +41,10 @@
   services:
     - service: ios_chris_iphone
     - service: ios_megan_iphone
+
+#-------------------------------------------
+#  Ecobee Messages
+#-------------------------------------------
+notify:
+  - name: ecobee
+    platform: ecobee

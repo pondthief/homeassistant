@@ -7,7 +7,7 @@ default_view:
   entities:
     - group.family_location
     - group.garage
-    - group.nest_control
+    - group.thermostat
     - group.doors
     - group.links
     - group.general_house
