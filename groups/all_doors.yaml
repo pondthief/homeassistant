@@ -1,9 +1,0 @@
-#-------------------------------------------
-#  All Doors
-#-------------------------------------------
-all_doors:
-  name: All Doors
-  entities:
-    - binary_sensor.front_door
-    - binary_sensor.back_door
-    - binary_sensor.garage_door
