@@ -2,9 +2,8 @@
 #  Quick things to look at
 #-------------------------------------------
 quick_glance:
-  name: General House
+  name: Quick Stats
   control: hidden
   entities:
-    - weather.thermostat
     - sensor.average_humidity
     - sensor.average_temperature
