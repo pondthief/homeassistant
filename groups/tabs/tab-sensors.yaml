@@ -24,4 +24,4 @@ sensors_tab:
     - group.thermostat_sensors
     - group.beacons
     - group.tv_room_sensors
-    - garage_sensors
+    - group.garage_sensors
