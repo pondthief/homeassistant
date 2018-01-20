@@ -18,9 +18,9 @@
 - alias: "Chris Garage Door Opened"
   trigger:
     - platform: state
-      entity_id: cover.chris_overhead_garage_door
-      to: 'open'
-      from: 'closed'
+      entity_id: binary_sensor.overhead_garage_one_sensor
+      to: 'on'
+      from: 'off'
   action:
     - service: notify.primary_contact
       data_template:
@@ -32,9 +32,9 @@
 - alias: "Megan Garage Door Opened"
   trigger:
     - platform: state
-      entity_id: cover.megan_overhead_garage_door
-      to: 'open'
-      from: 'closed'
+      entity_id: binary_sensor.overhead_garage_two_sensor
+      to: 'on'
+      from: 'off'
   action:
     - service: notify.primary_contact
       data_template:

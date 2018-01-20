@@ -2,15 +2,13 @@
 #  Garage
 #-------------------------------------------
 garage:
-  name: Garage Door Status
+  name: Garage Doors
   entities:
     - cover.megan_overhead_garage_door
-    - sensor.megan_car_present
     - cover.chris_overhead_garage_door
-    - sensor.chris_car_present
 
 garage_sensors:
-  name: Garage Door Status
+  name: Garage Doors Status
   entities:
-    - sensor.megan_car_present
-    - sensor.chris_car_present
+    - binary_sensor.overhead_garage_one_sensor
+    - binary_sensor.overhead_garage_two_sensor
