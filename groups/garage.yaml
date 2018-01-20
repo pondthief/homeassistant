@@ -6,6 +6,8 @@ garage:
   entities:
     - cover.megan_overhead_garage_door
     - cover.chris_overhead_garage_door
+    - binary_sensor.overhead_garage_one_sensor
+    - binary_sensor.overhead_garage_two_sensor
 
 garage_sensors:
   name: Garage Doors Status
