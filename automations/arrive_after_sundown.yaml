@@ -1,0 +1,17 @@
+#-------------------------------------------
+# Turn on Entry Light when door opens at night
+#-------------------------------------------
+- alias: 'Turn on Entry Light when door opens at night'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.front_door
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: sun
+    after: sunset
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.front_entry_switch
