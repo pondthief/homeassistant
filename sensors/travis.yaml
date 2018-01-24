@@ -1,3 +1,0 @@
-- platform: travisci
-  api_key: !secret travis_token
-  repository: Home-AssistantConfig
