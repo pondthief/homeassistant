@@ -26,24 +26,9 @@
   from_number: !secret twilio_from
 
 #-------------------------------------------
-#  iOS Push (just Chris)
+#  iOS Push
 #-------------------------------------------
 - name: ios
   platform: group
   services:
     - service: ios_chris_iphone
-
-#-------------------------------------------
-#  iOS Push (both)
-#-------------------------------------------
-- name: ios_both
-  platform: group
-  services:
-    - service: ios_chris_iphone
-    - service: ios_megan_iphone
-
-#-------------------------------------------
-#  Ecobee Messages
-#-------------------------------------------
-- name: ecobee
-  platform: ecobee
