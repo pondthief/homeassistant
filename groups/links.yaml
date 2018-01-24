@@ -4,6 +4,4 @@
 links:
   name: Links
   entities:
-    - weblink.datadog
-    - weblink.nagios
-    - weblink.rancher
+    - weblink.diskstation
