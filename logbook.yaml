@@ -5,9 +5,3 @@ exclude:
   domains:
     - zwave
     - weblink
-  entities:
-    - sensor.swap_used
-    - sensor.ram_free
-    - sensor.disk_used_
-    - sensor.cpu_used
-    - sensor.average_load_1m
