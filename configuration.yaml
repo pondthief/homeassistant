@@ -93,12 +93,6 @@ camera:
 cover: !include covers.yaml
 
 #-------------------------------------------
-# Enable light component
-#-------------------------------------------
-light:
-  - platform: lifx
-
-#-------------------------------------------
 # APCUPSd Settings
 #-------------------------------------------
 apcupsd:
@@ -114,17 +108,12 @@ ecobee:
 # MQTT Settings
 #-------------------------------------------
 mqtt:
-  broker: 127.0.0.1
+  broker: mqtt.fuzzyblender.com
 
 #-------------------------------------------
 # History support
 #-------------------------------------------
 history:
-
-#-------------------------------------------
-# Prometheus support
-#-------------------------------------------
-prometheus:
 
 #-------------------------------------------
 # Logbook Settings
@@ -140,11 +129,6 @@ sun:
 # Home Assistant Cloud
 #-------------------------------------------
 cloud:
-
-#-------------------------------------------
-# Datadog
-#-------------------------------------------
-datadog:
 
 #-------------------------------------------
 # Text to speech settings
@@ -220,21 +204,6 @@ device_tracker: !include device_tracker.yaml
 #-------------------------------------------
 weblink:
   entities:
-    - name: Rancher
-      url: http://192.168.7.253:8080
-      icon: mdi:cow
-    - name: Nagios
-      url: !secret nagios_url
-      icon: mdi:ethernet
-    - name: Datadog
-      url: https://app.datadoghq.com
-      icon: mdi:panda
-
-#-------------------------------------------
-# iFrames
-#-------------------------------------------
-panel_iframe:
-  router:
-    title: 'Nagios'
-    url: !secret nagios_url
-    icon: mdi:ethernet
+    - name: DiskStation
+      url: http://192.168.7.78:5000
+      icon: mdi:harddisk
