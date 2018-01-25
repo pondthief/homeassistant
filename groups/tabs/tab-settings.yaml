@@ -6,6 +6,5 @@ system_tab:
   view: yes
   icon: mdi:settings
   entities:
-    - group.apcupsd
     - group.battery_levels
     - group.connection
