@@ -96,7 +96,7 @@ cover: !include covers.yaml
 # APCUPSd Settings
 #-------------------------------------------
 apcupsd:
-  host: 127.0.0.1
+  host: 192.168.7.78
 
 #-------------------------------------------
 # Ecobee Settings
