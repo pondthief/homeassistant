@@ -1,0 +1,54 @@
+# Based off https://community.home-assistant.io/t/howto-create-battery-alert-without-creating-a-template-for-every-device/30576
+- alias: 'Low Battery Alert'
+  trigger:
+    - platform: time
+      at: '10:00:00'
+    - platform: time
+      at: '18:00:00'
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: >-
+          {%- set threshold = 40 -%}
+          {%- for item in states.light if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
+          {%- if loop.first -%}
+          {{ true }}
+          {%- endif -%}
+          {%- endfor -%}
+      - condition: template
+        value_template: >-
+          {%- set threshold = 40 -%}
+          {%- for item in states.switch if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
+          {%- if loop.first -%}
+          {{ true }}
+          {%- endif -%}
+          {%- endfor -%}
+      - condition: template
+        value_template: >-
+          {%- set threshold = 40 -%}
+          {%- for item in states.sensor if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
+          {%- if loop.first -%}
+          {{ true }}
+          {%- endif -%}
+          {%- endfor -%}
+      - condition: template
+        value_template: >-
+          {%- set threshold = 40 -%}
+          {%- for item in states.zwave if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
+          {%- if loop.first -%}
+          {{ true }}
+          {%- endif -%}
+          {%- endfor -%}
+      - condition: template
+        value_template: >-
+          {%- set threshold = 40 -%}
+          {%- for item in states.lock if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
+          {%- if loop.first -%}
+          {{ true }}
+          {%- endif -%}
+          {%- endfor -%}
+  action:
+    - service: notify.primary_contact
+      data_template:
+        message: "\U0001F50B There is a device with a low battery.  Fix it!"
