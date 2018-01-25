@@ -2,6 +2,6 @@
     name: 'UPS Status'
     host: 192.168.7.78
     community: public
-    baseoid: 1.3.6.1.4.1.6574.4.2.1
+    baseoid: .1.3.6.1.4.1.6574.4.2.1
     accept_errors: true
     version: 2c
