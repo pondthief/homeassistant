@@ -276,6 +276,10 @@ group.all_lights:
   friendly_name:  Lights
   hidden: false
 
+group.all_automations:
+  friendly_name:  Automations
+  hidden: false
+  
 #-------------------------------------------
 # Presence Icons
 #-------------------------------------------
