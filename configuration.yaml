@@ -74,6 +74,8 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 3
   ssl_certificate: !secret ssl_cert
+  ssl_key: !secret ssl_key
+  
 
 #-------------------------------------------
 # Checks for available updates
