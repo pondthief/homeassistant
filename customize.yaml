@@ -284,7 +284,7 @@ group.all_automations:
 # Presence Icons
 #-------------------------------------------
 sensor.chris_beacon:
-  entity_picture: https://s3.amazonaws.com/images.cowdog.io/hass/chris.JPG
+  entity_picture: !secret chris_picture
 
 sensor.megan_beacon:
-  entity_picture: https://s3.amazonaws.com/images.cowdog.io/hass/megan.JPG
+  entity_picture: !secret megan_picture
