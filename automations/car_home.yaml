@@ -1,12 +1,12 @@
 #-------------------------------------------
 # Unlock house when Chris gets home
 #-------------------------------------------
-- alias: 'Unlock when Rogue Arrive Home'
+- alias: 'Unlock when Chris Arrive Home'
   trigger:
     platform: state
-    entity_id: device_tracker.2015_nissan_rogue
-    to: 'home'
+    entity_id: device_tracker.2018_chevrolet_equinox
     from: 'not_home'
+    to: 'home'
   action:
     - service: lock.unlock
       data:
