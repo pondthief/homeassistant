@@ -21,11 +21,12 @@
   sensors:
     study_multisensor_battery:
       friendly_name: 'Study Multisensor'
-      value_template: '{% if states.zwave.study_multisensor.attributes.battery_level %}
-        {{ states.zwave.study_multisensor.attributes.battery_level }}
-      {% else %}
-        unknown
-      {% endif %}'      
+      value_template: >-
+        {% if states.zwave.study_multisensor %}
+          {{ states.zwave.study_multisensor.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}     
       unit_of_measurement: '%'
       entity_id: zwave.study_multisensor
       icon_template: >-

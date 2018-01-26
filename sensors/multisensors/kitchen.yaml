@@ -21,11 +21,12 @@
   sensors:
     kitchen_multisensor_battery:
       friendly_name: 'Kitchen Multisensor'
-      value_template: '{% if states.zwave.kitchen_multisensor.attributes.battery_level %}
-        {{ states.zwave.kitchen_multisensor.attributes.battery_level }}
-      {% else %}
-        unknown
-      {% endif %}'      
+      value_template: >-
+        {% if states.zwave.kitchen_multisensor %}
+          {{ states.zwave.kitchen_multisensor.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
       entity_id: zwave.kitchen_multisensor
       icon_template: >-

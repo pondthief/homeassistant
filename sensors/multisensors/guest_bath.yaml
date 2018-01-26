@@ -21,11 +21,12 @@
   sensors:
     guest_bath_multisensor_battery:
       friendly_name: 'Guest Bath Multisensor'
-      value_template: '{% if states.zwave.guest_bath_multisensor.attributes.battery_level %}
-        {{ states.zwave.guest_bath_multisensor.attributes.battery_level }}
-      {% else %}
-        unknown
-      {% endif %}'      
+      value_template: >-
+        {% if states.zwave.guest_bath_multisensor %}
+          {{ states.zwave.guest_bath_multisensor.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
       entity_id: zwave.guest_bath_multisensor
       icon_template: >-

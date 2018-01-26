@@ -21,11 +21,12 @@
   sensors:
     guest_multisensor_battery:
       friendly_name: 'Guest Multisensor'
-      value_template: '{% if states.zwave.guest_multisensor.attributes.battery_level %}
-        {{ states.zwave.guest_multisensor.attributes.battery_level }}
-      {% else %}
-        unknown
-      {% endif %}'      
+      value_template: >-
+        {% if states.zwave.guest_multisensor %}
+          {{ states.zwave.guest_multisensor.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
       entity_id: zwave.guest_multisensor
       icon_template: >-

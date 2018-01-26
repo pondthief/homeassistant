@@ -21,11 +21,12 @@
   sensors:
     master_bath_multisensor_battery:
       friendly_name: 'Master Bath Multisensor'
-      value_template: '{% if states.zwave.master_bath_multisensor.attributes.battery_level %}
-        {{ states.zwave.master_bath_multisensor.attributes.battery_level }}
-      {% else %}
-        unknown
-      {% endif %}'      
+      value_template: >-
+        {% if states.zwave.master_bath_multisensor %}
+          {{ states.zwave.master_bath_multisensor.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}  
       unit_of_measurement: '%'
       entity_id: zwave.master_bath_multisensor
       icon_template: >-

@@ -21,7 +21,7 @@
   sensors:
     laundry_multisensor_battery:
       friendly_name: 'Laundry Room Multisensor'
-      value_template: '{% if states.zwave.laundry_multisensor.attributes.battery_level %}
+      value_template: '{% if states.zwave.laundry_multisensor %}
         {{ states.zwave.laundry_multisensor.attributes.battery_level }}
       {% else %}
         unknown
