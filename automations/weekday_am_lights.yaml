@@ -1,0 +1,17 @@
+#-------------------------------------------
+# Turn on weekday AM things
+#-------------------------------------------
+- alias: 'Turn on weekday AM things'
+  initial_state: true
+  trigger:
+    platform: time
+    at: '06:30:00'
+  condition:
+    condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.kitchen_island_switch
