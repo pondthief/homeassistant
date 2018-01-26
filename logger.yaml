@@ -3,24 +3,4 @@
 #-------------------------------------------
 default: error
 logs:
-  homeassistant.core: error
   homeassistant.components.automation: warn
-  homeassistant.components.sensor.template: error
-  homeassistant.components.climate.nest: warn
-  homeassistant.components.device_tracker: warn
-  homeassistant.components.discovery: warn
-  homeassistant.components.http: warn
-  homeassistant.components.binary_sensor.ring: critical
-  homeassistant.components.camera: critical
-  homeassistant.components.sensor.ring: critical
-  homeassistant.components.media_player: warn
-  homeassistant.components.recorder: error
-  homeassistant.components.ring: error
-  homeassistant.components.sensor.darksky: warn
-  homeassistant.components.template: error
-  homeassistant.components.zwave: error
-  homeassistant.helpers.script: warn
-  homeassistant.components.cover.opengarage: critical
-  homeassistant.exceptions: info
-  py.warnings: error
-  root: warn
