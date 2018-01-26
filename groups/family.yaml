@@ -12,4 +12,4 @@ family_location:
   entities:
     - sensor.chris_beacon
     - sensor.megan_beacon
-    - device_tracker.2015_nissan_rogue
+    - device_tracker.2018_chevrolet_equinox
