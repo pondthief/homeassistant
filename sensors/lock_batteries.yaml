@@ -5,11 +5,12 @@
   sensors:
     front_door_battery:
       friendly_name: 'Front Door Lock Battery'
-      value_template: '{% if states.zwave.front_door.attributes.battery_level %}
-        {{ states.zwave.front_door.attributes.battery_level }}
-      {% else %}
-        unknown
-      {% endif %}'
+      value_template: >-
+        {% if states.zwave.front_door %}
+          {{ states.zwave.front_door.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
       entity_id: zwave.front_door
       icon_template: >-
@@ -34,11 +35,12 @@
   sensors:
     back_door_battery:
       friendly_name: 'Back Door Lock Battery'
-      value_template: '{% if states.zwave.back_door.attributes.battery_level %}
-        {{ states.zwave.back_door.attributes.battery_level }}
-      {% else %}
-        unknown
-      {% endif %}'
+      value_template: >-
+        {% if states.zwave.back_door %}
+          {{ states.zwave.back_door.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
       entity_id: zwave.back_door
       icon_template: >-
@@ -63,11 +65,12 @@
   sensors:
     garage_door_battery:
       friendly_name: 'Garage Door Lock Battery'
-      value_template: '{% if states.zwave.garage_door %}
-        {{ states.zwave.garage_door.attributes.battery_level }}
-      {% else %}
-        unknown
-      {% endif %}'
+      value_template: >-
+        {% if states.zwave.garage_door %}
+          {{ states.zwave.garage_door.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
       entity_id: zwave.garage_door
       icon_template: >-
