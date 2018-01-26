@@ -2,6 +2,7 @@
 # Things to do at Sunrise
 #-------------------------------------------
 - alias: 'Sunrise'
+  initial_state: true
   trigger:
     platform: sun
     event: sunrise

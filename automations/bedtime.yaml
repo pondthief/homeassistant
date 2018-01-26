@@ -2,6 +2,7 @@
 # Just before bed
 #-------------------------------------------
 - alias: 'Bedtime'
+  initial_state: true
   trigger:
     platform: time
     at: '22:30:00'

@@ -2,6 +2,7 @@
 # Alert When Front Door Opened
 #-------------------------------------------
 - alias: "Door Opened"
+  initial_state: true
   trigger:
     - platform: state
       entity_id: binary_sensor.front_door
@@ -16,6 +17,7 @@
 # Alert When Chris Garage Door Opened
 #-------------------------------------------
 - alias: "Chris Garage Door Opened"
+  initial_state: true
   trigger:
     - platform: state
       entity_id: binary_sensor.overhead_garage_one_sensor

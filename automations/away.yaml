@@ -2,6 +2,7 @@
 # When No One Is Home
 #-------------------------------------------
 - alias: 'Away'
+  initial_state: true
   trigger:
     platform: state
     entity_id: group.family

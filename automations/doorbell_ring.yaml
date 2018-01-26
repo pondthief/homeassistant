@@ -2,6 +2,7 @@
 # When Someone Rings the Doorbell
 #-------------------------------------------
 - alias: 'Doorbell Ring'
+  initial_state: true
   trigger:
     platform: state
     entity_id: binary_sensor.ring_front_door_ding

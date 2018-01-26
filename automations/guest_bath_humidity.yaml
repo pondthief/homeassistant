@@ -2,6 +2,7 @@
 # Guest Bath High Humidity
 #-------------------------------------------
 - alias: 'Guest Bath High Humidity'
+  initial_state: true
   trigger:
     platform: numeric_state
     entity_id: sensor.guest_bath_multisensor_relative_humidity
@@ -14,6 +15,7 @@
 # Guest Bath Normal Humidity
 #-------------------------------------------
 - alias: 'Guest Bath Normal Humidity'
+  initial_state: true
   trigger:
     platform: numeric_state
     entity_id: sensor.guest_bath_multisensor_relative_humidity

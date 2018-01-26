@@ -2,6 +2,7 @@
 # Alert When UPS is running
 #-------------------------------------------
 - alias: 'Lost Power'
+  initial_state: true
   trigger:
     platform: state
     entity_id: sensor.ups_status

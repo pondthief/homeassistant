@@ -2,6 +2,7 @@
 # Turn on deck back door if night / open
 #-------------------------------------------
 - alias: "Turn on Deck Light if Door Open"
+  initial_state: true
   trigger:
     - platform: state
       entity_id: binary_sensor.back_door
@@ -18,6 +19,7 @@
 # Turn off deck light after 15 min
 #-------------------------------------------
 - alias: "Deck Light Off After 15 min"
+  initial_state: true
   trigger:
     platform: state
     entity_id: switch.deck_flood_switch

@@ -2,6 +2,7 @@
 # Unlock house when Chris gets home
 #-------------------------------------------
 - alias: 'Unlock when Chris Arrive Home'
+  initial_state: true
   trigger:
     platform: state
     entity_id: device_tracker.2018_chevrolet_equinox

@@ -1,5 +1,6 @@
 # Based off https://community.home-assistant.io/t/howto-create-battery-alert-without-creating-a-template-for-every-device/30576
 - alias: 'Low Battery Alert'
+  initial_state: true
   trigger:
     - platform: time
       at: '10:00:00'

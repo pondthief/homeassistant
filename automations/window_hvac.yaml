@@ -2,6 +2,7 @@
 # Windows Opened, send alert, turn off HVAC
 #-------------------------------------------
 - alias: "Window Opened"
+  initial_state: true
   trigger:
     - platform: state
       entity_id: binary_sensor.all_windows
@@ -20,6 +21,7 @@
 # Windows Closed, send alert, turn on HVAC
 #-------------------------------------------
 - alias: "Window Opened"
+  initial_state: true
   trigger:
     - platform: state
       entity_id: binary_sensor.all_windows
