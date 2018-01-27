@@ -1,22 +1,21 @@
 #-------------------------------------------
 # Chris's BLE Beacon
+# {"id":"2f234454cf6d4a0fadf2f4911ba9ffa6_0000_0001","name":"Chris","distance":2.330905473323243}
 #-------------------------------------------
 - platform: mqtt_room
-  device_id: 2f234454cf6d4a0fadf2f4911ba9ffa6-0-1
+  device_id: 2f234454cf6d4a0fadf2f4911ba9ffa6_0000_0001
   name: 'Chris Beacon'
-  state_topic: 'room_presence'
+  state_topic: 'happy-bubbles/presence/ha'
   timeout: 5
   away_timeout: 60
 
 #-------------------------------------------
 # Megan's BLE Beacon
+# {"id":"bc44f10e7b554f9984ec1949292f72f1_0000_0001","name":"Megan","distance":2.9003455293388853}
 #-------------------------------------------
 - platform: mqtt_room
-  device_id: bc44f10e7b554f9984ec1949292f72f1-0-1
+  device_id: bc44f10e7b554f9984ec1949292f72f1_0000_0001
   name: 'Megan Beacon'
-  state_topic: 'room_presence'
+  state_topic: 'happy-bubbles/presence/ha'
   timeout: 5
   away_timeout: 60
-
-
-  
