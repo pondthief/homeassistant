@@ -1,7 +1,8 @@
 #-------------------------------------------
 #  Recorder Component
 #-------------------------------------------
-purge_keep_days: 5
+db_url: mysql://hass:hass@mariadb/hass?charset=utf8
+purge_keep_days: 30
 purge_interval: 2
 include:
   domains:
