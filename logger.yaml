@@ -2,3 +2,5 @@
 #  Logger Component
 #-------------------------------------------
 default: error
+logs:
+  homeassistant.components.device_tracker.automatic: error
