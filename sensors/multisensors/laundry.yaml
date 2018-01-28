@@ -27,7 +27,6 @@
         unknown
       {% endif %}'      
       unit_of_measurement: '%'
-      entity_id: zwave.laundry_multisensor
       icon_template: >-
         {% set battery_level = states('sensor.laundry_multisensor_battery')|int('unknown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}

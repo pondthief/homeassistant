@@ -28,7 +28,6 @@
           unknown
         {% endif %}  
       unit_of_measurement: '%'
-      entity_id: zwave.master_bath_multisensor
       icon_template: >-
         {% set battery_level = states('sensor.master_bath_multisensor_battery')|int('unknown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}
