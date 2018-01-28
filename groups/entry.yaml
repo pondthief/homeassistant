@@ -5,3 +5,8 @@ entry:
   name: Entry
   entities:
     - switch.front_entry_switch
+
+entry_sensors:
+  name: Entry
+  entities:
+    - sensor.front_door

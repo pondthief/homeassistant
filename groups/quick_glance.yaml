@@ -7,7 +7,5 @@ quick_glance:
   entities:
     - sensor.average_humidity
     - sensor.average_temperature
-    - binary_sensor.all_doors
-    - binary_sensor.all_windows
-    - sensor.nextsunrise
-    - sensor.nextsunset
+    - sensor.all_doors
+    - sensor.all_windows
