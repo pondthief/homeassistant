@@ -4,16 +4,16 @@
       friendly_name: "All Windows"
       device_class: opening
       value_template: >-
-        {{ is_state('binary_sensor.study_window', 'closed')
-            and is_state('binary_sensor.master_bathroom_window', 'closed')
-            and is_state('binary_sensor.guest_window', 'closed')
-            and is_state('binary_sensor.child_window', 'closed')
-            and is_state('binary_sensor.front_right_window', 'closed')
-            and is_state('binary_sensor.front_window_one', 'closed')
-            and is_state('binary_sensor.front_window_two', 'closed')
-            and is_state('binary_sensor.back_window_one', 'closed')
-            and is_state('binary_sensor.back_window_two', 'closed')
-            and is_state('binary_sensor.back_window_three', 'closed')
-            and is_state('binary_sensor.back_right_window', 'closed')
-            and is_state('binary_sensor.kitchen_sink_window', 'closed')
-            and is_state('binary_sensor.master_bedroom_window', 'closed') }}
+        {{ is_state('sensor.study_window', 'closed')
+            and is_state('sensor.master_bathroom_window', 'closed')
+            and is_state('sensor.guest_window', 'closed')
+            and is_state('sensor.child_window', 'closed')
+            and is_state('sensor.front_right_window', 'closed')
+            and is_state('sensor.front_window_one', 'closed')
+            and is_state('sensor.front_window_two', 'closed')
+            and is_state('sensor.back_window_one', 'closed')
+            and is_state('sensor.back_window_two', 'closed')
+            and is_state('sensor.back_window_three', 'closed')
+            and is_state('sensor.back_right_window', 'closed')
+            and is_state('sensor.kitchen_sink_window', 'closed')
+            and is_state('sensor.master_bedroom_window', 'closed') }}

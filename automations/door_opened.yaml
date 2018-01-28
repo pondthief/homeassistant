@@ -6,8 +6,8 @@
   trigger:
     - platform: state
       entity_id: sensor.front_door
-      to: 'on'
-      from: 'off'
+      from: 'closed'
+      to: 'open'
   action:
     - service: notify.primary_contact
       data_template:
