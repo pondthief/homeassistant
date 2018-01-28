@@ -5,9 +5,9 @@
   initial_state: true
   trigger:
     - platform: state
-      entity_id: binary_sensor.back_door
-      to: 'on'
-      from: 'off'
+      entity_id: sensor.back_door
+      from: 'closed'
+      to: 'open'
   condition:
     condition: sun
     after: sunset
@@ -23,8 +23,8 @@
   trigger:
     platform: state
     entity_id: switch.deck_flood_switch
-    to: 'on'
     from: 'off'
+    to: 'on'
     for:
       minutes: 15
   action:

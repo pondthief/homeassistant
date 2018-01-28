@@ -2,7 +2,7 @@
   platform: mqtt
   state_topic: "homeassistant/sensor/honeywell"
   qos: 1
-  value_template: 
+  value_template: >-
     {% if value_json.id is equalto 785920 %} 
       {{value_json.state}} 
     {% else %} 

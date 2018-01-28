@@ -6,8 +6,8 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.all_windows
-      to: 'off'
       from: 'on'
+      to: 'off'
   action:
     - service: notify.primary_contact
       data_template:
