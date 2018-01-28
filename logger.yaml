@@ -2,5 +2,3 @@
 #  Logger Component
 #-------------------------------------------
 default: error
-logs:
-  homeassistant.components.automation: warn
