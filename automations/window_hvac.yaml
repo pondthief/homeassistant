@@ -6,6 +6,7 @@
   trigger:
     - platform: state
       entity_id: sensor.all_windows
+      from: 'closed'
       to: 'open'
   action:
     - service: notify.primary_contact
@@ -24,6 +25,7 @@
   trigger:
     - platform: state
       entity_id: sensor.all_windows
+      from: 'open'
       to: 'closed'
   action:
     - service: notify.primary_contact
