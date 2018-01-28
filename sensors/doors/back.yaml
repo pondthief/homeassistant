@@ -6,7 +6,7 @@
     {% if value_json.id is equalto 491009 %} 
       {{value_json.state}} 
     {% else %} 
-      {{states.binary_sensor.back_door.state}} 
+      {{states.sensor.back_door.state}} 
     {% endif %}
   icon_template: >-
     {% if is_state('sensor.back_door', 'open') %}
