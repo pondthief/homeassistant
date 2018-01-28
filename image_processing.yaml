@@ -1,14 +1,14 @@
-  - platform: dlib_face_detect
-    name: Front Porch
-    source:
-      - entity_id: camera.front_porch
+  # - platform: dlib_face_detect
+  #  name: Front Porch
+  #  source:
+  #    - entity_id: camera.front_porch
 
-  - platform: dlib_face_detect
-    name: Front Yard
-    source:
-      - entity_id: camera.frontyard
+  # - platform: dlib_face_detect
+  #  name: Front Yard
+  #  source:
+  #    - entity_id: camera.frontyard
 
-  - platform: dlib_face_detect
-    name: Driveway
-    source:
-      - entity_id: camera.driveway
+  # - platform: dlib_face_detect
+  #  name: Driveway
+  #  source:
+  #    - entity_id: camera.driveway
