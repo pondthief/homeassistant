@@ -17,3 +17,10 @@
     {% else %}
       mdi:window-closed
     {% endif %}
+  json_attributes:
+    - time
+    - model
+    - id
+    - channel
+    - event
+    - heartbeat

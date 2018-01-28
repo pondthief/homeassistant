@@ -13,3 +13,10 @@
     {% else %}
       mdi:door
     {% endif %}
+  json_attributes:
+    - time
+    - model
+    - id
+    - channel
+    - event
+    - heartbeat
