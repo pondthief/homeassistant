@@ -9,7 +9,7 @@ laundry_room:
 laundry_room_sensors:
   name: Laundry Room
   entities:
-    - binary_sensor.garage_door
+    - sensor.laundry_door
     - sensor.laundry_multisensor_motion
     - sensor.laundry_multisensor_luminance
     - sensor.laundry_multisensor_relative_humidity

@@ -9,4 +9,4 @@ child_room:
 child_room_sensors:
   name: Clara's Room
   entities:
-    - binary_sensor.child_window
+    - sensor.child_window

@@ -10,7 +10,7 @@ study:
 study_sensors:
   name: Study
   entities:
-    - binary_sensor.study_window
+    - sensor.study_window
     - sensor.study_multisensor_luminance
     - sensor.study_multisensor_relative_humidity
     - sensor.study_multisensor_temperature

@@ -11,6 +11,6 @@ doors:
 doors_sensors:
   name: Doors
   entities:
-    - binary_sensor.front_door
-    - binary_sensor.back_door
-    - binary_sensor.garage_door
+    - sensor.front_door
+    - sensor.back_door
+    - sensor.laundry_door

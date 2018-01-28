@@ -13,12 +13,12 @@ kitchen:
 kitchen_sensors:
   name: Kitchen
   entities:
-    - binary_sensor.back_window_one
-    - binary_sensor.back_window_two
-    - binary_sensor.back_window_three
-    - binary_sensor.back_right_window
-    - binary_sensor.kitchen_sink_window
-    - binary_sensor.back_door
+    - sensor.back_window_one
+    - sensor.back_window_two
+    - sensor.back_window_three
+    - sensor.back_right_window
+    - sensor.kitchen_sink_window
+    - sensor.back_door
     - sensor.kitchen_multisensor_motion
     - sensor.kitchen_multisensor_luminance
     - sensor.kitchen_multisensor_relative_humidity

@@ -10,8 +10,8 @@
 tv_room_sensors:
   name: TV Room
   entities:
-    - binary_sensor.front_window_one
-    - binary_sensor.front_window_two
+    - sensor.front_window_one
+    - sensor.front_window_two
     - sensor.tv_room_multisensor_luminance
     - sensor.tv_room_multisensor_relative_humidity
     - sensor.tv_room_multisensor_temperature
