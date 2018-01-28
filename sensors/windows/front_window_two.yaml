@@ -1,0 +1,16 @@
+- name: "Front Window Two"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  qos: 1
+  value_template: >-
+    {% if value_json.id is equalto 4559 %} 
+      {{value_json.state}} 
+    {% else %} 
+      {{states.sensor.front_window_two.state}} 
+    {% endif %}
+  icon_template: >-
+    {% if is_state('sensor.front_window_two', 'open') %}
+      mdi:window-open
+    {% else %}
+      mdi:window-closed
+    {% endif %}

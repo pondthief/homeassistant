@@ -1,0 +1,15 @@
+- name: "Guest Window"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  value_template: >-
+    {% if value_json.id is equalto 871236 %} 
+      {{value_json.state}} 
+    {% else %} 
+      {{states.sensor.guest_window.state}} 
+    {% endif %}
+  icon_template: >-
+    {% if is_state('sensor.guest_window', 'open') %}
+      mdi:window-open
+    {% else %}
+      mdi:window-closed
+    {% endif %}

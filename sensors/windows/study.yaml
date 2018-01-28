@@ -1,0 +1,19 @@
+#-------------------------------------------
+#  Study Window
+#-------------------------------------------
+- name: "Study Window"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  qos: 1
+  value_template: >-
+    {% if value_json.id is equalto 547651 %} 
+      {{value_json.state}} 
+    {% else %} 
+      {{states.sensor.study_window.state}} 
+    {% endif %}
+  icon_template: >-
+    {% if is_state('sensor.study_window', 'open') %}
+      mdi:window-open
+    {% else %}
+      mdi:window-closed
+    {% endif %}

@@ -1,0 +1,17 @@
+#-------------------------------------------
+- name: "Master Bathroom Window"
+  platform: mqtt
+  state_topic: "homeassistant/sensor/honeywell"
+  qos: 1
+  value_template: >-
+    {% if value_json.id is equalto 792500 %} 
+      {{value_json.state}} 
+    {% else %} 
+      {{states.sensor.master_bathroom_window.state}} 
+    {% endif %}
+  icon_template: >-
+    {% if is_state('sensor.master_bathroom_window', 'open') %}
+      mdi:window-open
+    {% else %}
+      mdi:window-closed
+    {% endif %}
