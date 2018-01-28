@@ -11,9 +11,6 @@
         {% else %}
           home
         {% endif %}
-      entity_id:
-        - sensor.chris_beacon
-        - sensor.megan_beacon
       icon_template: >-
         {% if is_state('sensor.chris_beacon', 'not_home') and is_state('sensor.megan_beacon', 'not_home') %}
           mdi:airplane
