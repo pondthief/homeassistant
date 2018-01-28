@@ -5,7 +5,7 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: group.family
+    entity_id: sensor.family_status
     to: 'not_home'
     for:
       minutes: 10
