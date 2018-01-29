@@ -18,7 +18,6 @@ sensors_tab:
     - group.study_sensors
     - group.outside_sensors
     - group.weather
-    - group.travel_times
     - group.entry_sensors
     - group.thermostat_sensors
     - group.beacons

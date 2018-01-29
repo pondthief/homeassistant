@@ -1,6 +1,9 @@
 #-------------------------------------------
 #  Family Status
 #-------------------------------------------
+
+#todo: rename to all_family (to be consistent)
+
 - platform: template
   sensors:
     family_status:

@@ -1,0 +1,30 @@
+#-------------------------------------------
+#  Garage Door Lock
+#-------------------------------------------
+- platform: template
+  sensors:
+    garage_door_battery:
+      friendly_name: 'Garage Door Lock Battery'
+      value_template: >-
+        {% if states.zwave.garage_door %}
+          {{ states.zwave.garage_door.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% if states.zwave.garage_door %}
+        {% set battery_level = states('sensor.garage_door_battery')|int('unknown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {% if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+        {% endif %}
