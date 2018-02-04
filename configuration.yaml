@@ -111,10 +111,11 @@ mqtt:
   broker: mqtt.fuzzyblender.com
 
 #-------------------------------------------
-# Expose Prometheus metrics
+# Use Datadog
 #-------------------------------------------
-prometheus:
-
+datadog:
+  host: 192.168.7.253
+  
 #-------------------------------------------
 # History support
 #-------------------------------------------
