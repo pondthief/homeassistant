@@ -1,19 +1,19 @@
 #-------------------------------------------
 #  Garage Door Cover Megan
 #-------------------------------------------
-- platform: opengarage
-  covers:
-    garage:
-      host: 192.168.7.21
-      device_key: !secret opengarage_key
-      name:  Megan Overhead Garage Door
+#- platform: opengarage
+#  covers:
+#    garage:
+#      host: 192.168.7.21
+#      device_key: !secret opengarage_key
+#      name:  Megan Overhead Garage Door
 
 #-------------------------------------------
 #  Garage Door Cover Chris
 #-------------------------------------------
-- platform: opengarage
-  covers:
-    garage:
-      host: 192.168.7.21 # this is not the right IP, just temp until I get .23 fixed
-      device_key: !secret opengarage_key
-      name:  Chris Overhead Garage Door
+#- platform: opengarage
+#  covers:
+#    garage:
+#      host: 192.168.7.21 # this is not the right IP, just temp until I get .23 fixed
+#      device_key: !secret opengarage_key
+#      name:  Chris Overhead Garage Door
