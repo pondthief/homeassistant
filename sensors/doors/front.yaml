@@ -2,7 +2,7 @@
   platform: mqtt
   state_topic: "home/sensor/648705"
   qos: 1
-  value_template: {{value_json.state}} 
+  value_template: '{{value_json.state}}'
   icon_template: >-
     {% if is_state('sensor.front_door', 'open') %}
       mdi:door-open
