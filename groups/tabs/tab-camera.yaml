@@ -7,4 +7,3 @@ camera_tab:
   icon: mdi:camera
   entities:
     - group.cameras
-    - 
