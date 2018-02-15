@@ -4,7 +4,7 @@
 pollen:
   name: Pollen
   entities:
-    - allergy_index_today
-    - allergy_index_tomorrow
-    - allergy_average_forecasted
-    - disease_average_forecasted
+    - sensor.allergy_index_today
+    - sensor.allergy_index_tomorrow
+    - sensor.allergy_average_forecasted
+    - sensor.disease_average_forecasted
