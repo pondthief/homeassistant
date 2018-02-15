@@ -204,12 +204,3 @@ eight_sleep:
 # Device Tracking
 #-------------------------------------------
 device_tracker: !include device_tracker.yaml
-
-#-------------------------------------------
-# Weblinks
-#-------------------------------------------
-weblink:
-  entities:
-    - name: DiskStation
-      url: http://192.168.7.78:5000
-      icon: mdi:harddisk

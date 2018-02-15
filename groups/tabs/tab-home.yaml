@@ -9,5 +9,4 @@ default_view:
     - group.garage
     - group.thermostat
     - group.doors
-    - group.links
     - group.quick_glance
