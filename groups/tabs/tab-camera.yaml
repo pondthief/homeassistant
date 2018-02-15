@@ -1,0 +1,10 @@
+#-------------------------------------------
+#  Camera Tab
+#-------------------------------------------
+camera_tab:
+  name: Camera
+  view: yes
+  icon: mdi:camera
+  entities:
+    - group.cameras
+    - 

@@ -4,6 +4,10 @@
 outside_tab:
   name: Outside
   view: yes
-  icon: mdi:camera
+  icon: mdi:flower
   entities:
-    - group.cameras
+    - group.pollen
+    - group.weather
+    - group.almanac
+
+
