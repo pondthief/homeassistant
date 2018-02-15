@@ -1,13 +1,8 @@
 - name: "Laundry Door"
   platform: mqtt
-  state_topic: "homeassistant/sensor/honeywell"
+  state_topic: "home/sensor/275843"
   qos: 1
-  value_template: >-
-    {% if value_json.id is equalto 275843 %} 
-      {{value_json.state}} 
-    {% else %} 
-      {{states.sensor.laundry_door.state}} 
-    {% endif %}
+  value_template: {{value_json.state}}
   icon_template: >-
     {% if is_state('sensor.laundry_door', 'open') %}
       mdi:door-open
