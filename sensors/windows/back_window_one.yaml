@@ -1,13 +1,8 @@
 - name: "Back Window One"
   platform: mqtt
-  state_topic: "homeassistant/sensor/honeywell"
+  state_topic: "home/sensor/272026"
   qos: 1
-  value_template: >-
-    {% if value_json.id is equalto 272026 %} 
-      {{value_json.state}} 
-    {% else %} 
-      {{states.sensor.back_window_one.state}} 
-    {% endif %}
+  value_template: '{value_json.state}}'
   icon_template: >-
     {% if is_state('sensor.back_window_one', 'open') %}
       mdi:window-open

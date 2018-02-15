@@ -1,13 +1,8 @@
 - name: "Front Right Window"
   platform: mqtt
-  state_topic: "homeassistant/sensor/honeywell"
+  state_topic: "home/sensor/787146"
   qos: 1
-  value_template: >-
-    {% if value_json.id is equalto 787146 %} 
-      {{value_json.state}} 
-    {% else %} 
-      {{states.sensor.front_right_window.state}} 
-    {% endif %}
+  value_template: '{{value_json.state}}'
   icon_template: >-
     {% if is_state('sensor.front_right_window', 'open') %}
       mdi:window-open
