@@ -1,7 +1,7 @@
 #-------------------------------------------
 - name: "Master Bathroom Window"
   platform: mqtt
-  state_topic: "homeassistant/sensor/792500"
+  state_topic: "home/sensor/792500"
   qos: 1
   value_template: '{{value_json.state}}'
   icon_template: >-
