@@ -10,8 +10,9 @@
     to: 'on'
   action:
     - service: camera.snapshot
-      entity_id: camera.front_porch
-      filename: /tmp/front-door.jpg
+      data:
+        entity_id: camera.front_porch
+        filename: '/tmp/front-door.jpg'
     - service: notify.primary_contact
       data_template:
         title: "Doorbell"
