@@ -9,11 +9,10 @@
     from: 'off'
     to: 'on'
   action:
-    - service: notify.ios_both
+    - service: notify.primary_contact
       data_template:
         title: "Doorbell"
         message: "\U0001F514 Someone is at the Front Door!"
         data:
-          push:
-            category: camera
-          entity_id: camera.front_porch
+          file:
+            entity_id: camera.front_porch
