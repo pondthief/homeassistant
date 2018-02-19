@@ -15,7 +15,7 @@
         filename: '/tmp/front-door.jpg'
     - service: notify.primary_contact
       data_template:
-        message: "\U0001F514 @chriskacerguis Someone is at the Front Door!"
+        message: "\U0001F514 Someone is at the Front Door!"
         data:
           file:
             path: /tmp/front-door.jpg
