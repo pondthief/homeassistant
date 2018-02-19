@@ -4,40 +4,12 @@
 - name: primary_contact
   platform: group
   services:
-    - service: ios
+    - slack
 
 #-------------------------------------------
-#  Emergency Notices via SMS
+#  Slack Notices
 #-------------------------------------------
-- name: emergency_contact
-  platform: group
-  services:
-    - service: sms
-      data:
-        target:
-          - !secret chris_mobile_num
-          - !secret megan_mobile_num
-
-#-------------------------------------------
-#  Twilio SMS Notices
-#-------------------------------------------
-- name: sms
-  platform: twilio_sms
-  from_number: !secret twilio_from
-
-#-------------------------------------------
-#  iOS Push
-#-------------------------------------------
-- name: ios
-  platform: group
-  services:
-    - service: ios_chris_iphone
-    
-#-------------------------------------------
-#  iOS Push (both)
-#-------------------------------------------
-- name: ios_both
-  platform: group
-  services:
-    - service: ios_chris_iphone
-    - service: ios_megan_iphone
+- name: slack
+  platform: slack
+  api_key: !secret slack_key
+  default_channel: '#home'

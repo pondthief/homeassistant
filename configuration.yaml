@@ -44,27 +44,11 @@ ring:
 #-------------------------------------------
 frontend:
   javascript_version: latest
-  themes:
-    red:
-      primary-color: red
-    orange:
-      primary-color: orange
-    yellow:
-      primary-color: "#cccc00"
-    green:
-      primary-color: "#009900"
 
 #-------------------------------------------
 # iOS App Settings
 #-------------------------------------------
 ios: !include ios.yaml
-
-#-------------------------------------------
-# Twilio Settings
-#-------------------------------------------
-twilio:
-  account_sid: !secret twilio_sid
-  auth_token: !secret twilio_token
 
 #-------------------------------------------
 # Enable configuration UI
