@@ -1,0 +1,8 @@
+- platform: nut
+  name: Synology
+  host: 192.168.7.3
+  resources:
+    - ups.load
+    - ups.realpower.nominal
+    - input.voltage
+    - battery.runtime
