@@ -18,4 +18,4 @@
         title: "\U0001F514 Someone is at the Front Door!"
         data:
           file:
-            path: /tmp/front-door.jpg
+            path: '/tmp/front-door.jpg'
