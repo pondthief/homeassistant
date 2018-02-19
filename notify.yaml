@@ -4,7 +4,7 @@
 - name: primary_contact
   platform: group
   services:
-    - slack
+    - service: slack
 
 #-------------------------------------------
 #  Slack Notices
