@@ -12,10 +12,12 @@
     - service: camera.snapshot
       data:
         entity_id: camera.front_porch
-        filename: '/tmp/front-door.jpg'
+        filename: /tmp/front-door.jpg
     - service: notify.primary_contact
       data_template:
-        title: "Someone is at the Front Door!"
+        title: "Doorbell Pressed"
+        message: >
+          Doorbell was pressed on {{now().strftime("%c")}}.
         data:
           file:
-            path: '/tmp/front-door.jpg'
+            path: /tmp/front-door.jpg
