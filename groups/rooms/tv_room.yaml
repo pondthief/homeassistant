@@ -12,6 +12,11 @@ tv_room_sensors:
   entities:
     - sensor.front_window_one
     - sensor.front_window_two
+
+tv_room_enviroment:
+  name: TV Room
+  entities:
+    - sensor.tv_room_multisensor_motion
     - sensor.tv_room_multisensor_luminance
     - sensor.tv_room_multisensor_relative_humidity
     - sensor.tv_room_multisensor_temperature

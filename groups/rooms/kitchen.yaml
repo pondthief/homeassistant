@@ -19,6 +19,10 @@ kitchen_sensors:
     - sensor.back_right_window
     - sensor.kitchen_sink_window
     - sensor.back_door
+
+kitchen_enviroment:
+  name: Kitchen
+  entities:
     - sensor.kitchen_multisensor_motion
     - sensor.kitchen_multisensor_luminance
     - sensor.kitchen_multisensor_relative_humidity

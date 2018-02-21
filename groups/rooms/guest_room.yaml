@@ -10,6 +10,10 @@ guest_room_sensors:
   name: Guest Room
   entities:
     - sensor.guest_window
+
+guest_room_enviroment:
+  name: Guest Room
+  entities:
     - sensor.guest_multisensor_luminance
     - sensor.guest_multisensor_motion
     - sensor.guest_multisensor_relative_humidity

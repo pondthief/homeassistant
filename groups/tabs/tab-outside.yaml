@@ -9,5 +9,11 @@ outside_tab:
     - group.pollen
     - group.weather
     - group.almanac
+    - group.guest_bath_enviroment
+    - group.guest_room_enviroment
+    - group.kitchen_enviroment
+    - group.master_bath_enviroment
+    - group.study_enviroment
+    - group.tv_room_enviroment
 
 

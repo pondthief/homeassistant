@@ -12,6 +12,10 @@ master_bath_sensors:
   name: Master Bathroom
   entities:
     - sensor.master_bathroom_window
+
+master_bath_enviroment:
+  name: Master Bathroom
+  entities:
     - sensor.master_bath_multisensor_motion
     - sensor.master_bath_multisensor_luminance
     - sensor.master_bath_multisensor_relative_humidity
