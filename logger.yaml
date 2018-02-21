@@ -1,6 +1,6 @@
 #-------------------------------------------
 #  Logger Component
 #-------------------------------------------
-default: warn
+default: error
 logs:
   homeassistant.components.device_tracker.automatic: error
