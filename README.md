@@ -2,17 +2,17 @@
  
 [![Build Status](https://travis-ci.org/chriskacerguis/Home-AssistantConfig.svg?branch=master)](https://travis-ci.org/chriskacerguis/Home-AssistantConfig)
 
-My Home Assistant Config.  I run everyting in Docker (Ubuntu host) with the [Rancher](https://rancher.com) container management platform; with the following containers.
+My Home Assistant Config; the enviroment is based on Docker, and so all but one thing runs in Docker.  It is controlled with the [Portainer](https://portainer.io) 
+container management platform; with the following containers running (excluding portainer)
 
 ### Containers
+* [homeassistant/home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/) - The Brains of it all
+* [mariadb](https://hub.docker.com/_/mariadb/) - Provides history for Home Assistant
+* [ncarlier/mqtt/](https://hub.docker.com/r/ncarlier/mqtt/) - MQTT Server for IoT things   
+* [johncardenas/happybubbles-presence](https://hub.docker.com/r/johncardenas/happybubbles-presence/) - Grabs data from Happy Bubbles sensors, and sends to MQTT (and HA room-presence)
+* [influxdb](https://hub.docker.com/_/influxdb/) - More data storage for Grafana
+* [grafana/grafana](https://hub.docker.com/grafana/grafana/) - Data visualization
 
-| What              | Docker Hub                                                                                    | Notes |
-| ----------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| Home Assistant    | [homeassistant/home-assistant/](https://hub.docker.com/r/homeassistant/home-assistant/)       | The brains of everything |
-| Nagios            | [jasonrivers/nagios/](https://hub.docker.com/r/jasonrivers/nagios/)                           | Handles monitoring and alerting |
-| MariaDB           | [mariadb/](https://hub.docker.com/_/mariadb/)                                                 | DB for Rancher |
-| MQTT              | [ncarlier/mqtt/](https://hub.docker.com/r/ncarlier/mqtt/)                                     | MQTT server |
-| Honeywell2MQTT    | [chriskacerguis/honeywell2mqtt/](https://hub.docker.com/r/chriskacerguis/honeywell2mqtt/)     | Takes the SDR packets from the 5800 MINIs and sends them to the MQTT server |
 
 ### Hardware
 | Qty   | Name                                                  | Link |
@@ -27,20 +27,30 @@ My Home Assistant Config.  I run everyting in Docker (Ubuntu host) with the [Ran
 | 1     | Intel BOXNUC7I5BNH NUC                                | [(Amazon)](https://www.amazon.com/gp/product/B01N2UMKZ5/) |
 | 3     | Honeywell Ademco 5818MNL Recessed Door Transmitter    | [(Amazon)](https://www.amazon.com/gp/product/B001649CBC/) |
 | 1     | Nest Thermostat (3rd Generataion)                     | [(Nest)](https://nest.com) |
-| 3     | Amcrest ProHD Outdoor IP Security Camera IP3M-956E    | [(Amazon)](https://www.amazon.com/gp/product/B01E7QMFIM/) |
-| 3     | Aeotec Multisensor 6                                  | [(Amazon)](https://www.amazon.com/Aeotec-Multisensor-temperature-humidity-vibration/dp/B0151Z8ZQY/) |
+| 5     | Amcrest ProHD Outdoor IP Security Camera IP3M-956E    | [(Amazon)](https://www.amazon.com/gp/product/B01E7QMFIM/) |
+| 5     | Aeotec Multisensor 6                                  | [(Amazon)](https://www.amazon.com/Aeotec-Multisensor-temperature-humidity-vibration/dp/B0151Z8ZQY/) |
 | 1     | Eight Sleep - The Sleep Tracker                       | [(Eight Sleep)](https://eightsleep.com/products/eight-sleep-tracker) |
 | 1     | Automatic Pro                                         | [(Automatic)](https://www.automatic.com/pro/) |
+| 4     | Presence Detector                                     | [(Happy Bubbles)](https://www.happybubbles.tech/presence/detector) |
+| 3     | Radbeacons                                            | [(RadiusNetworks)](https://store.radiusnetworks.com/collections/all/products/radbeacon-dot) |
+| 1     | Synology Diskstation 1517+                            | [(Synology)](https://www.amazon.com/Synology-DiskStation-DS1517-2GB-Diskless/dp/B06Y4VN5LJ/) |
 
 ### Indoor Location Tracking
 
-My home automation also uses an internal bluetooth tracking system.  It uses several Raspberry Pi 3's, running the excellent [Room Assistant](https://github.com/mKeRix/room-assistant) in conjunction with the mqtt_room component of Home Assistant (those listen for the iBeacons and tell HA where the person is).  Then on my families keychains (or dog collar for the dog) are [Radbeacons](https://store.radiusnetworks.com/collections/all/products/radbeacon-dot).  Just install the default RASPBIAN Lite, and then [run this script](https://gist.github.com/chriskacerguis/b8f6baf35780670c573fa7197a8b6256)
+My home automation also uses an internal bluetooth tracking system.  I utilize the Happy Bubbles Presence Detectors in almost every room.  Attached to each persons keychain (or dog collar) is a Radbeacon BLE transmitter.  That data is picked up via the happybubbles-presence Docker container then sent to MQTT / Home Assistant room-presence component.
+
+### Door / Window Sensors
+
+While I like ZWave products (a lot) they tend to be expensive.  So, I utilize Honeywell Ademco 345Mhz sensors.  I have a Raspberry Pi 3 with a NooElec NESDR Nano 2+ SDR attached.  It picks up the RF from the sensors and pushes them to my MQTT server using [MQTT-sender](https://github.com/chriskacerguis/mqtt-sender), which Home Assistant is subscribed to (and has the [sensors](https://github.com/chriskacerguis/Home-AssistantConfig/tree/master/sensors/windows)).  See the [MQTT-sender](https://github.com/chriskacerguis/mqtt-sender) with the setup guide / docs for that.
+
+### Synology
+
+Provides backups for my Cloud Storage service (3rd party...think Dropbox, G Suite, etc), and iSCSI mount for the NUC.
 
 ### Misc Notes
 - Setup /etc/udev/rules.d/99-usb-serial.rules
 ```
 ACTION=="add", ATTRS{idVendor}=="0658", ATTRS{idProduct}=="0200", SYMLINK+="zwave"
-ACTION=="add", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="2838", SYMLINK+="sdr"
 ```
 - Disable kernel driver so that the SDR works correctly
 ```
