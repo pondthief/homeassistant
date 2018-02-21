@@ -9,12 +9,13 @@
     above: 55
   condition:
     condition: or
-    - condition: state
-      entity_id: switch.guest_bath_sink_switch
-      state: 'on'
-    - condition: state
-      entity_id: switch.guest_bath_shower_switch
-      state: 'on'
+    conditions:
+      - condition: state
+        entity_id: switch.guest_bath_sink_switch
+        state: 'on'
+      - condition: state
+        entity_id: switch.guest_bath_shower_switch
+        state: 'on'
   action:
     service: homeassistant.turn_on
     entity_id: switch.guest_bath_fan_switch
