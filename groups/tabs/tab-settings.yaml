@@ -9,3 +9,4 @@ system_tab:
     - group.battery_levels
     - group.connection
     - group.all_automations
+    - group.ups
