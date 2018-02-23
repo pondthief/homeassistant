@@ -19,5 +19,5 @@
         message: >
           Doorbell was pressed on {{now().strftime("%c")}}.
         data:
-          file:
-            path: /tmp/front-door.jpg
+          images:
+            - /tmp/front-door.jpg
