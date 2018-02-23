@@ -13,6 +13,7 @@
   platform: slack
   api_key: !secret slack_key
   default_channel: '#home'
+  username: homebot
 
 #-------------------------------------------
 #  Email Notices
