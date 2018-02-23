@@ -13,18 +13,9 @@
   platform: slack
   api_key: !secret slack_key
   default_channel: '#home'
-  username: homebot
 
 #-------------------------------------------
-#  Email Notices
+#  SMS Notices
 #-------------------------------------------
-- name: email
-  platform: smtp
-  server: !secret smtp_server
-  port: 587
-  sender: !secret smtp_sender
-  username: !secret smtp_user
-  password: !secret smtp_password
-  recipient:
-    - !secret chris_mms
-  sender_name: Home Assistant
+#- name: sms
+#  platform: twilio
