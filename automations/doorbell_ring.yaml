@@ -15,9 +15,8 @@
         filename: /tmp/front-door.jpg
     - service: notify.primary_contact
       data_template:
-        title: "Doorbell Pressed"
         message: >
-          Doorbell was pressed on {{now().strftime("%c")}}.
+          Someone is at the door!
         data:
           images:
             - /tmp/front-door.jpg
