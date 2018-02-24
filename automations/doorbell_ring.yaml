@@ -12,11 +12,9 @@
     - service: camera.snapshot
       data:
         entity_id: camera.front_porch
-        filename: /tmp/front-door.jpg
-    - service: notify.primary_contact
-      data_template:
-        message: >
-          Someone is at the door!
-        data:
-          images:
-            - /tmp/front-door.jpg
+        filename: /config/www/doorbell.jpg
+    - service: notify.sms
+      message: 'Someone is at the door.  https://plainrock.fuzzyblender.com:8123/local/doorbell.jpg'
+      target:
+        - !secret chris_mobile_num
+        - !secret megan_mobile_num

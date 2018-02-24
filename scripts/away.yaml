@@ -4,9 +4,6 @@
 away:
   alias: Away
   sequence:
-    - service: notify.primary_contact
-      data_template:
-        message: "\U0001F697 No humans present at home, going to low power mode."
     - service: lock.lock
       data:
         entity_id: group.all_locks

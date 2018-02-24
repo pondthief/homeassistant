@@ -144,6 +144,13 @@ binary_sensor: !include_dir_merge_list binary_sensors
 notify: !include notify.yaml
 
 #-------------------------------------------
+# Twilio Info
+#-------------------------------------------
+twilio:
+  account_sid: !secret twilio_sid
+  auth_token: !secret twilio_token
+
+#-------------------------------------------
 # Include zones
 #-------------------------------------------
 zone: !include_dir_list zones

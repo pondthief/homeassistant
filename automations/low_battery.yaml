@@ -50,6 +50,12 @@
           {%- endif -%}
           {%- endfor -%}
   action:
-    - service: notify.primary_contact
-      data_template:
-        message: "\U0001F50B There is a device with a low battery.  Fix it!"
+    - service: notify.sms
+      data:
+        message: "\U0001F50B There is a device with a low battery."
+        target:
+          - !secret chris_mobile_num
+    - service: persistent_notification.create
+      data:
+        message: 'There is a device with a low battery'
+        title: 'Low Battery'

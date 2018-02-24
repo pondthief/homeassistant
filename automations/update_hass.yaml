@@ -4,4 +4,12 @@
     platform: state
     entity_id: updater.updater
   action:
-    - service: script.update_notice
+    - service: persistent_notification.create
+      data:
+        message: 'Update for Home Assistant is available'
+        title: 'Software Update'
+    - service: notify.sms
+      data:
+        message: 'Update for Home Assistant is available'
+        target:
+          - !secret chris_mobile_num
