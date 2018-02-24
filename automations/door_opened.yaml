@@ -10,7 +10,7 @@
       to: 'open'
   action:
     - service: notify.sms
-      data:
+      data_template:
         message: "\U0001F6AA {{ trigger.to_state.attributes.friendly_name }} has been OPENED"
         target:
           - !secret chris_mobile_num
