@@ -5,7 +5,7 @@ homeassistant:
   elevation: 252
   unit_system: imperial
   time_zone: America/Chicago
-  whitelist_external_dirs: /config/www
+  whitelist_external_dirs: !secret write_dir
 
   #-------------------------------------------
   # Include customizations

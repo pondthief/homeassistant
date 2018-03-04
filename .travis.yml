@@ -6,7 +6,6 @@ before_install:
   - mv travis_secrets.yaml secrets.yaml
   - touch "ssl_key.pem"
   - touch "ssl_cert.pem"
-  - mkdir -p /config/www
 install:
   - pip3 install homeassistant
 script:
