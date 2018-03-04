@@ -77,7 +77,6 @@ updater:
 #-------------------------------------------
 camera:
   - platform: amcrest
-  - platform: ring
 
 #-------------------------------------------
 # Enable prometheus metrics
