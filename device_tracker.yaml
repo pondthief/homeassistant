@@ -9,5 +9,5 @@
 # Meraki Location Analytics
 #-------------------------------------------
 - platform: meraki
-  secret: meraki_secret
-  validator: meraki_validator
+  secret: !secret meraki_secret
+  validator: !secret meraki_validator
