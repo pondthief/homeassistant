@@ -9,3 +9,9 @@ quick_glance:
     - sensor.average_temperature
     - sensor.all_doors
     - sensor.all_windows
+    - group.new_tracker
+
+new_tracker:
+  name: Devices
+  entities:
+    - device_tracker.chris_iphone_x
