@@ -65,6 +65,11 @@ http:
   login_attempts_threshold: 3
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
+  trusted_networks:
+    - 127.0.0.1
+    - 192.168.7.0/24
+    - 192.168.16.0/24
+    - 192.168.128.0/24
 
 #-------------------------------------------
 # Checks for available updates
