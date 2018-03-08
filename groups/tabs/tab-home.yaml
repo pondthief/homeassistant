@@ -10,4 +10,4 @@ default_view:
     - group.thermostat
     - group.doors
     - group.quick_glance
-    - group.new_tracker
+    - group.trackers
