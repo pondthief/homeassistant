@@ -4,12 +4,12 @@
 family:
   name: Family
   entities:
-    - sensor.chris_beacon
-    - sensor.megan_beacon
+    - device_tracker.chris_iphone_x
+    - device_tracker.megan_iphone_8
 
 family_location:
   name: Family Location
   entities:
-    - sensor.chris_beacon
-    - sensor.megan_beacon
+    - device_tracker.chris_iphone_x
+    - device_tracker.megan_iphone_8
     - device_tracker.2018_chevrolet_equinox
