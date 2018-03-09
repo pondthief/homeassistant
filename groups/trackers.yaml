@@ -4,8 +4,6 @@
 trackers:
   name: Trackers
   entities:
-    - sensor.chris_beacon
-    - sensor.megan_beacon
     - device_tracker.chris_iphone_x
     - device_tracker.megan_tile
     - device_tracker.chris_tile

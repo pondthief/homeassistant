@@ -22,3 +22,4 @@ sensors_tab:
     - group.beacons
     - group.tv_room_sensors
     - group.garage_sensors
+    - group.trackers
