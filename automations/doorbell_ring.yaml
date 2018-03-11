@@ -1,21 +1,21 @@
 #-------------------------------------------
 # When Someone Rings the Doorbell
 #-------------------------------------------
-#- alias: 'Doorbell Ring'
-#  initial_state: true
-#  trigger:
-#    platform: state
-#    entity_id: binary_sensor.ring_front_door_ding
-#    from: 'off'
-#    to: 'on'
-#  action:
-#    - service: camera.snapshot
-#      data:
-#        entity_id: camera.front_porch
-#        filename: /config/www/doorbell.jpg
-#    - service: notify.sms
-#      data:
-#        message: 'Someone is at the door.  https://plainrock.fuzzyblender.com:8123/local/doorbell.jpg'
-#        target:
-#          - !secret chris_mobile_num
-#          - !secret megan_mobile_num
+- alias: 'Doorbell Ring'
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.sensor_2
+    from: 'off'
+    to: 'on'
+  action:
+    - service: camera.snapshot
+      data:
+        entity_id: camera.front_porch
+        filename: /config/www/doorbell.jpg
+    - service: notify.sms
+      data:
+        message: 'Someone is at the door.  https://plainrock.fuzzyblender.com:8123/local/doorbell.jpg'
+        target:
+          - !secret chris_mobile_num
+          - !secret megan_mobile_num
