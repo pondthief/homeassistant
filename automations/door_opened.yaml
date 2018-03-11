@@ -1,37 +1,20 @@
 #-------------------------------------------
-# Alert When Front Door Opened
+# Front Door Opened
 #-------------------------------------------
-- alias: "Door Opened"
+- alias: "Front Door Opened"
   initial_state: true
   trigger:
     - platform: state
       entity_id: sensor.front_door
       from: 'closed'
       to: 'open'
+  condition:
+    condition: state
+    entity_id: group.family
+    state: 'not_home'
   action:
     - service: notify.sms
       data_template:
-        message: "\U0001F6AA {{ trigger.to_state.attributes.friendly_name }} has been OPENED"
-        target:
-          - !secret chris_mobile_num
-
-#-------------------------------------------
-# Alert When Garage Door Opened
-#-------------------------------------------
-- alias: "Overhead Garage Door Opened"
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.overhead_garage_one_sensor
-      to: 'on'
-      from: 'off'
-    - platform: state
-      entity_id: binary_sensor.overhead_garage_two_sensor
-      to: 'on'
-      from: 'off'
-  action:
-    - service: notify.sms
-      data:
-        message: "\U0001F697 {{ trigger.to_state.attributes.friendly_name }} has been OPENED"
+        message: "\U0001F6AA {{ trigger.to_state.attributes.friendly_name }} has been opened"
         target:
           - !secret chris_mobile_num
