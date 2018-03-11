@@ -14,3 +14,7 @@
   server: !secret smtp_server
   username: !secret smtp_user
   password: !secret smtp_pass
+  sender_name: "Home Assistant"
+  recipient:
+    - !secret chris_email
+    - !secret megan_email
