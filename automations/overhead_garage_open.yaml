@@ -15,6 +15,6 @@
   action:
     - service: notify.sms
       data:
-        message: "\U0001F697 {{ trigger.to_state.attributes.friendly_name }} has been OPENED"
+        message: "\U0001F697 {{ trigger.to_state.attributes.friendly_name }} has been opened"
         target:
           - !secret chris_mobile_num
