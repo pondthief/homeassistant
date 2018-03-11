@@ -33,13 +33,6 @@ logger: !include logger.yaml
 image_processing: !include image_processing.yaml
 
 #-------------------------------------------
-# Ring Doorbell Settings
-#-------------------------------------------
-ring:
-  username: !secret ring_username
-  password: !secret ring_password
-
-#-------------------------------------------
 # Frontend Settings
 #-------------------------------------------
 frontend:
