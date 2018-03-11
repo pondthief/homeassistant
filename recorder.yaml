@@ -4,3 +4,19 @@
 db_url: !secret mysqlconn
 purge_keep_days: 30
 purge_interval: 2
+include:
+  domains:
+    - switch
+    - light
+    - lock
+    - automation
+    - climate
+    - binary_sensor
+    - sensor
+  entities:
+    - device_tracker.chris_iphone
+    - device_tracker.chris_iphone_x
+    - device_tracker.chris_tile
+    - device_tracker.2018_chevrolet_equinox
+    - device_tracker.megan_iphone_8
+    - device_tracker.megan_tile
