@@ -4,3 +4,13 @@
 - name: sms
   platform: twilio_sms
   from_number: !secret twilio_from
+
+#-------------------------------------------
+#  Email Notices
+#-------------------------------------------
+- name: email
+  platform: smtp
+  sender: !secret smtp_sender
+  server: !secret smtp_server
+  username: !secret smtp_user
+  password: !secret smtp_pass
