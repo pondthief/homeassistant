@@ -1,0 +1,560 @@
+lock.back_door_locked:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077282304
+sensor.back_door_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528065
+sensor.back_door_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528081
+switch.deck_flood_switch:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093060096
+light.kitchen_sink_level:
+  name:
+  platform: zwave
+  unique_id: 4-72057594109853697
+switch.kitchen_cabinets_switch:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126614528
+light.kitchen_cans_level:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143408129
+switch.kitchen_island_switch:
+  name:
+  platform: zwave
+  unique_id: 7-72057594160168960
+light.kitchen_table_level:
+  name:
+  platform: zwave
+  unique_id: 8-72057594176962561
+switch.craft_cans_switch:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193723392
+switch.front_entry_switch:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210500608
+switch.outside_security_switch:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227277824
+switch.front_yard_switch:
+  name:
+  platform: zwave
+  unique_id: 12-72057594244055040
+lock.front_door_locked:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261831680
+sensor.front_door_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 13-72057594262077441
+sensor.front_door_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 13-72057594262077457
+switch.living_room_lamp_switch:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277609472
+light.living_room_overhead_level:
+  name:
+  platform: zwave
+  unique_id: 15-72057594294403073
+light.living_room_cans_level:
+  name:
+  platform: zwave
+  unique_id: 16-72057594311180289
+switch.study_overhead_switch:
+  name:
+  platform: zwave
+  unique_id: 17-72057594327941120
+light.study_cans_level:
+  name:
+  platform: zwave
+  unique_id: 18-72057594344734721
+light.hallway_cans_level:
+  name:
+  platform: zwave
+  unique_id: 19-72057594361511937
+switch.laundry_room_overhead_switch:
+  name:
+  platform: zwave
+  unique_id: 20-72057594378272768
+lock.garage_door_locked:
+  name:
+  platform: zwave
+  unique_id: 21-72057594396049408
+sensor.garage_door_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 21-72057594396295169
+sensor.garage_door_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 21-72057594396295185
+switch.guest_overhead_switch:
+  name:
+  platform: zwave
+  unique_id: 22-72057594411827200
+light.clara_overhead_level:
+  name:
+  platform: zwave
+  unique_id: 23-72057594428620801
+switch.guest_bath_fan_switch:
+  name:
+  platform: zwave
+  unique_id: 24-72057594445381632
+switch.guest_bath_shower_switch:
+  name:
+  platform: zwave
+  unique_id: 25-72057594462158848
+switch.guest_bath_sink_switch:
+  name:
+  platform: zwave
+  unique_id: 26-72057594478936064
+light.master_bed_cans_level:
+  name:
+  platform: zwave
+  unique_id: 27-72057594495729665
+switch.master_bed_fan_switch:
+  name:
+  platform: zwave
+  unique_id: 28-72057594512490496
+switch.master_bed_fan_light_switch:
+  name:
+  platform: zwave
+  unique_id: 29-72057594529267712
+switch.master_bath_fan_switch:
+  name:
+  platform: zwave
+  unique_id: 30-72057594546044928
+switch.master_bath_shower_switch:
+  name:
+  platform: zwave
+  unique_id: 31-72057594562822144
+switch.master_bath_sink_switch:
+  name:
+  platform: zwave
+  unique_id: 32-72057594579599360
+switch.chris_bedside_switch:
+  name:
+  platform: zwave
+  unique_id: 33-72057594596376576
+switch.megan_bedside_switch:
+  name:
+  platform: zwave
+  unique_id: 34-72057594613153792
+binary_sensor.laundry_multisensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 35-72057594630111232
+sensor.laundry_multisensor_temperature:
+  name:
+  platform: zwave
+  unique_id: 35-72057594630127634
+sensor.laundry_multisensor_luminance:
+  name:
+  platform: zwave
+  unique_id: 35-72057594630127666
+sensor.laundry_multisensor_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 35-72057594630127698
+sensor.laundry_multisensor_ultraviolet:
+  name:
+  platform: zwave
+  unique_id: 35-72057594630128050
+sensor.laundry_multisensor_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 35-72057594631176193
+sensor.laundry_multisensor_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 35-72057594631176209
+sensor.laundry_multisensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 35-72057594631176225
+sensor.laundry_multisensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 35-72057594631176353
+binary_sensor.master_bath_multisensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 36-72057594646888448
+sensor.master_bath_multisensor_temperature:
+  name:
+  platform: zwave
+  unique_id: 36-72057594646904850
+sensor.master_bath_multisensor_luminance:
+  name:
+  platform: zwave
+  unique_id: 36-72057594646904882
+sensor.master_bath_multisensor_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 36-72057594646904914
+sensor.master_bath_multisensor_ultraviolet:
+  name:
+  platform: zwave
+  unique_id: 36-72057594646905266
+sensor.master_bath_multisensor_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 36-72057594647953409
+sensor.master_bath_multisensor_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 36-72057594647953425
+sensor.master_bath_multisensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 36-72057594647953441
+sensor.master_bath_multisensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 36-72057594647953569
+binary_sensor.study_multisensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 37-72057594663665664
+sensor.study_multisensor_temperature:
+  name:
+  platform: zwave
+  unique_id: 37-72057594663682066
+sensor.study_multisensor_luminance:
+  name:
+  platform: zwave
+  unique_id: 37-72057594663682098
+sensor.study_multisensor_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 37-72057594663682130
+sensor.study_multisensor_ultraviolet:
+  name:
+  platform: zwave
+  unique_id: 37-72057594663682482
+sensor.study_multisensor_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 37-72057594664730625
+sensor.study_multisensor_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 37-72057594664730641
+sensor.study_multisensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 37-72057594664730657
+sensor.study_multisensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 37-72057594664730785
+binary_sensor.kitchen_multisensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 38-72057594680442880
+sensor.kitchen_multisensor_temperature:
+  name:
+  platform: zwave
+  unique_id: 38-72057594680459282
+sensor.kitchen_multisensor_luminance:
+  name:
+  platform: zwave
+  unique_id: 38-72057594680459314
+sensor.kitchen_multisensor_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 38-72057594680459346
+sensor.kitchen_multisensor_ultraviolet:
+  name:
+  platform: zwave
+  unique_id: 38-72057594680459698
+sensor.kitchen_multisensor_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 38-72057594681507841
+sensor.kitchen_multisensor_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 38-72057594681507857
+sensor.kitchen_multisensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 38-72057594681507873
+sensor.kitchen_multisensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 38-72057594681508001
+binary_sensor.tv_room_multisensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 39-72057594697220096
+sensor.tv_room_multisensor_temperature:
+  name:
+  platform: zwave
+  unique_id: 39-72057594697236498
+sensor.tv_room_multisensor_luminance:
+  name:
+  platform: zwave
+  unique_id: 39-72057594697236530
+sensor.tv_room_multisensor_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 39-72057594697236562
+sensor.tv_room_multisensor_ultraviolet:
+  name:
+  platform: zwave
+  unique_id: 39-72057594697236914
+sensor.tv_room_multisensor_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 39-72057594698285057
+sensor.tv_room_multisensor_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 39-72057594698285073
+sensor.tv_room_multisensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 39-72057594698285089
+sensor.tv_room_multisensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 39-72057594698285217
+binary_sensor.guest_bath_multisensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 40-72057594713997312
+sensor.guest_bath_multisensor_temperature:
+  name:
+  platform: zwave
+  unique_id: 40-72057594714013714
+sensor.guest_bath_multisensor_luminance:
+  name:
+  platform: zwave
+  unique_id: 40-72057594714013746
+sensor.guest_bath_multisensor_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 40-72057594714013778
+sensor.guest_bath_multisensor_ultraviolet:
+  name:
+  platform: zwave
+  unique_id: 40-72057594714014130
+sensor.guest_bath_multisensor_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 40-72057594715062273
+sensor.guest_bath_multisensor_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 40-72057594715062289
+sensor.guest_bath_multisensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 40-72057594715062305
+sensor.guest_bath_multisensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 40-72057594715062433
+binary_sensor.guest_multisensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 41-72057594730774528
+sensor.guest_multisensor_temperature:
+  name:
+  platform: zwave
+  unique_id: 41-72057594730790930
+sensor.guest_multisensor_luminance:
+  name:
+  platform: zwave
+  unique_id: 41-72057594730790962
+sensor.guest_multisensor_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 41-72057594730790994
+sensor.guest_multisensor_ultraviolet:
+  name:
+  platform: zwave
+  unique_id: 41-72057594730791346
+sensor.guest_multisensor_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 41-72057594731839489
+sensor.guest_multisensor_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 41-72057594731839505
+sensor.guest_multisensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 41-72057594731839521
+sensor.guest_multisensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 41-72057594731839649
+binary_sensor.overhead_garage_one_sensor:
+  name:
+  platform: zwave
+  unique_id: 42-72057594747551744
+sensor.overhead_garage_one_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 42-72057594748616705
+sensor.overhead_garage_one_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 42-72057594748616721
+sensor.overhead_garage_one_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 42-72057594748616737
+sensor.overhead_garage_one_access_control:
+  name:
+  platform: zwave
+  unique_id: 42-72057594748616849
+sensor.overhead_garage_one_burglar:
+  name:
+  platform: zwave
+  unique_id: 42-72057594748616865
+sensor.overhead_garage_one_power_management:
+  name:
+  platform: zwave
+  unique_id: 42-72057594748616881
+binary_sensor.overhead_garage_two_sensor:
+  name:
+  platform: zwave
+  unique_id: 43-72057594764328960
+sensor.overhead_garage_two_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 43-72057594765393921
+sensor.overhead_garage_two_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 43-72057594765393937
+sensor.overhead_garage_two_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 43-72057594765393953
+sensor.overhead_garage_two_access_control:
+  name:
+  platform: zwave
+  unique_id: 43-72057594765394065
+sensor.overhead_garage_two_burglar:
+  name:
+  platform: zwave
+  unique_id: 43-72057594765394081
+sensor.overhead_garage_two_power_management:
+  name:
+  platform: zwave
+  unique_id: 43-72057594765394097
+sensor.chriss_iphone_battery_state:
+  name:
+  platform: ios
+  unique_id: state_chris_iphone
+sensor.chriss_iphone_battery_level:
+  name:
+  platform: ios
+  unique_id: level_chris_iphone
+sensor.chris_kacerguiss_ipad_battery_level:
+  name:
+  platform: ios
+  unique_id: level_chris_ipad
+sensor.megans_ipad_battery_level:
+  name:
+  platform: ios
+  unique_id: level_megans_ipad
+sensor.chris_kacerguiss_ipad_battery_state:
+  name:
+  platform: ios
+  unique_id: state_chris_ipad
+sensor.megans_ipad_battery_state:
+  name:
+  platform: ios
+  unique_id: state_megans_ipad
+sensor.iphone_battery_level:
+  name:
+  platform: ios
+  unique_id: level_iphone
+sensor.iphone_battery_state:
+  name:
+  platform: ios
+  unique_id: state_iphone
+sensor.allergy_index_forecasted_average:
+  name:
+  platform: pollen
+  unique_id: 78728_allergy_index_forecasted_average
+sensor.allergy_index_tomorrow:
+  name:
+  platform: pollen
+  unique_id: 78728_allergy_index_tomorrow
+sensor.allergy_index_today:
+  name:
+  platform: pollen
+  unique_id: 78728_allergy_index_today
+sensor.cold__flu_forecasted_average:
+  name:
+  platform: pollen
+  unique_id: 78728_cold__flu_forecasted_average
+sensor.alarm_type:
+  name:
+  platform: zwave
+  unique_id: 44-72057594782171137
+sensor.alarm_level:
+  name:
+  platform: zwave
+  unique_id: 44-72057594782171153
+binary_sensor.sensor:
+  name:
+  platform: zwave
+  unique_id: 44-72057594781106176
+sensor.aeotec_zw097_dry_contact_sensor_gen5_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 44-72057594782171169
+sensor.aeotec_zw097_dry_contact_sensor_gen5_access_control:
+  name:
+  platform: zwave
+  unique_id: 44-72057594782171281
+sensor.alarm_type_2:
+  name:
+  platform: zwave
+  unique_id: 45-72057594798948353
+sensor.alarm_level_2:
+  name:
+  platform: zwave
+  unique_id: 45-72057594798948369
+binary_sensor.sensor_2:
+  name: Doorbell
+  platform: zwave
+  unique_id: 45-72057594797883392
+sensor.aeotec_zw097_dry_contact_sensor_gen5_sourcenodeid_2:
+  name:
+  platform: zwave
+  unique_id: 45-72057594798948385
+sensor.aeotec_zw097_dry_contact_sensor_gen5_access_control_2:
+  name:
+  platform: zwave
+  unique_id: 45-72057594798948497
+sensor.allergy_index_yesterday:
+  name:
+  platform: pollen
+  unique_id: 78728_allergy_index_yesterday
+sensor.allergy_index_historical_average:
+  name:
+  platform: pollen
+  unique_id: 78728_allergy_index_historical_average
