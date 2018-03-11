@@ -4,17 +4,3 @@
 db_url: !secret mysqlconn
 purge_keep_days: 30
 purge_interval: 2
-include:
-  domains:
-    - switch
-    - light
-    - lock
-    - automation
-    - climate
-    - cover
-    - sensor
-  entities:
-    - binary_sensor.back_door
-    - binary_sensor.front_door
-    - binary_sensor.garage_door
-    - binary_sensor.ring_front_door_ding
