@@ -28,11 +28,6 @@ recorder: !include recorder.yaml
 logger: !include logger.yaml
 
 #-------------------------------------------
-# Image Processing
-#-------------------------------------------
-image_processing: !include image_processing.yaml
-
-#-------------------------------------------
 # Frontend Settings
 #-------------------------------------------
 frontend:
