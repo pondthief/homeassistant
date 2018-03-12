@@ -281,10 +281,10 @@ group.all_automations:
   hidden: false
   
 #-------------------------------------------
-# Presence Icons
+# Overhed Garage Doors
 #-------------------------------------------
-sensor.chris_beacon:
-  entity_picture: !secret chris_picture
+binary_sensor.overhead_garage_one_sensor:
+  device_class: garage_door
 
-sensor.megan_beacon:
-  entity_picture: !secret megan_picture
+binary_sensor.overhead_garage_two_sensor:
+  device_class: garage_door
