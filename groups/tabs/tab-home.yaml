@@ -10,3 +10,9 @@ default_view:
     - group.thermostat
     - group.doors
     - group.quick_glance
+    - group.quick_scripts
+
+quick_scripts:
+  name: Quick Scripts
+  entities:
+    - script.pre_bedtime
