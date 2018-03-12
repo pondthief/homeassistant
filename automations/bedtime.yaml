@@ -3,6 +3,7 @@
 #-------------------------------------------
 - alias: 'Bedtime'
   initial_state: true
+  hide_entity: true
   trigger:
     platform: time
     at: '22:30:00'

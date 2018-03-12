@@ -2,6 +2,7 @@
 # Turn on Laundry Light on Motion
 #-------------------------------------------
 - alias: 'Laundry Room Motion Light On'
+  hide_entity: true
   initial_state: true
   trigger:
     platform: state
@@ -16,6 +17,7 @@
 # Turn off Laundry Light when no motion
 #-------------------------------------------
 - alias: 'Laundry Room Motion Light Off'
+  hide_entity: true
   initial_state: true
   trigger:
     platform: state
