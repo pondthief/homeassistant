@@ -1,0 +1,16 @@
+#-------------------------------------------
+# Listener Down
+#-------------------------------------------
+- alias: 'Listener Down'
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.listener
+    from: 'on'
+    to: 'off'
+  action:
+    - service: notify.sms
+      data:
+        message: "\U0001F92C Unable to reach 433Mhz listener"
+        target:
+          - !secret chris_mobile_num
