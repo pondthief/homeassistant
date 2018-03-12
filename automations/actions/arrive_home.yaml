@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Unlock the door when arrive home (use tile?)
+# Arrive Home Actions
 #-------------------------------------------
-- alias: 'Unlock the door when arrive home'
+- alias: 'Arrive Home Actions'
   initial_state: true
   trigger:
     - platform: state

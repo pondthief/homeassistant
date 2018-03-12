@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Window(s) opened turn off HVAC
+# Window(s) Opened Actions
 #-------------------------------------------
-- alias: "Window Opened HVAC Off"
+- alias: "Window Opened Actions"
   initial_state: true
   hide_entity: true
   trigger:
@@ -22,9 +22,9 @@
         operation_mode: "off"
 
 #-------------------------------------------
-# Window(s) closed turn on HVAC
+# Window(s) Closed Actions
 #-------------------------------------------
-- alias: "Window Closed HVAC On"
+- alias: "Window Closed Actions"
   initial_state: true
   hide_entity: true
   trigger:

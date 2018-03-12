@@ -1,8 +1,9 @@
 #-------------------------------------------
-# When Someone Rings the Doorbell
+# Doorbell Action
 #-------------------------------------------
-- alias: 'Doorbell Ring'
+- alias: 'Doorbell Action'
   initial_state: true
+  hide_entity: true
   trigger:
     platform: state
     entity_id: binary_sensor.sensor_2

@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Turn on Laundry Light on Motion
+# Laundry Room Motion Actions
 #-------------------------------------------
-- alias: 'Laundry Room Motion Light On'
+- alias: 'Laundry Room Motion Actions'
   hide_entity: true
   initial_state: true
   trigger:
@@ -14,9 +14,9 @@
     entity_id: switch.laundry_room_overhead_switch
 
 #-------------------------------------------
-# Turn off Laundry Light when no motion
+# Laundry Room No Motion Actions
 #-------------------------------------------
-- alias: 'Laundry Room Motion Light Off'
+- alias: 'Laundry Room No Motion Actions'
   hide_entity: true
   initial_state: true
   trigger:

@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Turn on weekday AM things
+# Weekday Morning Actions
 #-------------------------------------------
-- alias: 'Turn on weekday AM things'
+- alias: 'Weekday Morning Actions'
   initial_state: true
   trigger:
     platform: time

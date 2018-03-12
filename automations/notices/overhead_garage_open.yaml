@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Alert When Garage Door Opened
+# Overhead Garage Door Opened Notice
 #-------------------------------------------
-- alias: "Overhead Garage Door Opened"
+- alias: "Overhead Garage Door Opened Notice"
   initial_state: true
   hide_entity: true
   trigger:

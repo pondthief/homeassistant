@@ -1,7 +1,7 @@
 #-------------------------------------------
 # No One Home
 #-------------------------------------------
-- alias: 'No one home'
+- alias: 'No One Home Actions'
   initial_state: true
   trigger:
     platform: state

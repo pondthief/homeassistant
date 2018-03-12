@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Alert When UPS is running
+# Main Power Lost Notice
 #-------------------------------------------
-- alias: 'Lost Power'
+- alias: 'Main Power Lost Notice'
   initial_state: true
   hide_entity: true
   trigger:

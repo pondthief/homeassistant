@@ -1,0 +1,40 @@
+#-------------------------------------------
+# Low Battery Notice
+#-------------------------------------------
+- alias: 'Low Battery Notice'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    - platform: time
+      at: '10:00:00'
+    - platform: time
+      at: '18:00:00'
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: >-
+          {%- set threshold = 40 -%}
+          {%- for item in states.zwave if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
+          {%- if loop.first -%}
+          {{ true }}
+          {%- endif -%}
+          {%- endfor -%}
+      - condition: template
+        value_template: >-
+          {%- set threshold = 40 -%}
+          {%- for item in states.lock if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
+          {%- if loop.first -%}
+          {{ true }}
+          {%- endif -%}
+          {%- endfor -%}
+  action:
+    - service: notify.sms
+      data:
+        message: "\U0001F50B There is a device with a low battery."
+        target:
+          - !secret chris_mobile_num
+    - service: persistent_notification.create
+      data:
+        message: 'There is a device with a low battery'
+        title: 'Low Battery'

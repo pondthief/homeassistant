@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Front Door Unlocked
+# Front Door Unlocked Notice
 #-------------------------------------------
-- alias: "Front Door Unlocked"
+- alias: "Front Door Unlocked Notice"
   initial_state: true
   hide_entity: true
   trigger:
@@ -17,9 +17,9 @@
           - !secret chris_mobile_num
 
 #-------------------------------------------
-# Back Door Unlocked
+# Back Door Unlocked Notice
 #-------------------------------------------
-- alias: "Back Door Unlocked"
+- alias: "Back Door Unlocked Notice"
   initial_state: true
   hide_entity: true
   trigger:
@@ -41,7 +41,7 @@
 #-------------------------------------------
 # Garage Door Unlocked (no alerts ATM)
 #-------------------------------------------
-- alias: "Garage Door Unlocked"
+- alias: "Garage Door Unlocked Notice"
   initial_state: true
   hide_entity: true
   trigger:

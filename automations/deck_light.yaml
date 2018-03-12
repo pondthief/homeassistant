@@ -1,7 +1,7 @@
 #-------------------------------------------
 # Turn on deck back door if night / open
 #-------------------------------------------
-- alias: "Turn on Deck Light if Door Open"
+- alias: "Deck Light On When Door Opened"
   initial_state: true
   hide_entity: true
   trigger:

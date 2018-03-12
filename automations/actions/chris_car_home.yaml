@@ -1,7 +1,7 @@
 #-------------------------------------------
-# When Chris's car gets home
+# Chris Car Home Actions
 #-------------------------------------------
-#- alias: 'Unlock when Chris Arrive Home'
+#- alias: 'Chris's Car Arrives Home
 #  initial_state: true
 #  trigger:
 #    platform: state

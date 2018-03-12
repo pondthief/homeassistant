@@ -1,7 +1,7 @@
 #-------------------------------------------
 # Front Door Opened
 #-------------------------------------------
-- alias: "Front Door Opened"
+- alias: "Front Door Opened Notice"
   initial_state: true
   trigger:
     - platform: state

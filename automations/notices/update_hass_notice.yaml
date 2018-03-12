@@ -1,4 +1,7 @@
-- alias: 'Update Available Notifications'
+#-------------------------------------------
+# Update Available Notice
+#-------------------------------------------
+- alias: 'Update Available Notice'
   initial_state: true
   hide_entity: true
   trigger:

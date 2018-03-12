@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Things to do at Sunrise
+# Sunrise Actions
 #-------------------------------------------
-- alias: 'Sunrise'
+- alias: 'Sunrise Actions'
   initial_state: true
   hide_entity: true
   trigger:

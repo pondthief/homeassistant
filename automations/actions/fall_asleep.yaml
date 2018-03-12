@@ -1,7 +1,7 @@
 #-------------------------------------------
 # Fall alseep
 #-------------------------------------------
-- alias: 'Fall asleep'
+- alias: 'Fall Asleep Actions'
   initial_state: true
   hide_entity: true
   trigger:
