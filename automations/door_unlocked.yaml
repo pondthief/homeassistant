@@ -3,6 +3,7 @@
 #-------------------------------------------
 - alias: "Front Door Unlocked"
   initial_state: true
+  hide_entity: true
   trigger:
     - platform: state
       entity_id: lock.front_door_locked
@@ -20,6 +21,7 @@
 #-------------------------------------------
 - alias: "Back Door Unlocked"
   initial_state: true
+  hide_entity: true
   trigger:
     - platform: state
       entity_id: lock.back_door_locked
@@ -41,6 +43,7 @@
 #-------------------------------------------
 - alias: "Garage Door Unlocked"
   initial_state: true
+  hide_entity: true
   trigger:
     - platform: state
       entity_id: lock.garage_door_locked

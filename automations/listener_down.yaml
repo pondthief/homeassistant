@@ -1,8 +1,9 @@
 #-------------------------------------------
 # Listener Down
 #-------------------------------------------
-- alias: 'Listener Down'
+- alias: 'Listener not available'
   initial_state: true
+  hide_entity: true
   trigger:
     platform: state
     entity_id: binary_sensor.listener
