@@ -1,5 +1,5 @@
 #-------------------------------------------
-# Unlock house when Chris gets home
+# When Chris's car gets home
 #-------------------------------------------
 #- alias: 'Unlock when Chris Arrive Home'
 #  initial_state: true

@@ -3,6 +3,7 @@
 #-------------------------------------------
 - alias: "Overhead Garage Door Opened"
   initial_state: true
+  hide_entity: true
   trigger:
     - platform: state
       entity_id: binary_sensor.overhead_garage_one_sensor

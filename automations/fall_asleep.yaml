@@ -1,8 +1,9 @@
 #-------------------------------------------
-# When Someone Falls Asleep
+# Fall alseep
 #-------------------------------------------
-- alias: 'Asleep'
+- alias: 'Fall asleep'
   initial_state: true
+  hide_entity: true
   trigger:
     - platform: state
       entity_id: sensor.eight_left_sleep_stage

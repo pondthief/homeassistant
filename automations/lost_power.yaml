@@ -3,6 +3,7 @@
 #-------------------------------------------
 - alias: 'Lost Power'
   initial_state: true
+  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.synology_status_data

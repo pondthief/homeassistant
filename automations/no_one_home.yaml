@@ -1,7 +1,7 @@
 #-------------------------------------------
-# When No One Is Home
+# No One Home
 #-------------------------------------------
-- alias: 'Away'
+- alias: 'No one home'
   initial_state: true
   trigger:
     platform: state
