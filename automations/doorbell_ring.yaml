@@ -5,7 +5,7 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: binary_sensor.doorbell_contact_sensor
+    entity_id: binary_sensor.sensor_2
     from: 'off'
     to: 'on'
   action:
