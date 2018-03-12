@@ -9,3 +9,4 @@ quick_glance:
     - sensor.average_temperature
     - sensor.all_doors
     - sensor.all_windows
+    - binary_sensor.garage_doors

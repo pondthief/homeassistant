@@ -273,13 +273,19 @@ group.all_switches:
   hidden: false
 
 group.all_lights:
-  friendly_name:  Lights
+  friendly_name: Lights
   hidden: false
 
 group.all_automations:
-  friendly_name:  Automations
+  friendly_name: Automations
   hidden: false
-  
+
+sensor.average_humidity:
+  icon: mdi:water-percent
+
+sensor.average_temperature:
+  icon: mdi:thermometer
+
 #-------------------------------------------
 # Overhed Garage Doors
 #-------------------------------------------
@@ -288,3 +294,4 @@ binary_sensor.overhead_garage_one_sensor:
 
 binary_sensor.overhead_garage_two_sensor:
   device_class: garage_door
+
