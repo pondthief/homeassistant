@@ -13,4 +13,3 @@
         message: "\U0001F50B Main power lost, running on UPS power"
         target:
           - !secret chris_mobile_num
-        

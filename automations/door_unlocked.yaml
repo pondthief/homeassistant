@@ -25,10 +25,10 @@
       entity_id: lock.back_door_locked
       from: 'locked'
       to: 'unlocked'
-  conditions:
-    - condition: state
-      entity_id: group.family
-      state: 'not_home'
+  condition:
+    condition: state
+    entity_id: group.family
+    state: 'not_home'
   action:
     - service: notify.sms
       data_template:

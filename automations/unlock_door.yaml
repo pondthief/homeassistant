@@ -12,10 +12,10 @@
       entity_id: device_tracker.megan_iphone_8
       from: 'not_home'
       to: 'home'
-  conditions:
-    - condition: time
-      after: '08:00:00'
-      before: '16:00:00'
+  condition:
+    condition: time
+    after: '08:00:00'
+    before: '16:00:00'
   action:
     - service: lock.unlock
       data:
