@@ -6,10 +6,9 @@
   action:
     - service: persistent_notification.create
       data:
-        message: 'Update for Home Assistant is available'
         title: 'Software Update'
-    - service: notify.sms
-      data:
         message: 'Update for Home Assistant is available'
-        target:
-          - !secret chris_mobile_num
+    - service: notify.email_admins
+      data:
+        title: 'New Home Assistant is avaiable'
+        message: 'There is an update for Home Assistant.  Check it out at https://home-assistant.io'
