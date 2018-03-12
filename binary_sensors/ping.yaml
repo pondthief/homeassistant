@@ -1,0 +1,14 @@
+#-------------------------------------------
+#  Pings to see if we are up
+#-------------------------------------------
+- platform: ping
+  host: 8.8.8.8
+  name: Google
+
+- platform: ping
+  host: 192.168.7.10
+  name: Listener
+
+- platform: ping
+  host: !secret prometheus_ip
+  name: External Prometheus
