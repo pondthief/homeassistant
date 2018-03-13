@@ -18,3 +18,18 @@ sensor.*_multisensor_luminance:
 #-------------------------------------------
 switch.*_fan_switch:
   icon: mdi:fan
+
+#-------------------------------------------
+# Window Icons
+#-------------------------------------------
+sensor.*_window:
+  icon: mdi:window-closed
+
+sensor.*_window_one:
+  icon: mdi:window-closed
+
+sensor.*_window_two:
+  icon: mdi:window-closed
+
+sensor.*_window_three:
+  icon: mdi:window-closed
