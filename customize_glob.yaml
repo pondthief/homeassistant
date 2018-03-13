@@ -33,3 +33,6 @@ sensor.*_window_two:
 
 sensor.*_window_three:
   icon: mdi:window-closed
+
+sensor.*_door:
+  icon: mdi:door-closed
