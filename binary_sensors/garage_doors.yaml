@@ -3,8 +3,8 @@
     garage_doors:
       friendly_name: "Garage Doors"
       value_template: >-
-        {% if not is_state('binary_sensor.overhead_garage_one_sensor', 'on')
-            and not is_state('binary_sensor.overhead_garage_two_sensor', 'on') %}
+        {% if is_state('binary_sensor.overhead_garage_one_sensor', 'off')
+            and is_state('binary_sensor.overhead_garage_two_sensor', 'off') %}
         off
         {% else %}
         on
