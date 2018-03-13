@@ -3,10 +3,13 @@
 #-------------------------------------------
 - alias: 'Low Battery Notice'
   initial_state: true
-  hide_entity: true
   trigger:
     - platform: time
-      at: '10:00:00'
+      at: '09:00:00'
+    - platform: time
+      at: '12:00:00'
+    - platform: time
+      at: '15:00:00'
     - platform: time
       at: '18:00:00'
   condition:
@@ -29,12 +32,26 @@
           {%- endif -%}
           {%- endfor -%}
   action:
-    - service: notify.sms
-      data:
-        message: "\U0001F50B There is a device with a low battery."
-        target:
-          - !secret chris_mobile_num
     - service: persistent_notification.create
       data:
         message: 'There is a device with a low battery'
         title: 'Low Battery'
+    - service: notify.email
+      data:
+        title: "\U0001F50B Low Battery Notice"
+        message: >-
+          {%- set threshold = 40 -%}
+          {%- set domains = [states.light, states.switch, states.sensor, states.zwave, states.lock ] -%}
+          {%- for domain in domains -%}
+          {%- if loop.first -%}
+          The following devices have low battery levels:
+          {%- endif -%}
+          {%- for item in domain if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
+          {%- if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) %}
+          {{ item.name }} ({{ item.attributes['battery_level'] }}),
+          {% endif -%}
+          {%- if "battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown") -%}
+          {{ item.name }} ({{ item.state }}),
+          {% endif -%}
+          {%- endfor -%}
+          {%- endfor -%}
