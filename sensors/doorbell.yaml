@@ -1,0 +1,11 @@
+- name: "Doorbell"
+  platform: mqtt
+  state_topic: "home/sensor/53771"
+  value_template: '{{value_json.state}}' 
+  json_attributes:
+    - time
+    - model
+    - id
+    - channel
+    - event
+    - heartbeat
