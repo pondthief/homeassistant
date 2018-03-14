@@ -1,0 +1,17 @@
+#-------------------------------------------
+# Certificate Expire Warning
+#-------------------------------------------
+- alias: 'Certificate Expire Warning'
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: sensor.ssl_certificate_expiry
+      below: 30
+  action:
+    - service: notify.email_admins
+      data:
+        title: "\U0001F510 SSL Certificate Expiring"
+        message: 'The SSL certificate for plainrock is due to expire in 30 days or less'
+
+
+
