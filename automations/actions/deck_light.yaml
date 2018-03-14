@@ -13,7 +13,7 @@
     condition: sun
     after: sunset
   action:
-    service: homeassistant.turn_on
+    service: switch.turn_on
     entity_id: switch.deck_flood_switch
 
 #-------------------------------------------
@@ -30,5 +30,5 @@
     for:
       minutes: 15
   action:
-    service: homeassistant.turn_off
+    service: switch.turn_off
     entity_id: switch.deck_flood_switch
