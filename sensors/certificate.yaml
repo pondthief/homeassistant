@@ -1,0 +1,2 @@
+- platform: cert_expiry
+  host: plainrock.fuzzyblender.com:8123
