@@ -6,7 +6,7 @@
   hide_entity: true
   trigger:
     platform: state
-    entity_id: binary_sensor.sensor_2
+    entity_id: binary_sensor.doorbell
     from: 'off'
     to: 'on'
   action:
