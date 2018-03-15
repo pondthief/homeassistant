@@ -1,0 +1,5 @@
+- name: "Doorbell"
+  platform: mqtt
+  state_topic: "home/sensor/doorbell"
+  payload_on: "ring"
+  device_class: power
