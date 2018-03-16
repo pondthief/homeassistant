@@ -1,8 +1,5 @@
 #-------------------------------------------
 # Doorbell Action
-#
-# Be sure to add this to CRON on the host
-# 0 0 * * * find /data/home-assistant/www/* -mtime +5 -exec rm {} \;
 #-------------------------------------------
 - alias: 'Doorbell Action'
   initial_state: true
