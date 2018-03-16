@@ -1,0 +1,8 @@
+#-------------------------------------------
+#  Energy Sensors
+#-------------------------------------------
+energy:
+  name: Engery Usage
+  entities:
+    - sensor.energy_usage
+    - sensor.daily_usage
