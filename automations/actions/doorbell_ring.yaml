@@ -14,7 +14,7 @@
     to: 'on'
   action:
     - service: camera.snapshot
-      data:
+      data_template:
         entity_id: camera.front_porch
         filename: /config/www/front_door_camera_{{ trigger.to_state.last_changed }}.jpg
     - service: notify.sms
