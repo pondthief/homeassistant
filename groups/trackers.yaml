@@ -5,6 +5,6 @@ trackers:
   name: Trackers
   entities:
     - device_tracker.chris_iphone_x
-    - device_tracker.megan_tile
-    - device_tracker.chris_tile
+#    - device_tracker.megan_tile
+#    - device_tracker.chris_tile
     - device_tracker.megan_iphone_8
