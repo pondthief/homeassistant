@@ -18,7 +18,7 @@
         entity_id: camera.front_porch
         filename: /config/www/front_door_camera_{{ trigger.to_state.last_changed }}.jpg
     - service: notify.sms
-      data:
+      data_template:
         message: 'Someone is at the door.  https://plainrock.fuzzyblender.com:8123/local/front_door_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg'
         target:
           - !secret chris_mobile_num
