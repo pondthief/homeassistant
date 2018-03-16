@@ -18,6 +18,11 @@ homeassistant:
   customize_glob: !include customize_glob.yaml
 
 #-------------------------------------------
+# Shell Commands
+#-------------------------------------------
+recorder: !include shell_commands.yaml
+
+#-------------------------------------------
 # Recorder Settings
 #-------------------------------------------
 recorder: !include recorder.yaml

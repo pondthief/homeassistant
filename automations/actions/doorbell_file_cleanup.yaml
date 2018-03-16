@@ -1,0 +1,8 @@
+- alias: "Camera Images Cleanup"
+  initial_state: true
+  hide_entity: true
+  trigger:
+    - platform: time
+      at: '01:00:00'
+  action:
+    service: shell_command.clean_doorbell_images

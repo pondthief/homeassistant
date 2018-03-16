@@ -1,0 +1,1 @@
+clean_doorbell_images: find /config/www/* -mtime +30 -exec rm {} \;
