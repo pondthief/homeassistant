@@ -1,7 +1,7 @@
 #-------------------------------------------
 # Chris Car Home Actions
 #-------------------------------------------
-- alias: 'Chris's Car Arrives Home
+- alias: 'Chris Car Arrives Home'
   initial_state: true
   trigger:
     platform: state
