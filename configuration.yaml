@@ -20,7 +20,7 @@ homeassistant:
 #-------------------------------------------
 # Shell Commands
 #-------------------------------------------
-recorder: !include shell_commands.yaml
+shell_command: !include shell_commands.yaml
 
 #-------------------------------------------
 # Recorder Settings
@@ -56,12 +56,11 @@ http:
   base_url: !secret server_fqdn
   ip_ban_enabled: true
   login_attempts_threshold: 3
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
+  ssl_certificate: /config/ssl.crt
+  ssl_key: /config/ssl.key
   trusted_networks:
     - 127.0.0.1
     - 192.168.7.0/24
-    - 192.168.16.0/24
     - 192.168.128.0/24
 
 #-------------------------------------------
@@ -96,7 +95,7 @@ ecobee:
 # MQTT Settings
 #-------------------------------------------
 mqtt:
-  broker: !secret mqttconn
+  broker: ubuntu.fuzzyblender.com
 
 #-------------------------------------------
 # History support
@@ -175,14 +174,6 @@ script: !include_dir_merge_named scripts
 # Include aleamcrestrts
 #-------------------------------------------
 amcrest: !include amcrest.yaml
-
-#-------------------------------------------
-# Eight Sleep Setup
-#-------------------------------------------
-eight_sleep:
-  username: !secret eight_sleep_user
-  password: !secret eight_sleep_pass
-  partner: true
 
 #-------------------------------------------
 # Device Tracking
