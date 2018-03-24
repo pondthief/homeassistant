@@ -56,8 +56,8 @@ http:
   base_url: !secret server_fqdn
   ip_ban_enabled: true
   login_attempts_threshold: 3
-  ssl_certificate: ssl.crt
-  ssl_key: ssl.key
+  ssl_certificate: !secret ssl_cert
+  ssl_key: !secret ssl_key
   trusted_networks:
     - 127.0.0.1
     - 192.168.7.0/24
