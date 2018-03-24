@@ -8,7 +8,3 @@
 - platform: ping
   host: 192.168.7.10
   name: Listener
-
-- platform: ping
-  host: !secret prometheus_ip
-  name: External Prometheus
