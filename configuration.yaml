@@ -172,11 +172,6 @@ zwave: !include zwave.yaml
 script: !include_dir_merge_named scripts
 
 #-------------------------------------------
-# Include alerts
-#-------------------------------------------
-alert: !include alerts.yaml
-
-#-------------------------------------------
 # Include aleamcrestrts
 #-------------------------------------------
 amcrest: !include amcrest.yaml
