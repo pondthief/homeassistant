@@ -3,15 +3,17 @@
 #-------------------------------------------
 - alias: 'Listener Not Available Notice'
   initial_state: true
-  hide_entity: true
   trigger:
-    platform: state
+    - platform: time
+      minutes: 5
+      seconds: 00
+  condition:
+    condition: state
     entity_id: binary_sensor.listener
-    from: 'on'
-    to: 'off'
+    state: 'off'
   action:
     - service: notify.sms
       data:
-        message: "\U0001F92C Unable to reach 433Mhz listener"
+        message: "\U0001F92C Unable to reach 345Mhz listener"
         target:
           - !secret chris_mobile_num
