@@ -73,7 +73,7 @@ updater:
 # Enable datadog
 #-------------------------------------------
 datadog:
-  - host: ubuntu.fuzzyblender.com
+  host: ubuntu.fuzzyblender.com
 
 #-------------------------------------------
 # Enable cameras
