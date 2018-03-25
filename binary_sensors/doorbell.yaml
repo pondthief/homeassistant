@@ -1,4 +1,4 @@
-- name: "Doorbell"
+- name: "bDoorbell"
   platform: mqtt
   state_topic: "home/sensor/doorbell"
   payload_on: "ring"
