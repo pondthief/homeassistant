@@ -1,7 +1,0 @@
-- name: "bDoorbell"
-  platform: mqtt
-  state_topic: "home/sensor/doorbell"
-  payload_on: "ring"
-  payload_off: "silent"
-  device_class: power
-  qos: 2
