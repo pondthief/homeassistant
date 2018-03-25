@@ -9,3 +9,4 @@ cameras:
     - camera.garage_inside
     - camera.frontyard
     - camera.deck
+    - camera.inside_frontdoor
