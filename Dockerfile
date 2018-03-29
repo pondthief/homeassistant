@@ -6,6 +6,7 @@ RUN apt-get install -y \
     ppp \
     && apt-get clean && rm -rf /tmp/* /var/tmp/*
 
+RUN update_repository
 RUN pip install python-sdk-auth hologram-python
 
 COPY . /config
