@@ -3,6 +3,7 @@ FROM homeassistant/home-assistant:latest
 RUN apt-get update
 RUN apt-get install -y \
     jq \
+    libpython2.7-dev \
     ppp \
     && apt-get clean && rm -rf /tmp/* /var/tmp/*
 
