@@ -5,10 +5,10 @@
   initial_state: true
   hide_entity: true
   trigger:
-    - platform: state
-      entity_id: sensor.all_windows
-      from: 'closed'
-      to: 'open'
+    platform: state
+    entity_id: sensor.all_windows
+    from: 'closed'
+    to: 'open'
   action:
     - service: notify.sms
       data:
@@ -28,10 +28,10 @@
   initial_state: true
   hide_entity: true
   trigger:
-    - platform: state
-      entity_id: sensor.all_windows
-      from: 'open'
-      to: 'closed'
+    platform: state
+    entity_id: sensor.all_windows
+    from: 'open'
+    to: 'closed'
   action:
     - service: notify.sms
       data:
