@@ -4,12 +4,10 @@
 thermostat:
   name: Thermostat
   entities:
-    - configurator.ecobee
-    - climate.thermostat
+    - climate.hallway
 
 thermostat_sensors:
   name: Thermostat Sensors
   entities:
-    - sensor.thermostat_humidity
-    - sensor.thermostat_temperature
-    - binary_sensor.thermostat_occupancy
+    - sensor.hallway_thermostat_humidity
+    - sensor.hallway_thermostat_temperature
