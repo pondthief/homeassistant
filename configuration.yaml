@@ -76,6 +76,13 @@ datadog:
   host: ubuntu.fuzzyblender.com
 
 #-------------------------------------------
+# Enable Nest
+#-------------------------------------------
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+#-------------------------------------------
 # Enable cameras
 #-------------------------------------------
 camera:
@@ -90,12 +97,6 @@ prometheus:
 # Enable covers
 #-------------------------------------------
 cover: !include covers.yaml
-
-#-------------------------------------------
-# Ecobee Settings
-#-------------------------------------------
-ecobee:
-  api_key: !secret ecobee_key 
 
 #-------------------------------------------
 # MQTT Settings
