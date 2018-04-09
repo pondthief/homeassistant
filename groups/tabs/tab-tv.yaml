@@ -1,0 +1,8 @@
+#-------------------------------------------
+#  TV Tab
+#-------------------------------------------
+tv_tab:
+  name: TV
+  view: yes
+  icon: mdi:television-classic
+  entities:
