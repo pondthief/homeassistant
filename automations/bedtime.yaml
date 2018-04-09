@@ -8,4 +8,12 @@
     platform: time
     at: '22:30:00'
   action:
-    - service: script.bedtime
+    - service: lock.lock
+      data:
+        entity_id: group.all_locks
+    - service: switch.turn_on
+      data:
+        entity_id: switch.outside_security_switch
+    - service: switch.turn_off
+      data:
+        entity_id: switch.kitchen_island_switch
