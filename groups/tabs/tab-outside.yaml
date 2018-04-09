@@ -2,7 +2,7 @@
 #  Outside Tab
 #-------------------------------------------
 outside_tab:
-  name: Outside
+  name: Enviromental Sensors
   view: yes
   icon: mdi:flower
   entities:
@@ -15,5 +15,6 @@ outside_tab:
     - group.master_bath_enviroment
     - group.study_enviroment
     - group.tv_room_enviroment
+    - group.hallway_enviroment
 
 
