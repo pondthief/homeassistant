@@ -21,3 +21,4 @@ control_tab:
     - group.garage
     - group.laundry_room
     - group.entry
+    - group.hallway

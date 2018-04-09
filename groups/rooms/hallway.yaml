@@ -1,0 +1,21 @@
+#-------------------------------------------
+#  Hallway
+#-------------------------------------------
+hallway:
+  name: Hallway
+  entities:
+    - climate.hallway
+    - light.hallway_cans_level
+
+hallway_sensors:
+  name: Hallway
+  entities:
+    - sensor.hallway_thermostat_operation_mode
+    - binary_sensor.hallway_thermostat_fan
+    - binary_sensor.hallway_thermostat_online
+
+hallway_enviroment:
+  name: Hallway
+  entities:
+    - sensor.hallway_thermostat_temperature
+    - sensor.hallway_thermostat_humidity
