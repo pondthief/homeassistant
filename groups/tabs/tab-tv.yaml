@@ -6,7 +6,7 @@ tv_tab:
   view: yes
   icon: mdi:television-classic
   entities:
-    - house_tvs
+    - group.house_tvs
 
 house_tvs:
   entities:
