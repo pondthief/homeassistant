@@ -6,3 +6,4 @@ tv_tab:
   view: yes
   icon: mdi:television-classic
   entities:
+    - media_player.roku_2n00ch441117
