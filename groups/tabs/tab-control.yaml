@@ -17,8 +17,6 @@ control_tab:
     - group.outside
     - group.master_bath
     - group.doors
-    - group.thermostat
-    - group.garage
     - group.laundry_room
     - group.entry
     - group.hallway
