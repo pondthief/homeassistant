@@ -11,3 +11,4 @@ tv_tab:
 house_tvs:
   entities:
     - media_player.roku_2n00ch441117
+    - media_player.master_bedroom
