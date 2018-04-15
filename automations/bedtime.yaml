@@ -1,5 +1,5 @@
 #-------------------------------------------
-# Just before bed
+# Things to do at Bedtime
 #-------------------------------------------
 - alias: 'Bedtime'
   initial_state: true
