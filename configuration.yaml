@@ -125,12 +125,6 @@ sun:
 cloud:
 
 #-------------------------------------------
-# Text to speech settings
-#-------------------------------------------
-tts:
-  platform: google
-
-#-------------------------------------------
 # Include sensors
 #-------------------------------------------
 sensor: !include_dir_merge_list sensors
