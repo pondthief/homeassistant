@@ -1,14 +1,14 @@
 #-------------------------------------------
-# Laundry Room Motion
+# Laundry Room No Motion
 #-------------------------------------------
-- alias: 'Laundry Room Motion'
+- alias: 'Laundry Room No Motion'
   hide_entity: true
   initial_state: true
   trigger:
     platform: state
     entity_id: sensor.laundry_multisensor_burglar
-    from: '0'
-    to: '8'
+    from: '8'
+    to: '0'
   action:
-    service: switch.turn_on
+    service: switch.turn_off
     entity_id: switch.laundry_room_overhead_switch
