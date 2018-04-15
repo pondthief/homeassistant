@@ -1,8 +1,8 @@
 #-------------------------------------------
-#  Internet Connection Related Items
+#  Internet Speeds
 #-------------------------------------------
-connection:
-  name: Interwebs
+internet_speeds:
+  name: Internet Speeds
   entities:
     - sensor.speedtest_download
     - sensor.speedtest_ping

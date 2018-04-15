@@ -19,7 +19,6 @@ sensors_tab:
     - group.outside_sensors
     - group.entry_sensors
     - group.thermostat_sensors
-    - group.beacons
     - group.tv_room_sensors
     - group.garage_sensors
     - group.trackers

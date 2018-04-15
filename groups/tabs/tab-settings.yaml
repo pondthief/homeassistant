@@ -7,7 +7,7 @@ system_tab:
   icon: mdi:settings
   entities:
     - group.battery_levels
-    - group.connection
+    - group.internet_speeds
     - group.ups
     - group.all_automations
     - group.ping_devices
