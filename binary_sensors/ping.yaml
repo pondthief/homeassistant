@@ -2,9 +2,5 @@
 #  Pings to see if we are up
 #-------------------------------------------
 - platform: ping
-  host: 8.8.8.8
-  name: Google
-
-- platform: ping
-  host: 192.168.128.250
+  host: doorbell.fuzzyblender.com
   name: Listener
