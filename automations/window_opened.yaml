@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Window(s) Opened Actions
+# Window(s) Opened
 #-------------------------------------------
-- alias: "Window Opened Actions"
+- alias: "Window Opened"
   initial_state: true
   hide_entity: true
   trigger:
