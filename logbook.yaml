@@ -1,7 +1,9 @@
 #-------------------------------------------
 #  Logbook Component
 #-------------------------------------------
-exclude:
+include:
   domains:
-    - zwave
-    - weblink
+    - switch
+    - light
+    - lock
+    - automation
