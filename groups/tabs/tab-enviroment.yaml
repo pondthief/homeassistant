@@ -1,14 +1,13 @@
 #-------------------------------------------
-#  Outside Tab
+#  Enviroment Sensors Tab
 #-------------------------------------------
-outside_tab:
-  name: Enviromental Sensors
+enviroment_tab:
+  name: Enviroment Sensors
   view: yes
   icon: mdi:flower
   entities:
     - group.pollen
     - group.weather
-    - group.almanac
     - group.guest_bath_enviroment
     - group.guest_room_enviroment
     - group.kitchen_enviroment
@@ -16,5 +15,3 @@ outside_tab:
     - group.study_enviroment
     - group.tv_room_enviroment
     - group.hallway_enviroment
-
-
