@@ -1,8 +1,0 @@
-#-------------------------------------------
-#  Beacons
-#-------------------------------------------
-beacons:
-  name: Beacons
-  entities:
-    - sensor.chris_beacon
-    - sensor.megan_beacon
