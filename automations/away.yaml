@@ -1,9 +1,15 @@
 #-------------------------------------------
-# Actions to take when Away detected
+# No One Home
 #-------------------------------------------
-away:
-  alias: Away
-  sequence:
+- alias: 'Away Mode'
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: group.family
+    to: 'not_home'
+    for:
+      minutes: 10
+  action:
     - service: lock.lock
       data:
         entity_id: group.all_locks
