@@ -1,33 +1,6 @@
 #-------------------------------------------
-#  SMS Notices
+#  Telegram Notices
 #-------------------------------------------
-- name: sms
-  platform: twilio_sms
-  from_number: !secret twilio_from
-
-#-------------------------------------------
-#  Email Notices
-#-------------------------------------------
-- name: email
-  platform: smtp
-  sender: !secret smtp_sender
-  server: !secret smtp_server
-  username: !secret smtp_user
-  password: !secret smtp_pass
-  sender_name: "Home Assistant"
-  recipient:
-    - !secret chris_email
-    - !secret megan_email
-
-#-------------------------------------------
-#  Email Admins Only
-#-------------------------------------------
-- name: email_admins
-  platform: smtp
-  sender: !secret smtp_sender
-  server: !secret smtp_server
-  username: !secret smtp_user
-  password: !secret smtp_pass
-  sender_name: "Home Assistant"
-  recipient:
-    - !secret chris_email
+- name: telegram
+  platform: telegram
+  chat_id: !secret chris_telegram

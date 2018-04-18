@@ -135,11 +135,14 @@ binary_sensor: !include_dir_merge_list binary_sensors
 notify: !include notify.yaml
 
 #-------------------------------------------
-# Twilio Info
+# Telegram Info
 #-------------------------------------------
-twilio:
-  account_sid: !secret twilio_sid
-  auth_token: !secret twilio_token
+telegram_bot:
+  - platform: webhooks
+    api_key: !secret telegram_bot_key
+    parse_mode: html
+    allowed_chat_ids:
+      - !secret chris_telegram
 
 #-------------------------------------------
 # Include zones

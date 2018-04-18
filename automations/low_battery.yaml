@@ -32,7 +32,7 @@
           {%- endif -%}
           {%- endfor -%}
   action:
-    - service: notify.email
+    - service: notify.telegram
       data:
         title: "\U0001F50B Low Battery Notice"
         message: >-

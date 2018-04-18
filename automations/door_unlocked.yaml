@@ -10,11 +10,9 @@
       from: 'locked'
       to: 'unlocked'
   action:
-    - service: notify.sms
-      data_template:
-        message: "\U0001F511 {{ trigger.to_state.attributes.friendly_name }} has been unlocked"
-        target:
-          - !secret chris_mobile_num
+    - service: notify.telegram
+      data:
+        message: "\U0001F511 Front Door has been unlocked"
 
 #-------------------------------------------
 # Back Door Unlocked Notice
@@ -32,11 +30,9 @@
     entity_id: group.family
     state: 'not_home'
   action:
-    - service: notify.sms
-      data_template:
-        message: "\U0001F511 {{ trigger.to_state.attributes.friendly_name }} has been unlocked"
-        target:
-          - !secret chris_mobile_num
+    - service: notify.telegram
+      data:
+        message: "\U0001F511 Back door has been unlocked"
 
 #-------------------------------------------
 # Garage Door Unlocked (no alerts ATM)
@@ -54,8 +50,6 @@
     entity_id: group.family
     state: 'not_home'
   action:
-    - service: notify.sms
-      data_template:
-        message: "\U0001F511 {{ trigger.to_state.attributes.friendly_name }} has been unlocked"
-        target:
-          - !secret chris_mobile_num
+    - service: notify.telegram
+      data:
+        message: "\U0001F511 Garage Door has been unlocked"

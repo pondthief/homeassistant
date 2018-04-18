@@ -12,8 +12,6 @@
     entity_id: binary_sensor.listener
     state: 'off'
   action:
-    - service: notify.sms
+    - service: notify.telegram
       data:
         message: "\U0001F92C Unable to reach 345Mhz listener"
-        target:
-          - !secret chris_mobile_num

@@ -14,8 +14,6 @@
       to: 'on'
       from: 'off'
   action:
-    - service: notify.sms
+    - service: notify.telegram
       data:
         message: "\U0001F697 {{ trigger.to_state.attributes.friendly_name }} has been opened"
-        target:
-          - !secret chris_mobile_num
