@@ -138,7 +138,7 @@ notify: !include notify.yaml
 # Telegram Info
 #-------------------------------------------
 telegram_bot:
-  - platform: polling
+  - platform: webhooks
     api_key: !secret telegram_bot_key
     parse_mode: html
     allowed_chat_ids:
