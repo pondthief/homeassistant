@@ -4,4 +4,4 @@
 default: error
 logs:
   homeassistant.components.sensor.foobot: error
-  homeassistant.components.telegram_bot: error
+  homeassistant.components.telegram_bot: debug
