@@ -20,4 +20,4 @@
           photo:
             - file: /config/www/doorbell.jpg
           inline_keyboard:
-            - 'Task 1:/unlock'
+            - 'Unlock:/unlock'
