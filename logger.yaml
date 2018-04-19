@@ -3,4 +3,5 @@
 #-------------------------------------------
 default: error
 logs:
-  homeassistant.components.device_tracker.automatic: error
+  homeassistant.components.sensor.foobot: debug
+  homeassistant.components.telegram_bot: debug
