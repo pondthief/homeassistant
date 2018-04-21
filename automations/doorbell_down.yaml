@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Listener Down
+# Doorbell Down
 #-------------------------------------------
-- alias: 'Listener Not Available Notice'
+- alias: 'Doorbell Down'
   initial_state: true
   trigger:
     - platform: time
@@ -14,4 +14,4 @@
   action:
     - service: notify.telegram
       data:
-        message: "\U0001F92C Unable to reach 345Mhz listener"
+        message: "\U0001F92C Unable to reach doorbell monitor!"

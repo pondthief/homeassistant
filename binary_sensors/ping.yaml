@@ -2,5 +2,5 @@
 #  Pings to see if we are up
 #-------------------------------------------
 - platform: ping
-  host: doorbell.fuzzyblender.com
-  name: Listener
+  host: 192.168.7.10
+  name: Doorbell
