@@ -9,6 +9,6 @@ action:
   - service: lock.unlock
     data:
       entity_id: lock.front_door_locked
-  - service: notify.notify
+  - service: notify.telegram
     data:
       message: 'By your command...'
