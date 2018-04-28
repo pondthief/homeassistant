@@ -115,4 +115,10 @@ blacklist rtl2830
 | 42    | Overhead Garage One               ||
 | 43    | Overhead Garage Two               ||
 | 44    | DEAD                              ||
-| 43    | Doorbell Dry Contact Sensor       ||
+| 45    | DEAD                              ||
+| 46    | Garage MultiSensor                ||
+
+### Disable Aeotec Multisensor 6 PIR light
+
+zwave.set_config_parameter
+{"node_id": "41","parameter": "81","value": "1"}
