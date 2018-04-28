@@ -2,18 +2,18 @@
 #  Garage
 #-------------------------------------------
 garage:
-  name: Garage Doors
+  name: Garage
   entities:
-    - cover.megan_overhead_garage_door
-    - cover.chris_overhead_garage_door
+
+garage_sensors:
+  name: Garage
+  entities:
     - binary_sensor.overhead_garage_one_sensor
     - binary_sensor.overhead_garage_two_sensor
 
-garage_sensors:
-  name: Garage Doors Status
+garage_enviroment:
+  name: Guest Bathroom
   entities:
-    - binary_sensor.overhead_garage_one_sensor
-    - binary_sensor.overhead_garage_two_sensor
     - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw100_multisensor_6_ultraviolet
     - sensor.aeotec_zw100_multisensor_6_relative_humidity
