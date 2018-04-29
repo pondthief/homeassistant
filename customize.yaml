@@ -295,3 +295,20 @@ binary_sensor.overhead_garage_one_sensor:
 binary_sensor.overhead_garage_two_sensor:
   device_class: garage_door
 
+#-------------------------------------------
+# Garage Multisensor
+#-------------------------------------------
+sensor.aeotec_zw100_multisensor_6_luminance:
+  friendly_name: Garage Lux
+
+ensor.garage_multisensor_motion:
+  friendly_name: Garage Motion
+
+sensor.aeotec_zw100_multisensor_6_relative_humidity:
+  friendly_name: Garage Humidity
+
+sensor.aeotec_zw100_multisensor_6_temperature:
+  friendly_name: Garage Temp
+
+sensor.aeotec_zw100_multisensor_6_ultraviolet:
+  friendly_name: Garage UV
