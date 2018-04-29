@@ -12,7 +12,7 @@ garage_sensors:
     - binary_sensor.overhead_garage_two_sensor
 
 garage_enviroment:
-  name: Guest Bathroom
+  name: Garage
   entities:
     - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw100_multisensor_6_ultraviolet
