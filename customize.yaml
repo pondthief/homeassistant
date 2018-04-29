@@ -280,12 +280,6 @@ group.all_automations:
   friendly_name: Automations
   hidden: false
 
-sensor.average_humidity:
-  icon: mdi:water-percent
-
-sensor.average_temperature:
-  icon: mdi:thermometer
-
 #-------------------------------------------
 # Overhed Garage Doors
 #-------------------------------------------
