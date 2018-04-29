@@ -1,16 +1,16 @@
 #-------------------------------------------
 # Multisensor Icons
 #-------------------------------------------
-sensor.*_multisensor_motion:
+sensor.*_motion:
   icon: mdi:walk
 
-sensor.*_multisensor_ultraviolet:
+sensor.*_ultraviolet:
   icon: mdi:sunglasses
 
-sensor.*_multisensor_relative_humidity:
+sensor.*_relative_humidity:
   icon: mdi:water-percent
 
-sensor.*_multisensor_luminance:
+sensor.*_luminance:
   icon: mdi:brightness-6
 
 #-------------------------------------------
