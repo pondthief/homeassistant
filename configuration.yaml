@@ -103,6 +103,9 @@ mqtt:
 # History support
 #-------------------------------------------
 history:
+  exclude:
+    domains:
+      - automation
 
 #-------------------------------------------
 # Logbook Settings
