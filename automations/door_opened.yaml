@@ -13,6 +13,6 @@
     entity_id: group.family
     state: 'not_home'
   action:
-    - service: notify.telegram
+    - service: notify.slack
       data:
         message: "\U0001F6AA The front door has been opened"

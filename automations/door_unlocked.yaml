@@ -10,7 +10,7 @@
       from: 'locked'
       to: 'unlocked'
   action:
-    - service: notify.telegram
+    - service: notify.slack
       data:
         message: "\U0001F511 Front Door has been unlocked"
 
@@ -30,7 +30,7 @@
     entity_id: group.family
     state: 'not_home'
   action:
-    - service: notify.telegram
+    - service: notify.slack
       data:
         message: "\U0001F511 Back door has been unlocked"
 
@@ -50,6 +50,6 @@
     entity_id: group.family
     state: 'not_home'
   action:
-    - service: notify.telegram
+    - service: notify.slack
       data:
         message: "\U0001F511 Garage Door has been unlocked"

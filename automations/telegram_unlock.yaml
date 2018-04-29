@@ -1,14 +1,14 @@
-alias: 'Telegram bot to unlock the front door'
-hide_entity: true
-trigger:
-  platform: event
-  event_type: telegram_command
-  event_data:
-    command: '/unlock'
-action:
-  - service: lock.unlock
-    data:
-      entity_id: lock.front_door_locked
-  - service: notify.telegram
-    data:
-      message: 'By your command...'
+#alias: 'Telegram bot to unlock the front door'
+#hide_entity: true
+#trigger:
+#  platform: event
+#  event_type: telegram_command
+#  event_data:
+#    command: '/unlock'
+#action:
+#  - service: lock.unlock
+#    data:
+#      entity_id: lock.front_door_locked
+#  - service: notify.slack
+#    data:
+#      message: 'By your command...'

@@ -8,7 +8,7 @@
       entity_id: sensor.ssl_certificate_expiry
       below: 30
   action:
-    - service: notify.telegram
+    - service: notify.slack
       data:
         message: "\U0001F510 SSL Certificate expiring in less than 30 days!"
 

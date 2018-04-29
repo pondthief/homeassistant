@@ -14,6 +14,6 @@
       to: 'on'
       from: 'off'
   action:
-    - service: notify.telegram
+    - service: notify.slack
       data:
         message: "\U0001F697 {{ trigger.to_state.attributes.friendly_name }} has been opened"

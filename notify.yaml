@@ -1,6 +1,7 @@
 #-------------------------------------------
-#  Telegram Notices
+#  Slack Notices
 #-------------------------------------------
-- name: telegram
-  platform: telegram
-  chat_id: !secret chris_telegram
+  - name: slack
+    platform: slack
+    api_key: !secret slack_bot_key
+    default_channel: '#home'

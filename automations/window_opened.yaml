@@ -10,7 +10,7 @@
     from: 'closed'
     to: 'open'
   action:
-    - service: notify.telegram
+    - service: notify.slack
       data:
         message: "\U0001F6A8 A window has been opened, HVAC has been turned off"
     - service: climate.set_operation_mode
