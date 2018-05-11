@@ -10,6 +10,7 @@ default_view:
     - group.doors
     - group.quick_glance
     - group.quick_scripts
+    - group.garage
 
 quick_scripts:
   name: Quick Scripts
