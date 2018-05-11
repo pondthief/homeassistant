@@ -4,6 +4,8 @@
 garage:
   name: Garage
   entities:
+    - cover.garage_door_opener_1
+    - cover.garage_door_opener_2
 
 garage_sensors:
   name: Garage
