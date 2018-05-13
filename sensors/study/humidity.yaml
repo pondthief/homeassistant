@@ -1,3 +1,5 @@
 - platform: mqtt
   state_topic: "home/sensors/3a002d000247363333343435/humidity"
   device_class: humidity
+  name: "Study Humidity"
+  unit_of_measurement: '%'
