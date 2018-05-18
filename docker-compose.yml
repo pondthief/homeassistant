@@ -1,0 +1,69 @@
+version: '3'
+
+services:
+  home-assistant:
+    image: homeassistant/home-assistant:latest
+    ports:
+      - "8123:8123"
+    depends_on:
+      - postgres
+      - prometheus
+      - mosquitto
+    volumes:
+      - /data/home-assistant:/config
+    network_mode: "bridge"
+    restart: always
+    devices:
+      - "/dev/zwave:/dev/zwave"
+
+  postgres:
+    image: postgres:9.5-alpine
+      ports:
+        - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: homeassistant
+      POSTGRES_PASSWORD: xxxxxxx
+    network_mode: "bridge"
+  
+  prometheus:
+    image: prom/prometheus:latest	
+      ports:
+        - "9090:9090"
+    restart: always
+    volumes:
+      - /data/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    network_mode: "bridge"
+  
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    ports:
+      - "1883:1883"
+      - "8083:8083"
+      - "8883:8883"
+    restart: always
+    volumes:
+      - /data/certs:/certs
+      - /data/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    network_mode: "bridge"
+
+  honeywell2mqtt:
+    image: chriskacerguis/honeywell2mqtt:2.0.0
+    restart: always
+    depends_on:
+      - mosquitto
+
+  portainer:
+    image: portainer/portainer
+    ports:
+      - "9000:9000"
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+      - /data/certs:/certs
+    network_mode: "bridge"
+    command: --ssl --sslcert /certs/fuzzyblender-with-ca.crt --sslkey /certs/fuzzyblender.key
+
+volumes:
+  portainer_data:
