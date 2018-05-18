@@ -70,10 +70,9 @@ updater:
   include_used_components: true
 
 #-------------------------------------------
-# Enable datadog
+# Enable prometheus for alerting
 #-------------------------------------------
-datadog:
-  host: ubuntu.fuzzyblender.com
+prometheus:
 
 #-------------------------------------------
 # Enable Nest
