@@ -1,0 +1,18 @@
+#-------------------------------------------
+#  Outside Things
+#-------------------------------------------
+outside:
+  name: Outside
+  entities:
+    - switch.deck_flood_switch
+    - switch.front_yard_switch
+    - switch.outside_security_switch
+
+outside_sensors:
+  name: Outside
+  entities:
+    - sensor.driveway_motion_detected
+    - sensor.frontyard_motion_detected
+    - sensor.front_porch_motion_detected
+    - binary_sensor.ring_front_door_motion
+    - sensor.garage_inside_motion_detected
