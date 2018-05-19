@@ -1,8 +1,0 @@
-#-------------------------------------------
-# Therapist
-#-------------------------------------------
-name: Therapist
-latitude: 30.272368
-longitude: -97.798415
-icon: mdi:medical-bag
-passive: true
