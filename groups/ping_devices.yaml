@@ -1,7 +1,0 @@
-#-------------------------------------------
-#  Ping Devices
-#-------------------------------------------
-ping_devices:
-  name: Ping Devices
-  entities:
-    - binary_sensor.listener
