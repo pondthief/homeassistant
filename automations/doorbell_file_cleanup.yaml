@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Cleanup our old camera snaps
+#-------------------------------------------
 - alias: "Camera Images Cleanup"
   initial_state: true
   hide_entity: true

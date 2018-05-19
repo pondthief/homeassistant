@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Entity Registry (still don't know what this does)
+#-------------------------------------------
 lock.back_door_locked:
   name:
   platform: zwave

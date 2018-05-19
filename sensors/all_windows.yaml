@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  All Windows Sensor
+#-------------------------------------------
 - platform: template
   sensors:
     all_windows:

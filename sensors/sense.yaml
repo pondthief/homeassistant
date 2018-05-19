@@ -1,3 +1,6 @@
+#-------------------------------------------
+#  Sense Energy Monitor
+#-------------------------------------------
 - platform: sense
   email: !secret sense_username
   password: !secret sense_password
