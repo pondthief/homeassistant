@@ -1,0 +1,13 @@
+#-------------------------------------------
+#  Average Humidity
+#-------------------------------------------
+- platform: min_max
+  name: Average Humidity
+  type: mean
+  round_digits: 1
+  entity_ids:
+    - sensor.thermostat_humidity
+    - sensor.study_multisensor_relative_humidity
+    - sensor.kitchen_multisensor_relative_humidity
+    - sensor.guest_multisensor_relative_humidity
+    - sensor.tv_room_multisensor_relative_humidity
