@@ -1,4 +1,18 @@
 #-------------------------------------------
+#  Speedtest Sensor
+#-------------------------------------------
+- platform: speedtest
+  hour:
+    - 0
+    - 6
+    - 12
+    - 18
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+#-------------------------------------------
 #  Monitor Synology NAS UPS
 #-------------------------------------------
 - platform: nut

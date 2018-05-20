@@ -70,11 +70,6 @@ updater:
   include_used_components: true
 
 #-------------------------------------------
-# Enable Prometheus
-#-------------------------------------------
-prometheus:
-
-#-------------------------------------------
 # Enable Nest
 #-------------------------------------------
 nest:
@@ -90,7 +85,11 @@ camera:
 #-------------------------------------------
 # Enable covers
 #-------------------------------------------
-cover: !include covers.yaml
+cover:
+  - platform: myq
+    username: !secret liftmaster_user
+    password: !secret liftmaster_pass
+    type: liftmaster
 
 #-------------------------------------------
 # MQTT Settings

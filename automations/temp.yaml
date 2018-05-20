@@ -1,0 +1,33 @@
+#-------------------------------------------
+# Too Hot Alert
+#-------------------------------------------
+- alias: "Too Hot Alert"
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.average_temperature
+    above: 77
+    for:
+      minutes: 30
+    action:
+      - service: notify.slack
+        data:
+          message: "\U0001F525 Average house temp is at or above 78 degrees"
+
+#-------------------------------------------
+# Front Door Unlocked
+#-------------------------------------------
+- alias: "Too Cold Alert"
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.average_temperature
+    below: 67
+    for:
+      minutes: 30
+    action:
+      - service: notify.slack
+        data:
+          message: "\U0002603 Average house temp is at or below 66 degrees"

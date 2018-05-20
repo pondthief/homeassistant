@@ -1,7 +1,0 @@
-#-------------------------------------------
-#  Liftmaster Garage Doors
-#-------------------------------------------
-- platform: myq
-  username: !secret liftmaster_user
-  password: !secret liftmaster_pass
-  type: liftmaster

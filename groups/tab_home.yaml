@@ -1,0 +1,28 @@
+#-------------------------------------------
+#  Home Tab
+#-------------------------------------------
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.family_location
+    - group.thermostat
+    - group.doors
+    - group.quick_glance
+    - group.garage
+
+quick_glance:
+  name: Quick Stats
+  control: hidden
+  entities:
+    - sensor.average_humidity
+    - sensor.average_temperature
+    - sensor.all_doors
+    - sensor.all_windows
+
+doors:
+  name: Door Locks
+  entities:
+    - lock.front_door_locked
+    - lock.back_door_locked
+    - lock.garage_door_locked

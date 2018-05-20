@@ -1,5 +1,20 @@
 #-------------------------------------------
-# Low Battery Notice
+# Main Power Lost
+#-------------------------------------------
+- alias: 'Main Power Lost'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.synology_status_data
+    from: 'OL'
+  action:
+    - service: notify.slack
+      data:
+        message: "\U0001F50B Main power lost, running on UPS power"
+
+#-------------------------------------------
+# Low Battery Devices
 #-------------------------------------------
 - alias: 'Low Battery Notice'
   initial_state: true
