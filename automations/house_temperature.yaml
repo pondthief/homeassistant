@@ -30,4 +30,4 @@
   action:
     - service: notify.slack
       data:
-        message: "\U00026C4 Average house temp is at or above 78 degrees"
+        message: "\U000026C4 Average house temp is at or above 78 degrees"
