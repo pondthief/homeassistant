@@ -1,4 +1,24 @@
 #-------------------------------------------
+# Back Door Unlocked Notice
+#-------------------------------------------
+- alias: "Back Door Unlocked Notice"
+  initial_state: true
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: lock.back_door_locked
+      from: 'locked'
+      to: 'unlocked'
+  condition:
+    condition: state
+    entity_id: group.family
+    state: 'not_home'
+  action:
+    - service: notify.slack
+      data:
+        message: "\U0001F511 Back door has been unlocked"
+
+#-------------------------------------------
 # Turn on deck back door if night / open
 #-------------------------------------------
 - alias: "Deck Light On When Door Opened"

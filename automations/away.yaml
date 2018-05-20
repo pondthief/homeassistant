@@ -1,7 +1,7 @@
 #-------------------------------------------
 # No One Home
 #-------------------------------------------
-- alias: 'Away Mode'
+- alias: 'No One Home'
   initial_state: true
   trigger:
     platform: state
@@ -19,3 +19,6 @@
         entity_id: group.all_locks
     - service: light.turn_off
     - service: switch.turn_off
+    - service: notify.slack
+      data:
+        message: "\U0001F697 No one home, going dormant"

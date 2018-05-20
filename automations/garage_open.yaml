@@ -1,18 +1,18 @@
 #-------------------------------------------
 # Overhead Garage Door Opened Notice
 #-------------------------------------------
-- alias: "Overhead Garage Door Opened Notice"
+- alias: "Overhead Garage Door Opened"
   initial_state: true
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: binary_sensor.overhead_garage_one_sensor
-      to: 'on'
-      from: 'off'
+      entity_id: cover.garage_door_opener_1
+      from: 'closed'
+      to: 'open'
     - platform: state
-      entity_id: binary_sensor.overhead_garage_two_sensor
-      to: 'on'
-      from: 'off'
+      entity_id: cover.garage_door_opener_2
+      from: 'closed'
+      to: 'open'
   action:
     - service: notify.slack
       data:
