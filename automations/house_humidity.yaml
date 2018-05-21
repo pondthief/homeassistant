@@ -10,7 +10,7 @@
     above: 55
     for:
       minutes: 30
-    action:
-      - service: notify.slack
-        data:
-          message: "\U0001F4A7 Average house humidity is at or above 56%"
+  action:
+    - service: notify.slack
+      data:
+        message: "\U0001F4A7 Average house humidity is at or above 56%"
