@@ -23,6 +23,12 @@ homeassistant:
 shell_command: !include shell_commands.yaml
 
 #-------------------------------------------
+# Enable InfluxDB for graphs
+#-------------------------------------------
+influxdb:
+  host: ubuntu.fuzzyblender.com
+
+#-------------------------------------------
 # Recorder Settings
 #-------------------------------------------
 recorder: !include recorder.yaml
