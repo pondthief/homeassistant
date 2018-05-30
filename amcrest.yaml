@@ -33,9 +33,9 @@
   stream_source: rtsp
   username: !secret amcrest_user
   password: !secret amcrest_pass
-#  scan_interval: 60
-#  sensors:
-#    - motion_detector
+  scan_interval: 60
+  sensors:
+    - motion_detector
 
 - host: 192.168.7.62
   name: Deck
