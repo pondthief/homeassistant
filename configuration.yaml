@@ -76,6 +76,11 @@ updater:
   include_used_components: true
 
 #-------------------------------------------
+# Image Processing
+#-------------------------------------------
+image_processing: !include image_processing.yaml
+
+#-------------------------------------------
 # Enable Nest
 #-------------------------------------------
 nest:

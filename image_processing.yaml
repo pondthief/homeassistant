@@ -1,0 +1,5 @@
+- platform: facebox
+  ip_address: ubuntu.fuzzyblender.com
+  port: 8080
+  source:
+    - entity_id: camera.frontyard
