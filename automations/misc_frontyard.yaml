@@ -7,8 +7,14 @@
     platform: state
     entity_id: sensor.frontyard_motion_detected
     to: 'True'
-
   action:
+    - service: camera.snapshot
+      data_template:
+        entity_id: camera.frontyard
+        filename: /config/www/camera_frontyard.jpg
     - service: notify.slack
       data:
-        message: "\U0001F697 Motion in the front yard!"
+        message: 'I see movement!'
+        data:
+          file:
+            path: /config/www/camera_frontyard.jpg
