@@ -1,0 +1,14 @@
+#-------------------------------------------
+# Front Yard Motion
+#-------------------------------------------
+- alias: 'frontyard_motion_detected'
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.frontyard_motion_detected
+    to: 'True'
+
+  action:
+    - service: notify.slack
+      data:
+        message: "\U0001F697 Motion in the front yard!"
