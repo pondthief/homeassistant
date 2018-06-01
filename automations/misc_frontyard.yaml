@@ -1,20 +1,22 @@
 #-------------------------------------------
 # Front Yard Motion
 #-------------------------------------------
-- alias: 'frontyard_motion_detected'
-  initial_state: true
-  trigger:
-    platform: state
-    entity_id: sensor.frontyard_motion_detected
-    to: 'True'
-  action:
-    - service: camera.snapshot
-      data_template:
-        entity_id: camera.frontyard
-        filename: /config/www/camera_frontyard.jpg
-    - service: notify.slack
-      data:
-        message: 'I see movement!'
-        data:
-          file:
-            path: /config/www/camera_frontyard.jpg
+#- alias: 'frontyard_motion_detected'
+#  initial_state: true
+#  trigger:
+#    platform: state
+#    entity_id: sensor.frontyard_motion_detected
+#    to: 'True'
+#  action:
+#    - service: image_processing.scan
+#      entity_id: image_processing.facebox_frontyard
+#    - service: camera.snapshot
+#      data_template:
+#        entity_id: camera.frontyard
+#        filename: /config/www/camera_frontyard.jpg
+#    - service: notify.slack
+#      data:
+#        message: 'I see movement!'
+#        data:
+#          file:
+#            path: /config/www/camera_frontyard.jpg

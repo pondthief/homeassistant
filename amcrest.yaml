@@ -33,7 +33,7 @@
   stream_source: rtsp
   username: !secret amcrest_user
   password: !secret amcrest_pass
-  scan_interval: 60
+  scan_interval: 3
   sensors:
     - motion_detector
 
