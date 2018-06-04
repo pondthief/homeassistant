@@ -9,6 +9,7 @@ services:
       - postgres
       - prometheus
       - mosquitto
+      - influxdb
     volumes:
       - /data/home-assistant:/config
     network_mode: "bridge"
@@ -16,23 +17,27 @@ services:
     devices:
       - "/dev/zwave:/dev/zwave"
 
-  postgres:
-    image: postgres:9.5-alpine
-      ports:
-        - "5432:5432"
-    restart: always
+  influxdb:
+    image: influxdb:alpine
+    ports:
+      - "8086:8086"
+    restart: always   
+    volumes:
+      - /data/influxdb:/var/lib/influxdb
     environment:
-      POSTGRES_USER: homeassistant
-      POSTGRES_PASSWORD: xxxxxxx
+      INFLUXDB_DB: home_assistant
     network_mode: "bridge"
   
-  prometheus:
-    image: prom/prometheus:latest	
-      ports:
-        - "9090:9090"
+  postgres:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
     restart: always
     volumes:
-      - /data/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: homeassistant
+      POSTGRES_PASSWORD: homeassistant
     network_mode: "bridge"
   
   mosquitto:
@@ -44,7 +49,9 @@ services:
     restart: always
     volumes:
       - /data/certs:/certs
-      - /data/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - /data/mosquitto/data:/mosquitto/data
+      - /data/mosquitto/config:/mosquitto/config
+      - /data/mosquitto/log:/mosquitto/log
     network_mode: "bridge"
 
   honeywell2mqtt:
@@ -67,3 +74,4 @@ services:
 
 volumes:
   portainer_data:
+  postgres_data:
