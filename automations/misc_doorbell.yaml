@@ -19,6 +19,6 @@
         target: '#alerts'
         data:
           attachments:
-            - title: "Doorbell Ring!"
+            - title: "\U0001F514 Doorbell Ring!"
               color: warning
               image_url: "https://plainrock.fuzzyblender.com:8123/local/snapshots/front_porch_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
