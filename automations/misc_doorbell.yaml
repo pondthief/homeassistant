@@ -23,5 +23,5 @@
 #            path: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
           attachments:
             - title: "Doorbell Ring!"
-            - color: warning
-            - image_url: "https://plainrock.fuzzyblender.com:8123/local/snapshots/front_porch_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
+              color: warning
+              image_url: "https://plainrock.fuzzyblender.com:8123/local/snapshots/front_porch_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
