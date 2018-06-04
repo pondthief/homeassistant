@@ -21,3 +21,5 @@
         data:
           file:
             path: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
+          attachments:
+            - color: warning
