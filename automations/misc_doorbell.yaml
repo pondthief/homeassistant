@@ -15,7 +15,7 @@
         # filename: /config/www/doorbell.jpg
         filename: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
     - service: notify.slack
-      data:
+      data_template:
         message: 'Someone is at the door'
         target: '#alerts'
         data:
