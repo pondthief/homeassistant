@@ -1,4 +1,4 @@
 #-------------------------------------------
 #  Remove doorbell images older than 30 days
 #-------------------------------------------
-clean_doorbell_images: find /config/www/* -mtime +30 -exec rm {} \;
+clean_doorbell_images: find /config/www/snapshots/* -mtime +30 -exec rm {} \;
