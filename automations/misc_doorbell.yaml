@@ -13,18 +13,11 @@
       data_template:
         entity_id: camera.front_porch
         # filename: /config/www/doorbell.jpg
-        filename: "/config/www/snapshots/front_door_camera_{{ trigger.to_state.last_changed }}.jpg"
-#    - service: notify.slack
-#      data:
-#        message: 'Someone is at the door'
-#        data:
-#          file:
-#            path: "/config/www/snapshots/front_door_camera_{{ trigger.to_state.last_changed }}.jpg"
-    - service: notify.ios_chris_iphone
-      data_template:
-        message: "\U0001F514 Someone has pressed the door bell at {{now().strftime(\"%H:%M %d-%m-%y\")}}"
+        filename: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
+    - service: notify.slack
+      data:
+        message: 'Someone is at the door'
+        target: '#alerts'
         data:
-          attachment:
-            content-type: jpeg
-            url: "https://plainrock.fuzzyblender.com/local/snapshots/front_door_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
-          entity_id: camera.front_door_camera
+          file:
+            path: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
