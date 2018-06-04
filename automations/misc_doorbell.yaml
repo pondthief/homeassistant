@@ -22,7 +22,7 @@
 #            path: "/config/www/snapshots/front_door_camera_{{ trigger.to_state.last_changed }}.jpg"
     - service: notify.ios_chris_iphone
       data_template:
-        message: '\U0001F514 Someone has pressed the door bell at {{now().strftime("%H:%M %d-%m-%y")}}'
+        message: "\U0001F514 Someone has pressed the door bell at {{now().strftime(\"%H:%M %d-%m-%y\")}}"
         data:
           attachment:
             content-type: jpeg
