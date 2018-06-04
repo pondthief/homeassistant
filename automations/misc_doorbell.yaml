@@ -12,15 +12,12 @@
     - service: camera.snapshot
       data_template:
         entity_id: camera.front_porch
-        # filename: /config/www/doorbell.jpg
         filename: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
     - service: notify.slack
       data_template:
         message: 'Someone is at the door'
         target: '#alerts'
         data:
-#          file:
-#            path: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
           attachments:
             - title: "Doorbell Ring!"
               color: warning
