@@ -16,7 +16,6 @@
     - service: notify.slack
       data_template:
         message: ''
-        image_file: '{{ trigger.to_state.last_changed }}'
         target: '#alerts'
         data:
           file:
