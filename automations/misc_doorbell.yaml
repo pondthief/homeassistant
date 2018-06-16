@@ -16,9 +16,10 @@
     - service: notify.slack
       data_template:
         message: ''
+        image_file: '{{ trigger.to_state.last_changed }}'
         target: '#alerts'
         data:
           attachments:
             - title: "\U0001F514 Someone is at the front door!"
               color: warning
-              image_url: "https://plainrock.fuzzyblender.com:8123/local/snapshots/front_porch_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
+              image_url: "https://plainrock.fuzzyblender.com:8123/local/snapshots/front_porch_camera_{{ image_file|urlencode }}.jpg"
