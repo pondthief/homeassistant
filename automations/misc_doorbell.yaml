@@ -18,7 +18,8 @@
         message: ''
         target: '#alerts'
         data:
-          file: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
+#          file: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
           attachments:
             - title: "\U0001F514 Someone is at the front door!"
               color: warning
+              image_url: "https://plainrock.fuzzyblender.com/local/snapshots/front_porch_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
