@@ -17,6 +17,3 @@
     - service: switch.turn_off
       data:
         entity_id: switch.kitchen_island_switch
-    - service: notify.slack
-      data:
-        message: "\U0001F4A4 Getting ready for bed"

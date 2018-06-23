@@ -10,9 +10,10 @@
     from: 'closed'
     to: 'open'
   action:
-    - service: notify.slack
-      data:
-        message: "\U0001F6A8 A window has been opened, HVAC has been turned off"
+    - service: notify.email
+      data_template:
+        title: "\U0001F6A8 Window Opened"
+        message: "A window has been opened, so the HVAC system has been turned off"
     - service: climate.set_operation_mode
       entity_id: climate.hallway
       data:

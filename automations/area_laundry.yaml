@@ -14,9 +14,10 @@
     entity_id: group.family
     state: 'not_home'
   action:
-    - service: notify.slack
-      data:
-        message: "\U0001F511 Laundry Door has been unlocked"
+    - service: notify.email
+      data_template:
+        title: "\U0001F511 Laundry Door has been unlocked"
+        message: "The Laundry Room Door has been unlocked"
 
 #-------------------------------------------
 # Laundry Room Motion

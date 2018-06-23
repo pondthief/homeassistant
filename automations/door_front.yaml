@@ -13,9 +13,10 @@
     entity_id: group.family
     state: 'not_home'
   action:
-    - service: notify.slack
-      data:
-        message: "\U0001F6AA The front door has been opened"
+    - service: notify.email
+      data_template:
+        title: "\U0001F6AA The front door has been opened"
+        message: "The Front Door has been opened, and no one is currently home."
 
 #-------------------------------------------
 # Front Door Unlocked
@@ -29,6 +30,7 @@
       from: 'locked'
       to: 'unlocked'
   action:
-    - service: notify.slack
-      data:
-        message: "\U0001F511 Front Door has been unlocked"
+    - service: notify.email
+      data_template:
+        title: "\U0001F511 Front Door has been unlocked"
+        message: "The Front Door has been unlocked, and no one is currently home."

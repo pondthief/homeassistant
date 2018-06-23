@@ -23,10 +23,10 @@ homeassistant:
 shell_command: !include shell_commands.yaml
 
 #-------------------------------------------
-# Enable InfluxDB for graphs
+# Enable Datadog
 #-------------------------------------------
-influxdb:
-  host: ubuntu.fuzzyblender.com
+datadog:
+  host: !secret internal_host
 
 #-------------------------------------------
 # Recorder Settings
@@ -106,7 +106,7 @@ cover:
 # MQTT Settings
 #-------------------------------------------
 mqtt:
-  broker: ubuntu.fuzzyblender.com
+  broker: !secret internal_host
 
 #-------------------------------------------
 # History support
@@ -180,3 +180,10 @@ amcrest: !include amcrest.yaml
 # Device Tracking
 #-------------------------------------------
 device_tracker: !include device_tracker.yaml
+
+#-------------------------------------------
+# Twilio
+#-------------------------------------------
+twilio:
+  account_sid: !secret twilio_sid
+  auth_token: !secret twilio_key

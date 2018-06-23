@@ -1,7 +1,20 @@
 #-------------------------------------------
-#  Slack Notices
+#  Email Notices
 #-------------------------------------------
-  - name: slack
-    platform: slack
-    api_key: !secret slack_bot_key
-    default_channel: '#home'
+- name: email
+  platform: smtp
+  sender: !secret smtp_email
+  recipient:
+    - !secret chris_email
+    - !secret megan_email
+  server: !secret smtp_host
+  username: !secret smtp_user
+  password: !secret smtp_pass
+  sender_name: Home Assistant
+
+#-------------------------------------------
+#  SMS Notices
+#-------------------------------------------
+- name: sms
+  platform: twilio_sms
+  from_number: !secret twilio_num

@@ -11,9 +11,10 @@
     for:
       minutes: 30
   action:
-    - service: notify.slack
-      data:
-        message: "\U0001F525 Average house temp is at or above 78 degrees"
+    - service: notify.email
+      data_template:
+        title: "\U000026C4 High Temperature"
+        message: "The average house temp is at or above 78 degrees"
 
 #-------------------------------------------
 # Front Door Unlocked
@@ -28,6 +29,7 @@
     for:
       minutes: 30
   action:
-    - service: notify.slack
-      data:
-        message: "\U000026C4 Average house temp is at or above 78 degrees"
+    - service: notify.email
+      data_template:
+        title: "\U000026C4 Low Temperature"
+        message: "The average house temp is at or below 66 degrees"

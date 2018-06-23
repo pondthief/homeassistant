@@ -13,13 +13,9 @@
       data_template:
         entity_id: camera.front_porch
         filename: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
-    - service: notify.slack
+    - service: notify.sms
       data_template:
-        message: ''
-        target: '#alerts'
-        data:
-#          file: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
-          attachments:
-            - title: "\U0001F514 Someone is at the front door!"
-              color: warning
-              image_url: "https://plainrock.fuzzyblender.com/local/snapshots/front_porch_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
+        message: "\U0001F514 Someone is at the front door! https://plainrock.fuzzyblender.com/local/snapshots/front_porch_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
+        target:
+          - !secret chris_mobile
+          - !secret megan_mobile
