@@ -16,5 +16,5 @@
   action:
     - service: notify.email
       data_template:
-        title: "\U0001F697 {{ trigger.to_state.attributes.friendly_name }} has been opened"
+        title: "\U0001F697 {{ trigger.to_state.attributes.friendly_name }} Opened"
         message: "{{ trigger.to_state.attributes.friendly_name }} has been opened"

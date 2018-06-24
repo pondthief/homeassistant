@@ -16,3 +16,4 @@ enviroment_tab:
     - group.tv_room_enviroment
     - group.hallway_enviroment
     - group.garage_enviroment
+    - group.server_room_enviroment

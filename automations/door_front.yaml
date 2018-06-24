@@ -15,7 +15,7 @@
   action:
     - service: notify.email
       data_template:
-        title: "\U0001F6AA The front door has been opened"
+        title: "\U0001F6AA Front Door Opened"
         message: "The Front Door has been opened, and no one is currently home."
 
 #-------------------------------------------
@@ -32,5 +32,5 @@
   action:
     - service: notify.email
       data_template:
-        title: "\U0001F511 Front Door has been unlocked"
-        message: "The Front Door has been unlocked, and no one is currently home."
+        title: "\U0001F511 Front Door Unlocked"
+        message: "The Front Door has been unlocked."

@@ -1,0 +1,19 @@
+#-------------------------------------------
+#  Server Room
+#-------------------------------------------
+server_room:
+  name: Server Room
+  entities:
+
+server_room_sensors:
+  name: Server Room
+  entities:
+
+server_room_enviroment:
+  name: Server Room
+  entities:
+    - sensor.study_multisensor_motion
+    - sensor.study_multisensor_luminance
+    - sensor.study_multisensor_relative_humidity
+    - sensor.study_multisensor_temperature
+    - sensor.study_multisensor_ultraviolet
