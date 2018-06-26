@@ -1,0 +1,8 @@
+- platform: wirelesstag
+  monitored_conditions:
+    - presence
+    - cold
+    - heat
+    - low_battery
+    - dry
+    - wet

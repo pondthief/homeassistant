@@ -185,3 +185,10 @@ device_tracker: !include device_tracker.yaml
 twilio:
   account_sid: !secret twilio_sid
   auth_token: !secret twilio_key
+
+#-------------------------------------------
+# WirelessTag
+#-------------------------------------------
+wirelesstag:
+  username: !secret sense_username
+  password: !secret sense_password
