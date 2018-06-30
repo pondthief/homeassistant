@@ -17,3 +17,4 @@ enviroment_tab:
     - group.hallway_enviroment
     - group.garage_enviroment
     - group.server_room_enviroment
+    - group.master_bed_enviroment
