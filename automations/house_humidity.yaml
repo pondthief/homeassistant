@@ -7,11 +7,11 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.average_humidity
-    above: 55
+    above: 65
     for:
-      minutes: 30
+      minutes: 60
   action:
     - service: notify.email
       data_template:
         title: "\U0001F4A7 High Humidity"
-        message: "The average house humidity is at or above 56%"
+        message: "The average house humidity is at or above 65%"
