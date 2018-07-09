@@ -1,7 +1,7 @@
 #-------------------------------------------
 # Things to do at Bedtime
 #-------------------------------------------
-- alias: 'Bedtime'
+- alias: 'Sleep Time'
   initial_state: true
   hide_entity: true
   trigger:
