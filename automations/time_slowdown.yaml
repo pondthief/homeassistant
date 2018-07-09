@@ -1,0 +1,19 @@
+#-------------------------------------------
+# Slowdown Time
+#-------------------------------------------
+- alias: 'Slowdown Time'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: time
+    at: '20:50:00'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.study_overhead_switch
+    - service: light.turn_on
+      data:
+        entity_id: 
+          - light.study_cans_level
+        brightness: 50
