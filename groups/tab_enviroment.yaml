@@ -6,7 +6,6 @@ enviroment_tab:
   view: yes
   icon: mdi:flower
   entities:
-    - group.pollen
     - group.weather
     - group.guest_bath_enviroment
     - group.guest_room_enviroment
@@ -18,3 +17,5 @@ enviroment_tab:
     - group.garage_enviroment
     - group.server_room_enviroment
     - group.master_bed_enviroment
+    - group.laundry_room_enviroment
+    - group.clara_room_enviroment
