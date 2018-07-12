@@ -135,6 +135,23 @@
         message: "The battery for the PIR / enviromental sensor in the guest bathroom is low.  It requires one CR2450 battery."
 
 #-------------------------------------------
+# Master Bath PIR Low Battery
+#-------------------------------------------
+- alias: 'Master Bath Low Battery'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.master_bath_low_battery
+      from: 'off'
+      to: 'on'
+  action:
+    - service: notify.email
+      data_template:
+        title: "\U0001F50B Low Battery - Master Bath"
+        message: "The battery for the PIR / enviromental sensor in the master bath is low.  It requires one CR2450 battery."
+
+#-------------------------------------------
 # Front Door Lock Low Battery
 #-------------------------------------------
 - alias: 'Front Door Lock Low Battery'
