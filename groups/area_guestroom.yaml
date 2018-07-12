@@ -4,18 +4,17 @@
 guest_room:
   name: Guest Room
   entities:
-    - switch.guest_overhead_switch
+    - light.clara_overhead_level
 
 guest_room_sensors:
   name: Guest Room
   entities:
-    - sensor.guest_window
+    - sensor.child_window
 
 guest_room_enviroment:
   name: Guest Room
   entities:
-    - sensor.guest_multisensor_luminance
-    - sensor.guest_multisensor_motion
-    - sensor.guest_multisensor_relative_humidity
-    - sensor.guest_multisensor_temperature
-    - sensor.guest_multisensor_ultraviolet
+    - binary_sensor.guest_room_low_battery
+    - sensor.wirelesstag_guest_room_humidity
+    - sensor.wirelesstag_guest_room_light
+    - sensor.wirelesstag_guest_room_temperature

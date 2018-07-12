@@ -1,12 +1,20 @@
 #-------------------------------------------
-#  Claras Room
+#  Clara's Room
 #-------------------------------------------
-child_room:
+clara_room:
   name: Clara's Room
   entities:
-    - light.clara_overhead_level
+    - switch.guest_overhead_switch
 
-child_room_sensors:
+clara_roomsensors:
   name: Clara's Room
   entities:
-    - sensor.child_window
+    - sensor.guest_window
+
+clara_room_enviroment:
+  name: Clara's Room
+  entities:
+    - binary_sensor.clara_room_low_battery
+    - sensor.wirelesstag_clara_room_humidity
+    - sensor.wirelesstag_clara_room_light
+    - sensor.wirelesstag_clara_room_temperature

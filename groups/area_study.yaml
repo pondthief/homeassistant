@@ -15,8 +15,7 @@ study_sensors:
 study_enviroment:
   name: Study
   entities:
-    - sensor.study_multisensor_motion
-    - sensor.study_multisensor_luminance
-    - sensor.study_multisensor_relative_humidity
-    - sensor.study_multisensor_temperature
-    - sensor.study_multisensor_ultraviolet
+    - binary_sensor.study_low_battery
+    - sensor.wirelesstag_study_humidity
+    - sensor.wirelesstag_study_light
+    - sensor.wirelesstag_study_temperature
