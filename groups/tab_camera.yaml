@@ -10,4 +10,4 @@ camera_tab:
     - camera.driveway
     - camera.front_porch
     - camera.frontyard
-    - camera.garage_inside
+    - camera.garage
