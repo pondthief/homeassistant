@@ -10,4 +10,13 @@ system_tab:
     - group.internet_speeds
     - group.ups
     - group.all_automations
-    - group.ping_devices
+    - group.camera_status
+
+camera_status:
+  name: Camera Status
+  entities:
+     - binary_sensor.deck_camera_status
+     - binary_sensor.driveway_camera_status
+     - binary_sensor.front_yard_camera_status
+     - binary_sensor.garage_camera_status
+     - binary_sensor.porch_camera_status
