@@ -15,7 +15,6 @@ guest_bath_sensors:
 guest_bath_enviroment:
   name: Guest Bathroom
   entities:
-    - binary_sensor.guest_bath_low_battery
     - sensor.wirelesstag_guest_bath_light
     - sensor.wirelesstag_guest_bath_humidity
     - sensor.wirelesstag_guest_bath_temperature

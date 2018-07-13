@@ -6,7 +6,7 @@ clara_room:
   entities:
     - switch.guest_overhead_switch
 
-clara_roomsensors:
+clara_room_sensors:
   name: Clara's Room
   entities:
     - sensor.guest_window
@@ -14,7 +14,6 @@ clara_roomsensors:
 clara_room_enviroment:
   name: Clara's Room
   entities:
-    - binary_sensor.clara_room_low_battery
     - sensor.wirelesstag_clara_room_humidity
     - sensor.wirelesstag_clara_room_light
     - sensor.wirelesstag_clara_room_temperature

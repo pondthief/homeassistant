@@ -6,7 +6,7 @@ default_view:
   icon: mdi:home
   entities:
     - group.family_location
-    - group.thermostat
+    - climate.hallway
     - group.doors
     - group.quick_glance
     - group.garage

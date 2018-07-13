@@ -16,7 +16,6 @@ master_bath_sensors:
 master_bath_enviroment:
   name: Master Bathroom
   entities:
-    - binary_sensor.master_bath_low_battery
     - sensor.wirelesstag_master_bath_humidity
     - sensor.wirelesstag_master_bath_light
     - sensor.wirelesstag_master_bath_temperature

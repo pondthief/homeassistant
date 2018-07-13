@@ -1,20 +1,21 @@
 #-------------------------------------------
-#  Craft Room
+#  Play Area
 #-------------------------------------------
-craft_room:
+play_area:
   name: Play Area
   entities:
     - switch.craft_cans_switch
 
-craft_room_sensors:
+play_area_sensors:
   name: Play Area
   entities:
+    - sensor.front_window_one
+    - sensor.front_window_two
     - sensor.front_right_window
-  
-craft_room_enviroment:
+
+play_area_enviroment:
   name: Play Area
   entities:
-    - binary_sensor.play_area_low_battery
     - sensor.wirelesstag_play_area_humidity
     - sensor.wirelesstag_play_area_light
     - sensor.wirelesstag_play_area_temperature

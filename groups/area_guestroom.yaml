@@ -14,7 +14,6 @@ guest_room_sensors:
 guest_room_enviroment:
   name: Guest Room
   entities:
-    - binary_sensor.guest_room_low_battery
     - sensor.wirelesstag_guest_room_humidity
     - sensor.wirelesstag_guest_room_light
     - sensor.wirelesstag_guest_room_temperature

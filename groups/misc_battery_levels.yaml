@@ -1,0 +1,20 @@
+#-------------------------------------------
+#  Battery Levels
+#-------------------------------------------
+battery_levels:
+  name: Battery Levels
+  entities:
+    - binary_sensor.clara_room_low_battery
+    - binary_sensor.play_area_low_battery
+    - binary_sensor.guest_bath_low_battery
+    - binary_sensor.guest_room_low_battery
+    - binary_sensor.kitchen_low_battery
+    - binary_sensor.laundry_room_low_battery
+    - binary_sensor.master_bath_low_battery
+    - binary_sensor.masterbed_low_battery
+    - binary_sensor.play_area_low_battery
+    - binary_sensor.study_low_battery
+    - sensor.laundry_multisensor_battery
+    - sensor.front_door_battery
+    - sensor.back_door_battery
+    - sensor.garage_door_battery

@@ -18,7 +18,6 @@ master_bed_sensors:
 master_bed_enviroment:
   name: Master Bedroom
   entities:
-    - binary_sensor.masterbed_low_battery
     - sensor.wirelesstag_masterbed_humidity
     - sensor.wirelesstag_masterbed_light
     - sensor.wirelesstag_masterbed_temperature

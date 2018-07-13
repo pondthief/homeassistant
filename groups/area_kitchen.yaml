@@ -23,7 +23,6 @@ kitchen_sensors:
 kitchen_enviroment:
   name: Kitchen
   entities:
-    - binary_sensor.kitchen_low_battery
     - sensor.wirelesstag_kitchen_humidity
     - sensor.wirelesstag_kitchen_light
     - sensor.wirelesstag_kitchen_temperature

@@ -12,7 +12,7 @@ enviroment_tab:
     - group.kitchen_enviroment
     - group.master_bath_enviroment
     - group.study_enviroment
-    - group.tv_room_enviroment
+    - group.play_area_enviroment
     - group.hallway_enviroment
     - group.garage_enviroment
     - group.server_room_enviroment

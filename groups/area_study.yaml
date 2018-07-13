@@ -15,7 +15,6 @@ study_sensors:
 study_enviroment:
   name: Study
   entities:
-    - binary_sensor.study_low_battery
     - sensor.wirelesstag_study_humidity
     - sensor.wirelesstag_study_light
     - sensor.wirelesstag_study_temperature
