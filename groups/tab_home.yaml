@@ -6,7 +6,7 @@ default_view:
   icon: mdi:home
   entities:
     - group.family_location
-    - climate.hallway
+    - group.thermo
     - group.doors
     - group.quick_glance
     - group.garage
@@ -26,3 +26,9 @@ doors:
     - lock.front_door_locked
     - lock.back_door_locked
     - lock.garage_door_locked
+
+thermo:
+  name: Thermostat
+  entities:
+    - climate.hallway
+    

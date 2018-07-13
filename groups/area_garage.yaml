@@ -16,8 +16,6 @@ garage_sensors:
 garage_enviroment:
   name: Garage
   entities:
-    - sensor.aeotec_zw100_multisensor_6_temperature
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity
-    - sensor.aeotec_zw100_multisensor_6_luminance
-    - sensor.garage_multisensor_motion
+    - sensor.wirelesstag_garage_humidity
+    - sensor.wirelesstag_garage_light
+    - sensor.wirelesstag_garage_temperature
