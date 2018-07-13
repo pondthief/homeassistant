@@ -1,0 +1,44 @@
+#-------------------------------------------
+#  Internal Monitoring
+#-------------------------------------------
+- platform: command_line
+  name: Driveway Camera Status
+  command: curl -s http://192.168.7.59 > nul && (echo "online") || (echo "offline")
+  device_class: connectivity
+  payload_on: "online"
+  payload_off: "offline"
+  scan_interval: 1800 # every 30 minutes
+
+- platform: command_line
+  name: Deck Camera Status
+  command: curl -s http://192.168.7.62 > nul && (echo "online") || (echo "offline")
+  device_class: connectivity
+  payload_on: "online"
+  payload_off: "offline"
+  scan_interval: 1800 # every 30 minutes
+
+- platform: command_line
+  name: Porch Camera Status
+  command: curl -s http://192.168.7.60 > nul && (echo "online") || (echo "offline")
+  device_class: connectivity
+  payload_on: "online"
+  payload_off: "offline"
+  scan_interval: 1800 # every 30 minutes
+
+- platform: command_line
+  name: Front Yard Camera Status
+  command: curl -s http://192.168.7.58 > nul && (echo "online") || (echo "offline")
+  device_class: connectivity
+  payload_on: "online"
+  payload_off: "offline"
+  scan_interval: 1800 # every 30 minutes
+
+- platform: command_line
+  name: Garage Camera Status
+  command: curl -s http://192.168.7.61 > nul && (echo "online") || (echo "offline")
+  device_class: connectivity
+  payload_on: "online"
+  payload_off: "offline"
+  scan_interval: 1800 # every 30 minutes
+
+# todo, monitor door bell device!

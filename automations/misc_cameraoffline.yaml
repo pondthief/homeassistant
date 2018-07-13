@@ -1,0 +1,67 @@
+#-------------------------------------------
+# Camera Offline
+#-------------------------------------------
+- alias: 'Driveway Camera Offline'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.driveway_camera_status
+    to: 'off'
+  action:
+    - service: notify.email
+      data_template:
+        title: "\U0001F4F7 Security Camera Offline - Driveway"
+        message: "Unable to contact the driveway camera."
+
+- alias: 'Deck Camera Offline'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.deck_camera_status
+    to: 'off'
+  action:
+    - service: notify.email
+      data_template:
+        title: "\U0001F4F7 Security Camera Offline - Deck"
+        message: "Unable to contact the deck camera."
+    
+- alias: 'Porch Camera Offline'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.porch_camera_status
+    to: 'off'
+  action:
+    - service: notify.email
+      data_template:
+        title: "\U0001F4F7 Security Camera Offline - Porch"
+        message: "Unable to contact the porch camera."
+
+- alias: 'Front Yard Camera Offline'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.frontyard_camera_status
+    to: 'off'
+  action:
+    - service: notify.email
+      data_template:
+        title: "\U0001F4F7 Security Camera Offline - Porch"
+        message: "Unable to contact the porch camera."
+
+- alias: 'Garage Camera Offline'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_camera_status
+    to: 'off'
+  action:
+    - service: notify.email
+      data_template:
+        title: "\U0001F4F7 Security Camera Offline - Garage"
+        message: "Unable to contact the garage camera."
