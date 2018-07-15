@@ -17,7 +17,7 @@
 #-------------------------------------------
 - platform: nut
   name: Synology
-  host: 192.168.7.3
+  host: 192.168.128.3
   resources:
     - ups.load
     - battery.runtime

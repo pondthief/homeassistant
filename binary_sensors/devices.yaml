@@ -11,15 +11,15 @@
 
 - platform: command_line
   name: Deck Camera Status
-  command: curl -s http://192.168.7.62 > nul && (echo "online") || (echo "offline")
+  command: curl -s http://192.168.128.227 > nul && (echo "online") || (echo "offline")
   device_class: connectivity
   payload_on: "online"
   payload_off: "offline"
   scan_interval: 1800 # every 30 minutes
 
 - platform: command_line
-  name: Porch Camera Status
-  command: curl -s http://192.168.7.60 > nul && (echo "online") || (echo "offline")
+  name: Front Door Camera Status
+  command: curl -s http://192.168.128.241 > nul && (echo "online") || (echo "offline")
   device_class: connectivity
   payload_on: "online"
   payload_off: "offline"
@@ -27,7 +27,7 @@
 
 - platform: command_line
   name: Front Yard Camera Status
-  command: curl -s http://192.168.7.58 > nul && (echo "online") || (echo "offline")
+  command: curl -s http://192.168.128.237 > nul && (echo "online") || (echo "offline")
   device_class: connectivity
   payload_on: "online"
   payload_off: "offline"
@@ -35,7 +35,7 @@
 
 - platform: command_line
   name: Garage Camera Status
-  command: curl -s http://192.168.7.61 > nul && (echo "online") || (echo "offline")
+  command: curl -s http://192.168.128.249 > nul && (echo "online") || (echo "offline")
   device_class: connectivity
   payload_on: "online"
   payload_off: "offline"

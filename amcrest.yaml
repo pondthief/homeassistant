@@ -20,7 +20,7 @@
   password: !secret amcrest_pass
 
 - host: 192.168.128.237
-  name: Frontyard
+  name: Front Yard
   stream_source: rtsp
   username: !secret amcrest_user
   password: !secret amcrest_pass
