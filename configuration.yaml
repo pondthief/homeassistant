@@ -195,8 +195,8 @@ wirelesstag:
   password: !secret sense_password
 
 #-------------------------------------------
-# Sonos
+# discovery
 #-------------------------------------------
-sonos:
-  media_player:
-    interface_addr: 192.168.128.240
+discovery:
+  ignore:
+    - roku
