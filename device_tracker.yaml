@@ -8,7 +8,7 @@
 #-------------------------------------------
 # Car Trackers
 #-------------------------------------------
-- platform: mqtt_json
-  devices:
-    chris_car: location/chris
-    megan_car: location/megan
+#- platform: mqtt_json
+#  devices:
+#    chris_car: location/chris
+#    megan_car: location/megan
