@@ -1,7 +1,7 @@
 #-------------------------------------------
 # Overhead Garage Door Opened Notice
 #-------------------------------------------
-- alias: "Overhead Garage Door Opened"
+- alias: "Garage Door 1 Opened"
   initial_state: true
   hide_entity: true
   trigger:
@@ -9,6 +9,19 @@
       entity_id: cover.garage_door_opener_1
       from: 'closed'
       to: 'open'
+  action:
+    - service: notify.email
+      data_template:
+        title: "\U0001F697 Garage Door 1 Opened"
+        message: "Hi! Garage Door 1 has been opened."
+
+#-------------------------------------------
+# Overhead Garage Door Opened Notice
+#-------------------------------------------
+- alias: "Garage Door 2 Opened"
+  initial_state: true
+  hide_entity: true
+  trigger:
     - platform: state
       entity_id: cover.garage_door_opener_2
       from: 'closed'
@@ -16,5 +29,5 @@
   action:
     - service: notify.email
       data_template:
-        title: "\U0001F697 {{ trigger.to_state.attributes.friendly_name }} Opened"
-        message: "{{ trigger.to_state.attributes.friendly_name }} has been opened"
+        title: "\U0001F697 Garage Door 2 Opened"
+        message: "Hi! Garage Door 2 has been opened."
