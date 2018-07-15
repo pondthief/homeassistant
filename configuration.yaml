@@ -199,4 +199,4 @@ wirelesstag:
 #-------------------------------------------
 sonos:
   media_player:
-    hosts: 192.168.128.240
+    interface_addr: 192.168.128.240
