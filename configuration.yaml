@@ -105,6 +105,7 @@ cover:
 #-------------------------------------------
 mqtt:
   broker: !secret internal_host
+  discovery: true
 
 #-------------------------------------------
 # History support
