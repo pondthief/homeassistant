@@ -197,7 +197,6 @@ wirelesstag:
 #-------------------------------------------
 # Sonos
 #-------------------------------------------
-media_player:
-  - platform: sonos
-    host: 192.168.128.240
-    name: Kitchen
+sonos:
+  media_player:
+    hosts: 192.168.128.240

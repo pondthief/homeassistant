@@ -6,8 +6,8 @@
   hide_entity: true
   trigger:
     platform: state
-    entity_id: sensor.doorbell
-    to: 'ring'
+    entity_id: binary_sensor.doorbell
+    to: 'on'
   action:
     - service: camera.snapshot
       data_template:
@@ -19,3 +19,13 @@
         target:
           - !secret chris_mobile
           - !secret megan_mobile
+#    - service: media_player.volume_set
+#      data:
+#        entity_id: media_player.kkken
+#        volume_level: 0.20
+#    - delay: '00:00:01'
+#    - service: media_player.play_media
+#      data:
+#        entity_id: media_player.kkken
+#        media_content_id: /local/doorbell-trumpet-sound.mp3
+#        media_content_type: 'music'
