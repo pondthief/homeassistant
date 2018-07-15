@@ -200,3 +200,8 @@ wirelesstag:
 discovery:
   ignore:
     - roku
+
+sonos:
+  media_player:
+    hosts:
+      - 192.168.128.240
