@@ -193,3 +193,10 @@ twilio:
 wirelesstag:
   username: !secret sense_username
   password: !secret sense_password
+
+#-------------------------------------------
+# Sonos
+#-------------------------------------------
+sonos:
+  media_player:
+    hosts: 192.168.128.240
