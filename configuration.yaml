@@ -197,6 +197,7 @@ wirelesstag:
 #-------------------------------------------
 # Sonos
 #-------------------------------------------
-sonos:
-  media_player:
-    hosts: 192.168.128.240
+media_player:
+  sonos:
+    media_player:
+      hosts: 192.168.128.240
