@@ -3,5 +3,4 @@
 #-------------------------------------------
 default: error
 logs:
-  homeassistant.components.sensor.foobot: error
-  homeassistant.components.telegram_bot: debug
+  homeassistant.components.cover.myq: error
