@@ -11,11 +11,11 @@
   action:
     - service: camera.snapshot
       data_template:
-        entity_id: camera.front_porch
-        filename: "/config/www/snapshots/front_porch_camera_{{ trigger.to_state.last_changed }}.jpg"
+        entity_id: camera.front_door
+        filename: "/config/www/snapshots/front_door_camera_{{ trigger.to_state.last_changed }}.jpg"
     - service: notify.sms
       data_template:
-        message: "\U0001F514 Someone is at the front door! https://plainrock.fuzzyblender.com/local/snapshots/front_porch_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
+        message: "\U0001F514 Someone is at the front door! https://plainrock.fuzzyblender.com/local/snapshots/front_door_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
         target:
           - !secret chris_mobile
           - !secret megan_mobile
