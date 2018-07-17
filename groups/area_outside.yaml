@@ -27,9 +27,9 @@ outside_cameras:
   name: Outside Cameras
   entities:
     - camera.driveway
-    - camera.front_porch
+    - camera.front_door
     - camera.garage_inside
-    - camera.frontyard
+    - camera.front_yard
     - camera.deck
 
 #-------------------------------------------
