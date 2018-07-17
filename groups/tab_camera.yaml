@@ -6,8 +6,8 @@ camera_tab:
   view: yes
   icon: mdi:camera
   entities:
-    - camera.deck
     - camera.driveway
-    - camera.front_porch
-    - camera.frontyard
-    - camera.garage
+    - camera.front_door
+    - camera.garage_inside
+    - camera.front_yard
+    - camera.deck
