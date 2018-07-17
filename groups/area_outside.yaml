@@ -28,7 +28,7 @@ outside_cameras:
   entities:
     - camera.driveway
     - camera.front_door
-    - camera.garage_inside
+    - camera.garage
     - camera.front_yard
     - camera.deck
 
