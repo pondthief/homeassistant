@@ -200,6 +200,7 @@ wirelesstag:
 discovery:
   ignore:
     - roku
+    - google_cast
 
 sonos:
   media_player:
