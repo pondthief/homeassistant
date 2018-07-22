@@ -13,3 +13,19 @@
       data_template:
         title: "\U0001F50B Main Power Offline"
         message: "Main power lost, running on UPS power"
+
+#-------------------------------------------
+# Main Power Restored
+#-------------------------------------------
+- alias: 'Main Power Restored'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.synology_status_data
+    to: 'OL'
+  action:
+    - service: notify.email
+      data_template:
+        title: "\U0001F50C Main Power Restored"
+        message: "Main power restored, now running on city power."
