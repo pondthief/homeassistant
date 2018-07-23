@@ -14,9 +14,10 @@
     entity_id: group.family
     state: 'not_home'
   action:
-    - service: notify.slack
-      data:
-        message: "\U0001F511 Back door has been unlocked"
+    - service: notify.email
+      data_template:
+        title: "\U0001F511 Back Door Unlocked"
+        message: "The back door has been unlocked."
 
 #-------------------------------------------
 # Turn on deck back door if night / open
