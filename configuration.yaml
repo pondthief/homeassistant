@@ -23,9 +23,9 @@ homeassistant:
 shell_command: !include shell_commands.yaml
 
 #-------------------------------------------
-# Enable Datadog
+# Enable InfluxDB
 #-------------------------------------------
-datadog:
+influxdb:
   host: !secret internal_host
 
 #-------------------------------------------
@@ -66,7 +66,6 @@ http:
   ssl_key: !secret ssl_key
   trusted_networks:
     - 127.0.0.1
-    - 192.168.7.0/24
     - 192.168.128.0/24
 
 #-------------------------------------------
