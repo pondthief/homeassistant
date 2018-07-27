@@ -1,0 +1,23 @@
+#-------------------------------------------
+# Equinox Arrive Home
+#-------------------------------------------
+- alias: "Equinox Arrive Home"
+  initial_state: true
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.3a002d000247363333343435
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: group.family
+      to: 'not_home'
+  action:
+    - service: lock.unlock
+      data:
+        entity_id: lock.front_door_locked
+    - service: notify.email
+      data_template:
+        title: "\U0001F44B The Equinox Has Arrived"
+        message: "The Equinox has arrived home.  The front door has been unlocked."
+
