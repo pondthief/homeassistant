@@ -11,7 +11,7 @@
   condition:
     - condition: state
       entity_id: group.family
-      to: 'not_home'
+      state: 'not_home'
   action:
     - service: lock.unlock
       data:
