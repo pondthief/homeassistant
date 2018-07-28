@@ -1,0 +1,26 @@
+- platform: synology
+  url: !secret synology_host
+  username: !secret synology_user
+  password: !secret synology_pass
+  timeout: 15
+
+- platform: amcrest
+
+amcrest:
+  - host: 192.168.128.249
+    name: Garage
+    stream_source: rtsp
+    username: !secret amcrest_user
+    password: !secret amcrest_pass
+
+  - host: 192.168.128.237
+    name: Front Yard
+    stream_source: rtsp
+    username: !secret amcrest_user
+    password: !secret amcrest_pass
+
+  - host: 192.168.128.227
+    name: Deck
+    stream_source: rtsp
+    username: !secret amcrest_user
+    password: !secret amcrest_pass

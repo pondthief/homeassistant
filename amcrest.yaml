@@ -1,17 +1,17 @@
 #-------------------------------------------
 #  Amcrest Cameras
 #-------------------------------------------
-- host: 192.168.128.226
-  name: Driveway
-  stream_source: rtsp
-  username: !secret amcrest_user
-  password: !secret amcrest_pass
+#- host: 192.168.128.226
+#  name: Driveway
+#  stream_source: rtsp
+#  username: !secret amcrest_user
+#  password: !secret amcrest_pass
 
-- host: 192.168.128.241
-  name: Front Door
-  stream_source: rtsp
-  username: !secret amcrest_user
-  password: !secret amcrest_pass
+#- host: 192.168.128.241
+#  name: Front Door
+#  stream_source: rtsp
+#  username: !secret amcrest_user
+#  password: !secret amcrest_pass
 
 - host: 192.168.128.249
   name: Garage

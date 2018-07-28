@@ -87,8 +87,7 @@ nest: !include nest.yaml
 #-------------------------------------------
 # Enable cameras
 #-------------------------------------------
-camera:
-  - platform: amcrest
+camera: !include cameras.yaml
 
 #-------------------------------------------
 # Enable covers
