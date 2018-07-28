@@ -1,6 +1,6 @@
 #-------------------------------------------
 #  Logger Component
-# Log Severities: notset, debug, info, warn, warning, error, fatal, critical
+#  Log Severities: notset, debug, info, warn, warning, error, fatal, critical
 #-------------------------------------------
 default: critical
 logs:
