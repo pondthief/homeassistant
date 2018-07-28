@@ -2,7 +2,7 @@
 #  Logger Component
 # Log Severities: notset, debug, info, warn, warning, error, fatal, critical
 #-------------------------------------------
-default: info
+default: critical
 logs:
   aiohttp.access: critical
   aiohttp.server: critical
@@ -25,3 +25,4 @@ logs:
   py.warnings: error
   requests.packages.urllib3.connectionpool: critical
   root: warn
+  netdisco.ssdp: critical
