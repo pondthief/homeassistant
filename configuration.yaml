@@ -171,7 +171,7 @@ script: !include_dir_merge_named scripts
 #-------------------------------------------
 # Include aleamcrestrts
 #-------------------------------------------
-amcrest: !include amcrest.yaml
+# amcrest: !include amcrest.yaml
 
 #-------------------------------------------
 # Device Tracking
