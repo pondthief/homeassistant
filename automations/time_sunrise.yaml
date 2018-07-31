@@ -19,3 +19,8 @@
           - switch.front_yard_switch
           - switch.deck_flood_switch
           - switch.outside_security_switch
+    - service: notify.email
+      data_template:
+        title: "\U0001F305 Good Morning!"
+        message: "The sun is rising and the day has begun. I've turned off the outside lights and indoor night lights."
+

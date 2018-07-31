@@ -23,3 +23,12 @@
     - service: lock.lock
       data:
         entity_id: group.all_locks
+    - service: notify.email
+      data_template:
+        title: "\U0001F307 Have a good evening!"
+        message: "The system has hit sunset mode.  Outside decorative lights are on, doors are locked, and inside lights were turned on."
+
+
+
+
+        
