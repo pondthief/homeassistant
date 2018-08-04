@@ -17,7 +17,7 @@
     - service: notify.email
       data_template:
         title: "\U0001F511 Back Door Unlocked"
-        message: "The back door has been unlocked ({{{ trigger.to_state.lock_status }})."
+        message: "The back door has been unlocked ({{ trigger.to_state.lock_status }})."
 
 #-------------------------------------------
 # Turn on deck back door if night / open
