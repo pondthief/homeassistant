@@ -8,7 +8,7 @@ control_tab:
   entities:
     - group.study
     - group.guest_room
-    - group.child_room
+    - group.clara_room
     - group.guest_bath
     - group.living_room
     - group.craft_room
