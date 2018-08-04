@@ -33,4 +33,4 @@
     - service: notify.email
       data_template:
         title: "\U0001F511 Front Door Unlocked"
-        message: "The Front Door has been unlocked."
+        message: "The Front Door has been unlocked ({{{ trigger.to_state.lock_status }})."
