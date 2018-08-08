@@ -4,8 +4,9 @@
 #-------------------------------------------
 default: critical
 logs:
-  aiohttp.access: critical
-  aiohttp.server: critical
+  homeassistant.components.http: debug
+#  aiohttp.access: critical
+#  aiohttp.server: critical
   homeassistant.core: error
   homeassistant.components.automation: warn
   homeassistant.components.binary_sensor: error
