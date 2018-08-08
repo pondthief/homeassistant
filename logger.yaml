@@ -4,7 +4,6 @@
 #-------------------------------------------
 default: critical
 logs:
-  homeassistant.components.http: debug
 #  aiohttp.access: critical
 #  aiohttp.server: critical
   homeassistant.core: error
@@ -13,7 +12,7 @@ logs:
   homeassistant.components.climate.nest: warn
   homeassistant.components.device_tracker: error
   homeassistant.components.discovery: warn
-  homeassistant.components.http: warn
+  homeassistant.components.http: debug
   homeassistant.components.media_player: warn
   homeassistant.components.cover: critical
   homeassistant.components.sensor.rest: critical
