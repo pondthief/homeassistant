@@ -2,17 +2,17 @@
 #  Logger Component
 #  Log Severities: notset, debug, info, warn, warning, error, fatal, critical
 #-------------------------------------------
-default: debug
+default: critical
 logs:
-#  aiohttp.access: critical
-#  aiohttp.server: critical
-#  homeassistant.core: error
+  aiohttp.access: critical
+  aiohttp.server: critical
+  homeassistant.core: error
   homeassistant.components.automation: warn
   homeassistant.components.binary_sensor: error
   homeassistant.components.climate.nest: warn
   homeassistant.components.device_tracker: error
   homeassistant.components.discovery: warn
-  homeassistant.components.http: debug
+  homeassistant.components.http: warn
   homeassistant.components.media_player: warn
   homeassistant.components.cover: critical
   homeassistant.components.sensor.rest: critical
