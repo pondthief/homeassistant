@@ -15,7 +15,7 @@
         filename: "/config/www/snapshots/front_door_camera_{{ trigger.to_state.last_changed }}.jpg"
     - service: notify.sms
       data_template:
-        message: "\U0001F514 Someone is at the front door! https://plainrock.fuzzyblender.com/local/snapshots/front_door_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
+        message: "\U0001F514 Someone is at the front door! https://ha.fuzzyblender.com/local/snapshots/front_door_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
         target:
           - !secret chris_mobile
           - !secret megan_mobile
@@ -27,5 +27,5 @@
     - service: media_player.play_media
       data:
         entity_id: media_player.kitchen
-        media_content_id: https://plainrock.fuzzyblender.com/local/doorbell.mp3
+        media_content_id: https://has.fuzzyblender.com/local/doorbell.mp3
         media_content_type: 'music'
