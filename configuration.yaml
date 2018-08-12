@@ -102,7 +102,7 @@ cover:
 # MQTT Settings
 #-------------------------------------------
 mqtt:
-  broker: !secret internal_host
+  broker: !secret mqtt_host
   discovery: true
 
 #-------------------------------------------
