@@ -1,11 +1,11 @@
 #-------------------------------------------
 #  Sense Energy Monitor
 #-------------------------------------------
-#- platform: sense
-#  email: !secret sense_username
-#  password: !secret sense_password
-#  monitored_conditions:
-#    - active_usage
-#    - active_production
-#    - daily_usage
-#    - daily_production
+- platform: sense
+  email: !secret sense_username
+  password: !secret sense_password
+  monitored_conditions:
+    - active_usage
+    - active_production
+    - daily_usage
+    - daily_production
