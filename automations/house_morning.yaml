@@ -24,3 +24,20 @@
         title: "\U0001F305 Good Morning!"
         message: "The sun is rising and the day has begun. I've turned off the outside lights and indoor night lights."
 
+#-------------------------------------------
+# Weekday Morning Actions
+#-------------------------------------------
+- alias: 'Weekday Morning Actions'
+  initial_state: true
+  trigger:
+    platform: time
+    at: '06:30:00'
+  condition:
+    condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.kitchen_island_switch

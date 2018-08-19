@@ -16,18 +16,18 @@
         message: "Hi! Garage Door 1 has been opened."
 
 #-------------------------------------------
-# Overhead Garage Door Opened Notice
+# Overhead Garage Door Closed Notice
 #-------------------------------------------
-- alias: "Garage Door 2 Opened"
+- alias: "Garage Door 1 Closed"
   initial_state: true
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: cover.garage_door_opener_2
-      from: 'closed'
-      to: 'open'
+      entity_id: cover.garage_door_opener_1
+      from: 'open'
+      to: 'closed'
   action:
     - service: notify.email
       data_template:
-        title: "\U0001F697 Garage Door 2 Opened"
-        message: "Hi! Garage Door 2 has been opened."
+        title: "\U0001F697 Garage Door 1 Closed"
+        message: "Hi! Garage Door 1 has been closed."

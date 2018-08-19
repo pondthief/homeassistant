@@ -70,17 +70,6 @@ http:
     - 192.168.128.0/24
 
 #-------------------------------------------
-# Checks for available updates
-#-------------------------------------------
-updater:
-  include_used_components: true
-
-#-------------------------------------------
-# Image Processing
-#-------------------------------------------
-image_processing: !include image_processing.yaml
-
-#-------------------------------------------
 # Enable Nest
 #-------------------------------------------
 nest: !include nest.yaml

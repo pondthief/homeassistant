@@ -17,6 +17,10 @@
       data_template:
         title: "\U0001F6AA Front Door Opened"
         message: "The Front Door has been opened, and no one is currently home."
+    - service: camera.snapshot
+      data_template:
+        entity_id: camera.front_door
+        filename: "/config/www/snapshots/front_door_open_{{ trigger.to_state.last_changed }}.jpg"
 
 #-------------------------------------------
 # Front Door Unlocked

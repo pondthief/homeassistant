@@ -1,5 +1,0 @@
-#- platform: facebox
-#  ip_address: 
-#  port: 8080
-#  source:
-#    - entity_id: camera.front_yard_snapshot 

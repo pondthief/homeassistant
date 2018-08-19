@@ -17,7 +17,7 @@
         message: "The average house temp is at or above 78 degrees"
 
 #-------------------------------------------
-# Front Door Unlocked
+# Too Cold Alert
 #-------------------------------------------
 - alias: "Too Cold Alert"
   initial_state: true
@@ -25,11 +25,11 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.average_temperature
-    below: 67
+    below: 64
     for:
       minutes: 30
   action:
     - service: notify.email
       data_template:
         title: "\U000026C4 Low Temperature"
-        message: "The average house temp is at or below 66 degrees"
+        message: "The average house temp is at or below 64 degrees"

@@ -1,25 +1,4 @@
 #-------------------------------------------
-# Laundry Door Unlocked
-#-------------------------------------------
-- alias: "Garage Door Unlocked"
-  initial_state: true
-  hide_entity: true
-  trigger:
-    - platform: state
-      entity_id: lock.garage_door_locked
-      from: 'locked'
-      to: 'unlocked'
-  condition:
-    condition: state
-    entity_id: group.family
-    state: 'not_home'
-  action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F511 Laundry Door Unlocked"
-        message: "The Laundry Room Door has been unlocked; however I don't detect anyone home"
-
-#-------------------------------------------
 # Laundry Room Motion
 #-------------------------------------------
 - alias: 'Laundry Room Motion'

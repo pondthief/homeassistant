@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Use Synology for Cameras 
+#-------------------------------------------
 - platform: synology
   url: !secret synology_host
   username: !secret synology_user
