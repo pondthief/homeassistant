@@ -3,7 +3,6 @@
 #-------------------------------------------
 - alias: "Garage Door 1 Opened"
   initial_state: true
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: cover.garage_door_opener_1
@@ -20,7 +19,6 @@
 #-------------------------------------------
 - alias: "Garage Door 1 Closed"
   initial_state: true
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: cover.garage_door_opener_1
