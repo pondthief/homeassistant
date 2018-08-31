@@ -31,7 +31,7 @@ influxdb:
 #-------------------------------------------
 # Enable InfluxDB
 #-------------------------------------------
-input_boolean: !include_dir_merge_list input_boolean
+input_boolean: !include_dir_merge_named input_booleans
 
 #-------------------------------------------
 # Recorder Settings
