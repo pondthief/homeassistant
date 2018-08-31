@@ -1,0 +1,4 @@
+known_guests:
+  name: Known People
+  entities:
+    - device_tracker.wendy_iphone

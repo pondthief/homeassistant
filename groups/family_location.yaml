@@ -12,8 +12,3 @@ family_location:
   entities:
     - device_tracker.chris_iphone_x
     - device_tracker.megan_iphone_8
-
-known_guests:
-  name: Known Guests
-  entities:
-    - device_tracker.wendy_iphone

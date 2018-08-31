@@ -1,5 +1,5 @@
 enable_alerts:
-  friendly_name: 'Alerts Enabled'
+  name: Alerts Enabled
   hidden: false
   homebridge_hidden: true
   icon: mdi:alert-octagram
