@@ -3,11 +3,16 @@
 #-------------------------------------------
 - alias: "Garage Door 2 Opened"
   initial_state: true
+  hide_entity: true
   trigger:
     - platform: state
       entity_id: cover.garage_door_opener_2
       from: 'closed'
       to: 'open'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_alerts
+    state: 'on'
   action:
     - service: notify.email
       data_template:
@@ -19,11 +24,16 @@
 #-------------------------------------------
 - alias: "Garage Door 2 Closed"
   initial_state: true
+  hide_entity: true
   trigger:
     - platform: state
       entity_id: cover.garage_door_opener_2
       from: 'open'
       to: 'closed'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_alerts
+    state: 'on'
   action:
     - service: notify.email
       data_template:

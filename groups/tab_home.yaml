@@ -10,6 +10,7 @@ default_view:
     - group.doors
     - group.quick_glance
     - group.garage
+    - group.quick_settings
 
 quick_glance:
   name: Quick Stats
@@ -19,6 +20,13 @@ quick_glance:
     - sensor.average_temperature
     - sensor.all_doors
     - sensor.all_windows
+
+quick_settings:
+  name: Quick Settings
+  control: hidden
+  entities:
+    - input_boolean.enable_alerts
+    - input_boolean.guest_mode
 
 doors:
   name: Door Locks

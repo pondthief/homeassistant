@@ -8,6 +8,10 @@
       entity_id: cover.garage_door_opener_1
       from: 'closed'
       to: 'open'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_alerts
+    state: 'on'
   action:
     - service: notify.email
       data_template:
@@ -24,6 +28,10 @@
       entity_id: cover.garage_door_opener_1
       from: 'open'
       to: 'closed'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_alerts
+    state: 'on'
   action:
     - service: notify.email
       data_template:

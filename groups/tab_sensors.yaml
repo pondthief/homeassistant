@@ -22,3 +22,4 @@ sensors_tab:
     - group.trackers
     - group.energy_usage
     - group.hallway_sensors
+    - group.known_guests
