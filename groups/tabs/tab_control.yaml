@@ -16,7 +16,7 @@ control_tab:
     - group.master_bed
     - group.outside
     - group.master_bath
-    - group.doors
+    - group.quick_lock
     - group.laundry_room
     - group.entry
     - group.hallway

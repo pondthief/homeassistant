@@ -19,7 +19,5 @@ sensors_tab:
     - group.thermostat_sensors
     - group.play_area_sensors
     - group.garage_sensors
-    - group.trackers
     - group.energy_usage
     - group.hallway_sensors
-    - group.known_guests

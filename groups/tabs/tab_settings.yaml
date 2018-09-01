@@ -1,0 +1,12 @@
+#-------------------------------------------
+#  System Tab
+#-------------------------------------------
+system_tab:
+  name: System
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.battery_levels
+    - group.internet_speeds
+    - group.ups
+    - group.all_automations

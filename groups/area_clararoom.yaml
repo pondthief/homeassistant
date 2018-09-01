@@ -4,7 +4,7 @@
 clara_room:
   name: Clara's Room
   entities:
-    - switch.guest_overhead_switch
+    - light.clara_overhead_level
 
 clara_room_sensors:
   name: Clara's Room

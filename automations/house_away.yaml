@@ -3,6 +3,7 @@
 #-------------------------------------------
 - alias: 'No One Home'
   initial_state: true
+  hide_entity: true
   trigger:
     platform: state
     entity_id: group.family
@@ -10,9 +11,15 @@
     for:
       minutes: 10
   condition:
-    condition: time
-    after: '06:00:00'
-    before: '20:00:00'
+    condition: and
+    conditions:
+      - condition: time
+        after: '06:00:00'
+        before: '20:00:00'
+      - condition:
+        condition: state
+        entity_id: input_boolean.enable_alerts
+        state: 'on'
   action:
     - service: lock.lock
       data:

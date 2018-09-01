@@ -1,0 +1,10 @@
+#-------------------------------------------
+#  People Tab
+#-------------------------------------------
+people_tab:
+  name: People
+  view: yes
+  icon: mdi:account-group
+  entities:
+    - group.family
+    - group.known_people

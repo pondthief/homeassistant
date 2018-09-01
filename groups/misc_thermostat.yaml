@@ -1,0 +1,5 @@
+thermostat:
+  name: Thermostat
+  entities:
+    - climate.hallway
+    
