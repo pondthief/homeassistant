@@ -1,6 +1,4 @@
 enable_alerts:
   name: Alerts Enabled
-  hidden: false
-  homebridge_hidden: true
   icon: mdi:alert-octagram
   initial: on

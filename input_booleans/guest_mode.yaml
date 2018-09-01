@@ -1,6 +1,4 @@
 guest_mode:
   name: Guest Mode
-  hidden: false
-  homebridge_hidden: true
   icon: mdi:account-alert
   initial: off
