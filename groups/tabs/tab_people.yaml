@@ -6,5 +6,4 @@ people_tab:
   view: yes
   icon: mdi:account-group
   entities:
-    - group.family
-    - group.known_people
+    - group.people
