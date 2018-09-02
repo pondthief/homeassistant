@@ -1,8 +1,11 @@
 #-------------------------------------------
-#  Family Group
+#  People Group
 #-------------------------------------------
-family:
-  name: Family
+people:
+  name: People
   entities:
     - device_tracker.chris_iphone_x
     - device_tracker.megan_iphone_8
+    - device_tracker.wendy_iphone
+    - device_tracker.anna_iphone
+    - device_tracker.michael_iphone
