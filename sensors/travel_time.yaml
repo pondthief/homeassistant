@@ -1,11 +1,11 @@
- - platform: google_travel_time
-   name: To Work
-   api_key: !secret travel_time_key
-   origin: !secret home_loc
-   destination: !secret work_loc
+- platform: google_travel_time
+  name: To Work
+  api_key: !secret travel_time_key
+  origin: !secret home_loc
+  destination: !secret work_loc
 
- - platform: google_travel_time
-   name: To Home
-   api_key: !secret travel_time_key
-   origin: !secret work_loc
-   destination: !secret home_loc
+- platform: google_travel_time
+  name: To Home
+  api_key: !secret travel_time_key
+  origin: !secret work_loc
+  destination: !secret home_loc
