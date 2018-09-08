@@ -1,5 +1,5 @@
-- platform: google_travel_time
-  name: To Work
-  api_key: !secret travel_time_key
+- platform: waze_travel_time
+  name: Travel Time to Chris Office
   origin: !secret home_loc
   destination: !secret work_loc
+  region: 'US'
