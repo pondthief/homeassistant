@@ -1,0 +1,6 @@
+- platform: mqtt
+  name: "Chris Garage Door"
+  command_topic: "garadget/chris/command"
+  state_topic: "garadget/chris/status"
+  payload_open: "open"
+  payload_close: "close"

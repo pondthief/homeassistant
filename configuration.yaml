@@ -87,11 +87,7 @@ camera: !include cameras.yaml
 #-------------------------------------------
 # Enable covers
 #-------------------------------------------
-cover:
-  - platform: myq
-    username: !secret liftmaster_user
-    password: !secret liftmaster_pass
-    type: liftmaster
+cover: !include cover.yaml
 
 #-------------------------------------------
 # MQTT Settings
