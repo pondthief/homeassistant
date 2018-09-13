@@ -4,3 +4,6 @@
   state_topic: "garadget/chris/status"
   payload_open: "open"
   payload_close: "close"
+  state_open: "open"
+  state_closed: "closed"
+  value_template: '{{ value_json.status }}'
