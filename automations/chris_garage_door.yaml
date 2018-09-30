@@ -1,12 +1,12 @@
 #-------------------------------------------
 # Overhead Garage Door Opened Notice
 #-------------------------------------------
-- alias: "Garage Door 1 Opened"
+- alias: "Chris Garage Door Opened"
   initial_state: true
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: cover.garage_door_opener_1
+      entity_id: cover.chris_garage_door
       from: 'closed'
       to: 'open'
   condition:
@@ -16,18 +16,18 @@
   action:
     - service: notify.email
       data_template:
-        title: "\U0001F697 Garage Door 1 Opened"
-        message: "Hi! Garage Door 1 has been opened."
+        title: "\U0001F697 Chris Garage Door Opened"
+        message: "Hi! Chris Garage Door has been opened."
 
 #-------------------------------------------
 # Overhead Garage Door Closed Notice
 #-------------------------------------------
-- alias: "Garage Door 1 Closed"
+- alias: "Chris Garage Door Closed"
   initial_state: true
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: cover.garage_door_opener_1
+      entity_id: cover.chris_garage_door
       from: 'open'
       to: 'closed'
   condition:
@@ -37,5 +37,5 @@
   action:
     - service: notify.email
       data_template:
-        title: "\U0001F697 Garage Door 1 Closed"
-        message: "Hi! Garage Door 1 has been closed."
+        title: "\U0001F697 Chris Garage Door Closed"
+        message: "Hi! Chris Garage Door has been closed."
