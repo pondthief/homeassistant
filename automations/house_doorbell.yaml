@@ -19,13 +19,3 @@
         target:
           - !secret chris_mobile
           - !secret megan_mobile
-#    - service: media_player.volume_set
-#      data:
-#        entity_id: media_player.kitchen
-#        volume_level: 0.20
-#    - delay: '00:00:01'
-    - service: media_player.play_media
-      data:
-        entity_id: media_player.kitchen
-        media_content_id: https://has.fuzzyblender.com/local/doorbell.mp3
-        media_content_type: 'music'
