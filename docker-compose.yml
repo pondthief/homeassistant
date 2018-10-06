@@ -11,7 +11,6 @@ services:
       - mosquitto
     volumes:
       - /srv/home-assistant:/config
-    network_mode: "host"
     restart: always
     devices:
       - "/dev/zwave:/dev/zwave"
@@ -26,21 +25,21 @@ services:
     environment:
       POSTGRES_USER: homeassistant
       POSTGRES_PASSWORD: homeassistant
-    network_mode: "host"
   
+  grafana:
+
   mosquitto:
     image: eclipse-mosquitto:latest
     ports:
       - "1883:1883"
-      - "8083:8083"
+      - "9001:9001"
       - "8883:8883"
     restart: always
     volumes:
-      - /srv/certs:/certs
+      - /etc/letsencrypt/:/etc/letsencrypt
       - /srv/mosquitto/data:/mosquitto/data
-      - /srv/mosquitto/config:/mosquitto/config
+      - /srv/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
       - /srv/mosquitto/log:/mosquitto/log
-    network_mode: "host"
 
   honeywell2mqtt:
     image: chriskacerguis/honeywell2mqtt:2.0.0
@@ -56,9 +55,9 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-      - /srv/certs:/certs
+      - /etc/letsencrypt/:/etc/letsencrypt
     network_mode: "bridge"
-    command: --ssl --sslcert /certs/fuzzyblender-with-ca.crt --sslkey /certs/fuzzyblender.key
+    command: --ssl --sslcert /etc/letsencrypt/live/fuzzyblender.com/fullchain.pem --sslkey /etc/letsencrypt/live/fuzzyblender.com/privkey.pem
 
 volumes:
   portainer_data:
