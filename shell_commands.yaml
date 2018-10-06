@@ -2,3 +2,4 @@
 #  Remove doorbell images older than 30 days
 #-------------------------------------------
 clean_doorbell_images: find /config/www/snapshots/* -mtime +30 -exec rm {} \;
+update_ha: /srv/home-assistant/bin/update.sh
