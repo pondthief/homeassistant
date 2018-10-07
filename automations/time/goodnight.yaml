@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Things to do at Bedtime
+# Goodnight
 #-------------------------------------------
-- alias: 'Sleep Time'
+- alias: 'Goodnight'
   initial_state: true
   hide_entity: true
   trigger:
@@ -17,3 +17,10 @@
     - service: switch.turn_off
       data:
         entity_id: switch.kitchen_island_switch
+    - service: notify.pushover_chris
+      data:
+        message: "\U0001F307 Goodnight Mode"
+        title: "Goodnight mode has been activated by Home Assistant."
+        data:
+          sound: pianobar
+          priority: -1

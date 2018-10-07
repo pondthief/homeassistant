@@ -1,0 +1,28 @@
+#-------------------------------------------
+# Sunrise Actions
+#-------------------------------------------
+- alias: 'Sunrise'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: '+00:00:00'
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: 
+          - light.kitchen_sink_level
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.front_yard_switch
+          - switch.deck_flood_switch
+          - switch.outside_security_switch
+    - service: notify.pushover_chris
+      data:
+        message: "\U0001F305 Good Morning!"
+        title: "The sun is rising and the day has begun. I've turned off the outside lights and indoor night lights."
+        data:
+          sound: pianobar
+          priority: -1

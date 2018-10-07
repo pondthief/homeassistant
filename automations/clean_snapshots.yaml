@@ -8,4 +8,4 @@
     - platform: time
       at: '01:00:00'
   action:
-    service: shell_command.clean_doorbell_images
+    service: shell_command.clean_snapshots

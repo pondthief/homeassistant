@@ -9,3 +9,10 @@ people:
     - device_tracker.wendy_iphone
     - device_tracker.anna_iphone
     - device_tracker.michael_iphone
+
+known_people:
+  name: Known People
+  entities:
+    - device_tracker.wendy_iphone
+    - device_tracker.anna_iphone
+    - device_tracker.michael_iphone

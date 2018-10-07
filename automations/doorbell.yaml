@@ -19,3 +19,10 @@
         target:
           - !secret chris_mobile
           - !secret megan_mobile
+    - service: notify.pushover_chris
+      data:
+        message: "\U0001F514 Doorbell"
+        title: "Someone is at the front door."
+        data:
+          sound: siren
+          priority: 1

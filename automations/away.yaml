@@ -25,7 +25,10 @@
         entity_id: group.all_locks
     - service: light.turn_off
     - service: switch.turn_off
-    - service: notify.email
-      data_template:
-        title: "\U0001F697 No one home, going dormant"
-        message: "There is no one at home; locking doors and turning off lights."
+    - service: notify.pushover_chris
+      data:
+        message: "\U0001F697 No One Home"
+        title: "There is no one at home; locking doors and turning off lights."
+        data:
+          sound: pianobar
+          priority: -1

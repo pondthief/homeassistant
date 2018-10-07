@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Slowdown Time
+# Bedtime Actions
 #-------------------------------------------
-- alias: 'Slowdown Time'
+- alias: 'Bedtime'
   initial_state: true
   hide_entity: true
   trigger:
@@ -17,3 +17,10 @@
         entity_id: 
           - light.study_cans_level
         brightness: 50
+    - service: notify.pushover_chris
+      data:
+        message: "\U0001F307 Bedtime Mode"
+        title: "Bedtime mode has been activated by Home Assistant."
+        data:
+          sound: pianobar
+          priority: -1

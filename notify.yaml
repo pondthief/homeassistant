@@ -18,3 +18,11 @@
 - name: sms
   platform: twilio_sms
   from_number: !secret twilio_num
+
+#-------------------------------------------
+#  Pushover Notices
+#-------------------------------------------
+- name: pushover_chris
+  platform: pushover
+  api_key: !secret pushover_api
+  user_key: !secret pushover_chris

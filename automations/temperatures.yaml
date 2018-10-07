@@ -11,10 +11,13 @@
     for:
       minutes: 30
   action:
-    - service: notify.email
-      data_template:
-        title: "\U000026C4 High Temperature"
-        message: "The average house temp is at or above 78 degrees"
+    - service: notify.pushover_chris
+      data:
+        message: "\U000026C4 High Temperature"
+        title: "The average house temp is at or above 78 degrees"
+        data:
+          sound: siren
+          priority: 2
 
 #-------------------------------------------
 # Too Cold Alert
@@ -29,7 +32,10 @@
     for:
       minutes: 30
   action:
-    - service: notify.email
-      data_template:
-        title: "\U000026C4 Low Temperature"
-        message: "The average house temp is at or below 64 degrees"
+    - service: notify.pushover_chris
+      data:
+        message: "\U000026C4 Low Temperature"
+        title: "The average house temp is at or below 64 degrees"
+        data:
+          sound: siren
+          priority: 2
