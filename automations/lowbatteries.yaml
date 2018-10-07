@@ -1,7 +1,7 @@
 #-------------------------------------------
-# Clara Room Low Battery
+# Wireless Tag Env Low Battery
 #-------------------------------------------
-- alias: 'Clara Room Low Battery'
+- alias: 'Env Low Battery'
   initial_state: true
   hide_entity: true
   trigger:
@@ -9,50 +9,40 @@
       entity_id: binary_sensor.clara_room_low_battery
       from: 'off'
       to: 'on'
-  action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Clara Room"
-        message: "The battery for the enviromental sensor in Clara's room is low.  It requires one CR2032 battery."
-
-#-------------------------------------------
-# Guest Room Low Battery
-#-------------------------------------------
-- alias: 'Guest Room Low Battery'
-  initial_state: true
-  hide_entity: true
-  trigger:
+    - platform: state
+      entity_id: binary_sensor.clara_room_low_battery
+      from: 'off'
+      to: 'on'
     - platform: state
       entity_id: binary_sensor.guest_room_low_battery
       from: 'off'
       to: 'on'
-  action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Guest Room"
-        message: "The battery for the enviromental sensor in the guest room is low.  It requires one CR2032 battery."
-
-#-------------------------------------------
-# Kitchen Low Battery
-#-------------------------------------------
-- alias: 'Kitchen Low Battery'
-  initial_state: true
-  hide_entity: true
-  trigger:
     - platform: state
       entity_id: binary_sensor.kitchen_low_battery
       from: 'off'
       to: 'on'
+    - platform: state
+      entity_id: binary_sensor.masterbed_low_battery
+      from: 'off'
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.play_area_low_battery
+      from: 'off'
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.study_low_battery
+      from: 'off'
+      to: 'on'
   action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Kitchen"
-        message: "The battery for the enviromental sensor in the kitchen is low.  It requires one CR2032 battery."
+    - service: notify.pushover_chris
+      data:
+        message: "\U0001F50B Env Sensor Low Battery"
+        title: "The battery for the enviromental sensor XXXX room is low.  It requires one CR2032 battery."
 
 #-------------------------------------------
-# Laundry Room PIR Low Battery
+# PIR Low Battery
 #-------------------------------------------
-- alias: 'Laundry Room Low Battery'
+- alias: 'PIR Low Battery'
   initial_state: true
   hide_entity: true
   trigger:
@@ -60,96 +50,19 @@
       entity_id: binary_sensor.laundry_room_low_battery
       from: 'off'
       to: 'on'
-  action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Laundry Room"
-        message: "The battery for the PIR / enviromental sensor in the laundry room is low.  It requires one CR2450 battery."
-
-#-------------------------------------------
-# Master Bed Low Battery
-#-------------------------------------------
-- alias: 'Master Bed Low Battery'
-  initial_state: true
-  hide_entity: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.masterbed_low_battery
-      from: 'off'
-      to: 'on'
-  action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Master Bedroom"
-        message: "The battery for the enviromental sensor in the master bedroom is low.  It requires one CR2032 battery."
-
-#-------------------------------------------
-# Play Area Low Battery
-#-------------------------------------------
-- alias: 'Play Area Low Battery'
-  initial_state: true
-  hide_entity: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.play_area_low_battery
-      from: 'off'
-      to: 'on'
-  action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Play Area"
-        message: "The battery for the enviromental sensor in the play area is low.  It requires one CR2032 battery."
-
-#-------------------------------------------
-# Study Low Battery
-#-------------------------------------------
-- alias: 'Study Low Battery'
-  initial_state: true
-  hide_entity: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.study_low_battery
-      from: 'off'
-      to: 'on'
-  action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Study"
-        message: "The battery for the enviromental sensor in the study is low.  It requires one CR2032 battery."
-
-#-------------------------------------------
-# Guest Bathroom PIR Low Battery
-#-------------------------------------------
-- alias: 'Guest Bathroom Low Battery'
-  initial_state: true
-  hide_entity: true
-  trigger:
     - platform: state
       entity_id: binary_sensor.guest_bath_low_battery
       from: 'off'
       to: 'on'
-  action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Guest Bathroom"
-        message: "The battery for the PIR / enviromental sensor in the guest bathroom is low.  It requires one CR2450 battery."
-
-#-------------------------------------------
-# Master Bath PIR Low Battery
-#-------------------------------------------
-- alias: 'Master Bath Low Battery'
-  initial_state: true
-  hide_entity: true
-  trigger:
     - platform: state
       entity_id: binary_sensor.master_bath_low_battery
       from: 'off'
       to: 'on'
   action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Master Bath"
-        message: "The battery for the PIR / enviromental sensor in the master bath is low.  It requires one CR2450 battery."
+    - service: notify.pushover_chris
+      data:
+        message: "\U0001F50B PIR Low Battery"
+        title: "The battery for the PIR / enviromental sensor in the XXX room is low.  It requires one CR2450 battery."
 
 #-------------------------------------------
 # Front Door Lock Low Battery
@@ -162,10 +75,13 @@
     entity_id: sensor.front_door_battery
     below: 60
   action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Front Door Lock"
-        message: "The battery for the front door lock is low.  It requires four AA batteries."
+    - service: notify.pushover_chris
+      data:
+        message: "\U0001F50B Low Battery - Front Door Lock"
+        title: "The battery for the front door lock is low.  It requires four AA batteries."
+        data:
+          sound: siren
+          priority: 2
 
 #-------------------------------------------
 # Back Door Lock Low Battery
@@ -178,15 +94,18 @@
     entity_id: sensor.back_door_battery
     below: 60
   action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Back Door Lock"
-        message: "The battery for the back door lock is low.  It requires four AA batteries."
+    - service: notify.pushover_chris
+      data:
+        message: "\U0001F50B Low Battery - Back Door Lock"
+        title: "The battery for the back door lock is low.  It requires four AA batteries."
+        data:
+          sound: siren
+          priority: 2
 
 #-------------------------------------------
-# Garage Door Lock Low Battery
+# Laundry Lock Low Battery
 #-------------------------------------------
-- alias: 'Garage Door Lock Low Battery'
+- alias: 'Laundry Room Door Lock Low Battery'
   initial_state: true
   hide_entity: true
   trigger:
@@ -194,7 +113,10 @@
     entity_id: sensor.garage_door_battery
     below: 60
   action:
-    - service: notify.email
-      data_template:
-        title: "\U0001F50B Low Battery - Garage Door Lock"
-        message: "The battery for the garage door lock is low.  It requires four AA batteries."
+    - service: notify.pushover_chris
+      data:
+        message: "\U0001F50B Low Battery - Laundry Room Door Lock"
+        title: "The battery for the laundry room door lock is low.  It requires four AA batteries."
+        data:
+          sound: siren
+          priority: 2

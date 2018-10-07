@@ -24,5 +24,5 @@
         message: "\U0001F514 Doorbell"
         title: "Someone is at the front door."
         data:
-          sound: siren
-          priority: 1
+          sound: pushover
+          priority: 2
