@@ -36,8 +36,8 @@
   action:
     - service: notify.pushover_chris
       data:
-        message: "\U0001F50B Env Sensor Low Battery"
-        title: "The battery for the enviromental sensor XXXX room is low.  It requires one CR2032 battery."
+        title: "\U0001F50B Env Sensor Low Battery"
+        message: "The battery for the enviromental sensor {{ trigger.from_state.attributes.friendly_name }} room is low.  It requires one CR2032 battery."
 
 #-------------------------------------------
 # PIR Low Battery
@@ -61,62 +61,30 @@
   action:
     - service: notify.pushover_chris
       data:
-        message: "\U0001F50B PIR Low Battery"
-        title: "The battery for the PIR / enviromental sensor in the XXX room is low.  It requires one CR2450 battery."
+        title: "\U0001F50B PIR Low Battery"
+        message: "The battery for the PIR / enviromental sensor in the {{ trigger.from_state.attributes.friendly_name }} room is low.  It requires one CR2450 battery."
 
 #-------------------------------------------
-# Front Door Lock Low Battery
+# Door Lock Low Battery
 #-------------------------------------------
-- alias: 'Front Door Lock Low Battery'
+- alias: 'Door Lock Low Battery'
   initial_state: true
   hide_entity: true
   trigger:
-    platform: numeric_state
-    entity_id: sensor.front_door_battery
-    below: 60
+    - platform: numeric_state
+      entity_id: sensor.front_door_battery
+      below: 60
+    - platform: numeric_state
+      entity_id: sensor.back_door_battery
+      below: 60
+    - platform: numeric_state
+      entity_id: sensor.garage_door_battery
+      below: 60
   action:
     - service: notify.pushover_chris
       data:
-        message: "\U0001F50B Low Battery - Front Door Lock"
-        title: "The battery for the front door lock is low.  It requires four AA batteries."
-        data:
-          sound: siren
-          priority: 2
-
-#-------------------------------------------
-# Back Door Lock Low Battery
-#-------------------------------------------
-- alias: 'Back Door Lock Low Battery'
-  initial_state: true
-  hide_entity: true
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.back_door_battery
-    below: 60
-  action:
-    - service: notify.pushover_chris
-      data:
-        message: "\U0001F50B Low Battery - Back Door Lock"
-        title: "The battery for the back door lock is low.  It requires four AA batteries."
-        data:
-          sound: siren
-          priority: 2
-
-#-------------------------------------------
-# Laundry Lock Low Battery
-#-------------------------------------------
-- alias: 'Laundry Room Door Lock Low Battery'
-  initial_state: true
-  hide_entity: true
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.garage_door_battery
-    below: 60
-  action:
-    - service: notify.pushover_chris
-      data:
-        message: "\U0001F50B Low Battery - Laundry Room Door Lock"
-        title: "The battery for the laundry room door lock is low.  It requires four AA batteries."
+        title: "\U0001F50B Lock Low Battery"
+        message: "The battery for {{ trigger.from_state.attributes.friendly_name }} is low.  It requires four AA batteries."
         data:
           sound: siren
           priority: 2

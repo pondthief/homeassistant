@@ -21,8 +21,8 @@
           - switch.outside_security_switch
     - service: notify.pushover_chris
       data:
-        message: "\U0001F305 Good Morning!"
-        title: "The sun is rising and the day has begun. I've turned off the outside lights and indoor night lights."
+        title: "\U0001F305 Good Morning!"
+        message: "The sun is rising and the day has begun. I've turned off the outside lights and indoor night lights."
         data:
           sound: pianobar
           priority: -1

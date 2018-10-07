@@ -11,8 +11,8 @@
   action:
     - service: notify.pushover_chris
       data:
-        message: "\U0001F50B Main Power OFFLINE"
-        title: "Main power lost, running on UPS power"
+        title: "\U0001F50B Main Power OFFLINE"
+        message: "Main power lost, running on UPS power"
         data:
           sound: siren
           priority: 1
@@ -30,7 +30,7 @@
   action:
     - service: notify.pushover_chris
       data:
-        message: "\U0001F50C Main Power RESTORED"
-        title: "Main power restored, now running on city power."
+        title: "\U0001F50C Main Power RESTORED"
+        message: "Main power restored, now running on city power."
         data:
           priority: 0

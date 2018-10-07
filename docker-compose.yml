@@ -26,8 +26,6 @@ services:
       POSTGRES_USER: homeassistant
       POSTGRES_PASSWORD: homeassistant
   
-  grafana:
-
   mosquitto:
     image: eclipse-mosquitto:latest
     ports:

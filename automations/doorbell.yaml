@@ -21,8 +21,8 @@
           - !secret megan_mobile
     - service: notify.pushover_chris
       data:
-        message: "\U0001F514 Doorbell"
-        title: "Someone is at the front door."
+        title: "\U0001F514 Doorbell"
+        message: "Someone is at the front door."
         data:
           sound: pushover
           priority: 2

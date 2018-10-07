@@ -1,0 +1,55 @@
+#-------------------------------------------
+# Door Opened
+#-------------------------------------------
+- alias: "Door Opened"
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: sensor.front_door
+      from: 'closed'
+      to: 'open'
+    - platform: state
+      entity_id: sensor.back_door
+      from: 'closed'
+      to: 'open'
+    - platform: state
+      entity_id: sensor.laundry_door
+      from: 'closed'
+      to: 'open'
+  action:
+    - service: notify.pushover_chris
+      data:
+        title: "\U0001F511 {{ trigger.from_state.attributes.friendly_name }} Opened"
+        message: "The {{ trigger.from_state.attributes.friendly_name }} has been opened."
+        data:
+          sound: siren
+          priority: 0
+
+#-------------------------------------------
+# Door Unlocked
+#-------------------------------------------
+- alias: "Door Unlocked"
+  initial_state: true
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: lock.front_door_locked
+      from: 'locked'
+      to: 'unlocked'
+    - platform: state
+      entity_id: lock.back_door_locked
+      from: 'locked'
+      to: 'unlocked'
+    - platform: state
+      entity_id: lock.garage_door_locked
+      from: 'locked'
+      to: 'unlocked'
+  action:
+    - service: notify.pushover_chris
+      data:
+        title: "\U0001F511 {{ trigger.from_state.attributes.friendly_name }} Unlocked"
+        message: "The {{ trigger.from_state.attributes.friendly_name }} has been {{ trigger.to_state.attributes.lock_status }}"
+        data:
+          sound: siren
+          priority: 0
+          

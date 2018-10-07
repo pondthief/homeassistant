@@ -27,8 +27,7 @@
     - service: switch.turn_off
     - service: notify.pushover_chris
       data:
-        message: "\U0001F697 No One Home"
-        title: "There is no one at home; locking doors and turning off lights."
+        title: "\U0001F697 No One Home"
+        message: "There is no one at home; locking doors and turning off lights."
         data:
-          sound: pianobar
-          priority: -1
+          priority: 0

@@ -6,7 +6,7 @@
   hide_entity: true
   trigger:
     platform: time
-    at: '20:50:00'
+    at: '20:00:00'
   action:
     - service: switch.turn_off
       data:
@@ -19,8 +19,8 @@
         brightness: 50
     - service: notify.pushover_chris
       data:
-        message: "\U0001F307 Bedtime Mode"
-        title: "Bedtime mode has been activated by Home Assistant."
+        title: "\U0001F307 Bedtime Mode"
+        message: "Bedtime mode has been activated by Home Assistant."
         data:
           sound: pianobar
           priority: -1

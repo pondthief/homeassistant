@@ -25,8 +25,8 @@
         entity_id: group.all_locks
     - service: notify.pushover_chris
       data:
-        message: "\U0001F307 Sunset Mode"
-        title: "The sun has set.  Outside decorative lights are on, doors locked, and inside lights were turned on."
+        title: "\U0001F307 Sunset Mode"
+        message: "The sun has set.  Outside decorative lights are on, doors locked, and inside lights were turned on."
         data:
           sound: pianobar
           priority: -1

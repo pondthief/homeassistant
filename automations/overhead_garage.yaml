@@ -14,10 +14,12 @@
     entity_id: input_boolean.enable_alerts
     state: 'on'
   action:
-    - service: notify.email
-      data_template:
+    - service: notify.pushover_chris
+      data:
         title: "\U0001F697 Chris Garage Door Opened"
         message: "Hi! Chris Garage Door has been opened."
+        data:
+          priority: 1
 
 #-------------------------------------------
 # Overhead Garage Door Closed Notice
@@ -35,7 +37,9 @@
     entity_id: input_boolean.enable_alerts
     state: 'on'
   action:
-    - service: notify.email
-      data_template:
+    - service: notify.pushover_chris
+      data:
         title: "\U0001F697 Chris Garage Door Closed"
         message: "Hi! Chris Garage Door has been closed."
+        data:
+          priority: 1
