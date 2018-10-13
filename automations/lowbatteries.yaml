@@ -37,7 +37,7 @@
     - service: notify.pushover_chris
       data_template:
         title: "\U0001F50B Env Sensor Low Battery"
-        message: "The battery for the enviromental sensor {{ trigger.from_state.attributes.friendly_name }} room is low.  It requires one CR2032 battery."
+        message: "The battery for the enviromental sensor {{ trigger.to_state.attributes.friendly_name }} room is low.  It requires one CR2032 battery."
 
 #-------------------------------------------
 # PIR Low Battery
@@ -62,7 +62,7 @@
     - service: notify.pushover_chris
       data_template:
         title: "\U0001F50B PIR Low Battery"
-        message: "The battery for the PIR / enviromental sensor in the {{ trigger.from_state.attributes.friendly_name }} room is low.  It requires one CR2450 battery."
+        message: "The battery for the PIR / enviromental sensor in the {{ trigger.to_state.attributes.friendly_name }} room is low.  It requires one CR2450 battery."
 
 #-------------------------------------------
 # Door Lock Low Battery
@@ -84,7 +84,7 @@
     - service: notify.pushover_chris
       data_template:
         title: "\U0001F50B Lock Low Battery"
-        message: "The battery for {{ trigger.from_state.attributes.friendly_name }} is low.  It requires four AA batteries."
+        message: "The battery for {{ trigger.to_state.attributes.friendly_name }} is low.  It requires four AA batteries."
         data:
           sound: siren
           priority: 2
