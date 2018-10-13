@@ -1,9 +1,9 @@
 #-------------------------------------------
 # Meraki Location Analytics
 #-------------------------------------------
-- platform: meraki
-  secret: !secret meraki_secret
-  validator: !secret meraki_validator
+# - platform: meraki
+#  secret: !secret meraki_secret
+#  validator: !secret meraki_validator
 
 #-------------------------------------------
 # Car Trackers
@@ -12,3 +12,11 @@
 #  devices:
 #    chris_car: location/chris
 #    megan_car: location/megan
+
+#-------------------------------------------
+# unifi controller
+#-------------------------------------------
+- platform: unifi
+  host: !secret cloud_key_site
+  username: !secret cloud_key_user
+  password: !secret cloud_key_pass
