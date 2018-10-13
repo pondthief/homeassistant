@@ -5,6 +5,7 @@ garage:
   name: Garage
   entities:
     - cover.chris_garage_door
+    - cover.megan_garage_door
 
 garage_sensors:
   name: Garage

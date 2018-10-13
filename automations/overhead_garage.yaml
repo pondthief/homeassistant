@@ -43,3 +43,49 @@
         message: "Hi! Chris Garage Door has been closed."
         data:
           priority: 1
+
+#-------------------------------------------
+# Overhead Garage Door Opened Notice
+#-------------------------------------------
+- alias: "Megan Garage Door Opened"
+  initial_state: true
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: cover.megan_garage_door
+      from: 'closed'
+      to: 'open'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_alerts
+    state: 'on'
+  action:
+    - service: notify.pushover_chris
+      data:
+        title: "\U0001F697 Megan Garage Door Opened"
+        message: "Hi! Megan Garage Door has been opened."
+        data:
+          priority: 1
+
+#-------------------------------------------
+# Overhead Garage Door Closed Notice
+#-------------------------------------------
+- alias: "Megan Garage Door Closed"
+  initial_state: true
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: cover.megan_garage_door
+      from: 'open'
+      to: 'closed'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_alerts
+    state: 'on'
+  action:
+    - service: notify.pushover_chris
+      data:
+        title: "\U0001F697 Megan Garage Door Closed"
+        message: "Hi! Megan Garage Door has been closed."
+        data:
+          priority: 1
