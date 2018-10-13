@@ -18,9 +18,9 @@
       to: 'open'
   action:
     - service: notify.pushover_chris
-      data:
-        title: "\U0001F511 {{ trigger.from_state.attributes.friendly_name }} Opened"
-        message: "The {{ trigger.from_state.attributes.friendly_name }} has been opened."
+      data_template:
+        title: "\U0001F511 {{ trigger.to_state.attributes.friendly_name }} Opened"
+        message: "The {{ trigger.to_state.attributes.friendly_name }} has been opened."
         data:
           sound: siren
           priority: 0
@@ -46,7 +46,7 @@
       to: 'unlocked'
   action:
     - service: notify.pushover_chris
-      data:
+      data_template:
         title: "\U0001F511 {{ trigger.from_state.attributes.friendly_name }} Unlocked"
         message: "The {{ trigger.from_state.attributes.friendly_name }} has been {{ trigger.to_state.attributes.lock_status }}"
         data:
