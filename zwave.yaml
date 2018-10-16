@@ -1,7 +1,7 @@
 #-------------------------------------------
 #  Zwave Component
 #-------------------------------------------
-usb_path: /dev/zwave
+usb_path: /dev/ttyACM0
 network_key: !secret zwave_network_key
 polling_interval: 10000
 device_config_domain:
