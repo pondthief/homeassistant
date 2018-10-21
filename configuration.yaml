@@ -50,11 +50,6 @@ frontend:
   javascript_version: latest
 
 #-------------------------------------------
-# iOS App Settings
-#-------------------------------------------
-ios: !include ios.yaml
-
-#-------------------------------------------
 # Enable configuration UI
 #-------------------------------------------
 config:
@@ -74,11 +69,6 @@ http:
   trusted_networks:
     - 127.0.0.1
     - 192.168.128.0/24
-
-#-------------------------------------------
-# Enable Nest
-#-------------------------------------------
-nest: !include nest.yaml
 
 #-------------------------------------------
 # Enable cameras
@@ -116,11 +106,6 @@ logbook: !include logbook.yaml
 sun:
 
 #-------------------------------------------
-# Home Assistant Cloud
-#-------------------------------------------
-cloud:
-
-#-------------------------------------------
 # Include sensors
 #-------------------------------------------
 sensor: !include_dir_merge_list sensors
@@ -149,17 +134,6 @@ group: !include_dir_merge_named groups
 # Include automations
 #-------------------------------------------
 automation: !include_dir_merge_list automations
-
-#-------------------------------------------
-# Zwave Settings
-#-------------------------------------------
-# note: zwave component totally failed.
-# zwave: !include zwave.yaml
-
-#-------------------------------------------
-# Scripts
-#-------------------------------------------
-script: !include_dir_merge_named scripts
 
 #-------------------------------------------
 # Device Tracking
