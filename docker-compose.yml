@@ -3,8 +3,7 @@ version: '3'
 services:
   home-assistant:
     image: homeassistant/home-assistant:latest
-    ports:
-      - "8123:8123"
+    network_mode: host
     depends_on:
       - postgres
       - influxdb
@@ -12,13 +11,10 @@ services:
     volumes:
       - /srv/home-assistant:/config
     restart: always
-    devices:
-      - "/dev/zwave:/dev/zwave"
   
   postgres:
     image: postgres:alpine
-    ports:
-      - "5432:5432"
+    network_mode: host
     restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -28,10 +24,7 @@ services:
   
   mosquitto:
     image: eclipse-mosquitto:latest
-    ports:
-      - "1883:1883"
-      - "9001:9001"
-      - "8883:8883"
+    network_mode: host
     restart: always
     volumes:
       - /etc/letsencrypt/:/etc/letsencrypt
@@ -47,8 +40,7 @@ services:
 
   portainer:
     image: portainer/portainer
-    ports:
-      - "9000:9000"
+    network_mode: host
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
