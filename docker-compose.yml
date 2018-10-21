@@ -45,7 +45,7 @@ services:
     network_mode: host
     restart: always
     volumes:
-      - influxdb:/var/lib/influxdb
+      - influxdb_data:/var/lib/influxdb
       - /etc/letsencrypt/:/etc/letsencrypt
     environment:
       INFLUXDB_DB: home_assistant
