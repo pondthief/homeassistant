@@ -1,0 +1,11 @@
+#-------------------------------------------
+#  Front Window 2
+#-------------------------------------------
+- name: "Front Window 2"
+  platform: mqtt
+  state_topic: "home/sensor/4559"
+  qos: 1
+  payload_on: open
+  payload_off: closed
+  device_class: window
+  value_template: '{{value_json.state}}'

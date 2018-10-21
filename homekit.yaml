@@ -12,6 +12,17 @@ filter:
     - binary_sensor.master_bathroom_window
     - sensor.wirelesstag_master_bath_temperature
     - sensor.wirelesstag_master_bath_humidity
+    # Master Bedroom Entities
+    - binary_sensor.master_bedroom_window
+    - sensor.wirelesstag_masterbed_temperature
+    - sensor.wirelesstag_masterbed_humidity
+    # Kitchen Entities
+    - binary_sensor.kitchen_sink_window
+    - sensor.wirelesstag_kitchen_temperature
+    - sensor.wirelesstag_kitchen_humidity
+    # Garage
+    - cover.chris_garage_door
+    - cover.megan_garage_door
     # General Enitites
     - binary_sensor.front_door
     - binary_sensor.back_door
@@ -29,3 +40,11 @@ entity_config:
     name: Masterbath Temperature
   sensor.wirelesstag_master_bath_humidity:
     name: Masterbath Humidity
+  sensor.wirelesstag_masterbed_temperature:
+    name: Master Bedroom Temperature
+  sensor.wirelesstag_masterbed_humidity:
+    name: Master Bedroom Humidity
+  sensor.wirelesstag_kitchen_temperature:
+    name: Kitchen Temperature
+  sensor.wirelesstag_kitchen_humidity:
+    name: Kitchen Humidity
