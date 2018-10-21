@@ -1,0 +1,11 @@
+#-------------------------------------------
+#  Front Door
+#-------------------------------------------
+- name: "Front Door"
+  platform: mqtt
+  state_topic: "home/sensor/648705"
+  qos: 1
+  payload_on: open
+  payload_off: closed
+  device_class: door
+  value_template: '{{value_json.state}}'

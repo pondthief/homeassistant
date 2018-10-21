@@ -1,12 +1,13 @@
 filter:
   include_entities:
+    # Study Entities
     - sensor.wirelesstag_study_temperature
     - sensor.wirelesstag_study_humidity
     - binary_sensor.study_window
+    # General Enitites
+    - binary_sensor.front_door
 entity_config:
   sensor.wirelesstag_study_temperature:
     name: Study Temperature
   sensor.wirelesstag_study_humidity:
     name: Study Humidity
-  sensor.study_window:
-    name: Study Window
