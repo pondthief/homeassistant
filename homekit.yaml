@@ -3,10 +3,10 @@ filter:
     - sensor.wirelesstag_study_temperature
     - sensor.wirelesstag_study_humidity
     - sensor.study_window
-  entity_config:
-    sensor.wirelesstag_study_temperature:
-      name: Study Temperature
-    sensor.wirelesstag_study_humidity:
-      name: Study Humidity
-    sensor.study_window:
-      name: Study Window
+entity_config:
+  sensor.wirelesstag_study_temperature:
+    name: Study Temperature
+  sensor.wirelesstag_study_humidity:
+    name: Study Humidity
+  sensor.study_window:
+    name: Study Window
