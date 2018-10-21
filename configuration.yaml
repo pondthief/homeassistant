@@ -65,6 +65,7 @@ config:
 http:
   api_password: !secret http_password
   base_url: !secret server_fqdn
+  server_port: 8123
   ip_ban_enabled: true
   login_attempts_threshold: 3
   ssl_certificate: !secret ssl_cert
