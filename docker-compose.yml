@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   home-assistant:
@@ -38,17 +38,28 @@ services:
     depends_on:
       - mosquitto
 
-  portainer:
-    image: portainer/portainer
+  influxdb:
+    image: influxdb:alpine
     network_mode: host
     restart: always
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
+      - influxdb:/var/lib/influxdb
       - /etc/letsencrypt/:/etc/letsencrypt
-    network_mode: "bridge"
-    command: --ssl --sslcert /etc/letsencrypt/live/fuzzyblender.com/fullchain.pem --sslkey /etc/letsencrypt/live/fuzzyblender.com/privkey.pem
+    environment:
+      INFLUXDB_DB: home_assistant
+
+#  portainer:
+#    image: portainer/portainer
+#    network_mode: host
+#    restart: always
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
+#      - portainer_data:/data
+#      - /etc/letsencrypt/:/etc/letsencrypt
+#    network_mode: "bridge"
+#    command: --ssl --sslcert /etc/letsencrypt/live/fuzzyblender.com/fullchain.pem --sslkey /etc/letsencrypt/live/fuzzyblender.com/privkey.pem
 
 volumes:
-  portainer_data:
+#  portainer_data:
   postgres_data:
+  influxdb_data:
