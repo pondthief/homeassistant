@@ -37,8 +37,11 @@ services:
   honeywell2mqtt:
     image: chriskacerguis/honeywell2mqtt:2.0.0
     restart: always
+    privileged: true
     depends_on:
       - mosquitto
+    environment:
+      MQTT_HOST: 192.168.1.33
 
   influxdb:
     image: influxdb:alpine
