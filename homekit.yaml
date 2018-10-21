@@ -2,7 +2,7 @@ filter:
   include_entities:
     - sensor.wirelesstag_study_temperature
     - sensor.wirelesstag_study_humidity
-    - sensor.study_window
+    - binary_sensor.study_window
 entity_config:
   sensor.wirelesstag_study_temperature:
     name: Study Temperature
