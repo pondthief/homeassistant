@@ -152,7 +152,8 @@ automation: !include_dir_merge_list automations
 #-------------------------------------------
 # Zwave Settings
 #-------------------------------------------
-zwave: !include zwave.yaml
+# note: zwave component totally failed.
+# zwave: !include zwave.yaml
 
 #-------------------------------------------
 # Scripts
@@ -177,3 +178,8 @@ twilio:
 wirelesstag:
   username: !secret sense_username
   password: !secret sense_password
+
+#-------------------------------------------
+# Homekit
+#-------------------------------------------
+homekit: !include homekit.yaml
