@@ -4,10 +4,28 @@ filter:
     - sensor.wirelesstag_study_temperature
     - sensor.wirelesstag_study_humidity
     - binary_sensor.study_window
+    # Clara Entities
+    - binary_sensor.claras_room_window
+    - sensor.wirelesstag_clara_room_temperature
+    - sensor.wirelesstag_clara_room_humidity
+    # Master Bathroom Entities
+    - binary_sensor.master_bathroom_window
+    - sensor.wirelesstag_master_bath_temperature
+    - sensor.wirelesstag_master_bath_humidity
     # General Enitites
     - binary_sensor.front_door
+    - binary_sensor.back_door
+    - binary_sensor.laundry_door
 entity_config:
   sensor.wirelesstag_study_temperature:
     name: Study Temperature
   sensor.wirelesstag_study_humidity:
     name: Study Humidity
+  sensor.wirelesstag_clara_room_temperature:
+    name: Clara's Room Temperature
+  sensor.wirelesstag_clara_room_humidity:
+    name: Clara's Room Humidity
+  sensor.wirelesstag_master_bath_temperature:
+    name: Masterbath Temperature
+  sensor.wirelesstag_master_bath_humidity:
+    name: Masterbath Humidity

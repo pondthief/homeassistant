@@ -1,0 +1,11 @@
+#-------------------------------------------
+#  Laundry Door
+#-------------------------------------------
+- name: "Laundry Door"
+  platform: mqtt
+  state_topic: "home/sensor/275843"
+  qos: 1
+  payload_on: open
+  payload_off: closed
+  device_class: door
+  value_template: '{{value_json.state}}'
