@@ -18,11 +18,21 @@ filter:
     - sensor.wirelesstag_masterbed_humidity
     # Kitchen Entities
     - binary_sensor.kitchen_sink_window
+    - binary_sensor.back_window_1
+    - binary_sensor.back_window_2
+    - binary_sensor.back_window_3
+    - binary_sensor.right_window_1
     - sensor.wirelesstag_kitchen_temperature
     - sensor.wirelesstag_kitchen_humidity
     # Garage
     - cover.chris_garage_door
     - cover.megan_garage_door
+    # Play Room
+    - binary_sensor.right_window_2
+    - binary_sensor.front_window_1
+    - binary_sensor.front_window_2
+    - sensor.wirelesstag_play_area_temperature
+    - sensor.wirelesstag_play_area_humidity
     # General Enitites
     - binary_sensor.front_door
     - binary_sensor.back_door
@@ -48,3 +58,7 @@ entity_config:
     name: Kitchen Temperature
   sensor.wirelesstag_kitchen_humidity:
     name: Kitchen Humidity
+  sensor.wirelesstag_play_area_temperature:
+    name: Playroom Temperature
+  sensor.wirelesstag_play_area_humidity:
+    name: Playroom Humidity
