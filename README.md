@@ -122,6 +122,8 @@ In case you want to buy something, here is a list with Amazon links for your con
 
 #### Misc Setup Notes
 
+Various tidbits I wanted to capture.
+
 ##### Fixes for the SDR
 
 You need to disable kernel driver so that the SDR works correctly.  Please don't ask my why, something conflicts and this just needs to be done.  Just run the 
