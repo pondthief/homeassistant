@@ -1,6 +1,0 @@
-- platform: template
-  sensors:
-    garage_door_status:
-      friendly_name: 'Chris Garage Door'
-      value_template: '{{ states.cover.chris_garage_door.state }}'
-      icon_template: '{% if is_state("cover.chris_garage_door", "closed") %}mdi:garage{% else %}mdi:garage-open{% endif %}'

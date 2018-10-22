@@ -7,16 +7,6 @@ homeassistant:
   time_zone: America/Chicago
   whitelist_external_dirs: !secret white_list_dirs
 
-  #-------------------------------------------
-  # Include customizations
-  #-------------------------------------------
-  customize: !include customize.yaml
-
-  #-------------------------------------------
-  # Include GLOB customizations
-  #-------------------------------------------
-  customize_glob: !include customize_glob.yaml
-
 #-------------------------------------------
 # Shell Commands
 #-------------------------------------------
@@ -58,17 +48,15 @@ config:
 # HTTP Server Config
 #-------------------------------------------
 http:
-  api_password: !secret http_password
   base_url: !secret server_fqdn
   server_port: 8123
   ip_ban_enabled: true
   login_attempts_threshold: 3
   ssl_certificate: !secret ssl_cert
   ssl_key: !secret ssl_key
-  ssl_profile: intermediate
   trusted_networks:
     - 127.0.0.1
-    - 192.168.128.0/24
+    - 192.168.1.0/24
 
 #-------------------------------------------
 # Enable cameras
@@ -84,7 +72,7 @@ cover: !include cover.yaml
 # MQTT Settings
 #-------------------------------------------
 mqtt:
-  broker: !secret mqtt_host
+  broker: !secret internal_host
   discovery: true
 
 #-------------------------------------------
@@ -119,11 +107,6 @@ binary_sensor: !include_dir_merge_list binary_sensors
 # Include notifications
 #-------------------------------------------
 notify: !include notify.yaml
-
-#-------------------------------------------
-# Include zones
-#-------------------------------------------
-zone: !include_dir_list zones
 
 #-------------------------------------------
 # Include groups

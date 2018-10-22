@@ -1,3 +1,6 @@
+#-------------------------------------------
+# HomeKit Configuration
+#-------------------------------------------
 filter:
   include_entities:
     # Laundry Room Entities
@@ -48,18 +51,21 @@ filter:
     - binary_sensor.back_door
     
 entity_config:
+  # Laundry Room Entities
+  binary_sensor.laundry_door:
+    name: Laundry Room Door
   sensor.wirelesstag_study_temperature:
-    name: Study Temperature
+    name: Office Temperature
   sensor.wirelesstag_study_humidity:
-    name: Study Humidity
+    name: Office Humidity
   sensor.wirelesstag_clara_room_temperature:
-    name: Clara's Room Temperature
+    name: Clara Room Temperature
   sensor.wirelesstag_clara_room_humidity:
-    name: Clara's Room Humidity
+    name: Clara Room Humidity
   sensor.wirelesstag_master_bath_temperature:
-    name: Masterbath Temperature
+    name: Master Bathroor Temperature
   sensor.wirelesstag_master_bath_humidity:
-    name: Masterbath Humidity
+    name: Master Bathroor Humidity
   sensor.wirelesstag_masterbed_temperature:
     name: Master Bedroom Temperature
   sensor.wirelesstag_masterbed_humidity:
@@ -81,9 +87,9 @@ entity_config:
     name: Laundry Room Humidity
   # Guest Room
   sensor.wirelesstag_guest_room_temperature:
-    name: Guest Room Temperature
+    name: Guest Bedroom Temperature
   sensor.wirelesstag_guest_room_humidity:
-    name: Guest Room Humidity
+    name: Guest Bedroom Humidity
   # Guest Bath
   sensor.wirelesstag_guest_bath_temperature:
     name: Guest Bathroom Temperature

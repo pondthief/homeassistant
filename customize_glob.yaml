@@ -1,8 +1,0 @@
-#-------------------------------------------
-# Window Icons
-#-------------------------------------------
-sensor.*_window*:
-  icon: mdi:window-closed
-
-sensor.*_door:
-  icon: mdi:door-closed
