@@ -3,4 +3,3 @@ quick_settings:
   control: hidden
   entities:
     - input_boolean.enable_alerts
-    - input_boolean.guest_mode

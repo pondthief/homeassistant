@@ -4,16 +4,7 @@
 laundry_room:
   name: Laundry Room
   entities:
-    - switch.laundry_room_overhead_switch
-
-laundry_room_sensors:
-  name: Laundry Room
-  entities:
-    - sensor.laundry_door
-
-laundry_room_enviroment:
-  name: Laundry Room
-  entities:
+    - binary_sensor.laundry_door
     - sensor.wirelesstag_laundry_room_humidity
     - sensor.wirelesstag_laundry_room_light
     - sensor.wirelesstag_laundry_room_temperature

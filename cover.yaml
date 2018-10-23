@@ -1,3 +1,4 @@
+
 - platform: mqtt
   name: "Chris Garage Door"
   command_topic: "garadget/chris/command"

@@ -3,7 +3,7 @@
 #-------------------------------------------
 - platform: nut
   name: Synology
-  host: !secret nas_host
+  host: !secret synology_ui
   resources:
     - ups.load
     - battery.runtime

@@ -4,17 +4,7 @@
 study:
   name: Study
   entities:
-    - switch.study_overhead_switch
-    - light.study_cans_level
-
-study_sensors:
-  name: Study
-  entities:
-    - sensor.study_window
-
-study_enviroment:
-  name: Study
-  entities:
+    - binary_sensor.study_window
     - sensor.wirelesstag_study_humidity
     - sensor.wirelesstag_study_light
     - sensor.wirelesstag_study_temperature

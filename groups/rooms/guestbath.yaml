@@ -4,17 +4,6 @@
 guest_bath:
   name: Guest Bathroom
   entities:
-    - switch.guest_bath_fan_switch
-    - switch.guest_bath_sink_switch
-    - switch.guest_bath_shower_switch
-
-guest_bath_sensors:
-  name: Guest Bathroom
-  entities:
-
-guest_bath_enviroment:
-  name: Guest Bathroom
-  entities:
     - sensor.wirelesstag_guest_bath_light
     - sensor.wirelesstag_guest_bath_humidity
     - sensor.wirelesstag_guest_bath_temperature

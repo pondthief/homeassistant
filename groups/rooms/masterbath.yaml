@@ -4,18 +4,7 @@
 master_bath:
   name: Master Bathroom
   entities:
-    - switch.master_bath_sink_switch
-    - switch.master_bath_shower_switch
-    - switch.master_bath_fan_switch
-
-master_bath_sensors:
-  name: Master Bathroom
-  entities:
-    - sensor.master_bathroom_window
-
-master_bath_enviroment:
-  name: Master Bathroom
-  entities:
+    - binary_sensor.master_bathroom_window
     - sensor.wirelesstag_master_bath_humidity
     - sensor.wirelesstag_master_bath_light
     - sensor.wirelesstag_master_bath_temperature

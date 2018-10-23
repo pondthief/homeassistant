@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Switch to Enable / Disable Alerts
+#-------------------------------------------
 enable_alerts:
   name: Alerts Enabled
   icon: mdi:alert-octagram

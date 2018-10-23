@@ -6,16 +6,6 @@ garage:
   entities:
     - cover.chris_garage_door
     - cover.megan_garage_door
-
-garage_sensors:
-  name: Garage
-  entities:
-    - binary_sensor.overhead_garage_one_sensor
-    - binary_sensor.overhead_garage_two_sensor
-
-garage_enviroment:
-  name: Garage
-  entities:
     - sensor.wirelesstag_garage_humidity
     - sensor.wirelesstag_garage_light
     - sensor.wirelesstag_garage_temperature

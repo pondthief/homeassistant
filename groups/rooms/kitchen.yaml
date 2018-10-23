@@ -4,25 +4,12 @@
 kitchen:
   name: Kitchen
   entities:
-    - light.kitchen_table_level
-    - light.kitchen_cans_level
-    - switch.kitchen_cabinets_switch
-    - switch.kitchen_island_switch
-    - light.kitchen_sink_level
-
-kitchen_sensors:
-  name: Kitchen
-  entities:
-    - sensor.back_window_one
-    - sensor.back_window_two
-    - sensor.back_window_three
-    - sensor.back_right_window
-    - sensor.kitchen_sink_window
-    - sensor.back_door
-
-kitchen_enviroment:
-  name: Kitchen
-  entities:
+    - binary_sensor.back_window_1
+    - binary_sensor.back_window_2
+    - binary_sensor.back_window_3
+    - binary_sensor.right_window_1
+    - binary_sensor.kitchen_sink_window
+    - binary_sensor.back_door
     - sensor.wirelesstag_kitchen_humidity
     - sensor.wirelesstag_kitchen_light
     - sensor.wirelesstag_kitchen_temperature
