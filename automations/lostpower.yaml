@@ -9,13 +9,12 @@
     entity_id: sensor.synology_status_data
     from: 'OL'
   action:
-    - service: notify.pushover_chris
-      data:
-        title: "\U0001F50B Main Power OFFLINE"
-        message: "Main power lost, running on UPS power"
-        data:
-          sound: siren
-          priority: 1
+    - service: notify.twilio_sms
+      data_template:
+        message: "\U0001F50B Main Power OFFLINE, running on UPS battery."
+        target:
+          - !secret chris_mobile
+          - !secret megan_mobile
 
 #-------------------------------------------
 # Main Power Restored
@@ -28,9 +27,10 @@
     entity_id: sensor.synology_status_data
     to: 'OL'
   action:
-    - service: notify.pushover_chris
-      data:
-        title: "\U0001F50C Main Power RESTORED"
-        message: "Main power restored, now running on city power."
-        data:
-          priority: 0
+    - service: notify.twilio_sms
+      data_template:
+        message: "\U0001F50C Main Power RESTORED, running on city power."
+        target:
+          - !secret chris_mobile
+          - !secret megan_mobile
+

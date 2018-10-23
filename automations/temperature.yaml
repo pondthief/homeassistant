@@ -7,17 +7,16 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.average_temperature
-    above: 77
+    above: 80
     for:
       minutes: 30
   action:
-    - service: notify.pushover_chris
-      data:
-        title: "\U000026C4 High Temperature"
-        message: "The average house temp is at or above 78 degrees"
-        data:
-          sound: siren
-          priority: 2
+    - service: notify.twilio_sms
+      data_template:
+        message: "\U0001F4A7 Average house temp is at or above 80 degrees"
+        target:
+          - !secret chris_mobile
+          - !secret megan_mobile
 
 #-------------------------------------------
 # Too Cold Alert
@@ -28,14 +27,13 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.average_temperature
-    below: 64
+    below: 62
     for:
       minutes: 30
   action:
-    - service: notify.pushover_chris
-      data:
-        title: "\U000026C4 Low Temperature"
-        message: "The average house temp is at or below 64 degrees"
-        data:
-          sound: siren
-          priority: 2
+    - service: notify.twilio_sms
+      data_template:
+        message: "\U0001F4A7  Average house temp is at or below 62 degree"
+        target:
+          - !secret chris_mobile
+          - !secret megan_mobile
