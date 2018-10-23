@@ -9,7 +9,11 @@ default_view:
     - group.quick_glance
     - group.quick_settings
 
-
-
-
-
+quick_glance:
+  name: Quick Glance
+  control: hidden
+  entities:
+    - sensor.average_humidity
+    - sensor.average_temperature
+    - sensor.all_doors
+    - sensor.all_windows

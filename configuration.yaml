@@ -19,7 +19,7 @@ influxdb:
   host: !secret internal_host
   
 #-------------------------------------------
-# Enable InfluxDB
+# Input Booleans
 #-------------------------------------------
 input_boolean: !include_dir_merge_named input_booleans
 
