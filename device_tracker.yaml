@@ -1,19 +1,4 @@
 #-------------------------------------------
-# Meraki Location Analytics
-#-------------------------------------------
-# - platform: meraki
-#  secret: !secret meraki_secret
-#  validator: !secret meraki_validator
-
-#-------------------------------------------
-# Car Trackers
-#-------------------------------------------
-#- platform: mqtt_json
-#  devices:
-#    chris_car: location/chris
-#    megan_car: location/megan
-
-#-------------------------------------------
 # unifi controller
 #-------------------------------------------
 - platform: unifi

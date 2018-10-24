@@ -4,20 +4,7 @@
 master_bed:
   name: Master Bedroom
   entities:
-    - switch.megan_bedside_switch
-    - switch.chris_bedside_switch
-    - switch.master_bed_fan_switch
-    - switch.master_bed_fan_light_switch
-    - light.master_bed_cans_level
-
-master_bed_sensors:
-  name: Master Bedroom
-  entities:
     - sensor.master_bedroom_window
-
-master_bed_enviroment:
-  name: Master Bedroom
-  entities:
     - sensor.wirelesstag_masterbed_humidity
     - sensor.wirelesstag_masterbed_light
     - sensor.wirelesstag_masterbed_temperature

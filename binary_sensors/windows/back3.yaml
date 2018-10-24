@@ -1,0 +1,11 @@
+#-------------------------------------------
+#  Back Window 3
+#-------------------------------------------
+- name: "Back Window 3"
+  platform: mqtt
+  state_topic: "home/sensor/830937"
+  qos: 1
+  payload_on: open
+  payload_off: closed
+  device_class: window
+  value_template: '{{value_json.state}}'

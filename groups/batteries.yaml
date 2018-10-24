@@ -15,7 +15,3 @@ battery_levels:
     - binary_sensor.play_area_low_battery
     - binary_sensor.study_low_battery
     - binary_sensor.garage_low_battery
-    - sensor.laundry_multisensor_battery
-    - sensor.front_door_battery
-    - sensor.back_door_battery
-    - sensor.garage_door_battery

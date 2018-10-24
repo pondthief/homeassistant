@@ -1,0 +1,11 @@
+#-------------------------------------------
+#  Kitchen Sink Window
+#-------------------------------------------
+- name: "Kitchen Sink Window"
+  platform: mqtt
+  state_topic: "home/sensor/65736"
+  qos: 1
+  payload_on: open
+  payload_off: closed
+  device_class: window
+  value_template: '{{value_json.state}}'

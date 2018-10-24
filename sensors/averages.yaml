@@ -12,11 +12,7 @@
     - sensor.wirelesstag_masterbed_temperature
     - sensor.wirelesstag_play_area_temperature
     - sensor.wirelesstag_study_temperature
-# Don't include these, as they are high temp rooms
-# and will skew the average
-#    - sensor.wirelesstag_laundry_room_temperature
-#    - sensor.wirelesstag_guest_bath_temperature
-#    - sensor.wirelesstag_master_bath_temperature
+    - sensor.wirelesstag_master_bath_temperature
 
 #-------------------------------------------
 #  Average Humidity
@@ -32,8 +28,3 @@
     - sensor.wirelesstag_masterbed_humidity
     - sensor.wirelesstag_play_area_humidity
     - sensor.wirelesstag_study_humidity
-# Don't include these, as they are high humidity rooms
-# and will skew the average
-#    - sensor.wirelesstag_laundry_room_humidity
-#    - sensor.wirelesstag_guest_bath_humidity
-#    - sensor.wirelesstag_master_bath_humidity

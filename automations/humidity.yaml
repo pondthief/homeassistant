@@ -11,10 +11,9 @@
     for:
       minutes: 60
   action:
-    - service: notify.pushover_chris
-      data:
-        title: "\U0001F4A7 High Humidity"
-        message: "The average house humidity is at or above 65%"
-        data:
-          sound: siren
-          priority: 0
+    - service: notify.twilio_sms
+      data_template:
+        message: "\U0001F4A7 The average house humidity is at or above 65%"
+        target:
+          - !secret chris_mobile
+          - !secret megan_mobile

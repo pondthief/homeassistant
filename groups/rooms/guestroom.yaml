@@ -1,0 +1,10 @@
+#-------------------------------------------
+#  Guest Room
+#-------------------------------------------
+guest_room:
+  name: Guest Room
+  entities:
+    - binary_sensor.guest_room_window
+    - sensor.wirelesstag_guest_room_humidity
+    - sensor.wirelesstag_guest_room_light
+    - sensor.wirelesstag_guest_room_temperature

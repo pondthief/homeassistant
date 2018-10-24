@@ -1,0 +1,11 @@
+#-------------------------------------------
+#  Master Bathroom Window
+#-------------------------------------------
+- name: "Master Bathroom Window"
+  platform: mqtt
+  state_topic: "home/sensor/792500"
+  qos: 1
+  payload_on: open
+  payload_off: closed
+  device_class: window
+  value_template: '{{value_json.state}}'

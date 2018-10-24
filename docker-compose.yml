@@ -1,37 +1,32 @@
-version: '3'
+version: '2'
 
 services:
   home-assistant:
     image: homeassistant/home-assistant:latest
-    ports:
-      - "8123:8123"
+    network_mode: host
     depends_on:
       - postgres
       - influxdb
       - mosquitto
     volumes:
       - /srv/home-assistant:/config
+      - /etc/letsencrypt/:/etc/letsencrypt
     restart: always
-    devices:
-      - "/dev/zwave:/dev/zwave"
   
   postgres:
     image: postgres:alpine
-    ports:
-      - "5432:5432"
+    network_mode: host
     restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - /etc/letsencrypt/:/etc/letsencrypt
     environment:
       POSTGRES_USER: homeassistant
       POSTGRES_PASSWORD: homeassistant
   
   mosquitto:
     image: eclipse-mosquitto:latest
-    ports:
-      - "1883:1883"
-      - "9001:9001"
-      - "8883:8883"
+    network_mode: host
     restart: always
     volumes:
       - /etc/letsencrypt/:/etc/letsencrypt
@@ -42,21 +37,34 @@ services:
   honeywell2mqtt:
     image: chriskacerguis/honeywell2mqtt:2.0.0
     restart: always
+    privileged: true
     depends_on:
       - mosquitto
+    environment:
+      MQTT_HOST: 192.168.1.33
 
-  portainer:
-    image: portainer/portainer
-    ports:
-      - "9000:9000"
+  influxdb:
+    image: influxdb:alpine
+    network_mode: host
     restart: always
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
+      - influxdb_data:/var/lib/influxdb
       - /etc/letsencrypt/:/etc/letsencrypt
-    network_mode: "bridge"
-    command: --ssl --sslcert /etc/letsencrypt/live/fuzzyblender.com/fullchain.pem --sslkey /etc/letsencrypt/live/fuzzyblender.com/privkey.pem
+    environment:
+      INFLUXDB_DB: home_assistant
+
+#  portainer:
+#    image: portainer/portainer
+#    network_mode: host
+#    restart: always
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
+#      - portainer_data:/data
+#      - /etc/letsencrypt/:/etc/letsencrypt
+#    network_mode: "bridge"
+#    command: --ssl --sslcert /etc/letsencrypt/live/fuzzyblender.com/fullchain.pem --sslkey /etc/letsencrypt/live/fuzzyblender.com/privkey.pem
 
 volumes:
-  portainer_data:
+#  portainer_data:
   postgres_data:
+  influxdb_data:

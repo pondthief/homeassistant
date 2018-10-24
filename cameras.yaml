@@ -2,7 +2,7 @@
 # Use Synology for Cameras 
 #-------------------------------------------
 - platform: synology
-  url: !secret synology_host
+  url: !secret synology_ui
   username: !secret synology_user
   password: !secret synology_pass
   timeout: 15

@@ -1,9 +1,0 @@
-#-------------------------------------------
-# Home
-#-------------------------------------------
-name: Home
-latitude: !secret home_lat
-longitude: !secret home_lon
-icon: mdi:home
-track_ios: true
-radius: 200

@@ -1,0 +1,11 @@
+#-------------------------------------------
+#  Monitor Synology NAS UPS
+#-------------------------------------------
+- platform: nut
+  name: Synology
+  host: !secret synology_ui
+  resources:
+    - ups.load
+    - battery.runtime
+    - battery.charge
+    - ups.status

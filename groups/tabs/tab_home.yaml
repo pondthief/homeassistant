@@ -5,14 +5,15 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-    - group.family
-    - group.thermostat
-    - group.quick_lock
+    - group.people
     - group.quick_glance
-    - group.garage
     - group.quick_settings
 
-
-
-
-
+quick_glance:
+  name: Quick Glance
+  control: hidden
+  entities:
+    - sensor.average_humidity
+    - sensor.average_temperature
+    - sensor.all_doors
+    - sensor.all_windows

@@ -1,36 +1,39 @@
 #-------------------------------------------
-# Main Power Lost
+# Too Hot Alert
 #-------------------------------------------
-- alias: 'Main Power Lost'
+- alias: "Too Hot Alert"
   initial_state: true
   hide_entity: true
   trigger:
-    platform: state
-    entity_id: sensor.synology_status_data
-    from: 'OL'
+    platform: numeric_state
+    entity_id: sensor.average_temperature
+    above: 80
+    for:
+      minutes: 30
   action:
     - service: notify.twilio_sms
       data_template:
-        message: "\U0001F50B Main Power OFFLINE, running on UPS battery."
+        message: "\U0001F4A7 Average house temp is at or above 80 degrees"
         target:
           - !secret chris_mobile
           - !secret megan_mobile
 
 #-------------------------------------------
-# Main Power Restored
+# Too Cold Alert
 #-------------------------------------------
-- alias: 'Main Power Restored'
+- alias: "Too Cold Alert"
   initial_state: true
   hide_entity: true
   trigger:
-    platform: state
-    entity_id: sensor.synology_status_data
-    to: 'OL'
+    platform: numeric_state
+    entity_id: sensor.average_temperature
+    below: 62
+    for:
+      minutes: 30
   action:
     - service: notify.twilio_sms
       data_template:
-        message: "\U0001F50C Main Power RESTORED, running on city power."
+        message: "\U0001F4A7  Average house temp is at or below 62 degree"
         target:
           - !secret chris_mobile
           - !secret megan_mobile
-

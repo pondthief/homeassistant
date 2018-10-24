@@ -1,3 +1,6 @@
+#-------------------------------------------
+# Wireless Tag Configuration
+#-------------------------------------------
 - platform: wirelesstag
   monitored_conditions:
     - presence

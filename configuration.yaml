@@ -7,16 +7,6 @@ homeassistant:
   time_zone: America/Chicago
   whitelist_external_dirs: !secret white_list_dirs
 
-  #-------------------------------------------
-  # Include customizations
-  #-------------------------------------------
-  customize: !include customize.yaml
-
-  #-------------------------------------------
-  # Include GLOB customizations
-  #-------------------------------------------
-  customize_glob: !include customize_glob.yaml
-
 #-------------------------------------------
 # Shell Commands
 #-------------------------------------------
@@ -29,7 +19,7 @@ influxdb:
   host: !secret internal_host
   
 #-------------------------------------------
-# Enable InfluxDB
+# Input Booleans
 #-------------------------------------------
 input_boolean: !include_dir_merge_named input_booleans
 
@@ -50,11 +40,6 @@ frontend:
   javascript_version: latest
 
 #-------------------------------------------
-# iOS App Settings
-#-------------------------------------------
-ios: !include ios.yaml
-
-#-------------------------------------------
 # Enable configuration UI
 #-------------------------------------------
 config:
@@ -63,21 +48,15 @@ config:
 # HTTP Server Config
 #-------------------------------------------
 http:
-  api_password: !secret http_password
   base_url: !secret server_fqdn
+  server_port: 8123
   ip_ban_enabled: true
   login_attempts_threshold: 3
   ssl_certificate: !secret ssl_cert
   ssl_key: !secret ssl_key
-  ssl_profile: intermediate
   trusted_networks:
     - 127.0.0.1
-    - 192.168.128.0/24
-
-#-------------------------------------------
-# Enable Nest
-#-------------------------------------------
-nest: !include nest.yaml
+    - 192.168.1.0/24
 
 #-------------------------------------------
 # Enable cameras
@@ -115,11 +94,6 @@ logbook: !include logbook.yaml
 sun:
 
 #-------------------------------------------
-# Home Assistant Cloud
-#-------------------------------------------
-cloud:
-
-#-------------------------------------------
 # Include sensors
 #-------------------------------------------
 sensor: !include_dir_merge_list sensors
@@ -135,11 +109,6 @@ binary_sensor: !include_dir_merge_list binary_sensors
 notify: !include notify.yaml
 
 #-------------------------------------------
-# Include zones
-#-------------------------------------------
-zone: !include_dir_list zones
-
-#-------------------------------------------
 # Include groups
 #-------------------------------------------
 group: !include_dir_merge_named groups
@@ -148,16 +117,6 @@ group: !include_dir_merge_named groups
 # Include automations
 #-------------------------------------------
 automation: !include_dir_merge_list automations
-
-#-------------------------------------------
-# Zwave Settings
-#-------------------------------------------
-zwave: !include zwave.yaml
-
-#-------------------------------------------
-# Scripts
-#-------------------------------------------
-script: !include_dir_merge_named scripts
 
 #-------------------------------------------
 # Device Tracking
@@ -177,3 +136,8 @@ twilio:
 wirelesstag:
   username: !secret sense_username
   password: !secret sense_password
+
+#-------------------------------------------
+# Homekit
+#-------------------------------------------
+homekit: !include homekit.yaml

@@ -1,0 +1,97 @@
+#-------------------------------------------
+# HomeKit Configuration
+#-------------------------------------------
+filter:
+  include_entities:
+    # Laundry Room Entities
+    - binary_sensor.laundry_door
+    - binary_sensor.laundry_room_motion
+    - sensor.wirelesstag_laundry_room_temperature
+    - sensor.wirelesstag_laundry_room_humidity
+    # Guest Room Entities
+    - binary_sensor.guest_room_window
+    - sensor.wirelesstag_guest_room_temperature
+    - sensor.wirelesstag_guest_room_humidity
+    # Guest Bath Entities
+    - sensor.wirelesstag_guest_bath_temperature
+    - sensor.wirelesstag_guest_bath_humidity
+    - binary_sensor.guest_room_motion
+    # Study Entities
+    - sensor.wirelesstag_study_temperature
+    - sensor.wirelesstag_study_humidity
+    - binary_sensor.study_window
+    # Clara Entities
+    - binary_sensor.claras_room_window
+    - sensor.wirelesstag_clara_room_temperature
+    - sensor.wirelesstag_clara_room_humidity
+    # Master Bathroom Entities
+    - binary_sensor.master_bathroom_window
+    - sensor.wirelesstag_master_bath_temperature
+    - sensor.wirelesstag_master_bath_humidity
+    # Master Bedroom Entities
+    - binary_sensor.master_bedroom_window
+    - sensor.wirelesstag_masterbed_temperature
+    - sensor.wirelesstag_masterbed_humidity
+    # Kitchen Entities
+    - binary_sensor.kitchen_sink_window
+    - binary_sensor.back_window_1
+    - binary_sensor.back_window_2
+    - binary_sensor.back_window_3
+    - binary_sensor.right_window_1
+    - sensor.wirelesstag_kitchen_temperature
+    - sensor.wirelesstag_kitchen_humidity
+    # Play Room
+    - binary_sensor.right_window_2
+    - binary_sensor.front_window_1
+    - binary_sensor.front_window_2
+    - sensor.wirelesstag_play_area_temperature
+    - sensor.wirelesstag_play_area_humidity
+    # General Enitites
+    - binary_sensor.front_door
+    - binary_sensor.back_door
+    
+entity_config:
+  # Laundry Room Entities
+  binary_sensor.laundry_door:
+    name: Laundry Room Door
+  sensor.wirelesstag_study_temperature:
+    name: Office Temperature
+  sensor.wirelesstag_study_humidity:
+    name: Office Humidity
+  sensor.wirelesstag_clara_room_temperature:
+    name: Clara Room Temperature
+  sensor.wirelesstag_clara_room_humidity:
+    name: Clara Room Humidity
+  sensor.wirelesstag_master_bath_temperature:
+    name: Master Bathroor Temperature
+  sensor.wirelesstag_master_bath_humidity:
+    name: Master Bathroor Humidity
+  sensor.wirelesstag_masterbed_temperature:
+    name: Master Bedroom Temperature
+  sensor.wirelesstag_masterbed_humidity:
+    name: Master Bedroom Humidity
+  sensor.wirelesstag_kitchen_temperature:
+    name: Kitchen Temperature
+  sensor.wirelesstag_kitchen_humidity:
+    name: Kitchen Humidity
+  sensor.wirelesstag_play_area_temperature:
+    name: Playroom Temperature
+  sensor.wirelesstag_play_area_humidity:
+    name: Playroom Humidity
+  # Laundry Room
+  binary_sensor.laundry_room_motion:
+    name: Laundry Room Motion
+  sensor.wirelesstag_laundry_room_temperature:
+    name: Laundry Room Temperature
+  sensor.wirelesstag_laundry_room_humidity:
+    name: Laundry Room Humidity
+  # Guest Room
+  sensor.wirelesstag_guest_room_temperature:
+    name: Guest Bedroom Temperature
+  sensor.wirelesstag_guest_room_humidity:
+    name: Guest Bedroom Humidity
+  # Guest Bath
+  sensor.wirelesstag_guest_bath_temperature:
+    name: Guest Bathroom Temperature
+  sensor.wirelesstag_guest_bath_humidity:
+    name: Guest Bathroom Humidity

@@ -1,7 +1,4 @@
 #-------------------------------------------
-#  Hallway
+#  Speedtest Sensor
 #-------------------------------------------
-hallway:
-  name: Hallway
-  entities:
-
+- platform: fastdotcom
