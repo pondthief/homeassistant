@@ -4,6 +4,7 @@ services:
   home-assistant:
     image: homeassistant/home-assistant:latest
     network_mode: host
+    restart: always
     depends_on:
       - postgres
       - influxdb
@@ -11,8 +12,7 @@ services:
     volumes:
       - /srv/home-assistant:/config
       - /etc/letsencrypt/:/etc/letsencrypt
-    restart: always
-  
+    
   postgres:
     image: postgres:alpine
     network_mode: host
@@ -41,7 +41,7 @@ services:
     depends_on:
       - mosquitto
     environment:
-      MQTT_HOST: 192.168.1.33
+      MQTT_HOST: 1.1.1.1
 
   influxdb:
     image: influxdb:alpine
@@ -53,6 +53,16 @@ services:
     environment:
       INFLUXDB_DB: home_assistant
 
+  grafana:
+    image: grafana/grafana:latest
+    network_mode: host
+    restart: always
+    volumes:
+      - /srv/grafana/data:/var/lib/grafana
+      - /srv/grafana/grafana.ini:/etc/grafana/grafana.ini"
+      - /etc/letsencrypt/:/etc/letsencrypt
+  
+# Generally speaking, I usually setup Portainer by itself
 #  portainer:
 #    image: portainer/portainer
 #    network_mode: host
