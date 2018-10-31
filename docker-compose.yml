@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  home-assistant:
+  homeassistant:
     image: homeassistant/home-assistant:latest
     network_mode: host
     restart: always
@@ -57,11 +57,29 @@ services:
     image: grafana/grafana:latest
     network_mode: host
     restart: always
+    user: root
     volumes:
       - /srv/grafana/data:/var/lib/grafana
       - /srv/grafana/grafana.ini:/etc/grafana/grafana.ini"
       - /etc/letsencrypt/:/etc/letsencrypt
-  
+
+ adminer:
+    image: adminer
+    restart: always
+    network_mode: host
+
+  homebridge:
+    image: oznu/homebridge
+    restart: always
+    network_mode: host
+    volumes:
+      - /srv/homebridge:/homebridge
+      - /etc/letsencrypt/:/etc/letsencrypt
+    enviroment:
+      TZ: America/Chicago
+      HOMEBRIDGE_CONFIG_UI: 1
+      HOMEBRIDGE_CONFIG_UI_PORT: 8080
+
 # Generally speaking, I usually setup Portainer by itself
 #  portainer:
 #    image: portainer/portainer
@@ -72,9 +90,10 @@ services:
 #      - portainer_data:/data
 #      - /etc/letsencrypt/:/etc/letsencrypt
 #    network_mode: "bridge"
-#    command: --ssl --sslcert /etc/letsencrypt/live/fuzzyblender.com/fullchain.pem --sslkey /etc/letsencrypt/live/fuzzyblender.com/privkey.pem
+#    command: --ssl --sslcert /etc/letsencrypt/live/fuzzyblender.com-0002/fullchain.pem --sslkey /etc/letsencrypt/live/fuzzyblender.com-0002/privkey.pem
+# /usr/syno/etc/certificate/_archive/nc7q7G
 
 volumes:
-#  portainer_data:
   postgres_data:
   influxdb_data:
+#  portainer_data:
