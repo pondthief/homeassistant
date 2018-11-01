@@ -1,8 +1,4 @@
 #-------------------------------------------
-# Use Synology for Cameras 
+# Amcrest Cameras
 #-------------------------------------------
-- platform: synology
-  url: !secret synology_api
-  username: !secret synology_user
-  password: !secret synology_pass
-  timeout: 15
+- platform: amcrest
