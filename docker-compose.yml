@@ -79,7 +79,7 @@ services:
       TZ: America/Chicago
       HOMEBRIDGE_CONFIG_UI: 1
       HOMEBRIDGE_CONFIG_UI_PORT: 8080
-
+  
 # Generally speaking, I usually setup Portainer by itself
 #  portainer:
 #    image: portainer/portainer
