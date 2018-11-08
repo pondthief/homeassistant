@@ -52,7 +52,7 @@ services:
       - ${USERDIR}/shared:/shared
     labels:
       - "traefik.enable=true"
-      - "traefik.backend=glances"
+      - "traefik.backend=homeassistant"
       #- "traefik.frontend.rule=PathPrefixStrip: /hass"
       - "traefik.frontend.rule=Host:hass.${DOMAINNAME}"  
       - "traefik.port=8123"
