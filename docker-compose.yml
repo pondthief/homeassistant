@@ -195,4 +195,3 @@ networks:
     name: traefik_proxy
   default:
     driver: bridge
-    name: default
