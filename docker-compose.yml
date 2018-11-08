@@ -12,12 +12,12 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "8080:8080"
+#      - "8080:8080"
     labels:
       - "traefik.enable=true"
       - "traefik.backend=traefik"
-      - "traefik.frontend.rule=Host:traefik.fuzzyblender.com"  
-#      - "traefik.frontend.rule=Host:nuc.fuzzyblender.com; PathPrefixStrip: /traefik"
+#      - "traefik.frontend.rule=Host:traefik.fuzzyblender.com"  
+      - "traefik.frontend.rule=Host:nuc.fuzzyblender.com; PathPrefixStrip: /traefik"
       - "traefik.port=8080"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
@@ -60,7 +60,7 @@ services:
       POSTGRES_PASSWORD: homeassistant
   
   mosquitto:
-    container_name: mqtt
+    container_name: mosquitto
     image: eclipse-mosquitto:latest
     network_mode: host
     restart: always
@@ -78,7 +78,7 @@ services:
     depends_on:
       - mosquitto
     environment:
-      MQTT_HOST: 1.1.1.1
+      MQTT_HOST: mosquitto
 
   influxdb:
     container_name: influxdb
@@ -92,17 +92,6 @@ services:
     environment:
       INFLUXDB_DB: home_assistant
 
-  grafana:
-    container_name: grafana
-    image: grafana/grafana:latest
-    network_mode: host
-    restart: always
-    user: root
-    volumes:
-      - /srv/grafana/data:/var/lib/grafana
-      - /srv/grafana/grafana.ini:/etc/grafana/grafana.ini:ro
-      - /srv/certs:/srv/certs
-
   adminer:
     container_name: adminder
     image: adminer
@@ -114,17 +103,17 @@ services:
       - "traefik.backend=adminer"
 #      - "traefik.frontend.rule=Host:traefik.fuzzyblender.com"  
       - "traefik.frontend.rule=Host:nuc.fuzzyblender.com; PathPrefixStrip: /adminer"
-      - "traefik.port=80"
+      - "traefik.port=8080"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
-#      - "traefik.frontend.headers.STSSeconds=315360000"
-#      - "traefik.frontend.headers.browserXSSFilter=true"
-#      - "traefik.frontend.headers.contentTypeNosniff=true"
-#      - "traefik.frontend.headers.forceSTSHeader=true"
-#      - "traefik.frontend.headers.SSLHost=fuzzyblender.com"
-#      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-#      - "traefik.frontend.headers.STSPreload=true"
-#      - "traefik.frontend.headers.frameDeny=true"
+      - "traefik.frontend.headers.STSSeconds=315360000"
+      - "traefik.frontend.headers.browserXSSFilter=true"
+      - "traefik.frontend.headers.contentTypeNosniff=true"
+      - "traefik.frontend.headers.forceSTSHeader=true"
+      - "traefik.frontend.headers.SSLHost=fuzzyblender.com"
+      - "traefik.frontend.headers.STSIncludeSubdomains=true"
+      - "traefik.frontend.headers.STSPreload=true"
+      - "traefik.frontend.headers.frameDeny=true"
 
   glances:
     container_name: glances
@@ -133,9 +122,6 @@ services:
     networks:
       - traefik_proxy
     pid: host
-#    ports:
-#      - "61208:61208"
-#      - "61209:61209"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
@@ -157,19 +143,6 @@ services:
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
 
-  homebridge:
-    container_name: homebridge
-    image: oznu/homebridge
-    network_mode: host
-    restart: always
-    volumes:
-      - /srv/homebridge:/homebridge
-      - /srv/certs:/srv/certs
-    environment:
-      TZ: America/Chicago
-      HOMEBRIDGE_CONFIG_UI: 1
-      HOMEBRIDGE_CONFIG_UI_PORT: 8888
-  
 # Generally speaking, I usually setup Portainer by itself
 #  portainer:
 #    image: portainer/portainer
