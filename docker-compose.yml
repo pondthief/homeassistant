@@ -8,12 +8,12 @@ services:
     restart: always
     domainname: nuc.fuzzyblender.com
     networks:
-      - home-assistant_default
+      - bridge
       - traefik_proxy
     ports:
       - "80:80"
       - "443:443"
-#      - "XXXX:8080"
+      - "8080:8080"
     labels:
       - "traefik.enable=true"
       - "traefik.backend=traefik"
