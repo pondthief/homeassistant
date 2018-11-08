@@ -1,4 +1,4 @@
-version: '2'
+version: '3.7'
 
 services:
   homeassistant:
@@ -11,7 +11,7 @@ services:
       - mosquitto
     volumes:
       - /srv/home-assistant:/config
-      - /etc/letsencrypt/:/etc/letsencrypt
+      - /srv/certs:/srv/certs
     
   postgres:
     image: postgres:alpine
@@ -19,7 +19,7 @@ services:
     restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - /etc/letsencrypt/:/etc/letsencrypt
+      - /srv/certs:/srv/certs
     environment:
       POSTGRES_USER: homeassistant
       POSTGRES_PASSWORD: homeassistant
@@ -29,9 +29,9 @@ services:
     network_mode: host
     restart: always
     volumes:
-      - /etc/letsencrypt/:/etc/letsencrypt
+      - /srv/certs:/srv/certs
       - /srv/mosquitto/data:/mosquitto/data
-      - /srv/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - /srv/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
       - /srv/mosquitto/log:/mosquitto/log
 
   honeywell2mqtt:
@@ -49,7 +49,8 @@ services:
     restart: always
     volumes:
       - influxdb_data:/var/lib/influxdb
-      - /etc/letsencrypt/:/etc/letsencrypt
+      - /srv/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro
+      - /srv/certs:/srv/certs
     environment:
       INFLUXDB_DB: home_assistant
 
@@ -60,25 +61,37 @@ services:
     user: root
     volumes:
       - /srv/grafana/data:/var/lib/grafana
-      - /srv/grafana/grafana.ini:/etc/grafana/grafana.ini"
-      - /etc/letsencrypt/:/etc/letsencrypt
+      - /srv/grafana/grafana.ini:/etc/grafana/grafana.ini:ro
+      - /srv/certs:/srv/certs
 
- adminer:
+  adminer:
     image: adminer
     restart: always
     network_mode: host
 
+  glances:
+    image: nicolargo/glances
+    restart: always
+    pid: host
+    ports:
+      - "61208:61208"
+      - "61209:61209"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      GLANCES_OPT: -w
+
   homebridge:
     image: oznu/homebridge
-    restart: always
     network_mode: host
+    restart: always
     volumes:
       - /srv/homebridge:/homebridge
-      - /etc/letsencrypt/:/etc/letsencrypt
-    enviroment:
+      - /srv/certs:/srv/certs
+    environment:
       TZ: America/Chicago
       HOMEBRIDGE_CONFIG_UI: 1
-      HOMEBRIDGE_CONFIG_UI_PORT: 8080
+      HOMEBRIDGE_CONFIG_UI_PORT: 8888
   
 # Generally speaking, I usually setup Portainer by itself
 #  portainer:
@@ -88,10 +101,9 @@ services:
 #    volumes:
 #      - /var/run/docker.sock:/var/run/docker.sock
 #      - portainer_data:/data
-#      - /etc/letsencrypt/:/etc/letsencrypt
+#      - /srv/certs:/srv/certs
 #    network_mode: "bridge"
-#    command: --ssl --sslcert /etc/letsencrypt/live/fuzzyblender.com-0002/fullchain.pem --sslkey /etc/letsencrypt/live/fuzzyblender.com-0002/privkey.pem
-# /usr/syno/etc/certificate/_archive/nc7q7G
+#    command: --ssl --sslcert /srv/certs/fullchain.crt --sslkey /srv/certs/fuzzyblender.key
 
 volumes:
   postgres_data:
