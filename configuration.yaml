@@ -127,9 +127,11 @@ device_tracker: !include device_tracker.yaml
 #-------------------------------------------
 # Twilio
 #-------------------------------------------
-twilio:
-  account_sid: !secret twilio_sid
-  auth_token: !secret twilio_key
+# Disabled until this is fixed:
+# https://github.com/home-assistant/home-assistant/issues/18246
+#twilio:
+#  account_sid: !secret twilio_sid
+#  auth_token: !secret twilio_key
 
 #-------------------------------------------
 # WirelessTag
