@@ -129,8 +129,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.backend=glances"
-      - "traefik.frontend.rule=Host:glances.fuzzyblender.com"  
-#      - "traefik.frontend.rule=Host:nuc.fuzzyblender.com; PathPrefixStrip: /glances"
+#      - "traefik.frontend.rule=Host:glances.fuzzyblender.com"  
+      - "traefik.frontend.rule=PathPrefixStrip: /glances"
       - "traefik.port=61208"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
