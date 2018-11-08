@@ -6,7 +6,6 @@ services:
     image: traefik:latest
     container_name: traefik
     restart: always
-    domainname: nuc.fuzzyblender.com
     networks:
       - default
       - traefik_proxy
@@ -17,19 +16,19 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.backend=traefik"
-#      - "traefik.frontend.rule=Host:traefik.fuzzyblender.com"  
-      - "traefik.frontend.rule=Host:nuc.fuzzyblender.com; PathPrefixStrip: /traefik"
+      - "traefik.frontend.rule=Host:traefik.fuzzyblender.com"  
+#      - "traefik.frontend.rule=Host:nuc.fuzzyblender.com; PathPrefixStrip: /traefik"
       - "traefik.port=8080"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
-#      - "traefik.frontend.headers.STSSeconds=315360000"
-#      - "traefik.frontend.headers.browserXSSFilter=true"
-#      - "traefik.frontend.headers.contentTypeNosniff=true"
-#      - "traefik.frontend.headers.forceSTSHeader=true"
-#      - "traefik.frontend.headers.SSLHost=nuc.fuzzyblender.com"
-#      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-#      - "traefik.frontend.headers.STSPreload=true"
-#      - "traefik.frontend.headers.frameDeny=true"
+      - "traefik.frontend.headers.STSSeconds=315360000"
+      - "traefik.frontend.headers.browserXSSFilter=true"
+      - "traefik.frontend.headers.contentTypeNosniff=true"
+      - "traefik.frontend.headers.forceSTSHeader=true"
+      - "traefik.frontend.headers.SSLHost=fuzzyblender.com"
+      - "traefik.frontend.headers.STSIncludeSubdomains=true"
+      - "traefik.frontend.headers.STSPreload=true"
+      - "traefik.frontend.headers.frameDeny=true"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /srv/traefik:/etc/traefik
@@ -122,7 +121,7 @@ services:
 #      - "traefik.frontend.headers.browserXSSFilter=true"
 #      - "traefik.frontend.headers.contentTypeNosniff=true"
 #      - "traefik.frontend.headers.forceSTSHeader=true"
-#      - "traefik.frontend.headers.SSLHost=nuc.fuzzyblender.com"
+#      - "traefik.frontend.headers.SSLHost=fuzzyblender.com"
 #      - "traefik.frontend.headers.STSIncludeSubdomains=true"
 #      - "traefik.frontend.headers.STSPreload=true"
 #      - "traefik.frontend.headers.frameDeny=true"
@@ -144,19 +143,19 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.backend=glances"
-#      - "traefik.frontend.rule=Host:traefik.fuzzyblender.com"  
-      - "traefik.frontend.rule=Host:nuc.fuzzyblender.com; PathPrefixStrip: /glances"
+      - "traefik.frontend.rule=Host:glances.fuzzyblender.com"  
+#      - "traefik.frontend.rule=Host:nuc.fuzzyblender.com; PathPrefixStrip: /glances"
       - "traefik.port=61208"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
-#      - "traefik.frontend.headers.STSSeconds=315360000"
-#      - "traefik.frontend.headers.browserXSSFilter=true"
-#      - "traefik.frontend.headers.contentTypeNosniff=true"
-#      - "traefik.frontend.headers.forceSTSHeader=true"
-#      - "traefik.frontend.headers.SSLHost=nuc.fuzzyblender.com"
-#      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-#      - "traefik.frontend.headers.STSPreload=true"
-#      - "traefik.frontend.headers.frameDeny=true"
+      - "traefik.frontend.headers.STSSeconds=315360000"
+      - "traefik.frontend.headers.browserXSSFilter=true"
+      - "traefik.frontend.headers.contentTypeNosniff=true"
+      - "traefik.frontend.headers.forceSTSHeader=true"
+      - "traefik.frontend.headers.SSLHost=fuzzyblender.com"
+      - "traefik.frontend.headers.STSIncludeSubdomains=true"
+      - "traefik.frontend.headers.STSPreload=true"
+      - "traefik.frontend.headers.frameDeny=true"
 
   homebridge:
     container_name: homebridge
