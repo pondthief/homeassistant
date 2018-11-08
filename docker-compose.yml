@@ -2,9 +2,11 @@ version: '3.7'
 
 services:
 
+  # Traefik Reverse Proxy
   traefik:
-    image: traefik:latest
+    image: traefik:alpine
     container_name: traefik
+    domainname: ${DOMAINNAME}
     restart: always
     networks:
       - default
@@ -12,12 +14,12 @@ services:
     ports:
       - "80:80"
       - "443:443"
-#      - "8080:8080"
+      #- "8080:8080"
     labels:
       - "traefik.enable=true"
       - "traefik.backend=traefik"
-#      - "traefik.frontend.rule=Host:traefik.fuzzyblender.com"  
-      - "traefik.frontend.rule=Host:nuc.fuzzyblender.com; PathPrefixStrip: /traefik"
+      #- "traefik.frontend.rule=Host:traefik.${DOMAINNAME}"  
+      - "traefik.frontend.rule=Host:${DOMAINNAME}; PathPrefixStrip: /traefik"
       - "traefik.port=8080"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
@@ -25,15 +27,16 @@ services:
       - "traefik.frontend.headers.browserXSSFilter=true"
       - "traefik.frontend.headers.contentTypeNosniff=true"
       - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=fuzzyblender.com"
+      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
       - "traefik.frontend.headers.STSIncludeSubdomains=true"
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /srv/traefik:/etc/traefik
-      - /srv/certs:/srv/certs
+      - ${USERDIR}/traefik:/etc/traefik
+      - ${USERDIR}/shared:/shared
   
+  # Home Assistant
   homeassistant:
     container_name: homeassistant
     image: homeassistant/home-assistant:latest
@@ -45,8 +48,8 @@ services:
       - influxdb
       - mosquitto
     volumes:
-      - /srv/home-assistant:/config
-      - /srv/certs:/srv/certs
+      - ${USERDIR}/home-assistant:/config
+      - ${USERDIR}/shared:/shared
     
   postgres:
     container_name: postgres
@@ -55,8 +58,8 @@ services:
       - "5432:5432"
     restart: always
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - /srv/certs:/srv/certs
+      - ${USERDIR}/postgres:/var/lib/postgresql/data
+      - ${USERDIR}/shared:/shared
     environment:
       POSTGRES_USER: homeassistant
       POSTGRES_PASSWORD: homeassistant
@@ -67,12 +70,13 @@ services:
     ports:
       - "1883:1883"
       - "8883:8883"
+      - "9001:9001"
     restart: always
     volumes:
-      - /srv/certs:/srv/certs
-      - /srv/mosquitto/data:/mosquitto/data
-      - /srv/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
-      - /srv/mosquitto/log:/mosquitto/log
+      - ${USERDIR}/mosquitto/data:/mosquitto/data
+      - ${USERDIR}/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ${USERDIR}/mosquitto/log:/mosquitto/log
+      - ${USERDIR}/shared:/shared
 
   honeywell2mqtt:
     container_name: honeywell2mqtt
@@ -91,12 +95,13 @@ services:
       - "8086:8086"
     restart: always
     volumes:
-      - influxdb_data:/var/lib/influxdb
-      - /srv/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro
-      - /srv/certs:/srv/certs
+      - ${USERDIR}/influxdb:/var/lib/influxdb
+      - ${USERDIR}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro
+      - ${USERDIR}/shared:/shared
     environment:
       INFLUXDB_DB: home_assistant
 
+  # Adminer - WebUI for DBs
   adminer:
     container_name: adminer
     image: adminer
@@ -114,11 +119,12 @@ services:
       - "traefik.frontend.headers.browserXSSFilter=true"
       - "traefik.frontend.headers.contentTypeNosniff=true"
       - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=fuzzyblender.com"
+      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
       - "traefik.frontend.headers.STSIncludeSubdomains=true"
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
 
+  # Glances - Keep an eye on things
   glances:
     container_name: glances
     image: nicolargo/glances
@@ -141,23 +147,24 @@ services:
       - "traefik.frontend.headers.browserXSSFilter=true"
       - "traefik.frontend.headers.contentTypeNosniff=true"
       - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=fuzzyblender.com"
+      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
       - "traefik.frontend.headers.STSIncludeSubdomains=true"
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
 
+  # Portainer - WebUI for Containers
   portainer:
     image: portainer/portainer
     container_name: portainer
     restart: always
     command: -H unix:///var/run/docker.sock
-#    ports:
-#      - "9000:9000"
+    #ports:
+      #- "9000:9000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /srv/portainer/data:/data
+      - ${USERDIR}/portainer/data:/data
     environment:
-      - TZ=America/Chicago
+      - TZ=${TZ}
     networks:
       - traefik_proxy
     labels:
@@ -171,17 +178,22 @@ services:
       - "traefik.frontend.headers.browserXSSFilter=true"
       - "traefik.frontend.headers.contentTypeNosniff=true"
       - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=example.com"
+      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
       - "traefik.frontend.headers.STSIncludeSubdomains=true"
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
 
-volumes:
-  postgres_data:
-    name: postgres_data
-  influxdb_data:
-    name: influxdb_data
+# Watchtower - To auto-update the containers
+  watchtower:
+    container_name: watchtower
+    hostname: watchtower
+    restart: always
+    image: v2tec/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --schedule "0 0 4 * * *" --cleanup
 
+# Networks that are needed
 networks:
   traefik_proxy:
     name: traefik_proxy
