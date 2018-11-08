@@ -32,7 +32,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /srv/traefik:/etc/traefik
-
+      - /srv/certs:/srv/certs
+  
   homeassistant:
     container_name: homeassistant
     image: homeassistant/home-assistant:latest
@@ -183,8 +184,11 @@ services:
 
 volumes:
   postgres_data:
+    name: postgres_data
   influxdb_data:
+    name: influxdb_data
 #  portainer_data:
 
 networks:
   traefik_proxy:
+    name: traefik_proxy
