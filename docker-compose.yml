@@ -37,7 +37,8 @@ services:
   homeassistant:
     container_name: homeassistant
     image: homeassistant/home-assistant:latest
-    network_mode: host
+    ports:
+      - "8123:8123"
     restart: always
     depends_on:
       - postgres
@@ -50,7 +51,8 @@ services:
   postgres:
     container_name: postgres
     image: postgres:alpine
-    network_mode: host
+    ports:
+      - "5432:5432"
     restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -62,7 +64,9 @@ services:
   mosquitto:
     container_name: mosquitto
     image: eclipse-mosquitto:latest
-    network_mode: host
+    ports:
+      - "1883:1883"
+      - "8883:8883"
     restart: always
     volumes:
       - /srv/certs:/srv/certs
@@ -83,7 +87,8 @@ services:
   influxdb:
     container_name: influxdb
     image: influxdb:alpine
-    network_mode: host
+    ports:
+      - "8086:8086"
     restart: always
     volumes:
       - influxdb_data:/var/lib/influxdb
@@ -130,7 +135,7 @@ services:
       - "traefik.enable=true"
       - "traefik.backend=glances"
 #      - "traefik.frontend.rule=Host:glances.fuzzyblender.com"  
-      - "traefik.frontend.rule=PathPrefix: /glances"
+      - "traefik.frontend.rule=PathPrefixStrip: /glances"
       - "traefik.port=61208"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
@@ -143,24 +148,42 @@ services:
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
 
-# Generally speaking, I usually setup Portainer by itself
-#  portainer:
-#    image: portainer/portainer
-#    network_mode: host
-#    restart: always
-#    volumes:
-#      - /var/run/docker.sock:/var/run/docker.sock
-#      - portainer_data:/data
-#      - /srv/certs:/srv/certs
-#    network_mode: "bridge"
-#    command: --ssl --sslcert /srv/certs/fullchain.crt --sslkey /srv/certs/fuzzyblender.key
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    restart: always
+    command: -H unix:///var/run/docker.sock
+#    ports:
+#      - "XXXX:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /srv/portainer/data:/data
+    environment:
+      - TZ=America/Chicago
+    networks:
+      - traefik_proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=portainer"
+#      - "traefik.frontend.rule=Host:portainer.${DOMAINNAME}"  
+      - "traefik.frontend.rule=PathPrefixStrip: /portainer"
+      - "traefik.port=9000"
+      - "traefik.docker.network=traefik_proxy"
+      - "traefik.frontend.headers.SSLRedirect=true"
+      - "traefik.frontend.headers.STSSeconds=315360000"
+      - "traefik.frontend.headers.browserXSSFilter=true"
+      - "traefik.frontend.headers.contentTypeNosniff=true"
+      - "traefik.frontend.headers.forceSTSHeader=true"
+      - "traefik.frontend.headers.SSLHost=example.com"
+      - "traefik.frontend.headers.STSIncludeSubdomains=true"
+      - "traefik.frontend.headers.STSPreload=true"
+      - "traefik.frontend.headers.frameDeny=true"
 
 volumes:
   postgres_data:
     name: postgres_data
   influxdb_data:
     name: influxdb_data
-#  portainer_data:
 
 networks:
   traefik_proxy:
