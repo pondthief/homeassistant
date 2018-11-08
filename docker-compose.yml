@@ -1,12 +1,14 @@
 version: '3.7'
 
 services:
+
   traefik:
     image: traefik:latest
     container_name: traefik
     restart: always
     domainname: nuc.fuzzyblender.com
     networks:
+      - default
       - traefik_proxy
     ports:
       - "80:80"
@@ -191,3 +193,6 @@ volumes:
 networks:
   traefik_proxy:
     name: traefik_proxy
+  default:
+    driver: bridge
+    name: default
