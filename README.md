@@ -35,22 +35,27 @@ I have a few things that I am working on, I try to keep track of them on [GitHub
 
 As I said the whole thing runs on Docker; and I used the following containers (check out my [docker-compose.yml](https://github.com/chriskacerguis/Home-AssistantConfig/blob/master/docker-compose.yml), Portainer is commented out b/c I generally start that first)
 
-My Home Assistant Config; the enviroment is based on Docker, and so all but one thing runs in Docker.  It is controlled with [Portainer](https://portainer.io) 
-container management platform; with the following containers running (excluding portainer)
+### Setup Overview
 
-* [homeassistant/home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/)
-* [influxdb](https://hub.docker.com/_/influxdb/)
-* [postgres](https://hub.docker.com/_/postgres/)
-* [eclipse-mosquitto](https://hub.docker.com/_/eclipse-mosquitt/)
-* [honeywell2mqtt](https://hub.docker.com/chriskacerguis/honeywell2mqtt/)
-* [grafana/grafana](https://hub.docker.com/grafana/grafana/)
+My enviroment is based on Docker, and so all but one thing runs in Docker.  It is controlled with [Portainer](https://portainer.io) which is a container management platform; with the following containers running (excluding portainer)
+
+| Container                                                               | Use | 
+| [homeassistant](https://hub.docker.com/r/homeassistant/home-assistant/) | The brains of it all |
+| [influxdb](https://hub.docker.com/_/influxdb/)                          | Time series DB, useful for pulling in data for Grafana |
+| [postgres](https://hub.docker.com/_/postgres/)                          | DB for HA history |
+| [eclipse-mosquitto](https://hub.docker.com/_/eclipse-mosquitto/)        | MQTT Broker |
+| [honeywell2mqtt](https://hub.docker.com/chriskacerguis/honeywell2mqtt/) | Takes 345Mhz sensor data and sends to MQTT |
+| [traefik](https://hub.docker.com/_/traefik/)                            | Reverse proxy for all HTTP/HTTPS containers |
+| [adminer](https://hub.docker.com/_/adminer/)                            | DB Admin Interface.  Mostly used for debugging if the need arises |
+| [glances](https://hub.docker.com/nicolargo/glances/)                    | Allows me to keep on eye on the system |
+| [watchtower](https://hub.docker.com/v2tec/watchtower/)                  | Auto-updates the containers when a new build is avaiable |
 
 ### Presence Detection
 
 Over my time with Home Assistant, presence detection has been "hard" to say the least.  That said, I have found that the Meraki presence 
 detection, and the UBNT presence detection are great.
 
-Update 10/1/2018: I stopped using Meraki gear, and moved to UBUT.  It allows me to (1) keep things local, (2) safe a LOT of money, 
+Update 10/1/2018: I stopped using Meraki gear, and moved to UBUT.  It allows me to (1) keep things local, (2) saves a LOT of money, 
 and (3) the Meraki component has not been updated to support the new auth system in HA, and (4) Meraki doens't support modern cyphers
 to their webhook system (seriously?!?!). 
 
@@ -89,13 +94,13 @@ status reports, so I removed it.
 
 ### Enviromental Sensors
 
-I LOVE the Wireless Tags product.  They work GREAT.  They have an issue where the local polling does not work over HTTPS (WTF), but
+I LOVE the WirelessTags product.  They work GREAT.  They have an issue where the local polling does not work over HTTPS (WTF), but
 I am working on a http2mqtt gateway that uses the MQTT-Discovery component for HA.  Stay tuned.
 
 ### Thermostat
 
-I was running Nest and it worked fine, but (1) it doesn't have HomeKit compability, and despite what Google says, it doesn't like that
-will happen anytime soon, and (2) I like Google...but, frankly Google has a track record of just killing projects; and I worry about Nest.
+I was running Nest and it worked fine, but (1) it doesn't have HomeKit compability, and despite what Google says, it doesn't look like that
+will happen anytime soon, and (2) I like Google...but, frankly Google has a track record of just killing products; and I worry about Nest.
 They aren't turning out products like I had hoped (or anyone for that matter), and their latest "release" (as of around 10/2018) was a new 
 set of colors for the existing Nest thermostat.
 
@@ -103,21 +108,21 @@ set of colors for the existing Nest thermostat.
 
 In case you want to buy something, here is a list with Amazon links for your convience (they are direct links with NO affiliate codes)
 
-| Qty   | Name                                                  | Link |
-| 1     | NooElec NESDR Nano 2+ Tiny Black RTL-SDR USB          | [(Amazon)](https://www.amazon.com/gp/product/B01B4L48QU/) |
-| 12    | Honeywell 5800MINI Wireless Door/Window Contact       | [(Amazon)](https://www.amazon.com/gp/product/B01LYOAECP/) |
-| 1     | Intel BOXNUC7I5BNH NUC                                | [(Amazon)](https://www.amazon.com/gp/product/B01N2UMKZ5/) |
-| 3     | Honeywell Ademco 5818MNL Recessed Door Transmitter    | [(Amazon)](https://www.amazon.com/gp/product/B001649CBC/) |
-| 1     | Synology Diskstation 1517+                            | [(Synology)](https://www.amazon.com/Synology-DiskStation-DS1517-2GB-Diskless/dp/B06Y4VN5LJ/) |
-| 5     | Amcrest ProHD Outdoor IP Security Camera IP3M-956E    | [(Amazon)](https://www.amazon.com/gp/product/B01E7QMFIM/) |
-| 1     | Amcrest ProHD Outdoor IP Security Camera IP3M-956E    | [(Amazon)](https://www.amazon.com/gp/product/B01E7QMFIM/) |
-| 1     | ecobee3 lite Smart Thermostat                         | [(Amazon)](https://www.amazon.com/ecobee-EB-STATE3LT-02-ecobee3-Smart-Thermostat/dp/B06W56TBLN) |
-| many  | Lutron Caseta Smart Lighting Dimmer                   | [(Amazon)](https://www.amazon.com/Lutron-Wireless-Lighting-PD-6WCL-WH-Assistant/dp/B00KLAXFQA/) |
-| many  | Lutron Caseta Smart Lighting Switch                   | [(Amazon)](https://www.amazon.com/Lutron-Wireless-Lighting-PD-6ANS-WH-Assistant/dp/B017LRCG38/) |
-| 1     | Lutron Caseta Wireless Smart Bridge                   | [(Amazon)](https://www.amazon.com/Lutron-Wireless-L-BDG2-WH-HomeKit-Assistant/dp/B00XPW67ZM/) |
-| many  | Wireless Sensor Tag (13-bit Temperature and Humidity) | [(WirelessTag)](https://store.wirelesstag.net/products/wireless-tag-13-bit-temperature-and-humidity) |
-| many  | PIR KumoSensor                                        | [(WirelessTag)](https://store.wirelesstag.net/products/pir-kumosensor) |
-| 1     | Ethernet Tag Manager                                  | [(WirelessTag)](https://store.wirelesstag.net/products/wireless-tag-13-bit-temperature-and-humidity) |
+| Qty   | Name                                                  | Link                                      |
+| 1     | NooElec NESDR Nano 2+ Tiny Black RTL-SDR USB          | [(Amazon)](http://amzn.com/B01B4L48QU/)   |
+| many  | Honeywell 5800MINI Wireless Door/Window Contact       | [(Amazon)](http://amzn.com//B01LYOAECP/)  |
+| 1     | Intel BOXNUC7I5BNH NUC                                | [(Amazon)](http://amzn.com//B01N2UMKZ5/)  |
+| 3     | Honeywell Ademco 5818MNL Recessed Door Transmitter    | [(Amazon)](http://amzn.com/B001649CBC/)   |
+| 1     | Synology Diskstation 1517+                            | [(Amazon)](http://amzn.com/B06Y4VN5LJ/)   |
+| 5     | Amcrest ProHD Outdoor IP Security Camera IP3M-956E    | [(Amazon)](http://amzn.com//B01E7QMFIM/)  |
+| 1     | Amcrest ProHD Outdoor IP Security Camera IP3M-956E    | [(Amazon)](http://amzn.com/B01E7QMFIM/)   |
+| 1     | ecobee3 lite Smart Thermostat                         | [(Amazon)](http://amzn.com/B06W56TBLN)    |
+| many  | Lutron Caseta Smart Lighting Dimmer                   | [(Amazon)](http://amzn.com/B00KLAXFQA/)   |
+| many  | Lutron Caseta Smart Lighting Switch                   | [(Amazon)](http://amzn.com/B017LRCG38/)   |
+| 1     | Lutron Caseta Wireless Smart Bridge                   | [(Amazon)](http://amzn.com/B00XPW67ZM/)   |
+| many  | Wireless Sensor Tag (13-bit Temperature and Humidity) | [(WirelessTag)](https://bit.ly/2DceKXZ)   |
+| many  | PIR KumoSensor                                        | [(WirelessTag)](https://bit.ly/2zCBQnc)   |
+| 1     | Ethernet Tag Manager                                  | [(WirelessTag)](https://bit.ly/2FcxTLY)   |
 
 
 #### Misc Setup Notes
@@ -137,3 +142,10 @@ blacklist rtl2832
 blacklist rtl2830
 EOT
 ```
+
+##### Special Thanks!
+
+While a lot of this is my work, I took ideas and snippets from others configs and tutorials, and I'd like to thank the following:
+
+* https://www.smarthomebeginner.com/traefik-reverse-proxy-tutorial-for-docker/
+* https://github.com/htpcBeginner/AtoMiC-ToolKit-Docker/blob/master/docker-compose-traefik.yml
