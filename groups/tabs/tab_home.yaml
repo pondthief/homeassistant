@@ -16,4 +16,4 @@ quick_glance:
     - sensor.average_humidity
     - sensor.average_temperature
     - binary_sensor.all_doors
-    - sensor.all_windows
+    - binary_sensor.all_windows

@@ -5,6 +5,7 @@
   sensors:
     all_doors:
       friendly_name: "All Doors"
+      device_class: door
       value_template: >-
         {% if is_state('binary_sensor.front_door', 'off') 
            and is_state('binary_sensor.back_door', 'off') 
