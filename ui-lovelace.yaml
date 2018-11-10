@@ -39,9 +39,9 @@ views:
           - type: picture-entity
             entity:  camera.driveway_camera
           - type: picture-entity
+            entity: camera.front_door_camera
       - type: horizontal-stack
         cards:
-            entity: camera.front_door_camera
           - type: picture-entity
             entity: camera.front_yard_camera
           - type: picture-entity
