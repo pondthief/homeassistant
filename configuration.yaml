@@ -16,7 +16,7 @@ shell_command: !include shell_commands.yaml
 # Enable InfluxDB
 #-------------------------------------------
 influxdb:
-  host: !secret internal_host
+  host: !secret influx_ip
   ssl: true
   
 #-------------------------------------------
@@ -70,7 +70,7 @@ cover: !include cover.yaml
 # MQTT Settings
 #-------------------------------------------
 mqtt:
-  broker: !secret mqtt_host
+  broker: !secret mqtt_ip
   discovery: true
 
 #-------------------------------------------
