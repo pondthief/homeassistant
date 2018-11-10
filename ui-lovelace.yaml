@@ -14,7 +14,7 @@ views:
           - binary_sensor.all_windows
   - title: Enviromental Sensors
     icon: mdi:pine-tree
-    id: home
+    id: enviroment
     cards:
       - type: horizontal-stack
         cards:
@@ -30,7 +30,7 @@ views:
             entity: sensor.cold__flu_forecasted_average
   - title: Cameras
     icon: mdi:video
-    id: home
+    id: cameras
     cards:
       - type: horizontal-stack
         cards:
