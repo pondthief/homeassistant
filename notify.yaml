@@ -11,12 +11,3 @@
   username: !secret smtp_user
   password: !secret smtp_pass
   sender_name: Home Assistant
-
-#-------------------------------------------
-#  SMS Notices
-#-------------------------------------------
-# Disabled until this is fixed:
-# https://github.com/home-assistant/home-assistant/issues/18246
-#- name: twilio_sms
-#  platform: twilio_sms
-#  from_number: !secret twilio_num

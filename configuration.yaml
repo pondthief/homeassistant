@@ -5,7 +5,7 @@ homeassistant:
   elevation: 252
   unit_system: imperial
   time_zone: America/Chicago
-  whitelist_external_dirs: !secret white_list_dirs
+  whitelist_external_dirs: !secret whitelist_dirs
 
 #-------------------------------------------
 # Shell Commands
@@ -50,11 +50,8 @@ config:
 #-------------------------------------------
 http:
   base_url: !secret server_fqdn
-#  server_port: 8123
   ip_ban_enabled: true
   login_attempts_threshold: 3
-#  ssl_certificate: !secret ssl_cert
-#  ssl_key: !secret ssl_key
   trusted_networks:
     - 127.0.0.1
     - 192.168.1.0/24
@@ -123,15 +120,6 @@ automation: !include_dir_merge_list automations
 # Device Tracking
 #-------------------------------------------
 device_tracker: !include device_tracker.yaml
-
-#-------------------------------------------
-# Twilio
-#-------------------------------------------
-# Disabled until this is fixed:
-# https://github.com/home-assistant/home-assistant/issues/18246
-#twilio:
-#  account_sid: !secret twilio_sid
-#  auth_token: !secret twilio_key
 
 #-------------------------------------------
 # WirelessTag

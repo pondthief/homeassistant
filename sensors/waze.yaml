@@ -1,8 +1,26 @@
 #-------------------------------------------
-# Travel Time Sensor
+# Waze Travel Time Sensor
 #-------------------------------------------
 - platform: waze_travel_time
-  name: Travel Time to Chris Office
-  origin: !secret home_loc
-  destination: !secret work_loc
+  name: Time to Ikea
+  origin: !secret home_coord
+  destination: !secret curras_coord
+  region: 'US'
+
+- platform: waze_travel_time
+  name: Time to Curras
+  origin: !secret home_coord
+  destination: !secret ikea_coord
+  region: 'US'
+
+- platform: waze_travel_time
+  name: Time to Cafe
+  origin: !secret home_coord
+  destination: !secret cafe_coords
+  region: 'US'
+
+- platform: waze_travel_time
+  name: Time to Parents
+  origin: !secret home_coord
+  destination: !secret moms_coords
   region: 'US'

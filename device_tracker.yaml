@@ -6,4 +6,3 @@
   username: !secret cloud_key_user
   password: !secret cloud_key_pass
   verify_ssl: false
-  

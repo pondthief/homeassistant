@@ -15,8 +15,8 @@ filter:
     # Guest Bath Entities
     - sensor.wirelesstag_guest_bath_temperature
     - sensor.wirelesstag_guest_bath_humidity
-    - binary_sensor.guest_room_motion
-    # Study Entities
+    - binary_sensor.guest_bath_motion
+    # Office Entities
     - sensor.wirelesstag_study_temperature
     - sensor.wirelesstag_study_humidity
     - binary_sensor.study_window

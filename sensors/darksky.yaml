@@ -1,5 +1,5 @@
 #-------------------------------------------
-#  Weather Sensors
+#  Darksky Sensors
 #-------------------------------------------
 - platform: darksky
   api_key: !secret darksky_api_key
@@ -16,13 +16,3 @@
     - humidity
     - temperature
 
-#-------------------------------------------
-#  Moon Phase
-#-------------------------------------------
-- platform: moon
-
-#-------------------------------------------
-#  Season Sensor
-#-------------------------------------------
-- platform: season
-  type: astronomical
