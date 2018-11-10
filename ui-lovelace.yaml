@@ -1,0 +1,48 @@
+title: Kafotter Place
+
+views:
+  - title: Home
+    icon: mdi:home-assistant
+    id: home
+    cards:
+      - type: glance
+        title: Status
+        entities:
+          - sensor.average_humidity
+          - sensor.average_temperature
+          - binary_sensor.all_doors
+          - binary_sensor.all_windows
+  - title: Enviromental Sensors
+    icon: mdi:pine-tree
+    id: home
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            entity: sensor.foobot_happybot_co2
+          - type: gauge
+            entity: sensor.foobot_happybot_pm25
+          - type: gauge
+            entity: sensor.foobot_happybot_voc
+          - type: gauge
+            entity: sensor.allergy_index_today
+          - type: gauge
+            entity: sensor.cold__flu_forecasted_average
+  - title: Cameras
+    icon: mdi:video
+    id: home
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: picture-entity
+            entity: camera.deck_camera
+          - type: picture-entity
+            entity:  camera.driveway_camera
+          - type: picture-entity
+      - type: horizontal-stack
+        cards:
+            entity: camera.front_door_camera
+          - type: picture-entity
+            entity: camera.front_yard_camera
+          - type: picture-entity
+            entity: camera.garage_camera
