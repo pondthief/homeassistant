@@ -18,6 +18,7 @@ shell_command: !include shell_commands.yaml
 influxdb:
   host: !secret influx_ip
   ssl: true
+  verify_ssl: false
   
 #-------------------------------------------
 # Input Booleans
