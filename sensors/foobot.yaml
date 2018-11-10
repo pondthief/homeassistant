@@ -1,0 +1,3 @@
+- platform: foobot
+  token: !secret foobot_key
+  username: !secret foobot_user
