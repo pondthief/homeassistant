@@ -87,6 +87,8 @@ services:
     container_name: homeassistant
     image: homeassistant/home-assistant:latest
     restart: always
+    networks:
+      - traefik_proxy
     depends_on:
       - postgres
       - influxdb
