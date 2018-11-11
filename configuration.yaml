@@ -17,6 +17,9 @@ shell_command: !include shell_commands.yaml
 #-------------------------------------------
 influxdb:
   host: !secret influx_ip
+  username: !secret influx_user
+  password: !secret influx_pass
+  database: !secret influx_db
   ssl: true
   verify_ssl: false
   

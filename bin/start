@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ${USERDIR}/home-assistant
+docker-compose up -d

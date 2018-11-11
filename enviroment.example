@@ -1,0 +1,8 @@
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+TZ="America/Chicago"
+USERDIR="/mnt/synology"
+DOMAINNAME=fuzzyblender.com
+DBNAME=homeassistant
+DBUSER=homeassistant
+DBPASS=homeassistant
+HOSTIP=0.0.0.0

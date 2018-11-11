@@ -14,59 +14,12 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      #- "8080:8080"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=traefik"
-      #- "traefik.frontend.rule=Host:traefik.${DOMAINNAME}"  
-      - "traefik.frontend.rule=PathPrefixStrip: /traefik"
-      - "traefik.port=8080"
-      - "traefik.docker.network=traefik_proxy"
-      - "traefik.frontend.headers.SSLRedirect=true"
-      - "traefik.frontend.headers.STSSeconds=315360000"
-      - "traefik.frontend.headers.browserXSSFilter=true"
-      - "traefik.frontend.headers.contentTypeNosniff=true"
-      - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
-      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-      - "traefik.frontend.headers.STSPreload=true"
-      - "traefik.frontend.headers.frameDeny=true"
+      - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ${USERDIR}/traefik:/etc/traefik
       - ${USERDIR}/shared:/shared
   
-  # Home Assistant
-  homeassistant:
-    container_name: homeassistant
-    image: homeassistant/home-assistant:latest
-#    ports:
-#      - "8123:8123"
-    restart: always
-    depends_on:
-      - postgres
-      - influxdb
-      - mosquitto
-    volumes:
-      - ${USERDIR}/home-assistant:/config
-      - ${USERDIR}/shared:/shared
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=homeassistant"
-      #- "traefik.frontend.rule=PathPrefixStrip: /hass"
-      - "traefik.frontend.rule=Host:hass.${DOMAINNAME}"  
-      - "traefik.port=8123"
-      - "traefik.docker.network=traefik_proxy"
-      - "traefik.frontend.headers.SSLRedirect=true"
-      - "traefik.frontend.headers.STSSeconds=315360000"
-      - "traefik.frontend.headers.browserXSSFilter=true"
-      - "traefik.frontend.headers.contentTypeNosniff=true"
-      - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
-      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-      - "traefik.frontend.headers.STSPreload=true"
-      - "traefik.frontend.headers.frameDeny=true"
-
   postgres:
     container_name: postgres
     image: postgres:alpine
@@ -77,8 +30,10 @@ services:
       - ${USERDIR}/postgres:/var/lib/postgresql/data
       - ${USERDIR}/shared:/shared
     environment:
-      POSTGRES_USER: homeassistant
-      POSTGRES_PASSWORD: homeassistant
+      POSTGRES_USER: ${DBUSER}
+      POSTGRES_PASSWORD: ${DBPASS}
+      POSTGRES_DB: ${DBNAME}
+      TZ: ${TZ}
   
   mosquitto:
     container_name: mosquitto
@@ -93,6 +48,8 @@ services:
       - ${USERDIR}/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
       - ${USERDIR}/mosquitto/log:/mosquitto/log
       - ${USERDIR}/shared:/shared
+    environment:
+      TZ: ${TZ}
 
   honeywell2mqtt:
     container_name: honeywell2mqtt
@@ -101,8 +58,11 @@ services:
     privileged: true
     depends_on:
       - mosquitto
+    links:
+      - mosquitto
     environment:
-      MQTT_HOST: mosquitto
+      MQTT_HOST: ${HOSTIP}
+      TZ: ${TZ}
 
   influxdb:
     container_name: influxdb
@@ -115,20 +75,30 @@ services:
       - ${USERDIR}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro
       - ${USERDIR}/shared:/shared
     environment:
-      INFLUXDB_DB: home_assistant
+      INFLUXDB_DB: ${DBNAME}
+      INFLUXDB_USER: ${DBUSER}
+      INFLUXDB_USER_PASSWORD: ${DBPASS}
+      TZ: ${TZ}
+  
+  # Below are things behind Traefik
 
-  # Adminer - WebUI for DBs
-  adminer:
-    container_name: adminer
-    image: adminer
+  # Home Assistant
+  homeassistant:
+    container_name: homeassistant
+    image: homeassistant/home-assistant:latest
     restart: always
-    networks:
-      - traefik_proxy
+    depends_on:
+      - postgres
+      - influxdb
+      - mosquitto
+    volumes:
+      - ${USERDIR}/home-assistant:/config
+      - ${USERDIR}/shared:/shared
     labels:
       - "traefik.enable=true"
-      - "traefik.backend=adminer" 
-      - "traefik.frontend.rule=PathPrefixStrip: /adminer"
-      - "traefik.port=8080"
+      - "traefik.backend=homeassistant"
+      - "traefik.frontend.rule=Host:ha.${DOMAINNAME}"  
+      - "traefik.port=8123"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
       - "traefik.frontend.headers.STSSeconds=315360000"
@@ -139,6 +109,9 @@ services:
       - "traefik.frontend.headers.STSIncludeSubdomains=true"
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
+    environment:
+      TZ: ${TZ}
+      HOSTIP: ${HOSTIP}
 
   # Glances - Keep an eye on things
   glances:
@@ -174,8 +147,6 @@ services:
     container_name: portainer
     restart: always
     command: -H unix:///var/run/docker.sock
-    #ports:
-      #- "9000:9000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${USERDIR}/portainer/data:/data
@@ -198,16 +169,6 @@ services:
       - "traefik.frontend.headers.STSIncludeSubdomains=true"
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
-
-# Watchtower - To auto-update the containers
-  watchtower:
-    container_name: watchtower
-    hostname: watchtower
-    restart: always
-    image: v2tec/watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    command: --schedule "0 0 4 * * *" --cleanup
 
 # Networks that are needed
 networks:
