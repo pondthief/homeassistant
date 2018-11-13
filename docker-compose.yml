@@ -178,7 +178,7 @@ services:
     restart: always
     command: -H unix:///var/run/docker.sock
     environment:
-      - PMA_ABSOLUTE_URI: https://${URLNAME}/phpmyadmin
+      - PMA_ABSOLUTE_URI: "https://${URLNAME}/phpmyadmin"
       - TZ: ${TZ}
       - PMA_HOST: ${URLNAME}
     networks:
