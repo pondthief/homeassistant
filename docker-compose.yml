@@ -23,7 +23,7 @@ services:
     container_name: mysql
     image: mysql:8
     ports:
-      - "5432:5432"
+      - "3306:3306"
     restart: always
     volumes:
       - ${USERDIR}/mysql:/var/lib/mysql
