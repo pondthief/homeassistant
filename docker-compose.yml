@@ -96,6 +96,8 @@ services:
     volumes:
       - ${USERDIR}/home-assistant:/config
       - ${USERDIR}/shared:/shared
+    links:
+      - mysql
     labels:
       - "traefik.enable=true"
       - "traefik.backend=homeassistant"
@@ -183,6 +185,8 @@ services:
       PMA_HOST: ${URLNAME}
     networks:
       - traefik_proxy
+    links:
+      - mysql
     labels:
       - "traefik.enable=true"
       - "traefik.backend=phpmyadmin"
