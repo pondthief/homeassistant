@@ -89,14 +89,12 @@ services:
     networks:
       - traefik_proxy
     depends_on:
-      - mysql
+      - postgres
       - influxdb
       - mosquitto
     volumes:
       - ${USERDIR}/home-assistant:/config
       - ${USERDIR}/shared:/shared
-    links:
-      - mysql
     labels:
       - "traefik.enable=true"
       - "traefik.backend=homeassistant"
