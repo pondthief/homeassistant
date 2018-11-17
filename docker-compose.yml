@@ -156,7 +156,7 @@ services:
       - "traefik.enable=true"
       - "traefik.backend=nagios"
       - "traefik.frontend.rule=PathPrefixStrip: /nagios"
-      - "traefik.port=61208"
+      - "traefik.port=80"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
       - "traefik.frontend.headers.STSSeconds=315360000"
