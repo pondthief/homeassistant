@@ -166,7 +166,7 @@ services:
       - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
       - "traefik.frontend.headers.STSIncludeSubdomains=true"
       - "traefik.frontend.headers.STSPreload=true"
-      - "traefik.frontend.headers.frameDeny=true"
+#      - "traefik.frontend.headers.frameDeny=true"
 
   # For HADashboard (not ready for use YET)
   # appdaemon:
