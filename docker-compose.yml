@@ -142,19 +142,21 @@ services:
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
 
-  appdaemon:
-    container_name: appdaemon
-    image: acockburn/appdaemon:latest
+  # Nagios for monitoring
+  # Serving from local drive in case the NAS fails
+  nagios:
+    container_name: nagios
+    image: jasonrivers/nagios:latest
     restart: always
     networks:
       - traefik_proxy
     volumes:
-      - ${USERDIR}/dashboard:/conf:ro
+      - /srv/nagios:/opt/nagios/etc
     labels:
       - "traefik.enable=true"
-      - "traefik.backend=appdaemon"
-      - "traefik.frontend.rule=PathPrefixStrip: /dashboard"
-      - "traefik.port=5050"
+      - "traefik.backend=nagios"
+      - "traefik.frontend.rule=PathPrefixStrip: /nagios"
+      - "traefik.port=61208"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
       - "traefik.frontend.headers.STSSeconds=315360000"
@@ -165,6 +167,31 @@ services:
       - "traefik.frontend.headers.STSIncludeSubdomains=true"
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
+
+  # For HADashboard (not ready for use YET)
+  # appdaemon:
+  #  container_name: appdaemon
+  #  image: acockburn/appdaemon:latest
+  #  restart: always
+  #  networks:
+  #    - traefik_proxy
+  #  volumes:
+  #    - ${USERDIR}/dashboard:/conf:ro
+  #  labels:
+  #    - "traefik.enable=true"
+  #    - "traefik.backend=appdaemon"
+  #    - "traefik.frontend.rule=PathPrefixStrip: /dashboard"
+  #    - "traefik.port=5050"
+  #    - "traefik.docker.network=traefik_proxy"
+  #    - "traefik.frontend.headers.SSLRedirect=true"
+  #    - "traefik.frontend.headers.STSSeconds=315360000"
+  #    - "traefik.frontend.headers.browserXSSFilter=true"
+  #    - "traefik.frontend.headers.contentTypeNosniff=true"
+  #    - "traefik.frontend.headers.forceSTSHeader=true"
+  #    - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
+  #    - "traefik.frontend.headers.STSIncludeSubdomains=true"
+  #    - "traefik.frontend.headers.STSPreload=true"
+  #    - "traefik.frontend.headers.frameDeny=true"
 
   # Portainer - WebUI for Containers
   portainer:
@@ -184,32 +211,6 @@ services:
       - "traefik.backend=portainer"
       - "traefik.frontend.rule=PathPrefixStrip: /portainer"
       - "traefik.port=9000"
-      - "traefik.docker.network=traefik_proxy"
-      - "traefik.frontend.headers.SSLRedirect=true"
-      - "traefik.frontend.headers.STSSeconds=315360000"
-      - "traefik.frontend.headers.browserXSSFilter=true"
-      - "traefik.frontend.headers.contentTypeNosniff=true"
-      - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
-      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-      - "traefik.frontend.headers.STSPreload=true"
-      - "traefik.frontend.headers.frameDeny=true"
-
-  # Portainer - WebUI for Containers
-  adminer:
-    image: adminer
-    container_name: adminer
-    restart: always
-    environment:
-      ADMINER_DEFAULT_SERVER: ${URLNAME}
-      TZ: ${TZ}
-    networks:
-      - traefik_proxy
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=adminer"
-      - "traefik.frontend.rule=PathPrefixStrip: /adminer"
-      - "traefik.port=8080"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
       - "traefik.frontend.headers.STSSeconds=315360000"
