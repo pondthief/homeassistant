@@ -88,8 +88,7 @@ services:
     container_name: homeassistant
     image: homeassistant/home-assistant:rc
     restart: always
-    networks:
-      - traefik_proxy
+    network_mode: host
     depends_on:
       - postgres
       - influxdb
@@ -97,21 +96,21 @@ services:
     volumes:
       - ${USERDIR}/home-assistant:/config
       - ${USERDIR}/shared:/shared
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=homeassistant"
-      - "traefik.frontend.rule=Host:ha.${DOMAINNAME}"  
-      - "traefik.port=8123"
-      - "traefik.docker.network=traefik_proxy"
-      - "traefik.frontend.headers.SSLRedirect=true"
-      - "traefik.frontend.headers.STSSeconds=315360000"
-      - "traefik.frontend.headers.browserXSSFilter=true"
-      - "traefik.frontend.headers.contentTypeNosniff=true"
-      - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
-      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-      - "traefik.frontend.headers.STSPreload=true"
-      - "traefik.frontend.headers.frameDeny=true"
+#    labels:
+#      - "traefik.enable=true"
+#      - "traefik.backend=homeassistant"
+#      - "traefik.frontend.rule=Host:ha.${DOMAINNAME}"  
+#      - "traefik.port=8123"
+#      - "traefik.docker.network=traefik_proxy"
+#      - "traefik.frontend.headers.SSLRedirect=true"
+#      - "traefik.frontend.headers.STSSeconds=315360000"
+#      - "traefik.frontend.headers.browserXSSFilter=true"
+#      - "traefik.frontend.headers.contentTypeNosniff=true"
+#      - "traefik.frontend.headers.forceSTSHeader=true"
+#      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
+#      - "traefik.frontend.headers.STSIncludeSubdomains=true"
+#      - "traefik.frontend.headers.STSPreload=true"
+#      - "traefik.frontend.headers.frameDeny=true"
     environment:
       TZ: ${TZ}
       HOSTIP: ${HOSTIP}
