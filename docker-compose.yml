@@ -93,7 +93,7 @@ services:
       - ${USERDIR}/homebridge:/homebridge
     environment:
       TZ: ${TZ}
-      HOMEBRIDGE_CONFIG_UI: 
+      HOMEBRIDGE_CONFIG_UI: 1
       HOMEBRIDGE_CONFIG_UI_PORT: 8080
 
   # Home Assistant
