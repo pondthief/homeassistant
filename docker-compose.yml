@@ -91,6 +91,7 @@ services:
     restart: always
     volumes:
       - ${USERDIR}/homebridge:/homebridge
+      - ${USERDIR}/shared:/shared
     environment:
       TZ: ${TZ}
       HOMEBRIDGE_CONFIG_UI: 1
