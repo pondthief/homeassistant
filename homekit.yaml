@@ -96,7 +96,7 @@ entity_config:
     name: Guest Bedroom Temperature
   sensor.wirelesstag_guest_room_humidity:
     name: Guest Bedroom Humidity
-  sensor.binary_sensor.guest_room_window:
+  binary_sensor.guest_room_window:
     name: Guest Bedroom Window
   # Guest Bath
   sensor.wirelesstag_guest_bath_temperature:
