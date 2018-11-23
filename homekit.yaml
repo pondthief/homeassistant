@@ -58,18 +58,24 @@ entity_config:
     name: Office Temperature
   sensor.wirelesstag_study_humidity:
     name: Office Humidity
+  # Clara's Room
   sensor.wirelesstag_clara_room_temperature:
-    name: Clara Room Temperature
+    name: Clara Bedroom Temperature
   sensor.wirelesstag_clara_room_humidity:
-    name: Clara Room Humidity
+    name: Clara Bedroom Humidity
+  binary_sensor.claras_room_window:
+    name: Clara Bedroom Window
+  # Master Bathroom
   sensor.wirelesstag_master_bath_temperature:
-    name: Master Bathroor Temperature
+    name: Master Bathroom Temperature
   sensor.wirelesstag_master_bath_humidity:
-    name: Master Bathroor Humidity
+    name: Master Bathroom Humidity
+  # Master Bedroom
   sensor.wirelesstag_masterbed_temperature:
     name: Master Bedroom Temperature
   sensor.wirelesstag_masterbed_humidity:
     name: Master Bedroom Humidity
+  # Kitchen
   sensor.wirelesstag_kitchen_temperature:
     name: Kitchen Temperature
   sensor.wirelesstag_kitchen_humidity:
@@ -90,8 +96,15 @@ entity_config:
     name: Guest Bedroom Temperature
   sensor.wirelesstag_guest_room_humidity:
     name: Guest Bedroom Humidity
+  sensor.binary_sensor.guest_room_window:
+    name: Guest Bedroom Window
   # Guest Bath
   sensor.wirelesstag_guest_bath_temperature:
     name: Guest Bathroom Temperature
   sensor.wirelesstag_guest_bath_humidity:
     name: Guest Bathroom Humidity
+  binary_sensor.guest_bath_motion:
+    name: Guest Bathroom Motion
+  # Office
+  binary_sensor.study_window:
+    name: Office Window
