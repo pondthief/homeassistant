@@ -19,6 +19,7 @@ services:
       - ${USERDIR}/traefik:/etc/traefik
       - ${USERDIR}/shared:/shared
 
+  # Database of champions
   postgres:
     container_name: postgres
     image: postgres:alpine
@@ -34,6 +35,7 @@ services:
       POSTGRES_DB: ${DBNAME}
       TZ: ${TZ}
 
+  # MQTT broker
   mosquitto:
     container_name: mosquitto
     image: eclipse-mosquitto:latest
@@ -50,6 +52,7 @@ services:
     environment:
       TZ: ${TZ}
 
+  # Pushing the Honeywell things to MQTT
   honeywell2mqtt:
     container_name: honeywell2mqtt
     image: chriskacerguis/honeywell2mqtt:2.0.0
@@ -63,6 +66,7 @@ services:
       MQTT_HOST: ${HOSTIP}
       TZ: ${TZ}
 
+  # InfluxDB for storing history
   influxdb:
     container_name: influxdb
     image: influxdb:alpine
@@ -78,8 +82,19 @@ services:
       INFLUXDB_USER: ${DBUSER}
       INFLUXDB_USER_PASSWORD: ${DBPASS}
       TZ: ${TZ}
-  
-  # Below are things behind Traefik
+
+  # Homebridge
+  homebridge:
+    container_name: homebridge
+    image: oznu/homebridge
+    network_mode: host
+    restart: always
+    volumes:
+      - ${USERDIR}/homebridge:/homebridge
+    environment:
+      TZ: ${TZ}
+      HOMEBRIDGE_CONFIG_UI: 
+      HOMEBRIDGE_CONFIG_UI_PORT: 8080
 
   # Home Assistant
   homeassistant:
@@ -113,34 +128,6 @@ services:
     environment:
       TZ: ${TZ}
       HOSTIP: ${HOSTIP}
-
-  # Glances - Keep an eye on things
-  glances:
-    container_name: glances
-    image: nicolargo/glances:latest-alpine
-    restart: always
-    networks:
-      - traefik_proxy
-    pid: host
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    environment:
-      GLANCES_OPT: -w
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=glances"
-      - "traefik.frontend.rule=PathPrefixStrip: /glances"
-      - "traefik.port=61208"
-      - "traefik.docker.network=traefik_proxy"
-      - "traefik.frontend.headers.SSLRedirect=true"
-      - "traefik.frontend.headers.STSSeconds=315360000"
-      - "traefik.frontend.headers.browserXSSFilter=true"
-      - "traefik.frontend.headers.contentTypeNosniff=true"
-      - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
-      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-      - "traefik.frontend.headers.STSPreload=true"
-      - "traefik.frontend.headers.frameDeny=true"
 
   # Nagios for monitoring
   # Serving from local drive in case the NAS fails
