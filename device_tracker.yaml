@@ -3,4 +3,4 @@
 #-------------------------------------------
 - platform: mqtt_json
   devices:
-    chris_iphone_mqtt: location/e0338eb638a0
+    chris_iphone_mqtt: homeassistant/location/e0338eb638a0
