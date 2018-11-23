@@ -1,8 +1,6 @@
 #-------------------------------------------
-# unifi controller
+# From Meraki
 #-------------------------------------------
-- platform: unifi
-  host: !secret cloud_key_site
-  username: !secret cloud_key_user
-  password: !secret cloud_key_pass
-  verify_ssl: false
+- platform: mqtt_json
+  devices:
+    chris_iphone_mqtt: location/e0338eb638a0
