@@ -86,7 +86,7 @@ services:
   # Home Assistant
   homeassistant:
     container_name: homeassistant
-    image: homeassistant/home-assistant:latest
+    image: homeassistant/home-assistant:rc
     restart: always
     networks:
       - traefik_proxy
