@@ -6,9 +6,29 @@ outside_tab:
   view: yes
   icon: mdi:tree
   entities:
+    - group.garage
     - camera.driveway_camera
     - camera.front_door_camera
     - camera.garage_camera
     - camera.front_yard_camera
     - camera.deck_camera
-    - group.garage
+    
+driveway_camera:
+  entities:
+    - camera.driveway_camera
+
+front_door_camera:
+  entities:
+    - camera.front_door_camera
+
+garage_camera:
+  entities:
+    - camera.garage_camera
+
+front_yard_camera:
+  entities:
+    - camera.front_yard_camera
+
+deck_camera:
+  entities:
+    - camera.deck_camera
