@@ -8,6 +8,8 @@ system_tab:
   entities:
     - group.battery_levels
     - group.all_automations
+    - group.network_stats
+    - group.network_devices
 
 battery_levels:
   name: Battery Levels
@@ -23,3 +25,16 @@ battery_levels:
     - binary_sensor.play_area_low_battery
     - binary_sensor.study_low_battery
     - binary_sensor.garage_low_battery
+
+network_stats:
+  name: Network Stats
+  entities:
+    - sensor.fastcom_download
+    - sensor.pihole_dns_queries_today
+    - sensor.pihole_ads_blocked_today
+    - sensor.pihole_ads_percentage_blocked_today
+
+network_devices:
+  name: Network Devices
+  entities:
+    - binary_sensor.pihole
