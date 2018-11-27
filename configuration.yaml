@@ -54,7 +54,7 @@ frontend:
 # HTTP Server Config
 #-------------------------------------------
 http:
-  base_url: !secret server_fqdn
+  base_url: !secret server_url
   ip_ban_enabled: true
   login_attempts_threshold: 3
   ssl_certificate: !secret ssl_cert
