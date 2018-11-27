@@ -1,8 +1,8 @@
 lock.kwikset_touchpad_electronic_deadbolt_locked:
-  name: Front Door Lock
+  friendly_name: Front Door Lock
 
 lock.kwikset_touchpad_electronic_deadbolt_locked_2:
-  name: Back Door Lock
+  friendly_name: Back Door Lock
 
 group.all_automations:
   hidden: false
