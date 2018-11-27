@@ -4,16 +4,7 @@
 clara_room:
   name: Clara's Room
   entities:
-    - light.clara_overhead_level
-
-clara_room_sensors:
-  name: Clara's Room
-  entities:
     - sensor.guest_window
-
-clara_room_enviroment:
-  name: Clara's Room
-  entities:
     - sensor.wirelesstag_clara_room_humidity
     - sensor.wirelesstag_clara_room_light
     - sensor.wirelesstag_clara_room_temperature

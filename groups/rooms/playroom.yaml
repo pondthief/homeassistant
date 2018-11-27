@@ -1,8 +1,8 @@
 #-------------------------------------------
 #  Play Area
 #-------------------------------------------
-play_area:
-  name: Play Area
+playroom:
+  name: Play Room
   entities:
     - sensor.front_window_1
     - sensor.front_window_2

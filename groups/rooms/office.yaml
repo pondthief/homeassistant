@@ -1,0 +1,16 @@
+#-------------------------------------------
+#  Internet Speeds
+#-------------------------------------------
+internet_speeds:
+  name: Internet Speeds
+  entities:
+    - sensor.fastcom_download
+
+#-------------------------------------------
+#  Office Sensors
+#-------------------------------------------
+office_sensors:
+    - binary_sensor.study_window
+    - sensor.wirelesstag_study_humidity
+    - sensor.wirelesstag_study_light
+    - sensor.wirelesstag_study_temperature

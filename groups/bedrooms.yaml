@@ -1,0 +1,11 @@
+#-------------------------------------------
+#  Bedrooms Tab
+#-------------------------------------------
+bedrooms_tab:
+  name: Bedrooms
+  view: yes
+  icon: mdi:hotel
+  entities:
+    - group.guest_room
+    - group.master_bed
+    - group.clara_room

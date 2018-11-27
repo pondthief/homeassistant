@@ -1,0 +1,55 @@
+#-------------------------------------------
+#  Home Tab
+#-------------------------------------------
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.people
+    - group.quick_glance
+    - group.quick_settings
+    - group.energy_usage
+
+#-------------------------------------------
+#  Quick Glance things
+#-------------------------------------------
+quick_glance:
+  name: Quick Glance
+  control: hidden
+  entities:
+    - sensor.average_humidity
+    - sensor.average_temperature
+    - binary_sensor.all_doors
+    - binary_sensor.all_windows
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_temperature
+
+#-------------------------------------------
+#  Quick Settings
+#-------------------------------------------
+quick_settings:
+  name: Quick Settings
+  control: hidden
+  entities:
+    - input_boolean.enable_alerts
+
+#-------------------------------------------
+#  Sense Energy Usage
+#-------------------------------------------
+energy_usage:
+  name: Engery Usage
+  entities:
+    - sensor.energy_usage
+    - sensor.daily_usage
+
+#-------------------------------------------
+#  People Group
+#-------------------------------------------
+people:
+  name: People
+  entities:
+    - device_tracker.chris_iphone_mqtt
+    - device_tracker.megan_iphone_8
+    - device_tracker.wendy_iphone
+    - device_tracker.anna_iphone
+    - device_tracker.michael_iphone

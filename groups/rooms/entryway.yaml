@@ -1,7 +1,0 @@
-#-------------------------------------------
-#  Front Entry
-#-------------------------------------------
-entry:
-  name: Entry
-  entities:
-    - binary_sensor.front_door

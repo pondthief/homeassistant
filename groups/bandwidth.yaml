@@ -1,7 +1,0 @@
-#-------------------------------------------
-#  Internet Speeds
-#-------------------------------------------
-internet_speeds:
-  name: Internet Speeds
-  entities:
-    - sensor.fastcom_download

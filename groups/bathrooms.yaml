@@ -1,0 +1,10 @@
+#-------------------------------------------
+#  Bathrooms Tab
+#-------------------------------------------
+bathrooms_tab:
+  name: Bathrooms
+  view: yes
+  icon: mdi:shower
+  entities:
+    - group.master_bath
+    - group.guest_bath

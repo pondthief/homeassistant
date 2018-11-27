@@ -1,0 +1,14 @@
+#-------------------------------------------
+#  Sensors Tab
+#-------------------------------------------
+mainrooms_tab:
+  name: Main Rooms
+  view: yes
+  icon: mdi:radar
+  entities:
+    - group.kitchen
+    - group.frontfoyer
+    - group.playroom
+    - group.laundry
+    - group.living
+    - group.frontfoyer

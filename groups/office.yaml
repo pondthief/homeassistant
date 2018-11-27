@@ -1,12 +1,10 @@
 #-------------------------------------------
-#  System Tab
+#  Office Tab
 #-------------------------------------------
-system_tab:
-  name: System
+office_tab:
+  name: Office
   view: yes
-  icon: mdi:settings
+  icon: mdi:server-security
   entities:
-    - group.battery_levels
     - group.internet_speeds
-    - group.ups
-    - group.all_automations
+    - group.office_sensors

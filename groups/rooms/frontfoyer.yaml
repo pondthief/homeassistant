@@ -1,0 +1,8 @@
+#-------------------------------------------
+#  Front Foyer
+#-------------------------------------------
+frontfoyer:
+  name: Front Foyer
+  entities:
+    - binary_sensor.front_door
+    - lock.kwikset_touchpad_electronic_deadbolt_locked

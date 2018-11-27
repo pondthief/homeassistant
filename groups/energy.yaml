@@ -1,8 +1,0 @@
-#-------------------------------------------
-#  Sense Energy Usage
-#-------------------------------------------
-energy_usage:
-  name: Engery Usage
-  entities:
-    - sensor.energy_usage
-    - sensor.daily_usage

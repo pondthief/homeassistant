@@ -1,6 +1,14 @@
 #-------------------------------------------
-#  Battery Levels
+#  System Tab
 #-------------------------------------------
+system_tab:
+  name: System
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.battery_levels
+    - group.all_automations
+
 battery_levels:
   name: Battery Levels
   entities:
