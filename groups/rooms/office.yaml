@@ -2,6 +2,7 @@
 #  Office Things
 #-------------------------------------------
 office:
+  name: Office
   entities:
     - binary_sensor.study_window
     - sensor.wirelesstag_study_humidity
