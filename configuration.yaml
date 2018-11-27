@@ -6,6 +6,7 @@ homeassistant:
   unit_system: imperial
   time_zone: America/Chicago
   whitelist_external_dirs: !secret whitelist_dirs
+  customize: !include customize.yaml
 
 #-------------------------------------------
 # Shell Commands
