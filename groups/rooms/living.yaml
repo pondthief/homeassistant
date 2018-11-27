@@ -4,3 +4,4 @@
 living_room:
   name: Living Room
   entities:
+    - lock.kwikset_touchpad_electronic_deadbolt_locked_2

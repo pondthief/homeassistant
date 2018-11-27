@@ -1,7 +1,7 @@
 #-------------------------------------------
 #  Laundry Room
 #-------------------------------------------
-laundry_room:
+laundryroom:
   name: Laundry Room
   entities:
     - binary_sensor.laundry_door

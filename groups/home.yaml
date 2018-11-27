@@ -9,6 +9,12 @@ default_view:
     - group.quick_glance
     - group.quick_settings
     - group.energy_usage
+    - group.kitchen
+    - group.frontfoyer
+    - group.playroom
+    - group.laundry
+    - group.living
+    - group.frontfoyer
 
 #-------------------------------------------
 #  Quick Glance things
@@ -46,7 +52,7 @@ energy_usage:
 #  People Group
 #-------------------------------------------
 people:
-  name: People
+  name: Who Is Home?
   entities:
     - device_tracker.chris_iphone_mqtt
     - device_tracker.megan_iphone_8

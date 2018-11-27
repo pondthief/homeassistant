@@ -4,7 +4,7 @@
 system_tab:
   name: System
   view: yes
-  icon: mdi:settings
+  icon: mdi:tune
   entities:
     - group.battery_levels
     - group.all_automations

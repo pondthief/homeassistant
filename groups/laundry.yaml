@@ -1,0 +1,9 @@
+#-------------------------------------------
+#  Laundry Room Tab
+#-------------------------------------------
+laundryroom_tab:
+  name: Laundry Room
+  view: yes
+  icon: mdi:washing-machine
+  entities:
+    - group.laundryroom

@@ -4,7 +4,7 @@
 outside_tab:
   name: Outside
   view: yes
-  icon: mdi:camera
+  icon: mdi:tree
   entities:
     - group.cameras
     - group.garage

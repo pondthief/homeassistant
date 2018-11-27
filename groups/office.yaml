@@ -4,7 +4,7 @@
 office_tab:
   name: Office
   view: yes
-  icon: mdi:server-security
+  icon: mdi:office-building
   entities:
     - group.internet_speeds
-    - group.office_sensors
+    - group.office
