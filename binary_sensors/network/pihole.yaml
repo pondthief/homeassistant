@@ -1,0 +1,6 @@
+#-------------------------------------------
+#  Pi-Hole Pinger
+#-------------------------------------------
+- platform: ping
+  name: Pi-Hole
+  host: !secret ip_pihole

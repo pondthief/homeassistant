@@ -5,15 +5,9 @@ outside_tab:
   name: Outside
   view: yes
   icon: mdi:tree
-  entities:
-    - group.cameras
-    - group.garage
-
-cameras:
-  name: Cameras
-  entities:
     - camera.driveway_camera
     - camera.front_door_camera
     - camera.garage_camera
     - camera.front_yard_camera
     - camera.deck_camera
+    - group.garage

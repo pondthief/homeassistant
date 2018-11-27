@@ -1,0 +1,2 @@
+- platform: cert_expiry
+  host: !secret server_fqdn
