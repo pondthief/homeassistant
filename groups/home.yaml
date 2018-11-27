@@ -55,7 +55,7 @@ people:
   name: Who Is Home?
   entities:
     - device_tracker.chris_iphone_mqtt
-    - device_tracker.megan_iphone_8
+    - device_tracker.megan_iphone_mqtt
     - device_tracker.wendy_iphone
     - device_tracker.anna_iphone
     - device_tracker.michael_iphone
