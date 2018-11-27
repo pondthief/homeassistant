@@ -7,11 +7,11 @@ outside_tab:
   icon: mdi:tree
   entities:
     - group.garage
-    - camera.driveway_camera
-    - camera.front_door_camera
-    - camera.garage_camera
-    - camera.front_yard_camera
-    - camera.deck_camera
+    - group.driveway_camera
+    - group.front_door_camera
+    - group.garage_camera
+    - group.front_yard_camera
+    - group.deck_camera
     
 driveway_camera:
   entities:
