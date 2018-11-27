@@ -4,5 +4,8 @@ lock.kwikset_touchpad_electronic_deadbolt_locked:
 lock.kwikset_touchpad_electronic_deadbolt_locked_2:
   friendly_name: Back Door Lock
 
+cover.garage_door_opener_2:
+  friendly_name: Megan Garage Door
+
 group.all_automations:
   hidden: false
