@@ -9,12 +9,9 @@
 #    entity_id: sensor.synology_status_data
 #    from: 'OL'
 #  action:
-#    - service: notify.twilio_sms
+#    - service: notify.email
 #      data_template:
 #        message: "\U0001F50B Main Power OFFLINE, running on UPS battery."
-#        target:
-#          - !secret chris_mobile
-#          - !secret megan_mobile
 
 #-------------------------------------------
 # Main Power Restored
@@ -27,10 +24,7 @@
 #    entity_id: sensor.synology_status_data
 #    to: 'OL'
 #  action:
-#    - service: notify.twilio_sms
+#    - service: notify.email
 #      data_template:
 #        message: "\U0001F50C Main Power RESTORED, running on city power."
-#        target:
-#          - !secret chris_mobile
-#          - !secret megan_mobile
 

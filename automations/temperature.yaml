@@ -11,12 +11,9 @@
     for:
       minutes: 30
   action:
-    - service: notify.twilio_sms
+    - service: notify.email
       data_template:
         message: "\U0001F4A7 Average house temp is at or above 80 degrees"
-        target:
-          - !secret chris_mobile
-          - !secret megan_mobile
 
 #-------------------------------------------
 # Too Cold Alert
@@ -31,9 +28,6 @@
     for:
       minutes: 30
   action:
-    - service: notify.twilio_sms
+    - service: notify.email
       data_template:
         message: "\U0001F4A7  Average house temp is at or below 62 degree"
-        target:
-          - !secret chris_mobile
-          - !secret megan_mobile

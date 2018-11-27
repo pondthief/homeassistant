@@ -17,7 +17,7 @@ shell_command: !include shell_commands.yaml
 # Enable InfluxDB
 #-------------------------------------------
 influxdb:
-  host: !secret influx_ip
+  host: !secret ip_influxdb
   username: !secret influx_user
   password: !secret influx_pass
   database: !secret influx_db
@@ -59,9 +59,6 @@ http:
   login_attempts_threshold: 3
   ssl_certificate: !secret ssl_cert
   ssl_key: !secret ssl_key
-  trusted_networks:
-    - 127.0.0.1
-    - 192.168.1.0/24
 
 #-------------------------------------------
 # Enable cameras
@@ -77,7 +74,7 @@ cover: !include cover.yaml
 # MQTT Settings
 #-------------------------------------------
 mqtt:
-  broker: !secret mqtt_ip
+  broker: !secret ip_mosquitto
   discovery: true
 
 #-------------------------------------------
@@ -129,8 +126,8 @@ device_tracker: !include device_tracker.yaml
 # WirelessTag
 #-------------------------------------------
 wirelesstag:
-  username: !secret sense_username
-  password: !secret sense_password
+  username: !secret wirelesstag_user
+  password: !secret wirelesstag_pass
 
 #-------------------------------------------
 # Homekit

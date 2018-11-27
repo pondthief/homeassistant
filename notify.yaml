@@ -5,8 +5,7 @@
   platform: smtp
   sender: !secret smtp_email
   recipient:
-    - !secret chris_email
-    - !secret megan_email
+    - !secret family_email
   server: !secret smtp_host
   username: !secret smtp_user
   password: !secret smtp_pass

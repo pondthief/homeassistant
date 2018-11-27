@@ -34,12 +34,9 @@
       from: 'off'
       to: 'on'
   action:
-    - service: notify.twilio_sms
+    - service: notify.email
       data_template:
         message: "\U0001F50B Battery for the env sensor {{ trigger.to_state.attributes.friendly_name }} room is low.  It requires one CR2032 battery."
-        target:
-          - !secret chris_mobile
-          - !secret megan_mobile
 
 #-------------------------------------------
 # PIR Low Battery
@@ -61,9 +58,6 @@
       from: 'off'
       to: 'on'
   action:
-    - service: notify.twilio_sms
+    - service: notify.email
       data_template:
         message: "\U0001F50B Battery for the motion sensor in the {{ trigger.to_state.attributes.friendly_name }} room is low.  It requires one CR2450 battery."
-        target:
-          - !secret chris_mobile
-          - !secret megan_mobile

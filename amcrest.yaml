@@ -1,31 +1,31 @@
 #-------------------------------------------
 # House Cameras
 #-------------------------------------------
-- host: 192.168.1.50
+- host: !secret ip_garage_camera
   name: Garage Camera
   stream_source: rtsp
   username: !secret amcrest_user
   password: !secret amcrest_pass
 
-- host: 192.168.1.67
+- host: !secret ip_front_yard_camera
   name: Front Yard Camera
   stream_source: rtsp
   username: !secret amcrest_user
   password: !secret amcrest_pass
 
-- host: 192.168.1.68
+- host: !secret ip_front_door_camera
   name: Front Door Camera
   stream_source: rtsp
   username: !secret amcrest_user
   password: !secret amcrest_pass
 
-- host: 192.168.1.81
+- host: !secret ip_deck_camera
   name: Deck Camera
   stream_source: rtsp
   username: !secret amcrest_user
   password: !secret amcrest_pass
 
-- host: 192.168.1.77
+- host: !secret ip_driveway_camera
   name: Driveway Camera
   stream_source: rtsp
   username: !secret amcrest_user
