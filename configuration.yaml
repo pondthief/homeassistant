@@ -45,11 +45,6 @@ frontend:
   javascript_version: latest
 
 #-------------------------------------------
-# Enable configuration UI
-#-------------------------------------------
-config:
-
-#-------------------------------------------
 # HTTP Server Config
 #-------------------------------------------
 http:
@@ -83,9 +78,6 @@ mqtt:
 # History support
 #-------------------------------------------
 history:
-  exclude:
-    domains:
-      - automation
 
 #-------------------------------------------
 # Logbook Settings
@@ -143,3 +135,10 @@ homekit: !include homekit.yaml
 # Amcrest
 #-------------------------------------------
 amcrest: !include amcrest.yaml
+
+#-------------------------------------------
+# Zwave
+#-------------------------------------------
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: !secret zwave_key
