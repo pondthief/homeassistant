@@ -10,6 +10,7 @@ system_tab:
     - group.all_automations
     - group.network_stats
     - group.network_devices
+    - group.energy_usage
 
 battery_levels:
   name: Battery Levels
@@ -38,3 +39,12 @@ network_devices:
   name: Network Devices
   entities:
     - binary_sensor.pihole
+
+#-------------------------------------------
+#  Sense Energy Usage
+#-------------------------------------------
+energy_usage:
+  name: Engery Usage
+  entities:
+    - sensor.energy_usage
+    - sensor.daily_usage

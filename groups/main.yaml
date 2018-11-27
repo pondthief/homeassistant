@@ -1,0 +1,14 @@
+#-------------------------------------------
+#  Main Areas Tab
+#-------------------------------------------
+main_tab:
+  name: Main Areas
+  view: yes
+  icon: mdi:coffee
+  entities:
+    - group.kitchen
+    - group.frontfoyer
+    - group.playroom
+    - group.laundry
+    - group.living
+    - group.frontfoyer

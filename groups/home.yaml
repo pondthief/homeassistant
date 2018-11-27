@@ -6,29 +6,34 @@ default_view:
   icon: mdi:home
   entities:
     - group.people
-    - group.quick_glance
+    - group.home_status
     - group.quick_settings
-    - group.energy_usage
-    - group.kitchen
-    - group.frontfoyer
-    - group.playroom
-    - group.laundry
-    - group.living
-    - group.frontfoyer
 
 #-------------------------------------------
-#  Quick Glance things
+#  Home Overview
 #-------------------------------------------
-quick_glance:
-  name: Quick Glance
+home_overview:
+  name: Home Overview
   control: hidden
   entities:
     - sensor.average_humidity
     - sensor.average_temperature
     - binary_sensor.all_doors
     - binary_sensor.all_windows
+
+#-------------------------------------------
+#  Environment Overview
+#-------------------------------------------
+environment_status:
+  name: Environment Overview
+  control: hidden
+  entities:
     - sensor.dark_sky_humidity
     - sensor.dark_sky_temperature
+    - sensor.dark_sky_precip_probability
+    - sensor.cold__flu_forecasted_average
+    - sensor.allergy_index_today
+    - sensor.allergy_index_forecasted_average
 
 #-------------------------------------------
 #  Quick Settings
@@ -38,15 +43,6 @@ quick_settings:
   control: hidden
   entities:
     - input_boolean.enable_alerts
-
-#-------------------------------------------
-#  Sense Energy Usage
-#-------------------------------------------
-energy_usage:
-  name: Engery Usage
-  entities:
-    - sensor.energy_usage
-    - sensor.daily_usage
 
 #-------------------------------------------
 #  People Group
