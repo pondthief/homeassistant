@@ -4,7 +4,7 @@
 - platform: mqtt_json
   devices:
     chris_iphone_mqtt: homeassistant/location/e0338eb638a0
-    megan_iphone_mqtt: homeassistant/location/b853ac2b9cac
+    megan_iphone_mqtt: homeassistant/location/4098ad0dadf0
     michael_iphone_mqtt: homeassistant/location/8866a564e976
     anna_iphone_mqtt: homeassistant/location/a4b805c4f2e8
     wendy_iphone_mqtt: homeassistant/location/90b0ede282f1
