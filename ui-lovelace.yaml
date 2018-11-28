@@ -1,4 +1,13 @@
 title: Home
 views:
-  icon: mdi:home-assistant
-  title: Front Foyer
+  - icon: mdi:home-assistant
+    title: Front Foyer
+    cards:
+      - type: gauge
+        title: Today's Alergy Index
+        max: 12
+        entity: sensor.allergy_index_today
+        severity:
+          green: 0
+          yellow: 4.8
+          red: 7.3
