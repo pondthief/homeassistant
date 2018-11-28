@@ -49,6 +49,8 @@ filter:
     # General Enitites
     - binary_sensor.front_door
     - binary_sensor.back_door
+    - lock.kwikset_touchpad_electronic_deadbolt_locked
+    - lock.kwikset_touchpad_electronic_deadbolt_locked_2
     
 entity_config:
   # Laundry Room Entities
@@ -80,6 +82,8 @@ entity_config:
     name: Kitchen Temperature
   sensor.wirelesstag_kitchen_humidity:
     name: Kitchen Humidity
+  lock.kwikset_touchpad_electronic_deadbolt_locked_2:
+    name: Back Door
   sensor.wirelesstag_play_area_temperature:
     name: Playroom Temperature
   sensor.wirelesstag_play_area_humidity:
@@ -108,3 +112,6 @@ entity_config:
   # Office
   binary_sensor.study_window:
     name: Office Window
+  # General
+  lock.kwikset_touchpad_electronic_deadbolt_locked:
+    name: Front Door
