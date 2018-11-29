@@ -198,7 +198,7 @@ services:
       - "traefik.enable=true"
       - "traefik.backend=heimdall"
       - "traefik.frontend.rule=PathPrefixStrip: /"
-      - "traefik.port=80"
+      - "traefik.port=443"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
       - "traefik.frontend.headers.STSSeconds=315360000"
