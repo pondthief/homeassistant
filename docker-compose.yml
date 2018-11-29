@@ -192,6 +192,7 @@ services:
       - ${USERDIR}/heimdall:/data
     environment:
       TZ: ${TZ}
+      FORCE_HTTPS: true
     networks:
       - traefik_proxy
     labels:
