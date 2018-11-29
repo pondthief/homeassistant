@@ -196,7 +196,7 @@ services:
       - traefik_proxy
     labels:
       - "traefik.enable=true"
-      - "traefik.backend=portainer"
+      - "traefik.backend=heimdall"
       - "traefik.frontend.rule=PathPrefixStrip: /"
       - "traefik.port=80"
       - "traefik.docker.network=traefik_proxy"
