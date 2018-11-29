@@ -189,7 +189,7 @@ services:
     container_name: heimdall
     restart: always
     volumes:
-      - ${USERDIR}/heimdall:/data
+      - ${USERDIR}/heimdall:/config
     environment:
       TZ: ${TZ}
     ports:
