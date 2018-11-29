@@ -197,7 +197,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.backend=heimdall"
-      - "traefik.frontend.rule=PathPrefixStrip: /"
+      - "traefik.frontend.rule=Host:home.${DOMAINNAME}"
       - "traefik.port=443"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
