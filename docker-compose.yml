@@ -185,7 +185,7 @@ services:
 
   # Heimdall - An Application dashboard and launcher
   heimdall:
-    image: heimdall/heimdall
+    image: linuxserver/heimdall
     container_name: heimdall
     restart: always
     volumes:
