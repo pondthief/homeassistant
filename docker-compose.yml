@@ -86,7 +86,7 @@ services:
   # Home Assistant
   homeassistant:
     container_name: homeassistant
-    image: homeassistant/home-assistant:rc
+    image: homeassistant/home-assistant:latest
     restart: always
     network_mode: host
     privileged: true
