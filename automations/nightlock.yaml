@@ -1,0 +1,13 @@
+#-------------------------------------------
+# Lock all the doors at Night
+#-------------------------------------------
+- alias: 'Lock Doors at Night'
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: time
+    at: '20:00:00'
+  action:
+    - service: lock.lock
+      data:
+        entity_id: group.all_locks
