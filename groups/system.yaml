@@ -39,6 +39,7 @@ network_devices:
   name: Network Devices
   entities:
     - binary_sensor.pihole
+    - binary_sensor.doorbell_status
 
 #-------------------------------------------
 #  Sense Energy Usage
