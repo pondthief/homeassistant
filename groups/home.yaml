@@ -36,6 +36,21 @@ environment_status:
     - sensor.allergy_index_today
     - sensor.allergy_index_forecasted_average
 
+illness_status:
+  name: Illness Overview
+  control: hidden
+  entities:
+    - sensor.cdc_level
+    - sensor.cdc_level_2
+    - sensor.cold__flu_forecasted_average
+    - sensor.avian_flu_symptoms
+    - sensor.dengue_fever_symptoms
+    - sensor.flu_symptoms
+    - sensor.flulike_symptoms
+    - sensor.leptospirosis_symptoms
+    - sensor.no_symptoms
+    - sensor.total_symptoms
+
 #-------------------------------------------
 #  Quick Settings
 #-------------------------------------------
