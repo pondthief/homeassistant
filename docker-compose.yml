@@ -66,23 +66,6 @@ services:
       MQTT_HOST: ${HOSTIP}
       TZ: ${TZ}
 
-  # InfluxDB for storing history
-  influxdb:
-    container_name: influxdb
-    image: influxdb:alpine
-    ports:
-      - "8086:8086"
-    restart: always
-    volumes:
-      - ${USERDIR}/influxdb:/var/lib/influxdb
-      - ${USERDIR}/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro
-      - ${USERDIR}/shared:/shared
-    environment:
-      INFLUXDB_DB: ${DBNAME}
-      INFLUXDB_USER: ${DBUSER}
-      INFLUXDB_USER_PASSWORD: ${DBPASS}
-      TZ: ${TZ}
-
   # Home Assistant
   homeassistant:
     container_name: homeassistant
@@ -101,7 +84,7 @@ services:
       TZ: ${TZ}
       HOSTIP: ${HOSTIP}
   
-  # Glances to keep an eye on the system
+  # Prometheus
   prometheus:
     container_name: prometheus
     image: prom/prometheus:latest
@@ -117,6 +100,15 @@ services:
       - "traefik.frontend.rule=Host:prometheus.${DOMAINNAME}"
       - "traefik.port=9090"
       - "traefik.docker.network=traefik_proxy"
+
+  # Node-Blackbox Prometheus
+  blackbox:
+    container_name: blackbox
+    image: prom/blackbox-exporter:latest
+    ports:
+      - "9115:9115"
+    restart: always
+    privileged: true
 
   # For HADashboard (not ready for use YET)
   # appdaemon:
@@ -143,7 +135,7 @@ services:
   #    - "traefik.frontend.headers.STSPreload=true"
   #    - "traefik.frontend.headers.frameDeny=true"
 
-  # Portainer - WebUI for Containers
+  # Portainer
   portainer:
     image: portainer/portainer
     container_name: portainer
@@ -172,7 +164,7 @@ services:
       - "traefik.frontend.headers.STSPreload=true"
       - "traefik.frontend.headers.frameDeny=true"
 
-  # Heimdall - An Application dashboard and launcher
+  # Heimdall
   heimdall:
     image: linuxserver/heimdall
     container_name: heimdall
