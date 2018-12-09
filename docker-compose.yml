@@ -102,32 +102,21 @@ services:
       HOSTIP: ${HOSTIP}
   
   # Glances to keep an eye on the system
-  glances:
-    container_name: glances
-    image: nicolargo/glances:latest-alpine
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:latest
     restart: always
     networks:
       - traefik_proxy
-    pid: host
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    environment:
-      GLANCES_OPT: -w
+      - ${USERDIR}/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ${USERDIR}/prometheus/data:/prometheus
     labels:
       - "traefik.enable=true"
-      - "traefik.backend=glances"
-      - "traefik.frontend.rule=PathPrefixStrip: /glances"
-      - "traefik.port=61208"
+      - "traefik.backend=prometheus"
+      - "traefik.frontend.rule=Host:prometheus.${DOMAINNAME}"
+      - "traefik.port=9090"
       - "traefik.docker.network=traefik_proxy"
-      - "traefik.frontend.headers.SSLRedirect=true"
-      - "traefik.frontend.headers.STSSeconds=315360000"
-      - "traefik.frontend.headers.browserXSSFilter=true"
-      - "traefik.frontend.headers.contentTypeNosniff=true"
-      - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
-      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-      - "traefik.frontend.headers.STSPreload=true"
-      - "traefik.frontend.headers.frameDeny=true"
 
   # For HADashboard (not ready for use YET)
   # appdaemon:
