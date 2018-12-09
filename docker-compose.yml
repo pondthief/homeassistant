@@ -179,7 +179,7 @@ services:
       - "traefik.enable=true"
       - "traefik.backend=heimdall"
       - "traefik.protocol=https"
-      - "traefik.frontend.rule=PathPrefixStrip: /"
+      - "traefik.frontend.rule=PathPrefixStrip: /dash"
       - "traefik.port=443"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
