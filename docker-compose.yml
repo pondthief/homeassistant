@@ -110,31 +110,6 @@ services:
     restart: always
     privileged: true
 
-  # For HADashboard (not ready for use YET)
-  # appdaemon:
-  #  container_name: appdaemon
-  #  image: acockburn/appdaemon:latest
-  #  restart: always
-  #  networks:
-  #    - traefik_proxy
-  #  volumes:
-  #    - ${USERDIR}/dashboard:/conf:ro
-  #  labels:
-  #    - "traefik.enable=true"
-  #    - "traefik.backend=appdaemon"
-  #    - "traefik.frontend.rule=PathPrefixStrip: /dashboard"
-  #    - "traefik.port=5050"
-  #    - "traefik.docker.network=traefik_proxy"
-  #    - "traefik.frontend.headers.SSLRedirect=true"
-  #    - "traefik.frontend.headers.STSSeconds=315360000"
-  #    - "traefik.frontend.headers.browserXSSFilter=true"
-  #    - "traefik.frontend.headers.contentTypeNosniff=true"
-  #    - "traefik.frontend.headers.forceSTSHeader=true"
-  #    - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
-  #    - "traefik.frontend.headers.STSIncludeSubdomains=true"
-  #    - "traefik.frontend.headers.STSPreload=true"
-  #    - "traefik.frontend.headers.frameDeny=true"
-
   # Portainer
   portainer:
     image: portainer/portainer
@@ -151,36 +126,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.backend=portainer"
-      - "traefik.frontend.rule=PathPrefixStrip: /portainer"
+      - "traefik.frontend.rule=Host:portainer.${DOMAINNAME}"
       - "traefik.port=9000"
-      - "traefik.docker.network=traefik_proxy"
-      - "traefik.frontend.headers.SSLRedirect=true"
-      - "traefik.frontend.headers.STSSeconds=315360000"
-      - "traefik.frontend.headers.browserXSSFilter=true"
-      - "traefik.frontend.headers.contentTypeNosniff=true"
-      - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
-      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-      - "traefik.frontend.headers.STSPreload=true"
-      - "traefik.frontend.headers.frameDeny=true"
-
-  # Heimdall
-  heimdall:
-    image: linuxserver/heimdall
-    container_name: heimdall
-    restart: always
-    volumes:
-      - ${USERDIR}/heimdall:/config
-    environment:
-      TZ: ${TZ}
-    networks:
-      - traefik_proxy
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=heimdall"
-      - "traefik.protocol=https"
-      - "traefik.frontend.rule=PathPrefixStrip: /dash"
-      - "traefik.port=443"
       - "traefik.docker.network=traefik_proxy"
       - "traefik.frontend.headers.SSLRedirect=true"
       - "traefik.frontend.headers.STSSeconds=315360000"
