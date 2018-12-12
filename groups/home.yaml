@@ -9,6 +9,7 @@ default_view:
     - group.home_overview
     - group.environment_status
     - group.quick_settings
+    - group.illness_status
 
 #-------------------------------------------
 #  Home Overview
