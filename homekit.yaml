@@ -1,6 +1,7 @@
 #-------------------------------------------
 # HomeKit Configuration
 #-------------------------------------------
+auto_start: false
 filter:
   include_entities:
     # Laundry Room Entities
@@ -53,65 +54,8 @@ filter:
     - lock.kwikset_touchpad_electronic_deadbolt_locked_2
     
 entity_config:
-  # Laundry Room Entities
-  binary_sensor.laundry_door:
-    name: Laundry Room Door
-  sensor.wirelesstag_study_temperature:
-    name: Office Temperature
-  sensor.wirelesstag_study_humidity:
-    name: Office Humidity
-  # Clara's Room
-  sensor.wirelesstag_clara_room_temperature:
-    name: Clara Bedroom Temperature
-  sensor.wirelesstag_clara_room_humidity:
-    name: Clara Bedroom Humidity
-  binary_sensor.claras_room_window:
-    name: Clara Bedroom Window
-  # Master Bathroom
-  sensor.wirelesstag_master_bath_temperature:
-    name: Master Bathroom Temperature
-  sensor.wirelesstag_master_bath_humidity:
-    name: Master Bathroom Humidity
-  # Master Bedroom
-  sensor.wirelesstag_masterbed_temperature:
-    name: Master Bedroom Temperature
-  sensor.wirelesstag_masterbed_humidity:
-    name: Master Bedroom Humidity
-  # Kitchen
-  sensor.wirelesstag_kitchen_temperature:
-    name: Kitchen Temperature
-  sensor.wirelesstag_kitchen_humidity:
-    name: Kitchen Humidity
   lock.kwikset_touchpad_electronic_deadbolt_locked_2:
     name: Back Door
-  sensor.wirelesstag_play_area_temperature:
-    name: Playroom Temperature
-  sensor.wirelesstag_play_area_humidity:
-    name: Playroom Humidity
-  # Laundry Room
-  binary_sensor.laundry_room_motion:
-    name: Laundry Room Motion
-  sensor.wirelesstag_laundry_room_temperature:
-    name: Laundry Room Temperature
-  sensor.wirelesstag_laundry_room_humidity:
-    name: Laundry Room Humidity
-  # Guest Room
-  sensor.wirelesstag_guest_room_temperature:
-    name: Guest Bedroom Temperature
-  sensor.wirelesstag_guest_room_humidity:
-    name: Guest Bedroom Humidity
-  binary_sensor.guest_room_window:
-    name: Guest Bedroom Window
-  # Guest Bath
-  sensor.wirelesstag_guest_bath_temperature:
-    name: Guest Bathroom Temperature
-  sensor.wirelesstag_guest_bath_humidity:
-    name: Guest Bathroom Humidity
-  binary_sensor.guest_bath_motion:
-    name: Guest Bathroom Motion
-  # Office
-  binary_sensor.study_window:
-    name: Office Window
   # General
   lock.kwikset_touchpad_electronic_deadbolt_locked:
     name: Front Door
