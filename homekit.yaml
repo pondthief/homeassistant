@@ -13,26 +13,26 @@ filter:
     - binary_sensor.guest_room_window
     - sensor.wirelesstag_guest_room_temperature
     - sensor.wirelesstag_guest_room_humidity
-    # Guest Bath Entities
-    - sensor.wirelesstag_guest_bath_temperature
-    - sensor.wirelesstag_guest_bath_humidity
+    # Guest Bathroom Entities
+    - sensor.wirelesstag_guest_bathroom_temperature
+    - sensor.wirelesstag_guest_bathroom_humidity
     - binary_sensor.guest_bath_motion
     # Office Entities
-    - sensor.wirelesstag_study_temperature
-    - sensor.wirelesstag_study_humidity
+    - sensor.wirelesstag_office_temperature
+    - sensor.wirelesstag_office_humidity
     - binary_sensor.study_window
     # Clara Entities
     - binary_sensor.claras_room_window
-    - sensor.wirelesstag_clara_room_temperature
-    - sensor.wirelesstag_clara_room_humidity
+    - sensor.wirelesstag_clara_bedroom_temperature
+    - sensor.wirelesstag_clara_bedroom_humidity
     # Master Bathroom Entities
     - binary_sensor.master_bathroom_window
-    - sensor.wirelesstag_master_bath_temperature
-    - sensor.wirelesstag_master_bath_humidity
+    - sensor.wirelesstag_master_bathroom_temperature
+    - sensor.wirelesstag_master_bathroom_humidity
     # Master Bedroom Entities
     - binary_sensor.master_bedroom_window
-    - sensor.wirelesstag_masterbed_temperature
-    - sensor.wirelesstag_masterbed_humidity
+    - sensor.wirelesstag_master_bedroom_temperature
+    - sensor.wirelesstag_master_bedroom_humidity
     # Kitchen Entities
     - binary_sensor.kitchen_sink_window
     - binary_sensor.back_window_1
@@ -45,8 +45,8 @@ filter:
     - binary_sensor.right_window_2
     - binary_sensor.front_window_1
     - binary_sensor.front_window_2
-    - sensor.wirelesstag_play_area_temperature
-    - sensor.wirelesstag_play_area_humidity
+    - sensor.wirelesstag_playroom_temperature
+    - sensor.wirelesstag_playroom_humidity
     # General Enitites
     - binary_sensor.front_door
     - binary_sensor.back_door
