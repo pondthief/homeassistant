@@ -5,6 +5,6 @@ master_bed:
   name: Master Bedroom
   entities:
     - sensor.master_bedroom_window
-    - sensor.wirelesstag_masterbed_humidity
-    - sensor.wirelesstag_masterbed_light
-    - sensor.wirelesstag_masterbed_temperature
+    - sensor.wirelesstag_master_bedroom_humidity
+    - sensor.wirelesstag_master_bedroom_light
+    - sensor.wirelesstag_master_bedroom_temperature

@@ -7,6 +7,6 @@ playroom:
     - sensor.front_window_1
     - sensor.front_window_2
     - sensor.right_window_2
-    - sensor.wirelesstag_play_area_humidity
-    - sensor.wirelesstag_play_area_light
-    - sensor.wirelesstag_play_area_temperature
+    - sensor.wirelesstag_playroom_humidity
+    - sensor.wirelesstag_playroom_light
+    - sensor.wirelesstag_playroom_temperature

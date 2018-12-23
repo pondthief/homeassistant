@@ -5,6 +5,6 @@ office:
   name: Office
   entities:
     - binary_sensor.study_window
-    - sensor.wirelesstag_study_humidity
-    - sensor.wirelesstag_study_light
-    - sensor.wirelesstag_study_temperature
+    - sensor.wirelesstag_office_humidity
+    - sensor.wirelesstag_office_light
+    - sensor.wirelesstag_office_temperature
