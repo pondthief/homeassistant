@@ -92,7 +92,7 @@ services:
     privileged: true
     depends_on:
       - postgres
-      - prometheus
+      - influxdb
       - mosquitto
     volumes:
       - ${USERDIR}/home-assistant:/config
