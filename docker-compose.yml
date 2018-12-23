@@ -100,7 +100,27 @@ services:
     environment:
       TZ: ${TZ}
       HOSTIP: ${HOSTIP}
-  
+
+  # Nagios
+  nagios:
+    container_name: nagios
+    image: jasonrivers/nagios:latest
+    restart: always
+    networks:
+      - traefik_proxy
+    volumes:
+      - ${USERDIR}/nagios/etc:/opt/nagios/etc
+      - ${USERDIR}/nagios/var:/opt/nagios/var
+      - ${USERDIR}/nagios-plugins:/opt/Custom-Nagios-Plugins
+      - ${USERDIR}/nagiosgraph/var:/opt/nagiosgraph/var
+      - ${USERDIR}/nagiosgraph/etc:/opt/nagiosgraph/etc
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=nagios"
+      - "traefik.frontend.rule=Host:nagios.${DOMAINNAME}"
+      - "traefik.port=80"
+      - "traefik.docker.network=traefik_proxy"
+
   # Prometheus
   prometheus:
     container_name: prometheus
