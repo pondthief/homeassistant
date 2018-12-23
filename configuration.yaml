@@ -14,9 +14,14 @@ homeassistant:
 shell_command: !include shell_commands.yaml
 
 #-------------------------------------------
-# Enable Prometheus
+# Enable InfluxDB
 #-------------------------------------------
-prometheus:
+influxdb:
+  database: !secret influx_db
+  username: !secret influx_user
+  password: !secret influx_pass
+  ssl: true
+  verify_ssl: false
 
 #-------------------------------------------
 # Web Config
