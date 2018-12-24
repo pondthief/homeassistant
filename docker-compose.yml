@@ -39,6 +39,8 @@ services:
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
+    depends_on:
+      - traefik
     networks:
       - traefik_proxy
     restart: always
@@ -106,6 +108,8 @@ services:
     container_name: nagios
     image: jasonrivers/nagios:latest
     restart: always
+    depends_on:
+      - traefik
     networks:
       - traefik_proxy
     volumes:
@@ -138,7 +142,6 @@ services:
       INFLUXDB_USER_PASSWORD: ${DBPASS}
       TZ: ${TZ}
 
-
   # Portainer
   portainer:
     image: portainer/portainer
@@ -150,6 +153,8 @@ services:
       - ${USERDIR}/portainer/data:/data
     environment:
       TZ: ${TZ}
+    depends_on:
+      - traefik
     networks:
       - traefik_proxy
     labels:
