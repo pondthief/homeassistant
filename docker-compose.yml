@@ -35,24 +35,19 @@ services:
       POSTGRES_DB: ${DBNAME}
       TZ: ${TZ}
 
-  # Grafana
-  grafana:
-    image: grafana/grafana:latest
-    container_name: grafana
-    depends_on:
-      - traefik
-    networks:
-      - traefik_proxy
+  # Unifi-Controller
+  unifi:
+    image: chriskacerguis/unifi-controller:latest
+    container_name: unifi
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+      - "8880:8880"
+      - "8843:8843"
     restart: always
     volumes:
-      - ${USERDIR}/grafana/data:/var/lib/grafana
-      - ${USERDIR}/grafana/grafana.ini:/etc/grafana/grafana.ini"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=grafana"
-      - "traefik.frontend.rule=Host:grafana.${DOMAINNAME}"
-      - "traefik.port=3000"
-      - "traefik.docker.network=traefik_proxy"
+      - ${USERDIR}/ubnt/data:/usr/lib/unifi/data 
+      - ${USERDIR}/ubnt/logs:/usr/lib/unifi/logs
 
   # MQTT broker
   mosquitto:
