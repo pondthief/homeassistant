@@ -19,7 +19,7 @@ services:
       - ${USERDIR}/traefik:/etc/traefik
       - ${USERDIR}/shared:/shared
 
-  # Database of champions
+  # Database for HA
   postgres:
     container_name: postgres
     image: postgres:alpine
@@ -36,18 +36,14 @@ services:
       TZ: ${TZ}
 
   # Unifi-Controller
-  unifi:
-    image: chriskacerguis/unifi-controller:latest
-    container_name: unifi
-    ports:
-      - "8080:8080"
-      - "8443:8443"
-      - "8880:8880"
-      - "8843:8843"
-    restart: always
-    volumes:
-      - ${USERDIR}/ubnt/data:/usr/lib/unifi/data 
-      - ${USERDIR}/ubnt/logs:/usr/lib/unifi/logs
+  # unifi:
+  #  image: chriskacerguis/unifi-controller:latest
+  #  container_name: unifi
+  #  network_mode: host
+  #  restart: always
+  #  volumes:
+  #    - ${USERDIR}/ubnt/data:/usr/lib/unifi/data 
+  #    - ${USERDIR}/ubnt/logs:/usr/lib/unifi/logs
 
   # MQTT broker
   mosquitto:
@@ -66,7 +62,7 @@ services:
     environment:
       TZ: ${TZ}
 
-  # Pushing the Honeywell things to MQTT
+  # Pushing Honeywell 345Mhz RF signals to MQTT
   honeywell2mqtt:
     container_name: honeywell2mqtt
     image: chriskacerguis/honeywell2mqtt:2.0.0
@@ -99,26 +95,35 @@ services:
       HOSTIP: ${HOSTIP}
 
   # Nagios
-  nagios:
-    container_name: nagios
-    image: jasonrivers/nagios:latest
-    restart: always
-    depends_on:
-      - traefik
-    networks:
-      - traefik_proxy
-    volumes:
-      - ${USERDIR}/nagios/etc:/opt/nagios/etc
-      - ${USERDIR}/nagios/var:/opt/nagios/var
-      - ${USERDIR}/nagios-plugins:/opt/Custom-Nagios-Plugins
-      - ${USERDIR}/nagiosgraph/var:/opt/nagiosgraph/var
-      - ${USERDIR}/nagiosgraph/etc:/opt/nagiosgraph/etc
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=nagios"
-      - "traefik.frontend.rule=Host:nagios.${DOMAINNAME}"
-      - "traefik.port=80"
-      - "traefik.docker.network=traefik_proxy"
+  # nagios:
+  #  container_name: nagios
+  #  image: jasonrivers/nagios:latest
+  #  restart: always
+  #  depends_on:
+  #    - traefik
+  #  networks:
+  #    - traefik_proxy
+  #  volumes:
+  #    - ${USERDIR}/nagios/etc:/opt/nagios/etc
+  #    - ${USERDIR}/nagios/var:/opt/nagios/var
+  #    - ${USERDIR}/nagios-plugins:/opt/Custom-Nagios-Plugins
+  #    - ${USERDIR}/nagiosgraph/var:/opt/nagiosgraph/var
+  #    - ${USERDIR}/nagiosgraph/etc:/opt/nagiosgraph/etc
+  #  labels:
+  #    - "traefik.enable=true"
+  #    - "traefik.backend=nagios"
+  #    - "traefik.frontend.rule=Host:nagios.${DOMAINNAME}"
+  #    - "traefik.port=80"
+  #    - "traefik.docker.network=traefik_proxy"
+
+  # DNS over HTTPS via Cloudflare 1.1.1.1
+  #dns:
+  #  container_name: dns
+  #  image: qmcgaw/cloudflare-dns-server:latest
+  #  ports:
+  #    - "53:53/udp"
+  #  environment:
+  #    BLOCK_MALICIOUS: "off"
 
   # InfluxDB
   influxdb:
