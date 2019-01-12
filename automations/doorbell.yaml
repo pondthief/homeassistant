@@ -13,6 +13,9 @@
       data_template:
         entity_id: camera.front_door
         filename: "/config/www/snapshots/front_door_camera_{{ trigger.to_state.last_changed }}.jpg"
+    - service: notify.email
+      data_template:
+        message: "\U0001F4A7 Doorbell!"
 #    - service: notify.twilio_sms
 #      data_template:
 #        message: "\U0001F514 Someone is at the front door! /local/snapshots/front_door_camera_{{ trigger.to_state.last_changed|urlencode }}.jpg"
