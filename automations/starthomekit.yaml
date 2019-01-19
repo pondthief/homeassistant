@@ -1,4 +1,6 @@
 - alias: 'Start HomeKit'
+  initial_state: true
+  hide_entity: true
   trigger:
     - platform: event
       event_type: zwave.network_ready
