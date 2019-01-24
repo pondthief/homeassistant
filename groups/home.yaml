@@ -33,7 +33,6 @@ environment_status:
     - sensor.dark_sky_humidity
     - sensor.dark_sky_temperature
     - sensor.dark_sky_precip_probability
-    - sensor.cold__flu_forecasted_average
     - sensor.allergy_index_today
     - sensor.allergy_index_forecasted_average
 
@@ -43,7 +42,7 @@ illness_status:
   entities:
     - sensor.cdc_level
     - sensor.cdc_level_2
-    - sensor.cold__flu_forecasted_average
+    - sensor.cold_flu_forecasted_average
     - sensor.avian_flu_symptoms
     - sensor.dengue_fever_symptoms
     - sensor.flu_symptoms
