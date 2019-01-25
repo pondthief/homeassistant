@@ -4,6 +4,5 @@
 guest_bath:
   name: Guest Bathroom
   entities:
-    - sensor.wirelesstag_guest_bathroom_light
     - sensor.wirelesstag_guest_bathroom_humidity
     - sensor.wirelesstag_guest_bathroom_temperature

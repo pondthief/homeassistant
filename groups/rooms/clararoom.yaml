@@ -4,7 +4,7 @@
 clara_room:
   name: Clara's Room
   entities:
-    - sensor.guest_window
+    - binary_sensor.clara_s_room_window
     - sensor.wirelesstag_clara_bedroom_humidity
     - sensor.wirelesstag_clara_bedroom_light
     - sensor.wirelesstag_clara_bedroom_temperature

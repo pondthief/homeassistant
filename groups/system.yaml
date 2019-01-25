@@ -30,15 +30,12 @@ battery_levels:
 network_stats:
   name: Network Stats
   entities:
-    - sensor.fastcom_download
-    - sensor.pihole_dns_queries_today
-    - sensor.pihole_ads_blocked_today
-    - sensor.pihole_ads_percentage_blocked_today
+    - sensor.fast_com_download
+
 
 network_devices:
   name: Network Devices
   entities:
-    - binary_sensor.pihole
     - binary_sensor.doorbell_status
 
 #-------------------------------------------

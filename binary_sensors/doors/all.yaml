@@ -10,7 +10,7 @@
         {% if is_state('binary_sensor.front_door', 'off') 
            and is_state('binary_sensor.back_door', 'off') 
            and is_state('binary_sensor.laundry_door', 'off') %}
-          closed
+          off
         {% else %}
-          open
+          on
         {% endif %}

@@ -6,5 +6,4 @@ laundryroom:
   entities:
     - binary_sensor.laundry_door
     - sensor.wirelesstag_laundry_room_humidity
-    - sensor.wirelesstag_laundry_room_light
     - sensor.wirelesstag_laundry_room_temperature

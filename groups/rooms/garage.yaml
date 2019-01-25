@@ -7,5 +7,4 @@ garage:
     - cover.chris_garage_door
     - cover.garage_door_opener_2
     - sensor.wirelesstag_garage_humidity
-    - sensor.wirelesstag_garage_light
     - sensor.wirelesstag_garage_temperature
