@@ -1,5 +1,8 @@
-
+#-------------------------------------------
+#  Unifi Cloud Key
+#-------------------------------------------
 - platform: unifi
   host: !secret ip_unifi
   username: !secret unifi_user
   password: !secret unifi_pass
+  verify_ssl: false
