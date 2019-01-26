@@ -5,7 +5,7 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-#    - group.people
+    - group.people
     - group.home_overview
     - group.environment_status
     - group.quick_settings
@@ -34,20 +34,14 @@ environment_status:
     - sensor.dark_sky_temperature
     - sensor.dark_sky_precip_probability
     - sensor.allergy_index_today
-    - sensor.allergy_index_forecasted_average
 
 illness_status:
   name: Illness Overview
   control: hidden
   entities:
-    - sensor.cdc_level
-    - sensor.cdc_level_2
     - sensor.cold_flu_forecasted_average
-    - sensor.avian_flu_symptoms
-    - sensor.dengue_fever_symptoms
     - sensor.flu_symptoms
     - sensor.flulike_symptoms
-    - sensor.leptospirosis_symptoms
     - sensor.no_symptoms
     - sensor.total_symptoms
 
@@ -66,8 +60,8 @@ quick_settings:
 people:
   name: Who Is Home?
   entities:
-    - device_tracker.chris_iphone_mqtt
-    - device_tracker.megan_iphone_mqtt
+    - device_tracker.chriss_iphone
+    - device_tracker.megan_s_iphone_x
     - device_tracker.wendy_iphone
     - device_tracker.anna_iphone
     - device_tracker.michael_iphone
