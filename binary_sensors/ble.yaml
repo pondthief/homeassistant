@@ -1,11 +1,11 @@
 - platform: mqtt
   state_topic: "homeassistant/binary_sensor/chrisble"
-  name: Chris iPhone Xs
+  name: Chris iPhone Xs BLE
   device_class: presence
   force_update: true
 
 - platform: mqtt
   state_topic: "homeassistant/binary_sensor/meganble"
-  name: Megan iPhone X
+  name: Megan iPhone X BLE
   device_class: presence
   force_update: true

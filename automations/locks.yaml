@@ -1,0 +1,14 @@
+#-------------------------------------------
+# Arrive Home
+#-------------------------------------------
+- alias: 'Arrive Home'
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.chris_iphone_xs_ble
+      from: 'off'
+      to: 'on'
+  action:
+    - service: notify.email
+      data_template:
+        message: "\U0001F513 Bluetooth Unlock"
