@@ -1,13 +1,17 @@
 #-------------------------------------------
 # Arrive Home
 #-------------------------------------------
-- alias: 'Arrive Home'
+- alias: 'Chris Arrive Home'
   initial_state: true
   trigger:
     - platform: state
       entity_id: binary_sensor.chris_iphone_xs_ble
       from: 'off'
       to: 'on'
+  condition:
+    condition: state
+    entity_id: device_tracker.chriss_iphone
+    state: 'not_home'
   action:
     - service: notify.email
       data_template:
