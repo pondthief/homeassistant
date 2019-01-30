@@ -35,15 +35,6 @@ services:
       POSTGRES_DB: ${DBNAME}
       TZ: ${TZ}
 
-  # Unifi-Controller
-  # unifi:
-  #  image: chriskacerguis/unifi-controller:latest
-  #  container_name: unifi
-  #  network_mode: host
-  #  restart: always
-  #  volumes:
-  #    - ${USERDIR}/ubnt/data:/usr/lib/unifi/data 
-  #    - ${USERDIR}/ubnt/logs:/usr/lib/unifi/logs
 
   # MQTT broker
   mosquitto:
@@ -62,19 +53,6 @@ services:
     environment:
       TZ: ${TZ}
 
-  # Pushing Honeywell 345Mhz RF signals to MQTT
-  honeywell2mqtt:
-    container_name: honeywell2mqtt
-    image: chriskacerguis/honeywell2mqtt:2.0.0
-    restart: always
-    privileged: true
-    depends_on:
-      - mosquitto
-    links:
-      - mosquitto
-    environment:
-      MQTT_HOST: ${HOSTIP}
-      TZ: ${TZ}
 
   # Home Assistant
   homeassistant:
@@ -94,36 +72,24 @@ services:
       TZ: ${TZ}
       HOSTIP: ${HOSTIP}
 
-  # Nagios
-  # nagios:
-  #  container_name: nagios
-  #  image: jasonrivers/nagios:latest
-  #  restart: always
-  #  depends_on:
-  #    - traefik
-  #  networks:
-  #    - traefik_proxy
-  #  volumes:
-  #    - ${USERDIR}/nagios/etc:/opt/nagios/etc
-  #    - ${USERDIR}/nagios/var:/opt/nagios/var
-  #    - ${USERDIR}/nagios-plugins:/opt/Custom-Nagios-Plugins
-  #    - ${USERDIR}/nagiosgraph/var:/opt/nagiosgraph/var
-  #    - ${USERDIR}/nagiosgraph/etc:/opt/nagiosgraph/etc
-  #  labels:
-  #    - "traefik.enable=true"
-  #    - "traefik.backend=nagios"
-  #    - "traefik.frontend.rule=Host:nagios.${DOMAINNAME}"
-  #    - "traefik.port=80"
-  #    - "traefik.docker.network=traefik_proxy"
+  appdaemon:
+    container_name: homeassistant_appdaemon
+    image: acockburn/appdaemon:latest
+    depends_on:
+      # Start home-assistant first
+      - homeassistant
+    links:
+      # Link ports from home-assistant container
+      - homeassistant
+    ports:
+      - 5050:5050
+    volumes:
+      # App daemon configuration
+      - ${USERDIR}/appdaemon:/conf
+      # Timezone configuration (Linux only)
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
 
-  # DNS over HTTPS via Cloudflare 1.1.1.1
-  #dns:
-  #  container_name: dns
-  #  image: qmcgaw/cloudflare-dns-server:latest
-  #  ports:
-  #    - "53:53/udp"
-  #  environment:
-  #    BLOCK_MALICIOUS: "off"
 
   # InfluxDB
   influxdb:
@@ -141,37 +107,6 @@ services:
       INFLUXDB_USER: ${DBUSER}
       INFLUXDB_USER_PASSWORD: ${DBPASS}
       TZ: ${TZ}
-
-  # Portainer
-  portainer:
-    image: portainer/portainer
-    container_name: portainer
-    restart: always
-    command: -H unix:///var/run/docker.sock
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ${USERDIR}/portainer/data:/data
-    environment:
-      TZ: ${TZ}
-    depends_on:
-      - traefik
-    networks:
-      - traefik_proxy
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=portainer"
-      - "traefik.frontend.rule=Host:portainer.${DOMAINNAME}"
-      - "traefik.port=9000"
-      - "traefik.docker.network=traefik_proxy"
-      - "traefik.frontend.headers.SSLRedirect=true"
-      - "traefik.frontend.headers.STSSeconds=315360000"
-      - "traefik.frontend.headers.browserXSSFilter=true"
-      - "traefik.frontend.headers.contentTypeNosniff=true"
-      - "traefik.frontend.headers.forceSTSHeader=true"
-      - "traefik.frontend.headers.SSLHost=${DOMAINNAME}"
-      - "traefik.frontend.headers.STSIncludeSubdomains=true"
-      - "traefik.frontend.headers.STSPreload=true"
-      - "traefik.frontend.headers.frameDeny=true"
 
 # Networks that are needed
 networks:
