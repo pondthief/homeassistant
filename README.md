@@ -148,4 +148,4 @@ EOT
 While a lot of this is my work, I took ideas and snippets from others configs and tutorials, and I'd like to thank the following:
 
 * https://www.smarthomebeginner.com/traefik-reverse-proxy-tutorial-for-docker/
-* https://github.com/htpcBeginner/AtoMiC-ToolKit-Docker/blob/master/docker-compose-traefik.yml
+* https://github.com/htpcBeginner/AtoMiC-ToolKit-Docker/blob/master/docker-compose-traefik.yml# homeassistant
